@@ -1,0 +1,34 @@
+{
+    "1.16":{
+      "platform":"java",
+      "download": "https://github.com/Gamemode4Dev/GM4_Datapacks/archive/master.zip",
+      "branch": "master",
+      "local": "master-1.16",
+      "version_offset":16000,
+      "packager_version":1
+    },
+    "1.15":{
+      "platform":"java",
+      "download": "https://github.com/Gamemode4Dev/GM4_Datapacks/archive/ver/1.15.zip",
+      "branch": "ver/1.15",
+      "local": "master-1.15",
+      "version_offset":15000,
+      "packager_version":1
+    },
+    "1.14":{
+      "platform":"java",
+      "download": "https://github.com/Gamemode4Dev/GM4_Datapacks/archive/ver/1.14.zip",
+      "branch": "ver/1.14",
+      "local": "master-1.14",
+      "version_offset":14000,
+      "packager_version":0
+    },
+    "1.13":{
+      "platform":"java",
+      "download": "https://github.com/Gamemode4Dev/GM4_Datapacks/archive/ver/1.13.zip",
+      "branch":"ver/1.13",
+      "local": "master-download",
+      "version_offset":0,
+      "packager_version":0
+    }
+}
