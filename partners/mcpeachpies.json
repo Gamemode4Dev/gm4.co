@@ -1,0 +1,25 @@
+{
+  "creator_name":"mcpeachpies",
+  "default_repo":"https://github.com/mcpeachpies/mcpeachpies-datapacks/archive/master.zip",
+  "modules":[
+    {
+      "module_name":"Multiplayer Sleeping",
+      "versions":{
+        "1.15":{
+          "path":"multiplayer_sleeping/mcpeachpies_multiplayer_sleeping_1_15"
+        },
+        "1.16":{
+          "path":"mcpeachpies_multiplayer_sleeping"
+        }
+      }
+    },
+    {
+      "module_name":"Renewable Pigstep",
+      "versions":{
+        "1.16":{
+          "path":"renewable_pigstep/mcpeachpies_renewable_pigstep"
+        }
+      }
+    }
+  ]
+}
