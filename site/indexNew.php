@@ -1,5 +1,18 @@
 <?php
-//created 19 august 2020
+/*
+created 19 august 2020
+==============
+contributors:
+  Sparks
+==============
+
+This is the module browse page. It is currently intended to be the homepage of
+the entire website and will eventually feature cards and categories for things
+other than modules - advertising cards for Discord, wiki etc.
+
+Essentially it is a container page that is populated with actual content by
+includes/homepage.js
+*/
 ?>
 <!DOCTYPE html>
 <html>
@@ -24,10 +37,10 @@
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
   })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
- 
+
   ga('create', 'UA-63061711-1', 'auto');
   ga('send', 'pageview');
- 
+
 </script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 <script src="includes/homepage.js?nocache=<?php echo(rand(0,999999)); ?>"></script>

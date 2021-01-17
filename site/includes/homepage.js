@@ -1,3 +1,11 @@
+/*
+================
+contributors:
+  Sparks
+================
+JS for the module browse page
+*/
+
 var module_categories = {};
 
 window.onload = function(){
