@@ -1,9 +1,5 @@
 <?php
-/*==============
-contributors:
-  Sparks
-================
-
+/*
 This file looks through the local git copies for $module_id to find the most recent
 and visible pack.mcmeta. It then returns the module metadata from that file.
 called by the new website homepage when a module is clicked.
@@ -28,7 +24,7 @@ foreach($versions as $version){
       $mcmetafound = true;
       break;
     }
-    
+
   }
 }
 if($mcmetafound){

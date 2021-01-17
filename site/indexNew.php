@@ -1,10 +1,6 @@
 <?php
 /*
 created 19 august 2020
-==============
-contributors:
-  Sparks
-==============
 
 This is the module browse page. It is currently intended to be the homepage of
 the entire website and will eventually feature cards and categories for things

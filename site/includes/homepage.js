@@ -1,8 +1,4 @@
 /*
-================
-contributors:
-  Sparks
-================
 JS for the module browse page
 */
 
