@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   id="Boots"
+   viewBox="0 0 348 249"
+   version="1.1"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="boots_of_ostara_1.svg">
+  <metadata
+     id="metadata19">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title>boots_of_ostara</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     id="namedview17"
+     showgrid="false"
+     inkscape:zoom="1.6551724"
+     inkscape:cx="73.67206"
+     inkscape:cy="183.96981"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="Boots" />
+  <defs
+     id="defs3">
+    <style
+       id="style5">.cls-1{fill:#126b94;}.cls-2{fill:#4aa0c7;}.cls-3{fill:#4ac752;}</style>
+  </defs>
+  <title
+     id="title7">boots_of_ostara</title>
+  <g
+     id="Right_Boot"
+     data-name="Right Boot"
+     transform="matrix(0.9563253,0,0,0.9563253,7.5993976,5.4375)">
+    <polygon
+       id="Outline-2"
+       data-name="Outline"
+       class="cls-1"
+       points="0,174 0,249 100,249 100,224 125,224 125,198 149,198 149,0 75,0 75,25 49,25 49,149 25,149 25,174 25,174 "
+       style="fill:#4aa0c7;fill-opacity:1" />
+    <polygon
+       id="Inside-2"
+       data-name="Inside"
+       class="cls-2"
+       points="75,25 75,149 49,149 49,174 100,174 100,149 125,149 125,25 125,25 "
+       style="fill:#4aa0c7;fill-opacity:1" />
+    <polygon
+       id="Bottom-2"
+       data-name="Bottom"
+       class="cls-3"
+       points="100,174 100,198 49,198 49,174 25,174 25,224 100,224 100,198 125,198 125,174 125,174 "
+       style="fill:#7cbbd8;fill-opacity:1" />
+  </g>
+</svg>
