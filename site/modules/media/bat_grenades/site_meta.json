@@ -1,0 +1,15 @@
+{
+  "promo_images":[
+      {
+        "type":"image",
+        "link":"promo_1.png",
+        "credit":"Sparks"
+        "alt":"A bat exploding in a cave!"
+      },
+      {
+        "type":"video",
+        "link":"https://www.youtube.com/watch?v=uUoEKtte1GQ",
+        "alt":"Bat Grenades explaination video."
+      }
+  ]
+}
