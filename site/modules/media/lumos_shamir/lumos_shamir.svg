@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="lumos_shamir" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+	 y="0px" width="511.473px" height="511.473px" viewBox="0 0 511.473 511.473" enable-background="new 0 0 511.473 511.473"
+	 xml:space="preserve">
+<rect fill="#FFFFFF" width="511.473" height="511.473"/>
+<g id="Icon">
+	<path id="Light" fill="#DBECF4" d="M257.736,154.369c72.021,0,130.403,44.015,130.403,98.315c0,54.294-58.382,98.31-130.403,98.31
+		c-72.021,0-130.405-44.016-130.405-98.31C127.331,198.383,185.716,154.369,257.736,154.369z"/>
+	<g id="Pickaxe">
+		<g>
+			<polygon fill="#4AA0C7" points="338.601,276.623 352.897,262.323 372.387,281.814 358.087,296.108 			"/>
+			<polygon fill="#4AA0C7" points="257.598,224.874 300.521,181.94 372.101,253.506 329.166,296.441 			"/>
+			<polygon fill="#4AA0C7" points="143.098,253.491 214.661,181.92 257.596,224.853 186.03,296.428 			"/>
+			
+				<rect x="217.092" y="184.389" transform="matrix(-0.7071 0.7071 -0.7071 -0.7071 598.745 201.7623)" fill="#4AA0C7" width="80.989" height="80.99"/>
+			
+				<rect x="146.582" y="270.283" transform="matrix(-0.7071 0.7071 -0.7071 -0.7071 469.8428 366.1698)" fill="#4AA0C7" width="25.009" height="20.215"/>
+			<polygon fill="#4AA0C7" points="228.936,282.166 257.565,253.537 286.203,282.167 257.566,310.805 			"/>
+			<polygon fill="#4AA0C7" points="228.935,310.768 257.566,282.144 286.205,310.768 257.566,339.407 			"/>
+			<polygon fill="#4AA0C7" points="228.936,339.403 257.566,310.764 286.205,339.403 257.566,368.035 			"/>
+			<polygon fill="#4AA0C7" points="228.936,368.016 257.566,339.382 286.205,368.016 257.566,396.645 			"/>
+			<polygon fill="#4AA0C7" points="228.932,396.677 257.563,368.044 286.203,396.677 257.563,425.306 			"/>
+			<polygon fill="#4AA0C7" points="228.768,425.334 257.408,396.696 286.038,425.331 257.406,453.965 			"/>
+			<polygon fill="#4AA0C7" points="228.664,454.201 257.294,425.568 285.934,454.201 257.294,482.843 			"/>
+		</g>
+		<rect x="228.651" y="253.496" fill="#4AA0C7" width="57.82" height="28.677"/>
+		<rect x="228.651" y="259.811" fill="#A1CEE2" width="57.82" height="16.451"/>
+	</g>
+	<g id="Flame_Particles">
+		<g id="Flame">
+			<rect x="356.046" y="191.096" fill="#A1CEE2" width="5.914" height="11.817"/>
+			<rect x="361.96" y="173.317" fill="#A1CEE2" width="5.9" height="35.556"/>
+			<rect x="361.96" y="185.186" fill="#A1CEE2" width="11.819" height="23.685"/>
+			<rect x="356.046" y="197.054" fill="#A1CEE2" width="23.693" height="5.909"/>
+			<rect x="356.046" y="185.186" fill="#4AA0C7" width="5.914" height="5.91"/>
+			<rect x="356.046" y="202.964" fill="#4AA0C7" width="5.914" height="5.908"/>
+			<rect x="373.828" y="202.964" fill="#4AA0C7" width="5.911" height="5.908"/>
+			<rect x="373.828" y="191.096" fill="#4AA0C7" width="5.911" height="5.906"/>
+			<rect x="367.871" y="173.317" fill="#4AA0C7" width="5.908" height="11.818"/>
+			<rect x="361.96" y="167.407" fill="#4AA0C7" width="5.9" height="5.91"/>
+			<rect x="361.96" y="191.096" fill="#FFFFFF" width="5.9" height="11.817"/>
+			<rect x="361.96" y="197.054" fill="#FFFFFF" width="11.819" height="5.909"/>
+			<rect x="367.871" y="167.407" fill="#3D83A3" width="5.908" height="5.91"/>
+			<rect x="361.96" y="161.498" fill="#3D83A3" width="5.9" height="5.909"/>
+		</g>
+		<g id="Flame_1_">
+			<rect x="145.417" y="190.739" fill="#A1CEE2" width="5.042" height="10.084"/>
+			<rect x="150.458" y="175.66" fill="#A1CEE2" width="5.044" height="30.155"/>
+			<rect x="150.458" y="185.695" fill="#A1CEE2" width="10.084" height="20.119"/>
+			<rect x="145.417" y="195.73" fill="#A1CEE2" width="20.12" height="5.041"/>
+			<rect x="145.417" y="185.695" fill="#4AA0C7" width="5.042" height="5.044"/>
+			<rect x="145.417" y="200.771" fill="#4AA0C7" width="5.042" height="5.043"/>
+			<rect x="160.491" y="200.771" fill="#4AA0C7" width="5.044" height="5.043"/>
+			<rect x="160.491" y="190.739" fill="#4AA0C7" width="5.044" height="5.042"/>
+			<rect x="155.452" y="175.66" fill="#4AA0C7" width="5.042" height="10.088"/>
+			<rect x="150.458" y="170.617" fill="#4AA0C7" width="5.044" height="5.043"/>
+			<rect x="150.458" y="190.739" fill="#FFFFFF" width="5.044" height="10.084"/>
+			<rect x="150.458" y="195.73" fill="#FFFFFF" width="10.084" height="5.041"/>
+			<rect x="155.452" y="170.617" fill="#3D83A3" width="5.042" height="5.043"/>
+			<rect x="150.458" y="165.574" fill="#3D83A3" width="5.044" height="5.042"/>
+		</g>
+		<g id="Flame_3_">
+			<rect x="194.571" y="337.856" fill="#A1CEE2" width="5.198" height="10.438"/>
+			<rect x="199.767" y="322.218" fill="#A1CEE2" width="5.196" height="31.317"/>
+			<rect x="199.767" y="332.657" fill="#A1CEE2" width="10.441" height="20.878"/>
+			<rect x="194.571" y="343.095" fill="#A1CEE2" width="20.886" height="5.2"/>
+			<rect x="194.571" y="332.657" fill="#4AA0C7" width="5.198" height="5.2"/>
+			<rect x="194.571" y="348.345" fill="#4AA0C7" width="5.198" height="5.19"/>
+			<rect x="210.259" y="348.345" fill="#4AA0C7" width="5.198" height="5.19"/>
+			<rect x="210.259" y="337.856" fill="#4AA0C7" width="5.198" height="5.192"/>
+			<rect x="205.011" y="322.218" fill="#4AA0C7" width="5.197" height="10.438"/>
+			<rect x="199.767" y="316.961" fill="#4AA0C7" width="5.196" height="5.201"/>
+			<rect x="199.767" y="337.856" fill="#FFFFFF" width="5.196" height="10.438"/>
+			<rect x="199.767" y="343.095" fill="#FFFFFF" width="10.441" height="5.2"/>
+			<rect x="205.011" y="316.961" fill="#3D83A3" width="5.197" height="5.201"/>
+			<rect x="199.767" y="311.774" fill="#3D83A3" width="5.196" height="5.187"/>
+		</g>
+	</g>
+</g>
+<g id="Shamir">
+	<rect id="Cast" x="223.912" y="53.095" fill="#3D83A3" width="67.713" height="67.718"/>
+	<rect id="Band" x="217.386" y="74.141" fill="#7FBCD7" width="80.102" height="22.166"/>
+</g>
+<g id="Shamir_Particles">
+	<g>
+		<polygon fill="#7FBCD7" points="311.637,139.602 313.171,132.941 319.834,134.483 318.303,141.133 		"/>
+		<polygon fill="#7FBCD7" points="317.692,143.808 318.322,141.125 321.004,141.739 320.375,144.419 		"/>
+		<polygon fill="#7FBCD7" points="319.936,134.537 320.529,131.855 323.212,132.479 322.61,135.161 		"/>
+		<polygon fill="#7FBCD7" points="310.59,132.408 311.22,129.727 313.901,130.345 313.272,133.026 		"/>
+		<polygon fill="#7FBCD7" points="308.412,141.653 309.043,138.974 311.724,139.598 311.092,142.276 		"/>
+	</g>
+	<g>
+		<polygon fill="#7FBCD7" points="193.338,131.458 196.177,120.872 206.763,123.701 203.923,134.287 		"/>
+		<polygon fill="#7FBCD7" points="202.754,138.493 203.886,134.259 208.123,135.398 206.98,139.626 		"/>
+		<polygon fill="#7FBCD7" points="206.697,123.725 207.824,119.489 212.064,120.625 210.922,124.852 		"/>
+		<polygon fill="#7FBCD7" points="191.87,119.686 193.008,115.455 197.232,116.591 196.106,120.817 		"/>
+		<polygon fill="#7FBCD7" points="187.913,134.542 189.055,130.31 193.281,131.449 192.157,135.678 		"/>
+	</g>
+	<g>
+		<polygon fill="#7FBCD7" points="181.182,55.487 184.848,49.717 190.604,53.383 186.954,59.145 		"/>
+		<polygon fill="#7FBCD7" points="185.528,61.458 186.998,59.129 189.322,60.611 187.845,62.934 		"/>
+		<polygon fill="#7FBCD7" points="190.636,53.4 192.101,51.076 194.43,52.553 192.948,54.876 		"/>
+		<polygon fill="#7FBCD7" points="182.549,48.259 184.026,45.932 186.354,47.41 184.872,49.728 		"/>
+		<polygon fill="#7FBCD7" points="177.386,56.317 178.857,53.991 181.18,55.468 179.706,57.786 		"/>
+	</g>
+	<g>
+		<polygon fill="#7FBCD7" points="262.109,30.117 263.008,27.45 265.676,28.319 264.775,30.983 		"/>
+		
+			<rect x="260.7" y="24.276" transform="matrix(-0.3086 0.9512 -0.9512 -0.3086 367.4182 -215.7015)" fill="#7FBCD7" width="2.8" height="2.806"/>
+		<polygon fill="#7FBCD7" points="265.679,28.232 266.543,25.574 269.213,26.442 268.313,29.11 		"/>
+		<polygon fill="#7FBCD7" points="258.571,31.848 259.42,29.188 262.088,30.056 261.224,32.723 		"/>
+		
+			<rect x="264.254" y="31.331" transform="matrix(-0.3083 0.9513 -0.9513 -0.3083 378.6982 -209.8865)" fill="#7FBCD7" width="2.8" height="2.806"/>
+	</g>
+	<g>
+		<polygon fill="#7FBCD7" points="324.891,69.94 331.729,69.866 331.786,76.695 324.983,76.762 		"/>
+		<polygon fill="#7FBCD7" points="331.786,76.702 334.558,76.669 334.58,79.424 331.808,79.447 		"/>
+		<polygon fill="#7FBCD7" points="331.706,67.123 334.442,67.092 334.465,69.846 331.728,69.87 		"/>
+		<polygon fill="#7FBCD7" points="322.17,67.271 324.902,67.248 324.927,69.998 322.191,70.026 		"/>
+		<polygon fill="#7FBCD7" points="322.284,76.804 325.018,76.774 325.04,79.524 322.308,79.558 		"/>
+	</g>
+</g>
+</svg>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1"
+	 id="svg8" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:svg="http://www.w3.org/2000/svg"
+	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="511.473px"
+	 height="511.473px" viewBox="0 0 511.473 511.473" enable-background="new 0 0 511.473 511.473" xml:space="preserve">
+<rect fill="#FFFFFF" width="511.473" height="511.477"/>
+<g id="Icon">
+	<g id="Tree">
+		<rect x="235.65" y="46.76" fill="#A1CEE2" width="37.565" height="265.269"/>
+		<rect x="194.665" y="83.188" fill="#A1CEE2" width="120.671" height="77.414"/>
+		<rect x="155.952" y="125.313" fill="#A1CEE2" width="198.099" height="37.575"/>
+	</g>
+	<g id="Hill_Back">
+		<rect y="126.978" fill="#A1CEE2" width="87.541" height="213.002"/>
+		<rect x="63.644" y="163.967" fill="#A1CEE2" width="52.617" height="129.825"/>
+		<rect x="99.229" y="203.351" fill="#A1CEE2" width="95.1" height="117.12"/>
+	</g>
+	<g id="Hill_Middle_1_">
+		<rect y="318.078" fill="#7FBCD7" width="511.469" height="193.395"/>
+		<rect x="78.849" y="282.135" fill="#7FBCD7" width="432.624" height="64.905"/>
+		<rect x="397.616" y="242.29" fill="#7FBCD7" width="113.853" height="94.483"/>
+	</g>
+	<g id="Dungeon">
+		<rect id="Background" x="155.38" y="319.932" fill="#A1CEE2" width="221.703" height="191.527"/>
+		<polygon fill="#4AA0C7" points="296.397,395.895 269.279,395.895 269.279,395.916 252.483,395.916 252.483,395.981 
+			190.119,395.981 190.119,453.177 255.723,453.177 255.723,435.256 273.853,435.256 273.853,415.347 296.397,415.347 		"/>
+		<polygon fill="#4AA0C7" points="392.34,416.756 392.34,405.96 392.14,405.96 392.14,395.557 346.725,395.557 346.725,405.96 
+			336.744,405.96 336.744,415.351 327.129,415.351 327.129,424.568 317.119,424.568 317.119,434.967 307.925,434.967 
+			307.925,444.763 296.318,444.763 296.318,452.978 285.131,452.978 285.131,464.774 274.117,464.774 274.117,477.42 
+			390.743,477.42 390.743,467.161 390.937,467.161 390.937,454.377 391.752,454.377 391.752,447.956 391.947,447.956 
+			391.947,435.765 392.34,435.765 392.34,424.568 391.359,424.568 391.359,416.756 		"/>
+		<g id="Spawner">
+			<rect x="196.292" y="376.341" fill="#3D83A3" width="19.191" height="1.038"/>
+			<rect x="196.292" y="379.424" fill="#3D83A3" width="19.191" height="1.037"/>
+			<rect x="196.292" y="382.488" fill="#3D83A3" width="19.191" height="1.028"/>
+			<rect x="196.292" y="385.573" fill="#3D83A3" width="19.191" height="1.038"/>
+			<rect x="196.292" y="388.634" fill="#3D83A3" width="19.191" height="1.033"/>
+			<rect x="196.292" y="391.679" fill="#3D83A3" width="19.191" height="1.038"/>
+			<rect x="196.292" y="394.833" fill="#3D83A3" width="19.191" height="1.038"/>
+			<rect x="196.262" y="376.341" fill="#3D83A3" width="1.034" height="19.46"/>
+			<rect x="199.336" y="376.341" fill="#3D83A3" width="1.024" height="19.46"/>
+			<rect x="202.417" y="376.338" fill="#3D83A3" width="1.023" height="19.459"/>
+			<rect x="205.475" y="376.341" fill="#3D83A3" width="1.03" height="19.46"/>
+			<rect x="208.534" y="376.341" fill="#3D83A3" width="1.034" height="19.46"/>
+			<rect x="211.602" y="376.34" fill="#3D83A3" width="1.034" height="19.459"/>
+			<rect x="214.668" y="376.338" fill="#3D83A3" width="0.865" height="19.459"/>
+		</g>
+		<g id="Zombie">
+			<rect x="227.079" y="356.997" fill="#3D83A3" width="9.17" height="10.173"/>
+			<rect x="229.107" y="367.195" fill="#3D83A3" width="14.369" height="5.155"/>
+			<rect x="229.107" y="365.182" fill="#3D83A3" width="5.045" height="30.787"/>
+		</g>
+		<g id="Zombie_1_">
+			<rect x="355.775" y="356.995" fill="#3D83A3" width="9.17" height="10.173"/>
+			<rect x="348.548" y="367.195" fill="#3D83A3" width="14.354" height="5.155"/>
+			<rect x="357.871" y="365.176" fill="#3D83A3" width="5.034" height="30.789"/>
+		</g>
+	</g>
+	<g id="Hill_Front">
+		<rect y="359.227" fill="#3D83A3" width="116.751" height="152.232"/>
+		<rect x="108.522" y="395.954" fill="#3D83A3" width="87.74" height="115.505"/>
+		<rect x="176.224" y="436.673" fill="#3D83A3" width="58.726" height="74.8"/>
+	</g>
+</g>
+<rect x="377.083" y="387.137" fill="#7FBCD7" width="22.996" height="91.372"/>
+</svg>
