@@ -1,0 +1,15 @@
+{
+  "promo_images":[
+      {
+        "type":"image",
+        "link":"promo_1.png",
+        "credit":"Bloo"
+        "alt":"Cozy in the cold"
+      },
+      {
+        "type":"video",
+        "link":"https://www.youtube.com/watch?v=uUoEKtte1GQ",
+        "alt":"Bat Grenades explaination video."
+      }
+  ]
+}
