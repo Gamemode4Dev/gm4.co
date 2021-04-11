@@ -2,15 +2,48 @@
 JS for the module browse page
 */
 
+const LATEST_VERSION = "1.16";
+
 var module_categories = {};
+var cardWidth = 237;
+var barHeight = 331;
+var windowWidth = 0;
+var visibleCards = 0;
+var siteTheme = "light";
 
 window.onload = function(){
-  console.log("loaded");
   if (window.matchMedia != "undefined" && window.matchMedia('(prefers-color-scheme: dark)').matches) {
     $("body").removeClass("light");
     $("body").addClass("dark");
+    siteTheme = "dark";
   }
   loadCategories();
+}
+
+$(window).resize(function(){
+  snug_fit_cards();
+});
+
+function snug_fit_cards(){
+  windowWidth = $(window).width();
+  visibleCards = Math.floor(windowWidth / cardWidth)-1;
+  difference = windowWidth - (visibleCards * cardWidth);
+  $(".moduleCard").width(cardWidth+(difference/visibleCards)-8);
+  $(".placeholderCard").width(cardWidth+(difference/visibleCards)-8);
+  $(".categoryBar").height(barHeight + (difference/visibleCards)-8);
+  $(".moduleCard img").width(150 + (difference/visibleCards)-8);
+  $(".moduleCard img").height(150 + (difference/visibleCards)-8);
+  $(".moduleCard img").css("top","calc(50% - " + (((150 + (difference/visibleCards)-8)/2) + 20) + "px");
+  $(".categoryBar").each(function(index){
+    cardCount = $(this).find(".moduleCard").length;
+    if(cardCount <= visibleCards){
+      $(this).find(".browseButton").hide();
+      $(this).find(".placeholderCard").remove();
+    }
+    else{
+      $(this).find(".browseButton").show();
+    }
+  });
 }
 
 function loadCategories(){
@@ -21,18 +54,53 @@ function loadCategories(){
       for(i=0;i<module_categories.length;i++){
         cards = "";
         cardarray = module_categories[i].modules;
-        for(j=0;j<cardarray.length;j++){
-          cards += '<div class="moduleCard noselect" data-module_id="'+cardarray[j]+'"><img src="modules/media/' + cardarray[j] + '.png" onerror="image_error(this)"><p class="cardName">' + cardarray[j].replace(/_/g, " ") + '</p></div>';
+        if(module_categories[i].order != undefined && module_categories[i].order == "shuffled"){
+          shuffleArray(cardarray);
         }
-        $("#categoriesContainer").append('<h2>' + module_categories[i].title + '</h2><div class="categoryBar">' + cards + '</div>');
+        for(j=0;j<cardarray.length;j++){
+          cards += '<div class="moduleCard noselect" data-module_id="'+cardarray[j]+'"><img src="modules/media/' + cardarray[j] + '/' + cardarray[j] + '.svg" onerror="image_error(this)"><p class="cardName">' + cardarray[j].replace(/_/g, " ") + '</p></div>';
+        }
+        $("#categoriesContainer").append('<h2>' + module_categories[i].title + ' <span style="opacity:0.5">(' + cardarray.length + ')</span></h2><div class="categoryBar"><div class="cardContainer">' + cards + '</div></div>');
       }
       //add listeners
-    $(".moduleCard").on("click",function(){
-      console.log($(this).parent());
-      $("#preview").remove();
-      $(this).parent().after('<div id="preview"><p>'+$(this).attr("data-module_id")+'</p></div>');
-      loadPreview($(this).attr("data-module_id"));
-    });
+      $(".moduleCard").on("click",function(){
+        if($(this).attr("data-module_id")!=undefined){
+          $("#preview").remove();
+          $(this).parent().parent().after('<div id="preview"></div>');
+          loadPreview($(this).attr("data-module_id"));
+        }      
+      });
+      
+      $(".categoryBar").append('<div class="browseButton browseButtonLeft"></div><div class="browseButton browseButtonRight"></div>');
+      snug_fit_cards();
+
+      $(".browseButtonRight").on("click",function(){
+        if($(this).parent().find(".cardContainer").find(".placeholderCard").length == 0){
+          $(this).parent().find(".cardContainer").append('<div class="placeholderCard noselect moduleCard"><img src="images/enderpuff_by_qbert.png"  title="End of results. Artwork by Qbert" alt="End of results"/><p class="cardName">You\'ve reached the end</p></div>');
+          snug_fit_cards();
+        }
+        $(this).parent().find(".cardContainer").animate({"right":((cardWidth+(difference/visibleCards))*(visibleCards-1))+"px"},400,"swing",function(){
+          for(i=0;i<Math.max(visibleCards-1,1);i++){
+            $(this).append($(this).find(".moduleCard:first"));
+          }
+          $(this).css("right","0px");
+        });
+        
+      });
+      $(".browseButtonLeft").on("click",function(){
+        if($(this).parent().find(".cardContainer").find(".placeholderCard").length == 0){
+          $(this).parent().find(".cardContainer").append('<div class="placeholderCard noselect moduleCard"><img src="images/enderpuff_by_qbert.png" title="End of results. Artwork by Qbert" alt="End of results"/><p class="cardName">You\'ve reached the end</p></div>');
+          snug_fit_cards();
+        }
+        $(this).parent().find(".cardContainer").css("right",((cardWidth+(difference/visibleCards))*(visibleCards-1))+"px");
+        for(i=0;i<Math.max(visibleCards-1,1);i++){
+          $(this).parent().find(".cardContainer").prepend($(this).parent().find(".cardContainer").find(".moduleCard:last"));
+        }
+        $(this).parent().find(".cardContainer").animate({"right":"0px"},400,"swing",function(){
+          
+        });
+        
+      });
     }
     else{
       alert("Something went wrong and modules couldn't be loaded");
@@ -40,24 +108,90 @@ function loadCategories(){
   });
 }
 
+function toggleTheme(){
+  if(siteTheme=="light"){
+    theme("dark");
+  }
+  else{
+    theme("light");
+  }
+}
 function theme(mode){
   if(mode=="light"){
     $("body").removeClass("dark");
     $("body").addClass("light");
+    siteTheme = "light";
   }
   if(mode=="dark"){
     $("body").removeClass("light");
     $("body").addClass("dark");
+    siteTheme = "dark";
   }
 }
 
 function loadPreview(module_id){
-  $.ajax({url:"includes/getmoduleinfo.php?module_id="+module_id}).done(function(data){
-    data = JSON.parse(data);
-    console.log(data);
-  });
+  if(!$(this).hasClass("placeholderCard")){
+    $.ajax({url:"includes/getmoduleinfo.php?module_id="+module_id}).done(function(data){
+      data = JSON.parse(data);
+      console.log(data);
+      $("#preview").append("<div id='previewLeft'></div>");
+      $("#preview").append("<div id='previewRight'><h3>" + data.module_name + "</h3></div>");
+      $("#previewRight").append("<p>" + data.site_description + "</p><br>");
+      if(data.mcversion == LATEST_VERSION){
+        $("#previewRight").append("<a target='download_frame' href='modules/download/"+LATEST_VERSION+"/"+data.module_id.replace("_","-") +"' class='buttonLink'><span class='datapack_icon'></span> Download " + data.module_name + " for Java " + LATEST_VERSION + "</a>");
+      }
+      $("#previewRight").append("<br><br><a class='buttonLink' href='https://www.gm4.co/modules/" + data.module_id.replace("_","-") + "'><span class='more_icon'></span> More Downloads &amp; Info</a><br><h3 class='dividingHeader'>Info Links</h3>");
+      if(data.wiki_link != undefined && data.wiki_link != ""){
+        $("#previewRight").append("<p><a href='" + data.wiki_link + "' target='_BLANK'>Read about this on the Gamemode 4 Wiki</a></p>");
+      }
+      //load images from site meta
+      if(data.promo != undefined && data.promo != null && data.promo != "null" && data.promo != ""){
+        load_site_meta(data);
+      }
+      else{
+        $("#previewLeft").append("<img width='500px' height='500px' src='modules/media/" + module_id + "/" + module_id + ".svg' />");
+      }
+    });
+  }
 }
 
 function image_error(caller){
   $(caller).prop("src","../modules/media/placeholder.png");
+}
+
+function load_site_meta(moduleInfo){
+  console.log("loading site meta for " + moduleInfo.module_id); 
+  data = moduleInfo.promo;
+  if(data.promo_images == undefined || data.promo_images.length==0){
+    $("#previewLeft").append("<img width='500px' height='500px' src='modules/media/" + module_id + "/" + module_id + ".svg' />");
+  }
+  if(data.promo_images != undefined && data.promo_images.length==1){
+    if(data.promo_images[0].type=="image"){
+      $("#previewLeft").css("background-image","url(modules/media/" + moduleInfo.module_id + "/" + data.promo_images[0].image + ")");
+      $("#previewLeft").prop("title",data.promo_images[0].alt + " (image credit: " + data.promo_images[0].credit + ")");
+    }
+    if(data.promo_images[0].type=="video"){
+      $("#previewLeft").append("<a href='" + data.promo_images[i].image + "'><div class='promo_thumbnail' style='background-image:url(modules/media/" + module_id + "/" + module_id + ".svg)' title='" + data.promo_images[i].alt + "'><img style='width:125px;position:absolute;left:62px;top:62px;' src='images/play.svg' title='" + data.promo_images[i].alt + "'/></div></a>");
+    }
+  }
+  if(data.promo_images.length == 2){
+    $("#previewLeft").css("width","250px");
+  }
+  if(data.promo_images.length > 1){
+    tileTotal = data.promo_images.length;
+    
+    if(tileTotal > 4) tileTotal = 4;
+    for(i=0;i<tileTotal;i++){
+      if(data.promo_images[i].type=="image"){
+        $("#previewLeft").append("<div class='promo_thumbnail' title='" + data.promo_images[i].alt + " (image credit: " + data.promo_images[i].credit + ")' style='background-image:url(modules/media/" + moduleInfo.module_id + "/" + data.promo_images[i].image + ")'></div>");
+      }
+      if(data.promo_images[i].type=="video"){
+        $("#previewLeft").append("<a href='" + data.promo_images[i].link + "'><div class='promo_thumbnail' style='background-image:url(modules/media/" + moduleInfo.module_id + "/" + data.promo_images[i].image + ")' title='" + data.promo_images[i].alt + "'><img style='width:125px;position:absolute;left:62px;top:62px;' src='images/play.svg' title='" + data.promo_images[i].alt + "'/></div></a>");
+      }
+    }
+  }
+}
+
+function shuffleArray(arr) {
+  arr.sort(() => Math.random() - 0.5);
 }
