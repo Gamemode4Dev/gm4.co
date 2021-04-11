@@ -123,6 +123,18 @@
         "vertical_rails",
         "ziprails"
       ]
+    },
+    {
+      "title":"Metallurgy",
+      "modules":[
+        "metallurgy",
+        "fulcio_shamir",
+        "lumos_shamir",
+        "metallurgy_shamir",
+        "moneo_shamir",
+        "percurro_shamir",
+        "orb_of_ankou"
+      ]
     }
   ]
 }
