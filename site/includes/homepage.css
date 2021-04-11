@@ -43,11 +43,32 @@ h2{
   padding-left:5px;
 }
 
+a{
+  color: var(--main-text-color);
+}
+
+a:visited{
+  color: var(--main-text-color);
+}
+
 .noselect {
   -webkit-user-select: none;  /* Chrome all / Safari all */
   -moz-user-select: none;     /* Firefox all */
   -ms-user-select: none;      /* IE 10+ */
   user-select: none;          /* Likely future */
+}
+
+#themeButton{
+  position:absolute;
+  top:10px;
+  right:10px;
+  width:40px;
+  height:40px;
+  content:"";
+  background-image:url(../images/theme_button.svg);
+  background-size:contain;
+  background-position:center;
+  background-repeat:no-repeat;
 }
 
 .categoryBar{
@@ -60,7 +81,41 @@ h2{
   overflow:hidden;
 }
 
-.moduleCard{
+.cardContainer{
+  height:100%;
+  width:5000px;
+  position:relative;
+}
+
+.browseButton{
+  height:100%;
+  width:30px;
+  background-color:rgba(200,200,200,0.5);
+  content:" ";
+  position:absolute;
+  top:0px;
+  z-index:1;
+  background-repeat:no-repeat;
+  background-position:center;
+  background-size:contain;
+}
+
+.browseButton:hover{
+  transform:scale(1.2);
+  background-color:rgba(200,200,200,0.9);
+}
+
+.browseButtonLeft{
+  left:0px;
+  background-image:url(../images/leftArrow.svg);
+}
+
+.browseButtonRight{
+  right:0px;
+  background-image:url(../images/rightArrow.svg);
+}
+
+.moduleCard, .placeholderCard{
   position:relative;
   background: linear-gradient(to right bottom, var(--modulecard-bg-top) 50%, var(--modulecard-bg-bottom) 50%);
   height:calc(100% - 6px);
@@ -72,6 +127,7 @@ h2{
   margin-right:2px;
   transition:0.1s;
   cursor:pointer;
+  border-radius:20px;
 }
 
 .moduleCard:hover{
@@ -89,6 +145,7 @@ h2{
   left:0px;
   padding:5px;
   margin:0px;
+  text-align:center;
   text-transform:capitalize;
 }
 
@@ -96,17 +153,16 @@ h2{
   position:absolute;
   left:41px;
   top:calc(50% - 70px);
-  border-radius:50%;
+  border-radius:20px;
   transition:0.1s;
   width:150px;
   height:150px;
 }
 
 .moduleCard:hover img{
-  top:calc(50% - 75px);
-  left:39px;
-  width:155px;
-  height:155px;
+  transform:translateX(-3px);
+  transform:translateY(-3px);
+  transform: scale(1.03);
 }
 
 .moduleCardbg{
@@ -117,11 +173,101 @@ h2{
   border-radius:0% !important;
 }
 
+.dividingHeader{
+  width:100%;
+  border-bottom:1px solid white;
+}
+
 #preview{
   width:100%;
   background-color:var(--preview-bg);
-  height:500px;
+  min-height:500px;
   -webkit-box-shadow: inset 0px 0px 21px 0px rgba(128,128,128,0.25);
   -moz-box-shadow: inset 0px 0px 21px 0px rgba(128,128,128,0.25);
   box-shadow: inset 0px 0px 21px 0px rgba(0,0,0,0.25);
 }
+
+#previewLeft{
+  width:500px;
+  height:500px;
+  float:left;
+  background-color: #CECECE;
+  overflow:hidden;
+  border-radius:20px;
+  position:relative;
+  display:inline-block;
+  background-size:cover;
+  background-repeat:no-repeat;
+  background-position:center;
+}
+
+#previewRight{
+  height:100%;
+  min-width:500px;
+  padding:10px;
+  float:left;
+  position:relative;
+  display:inline-block;
+  margin-left:10px;
+}
+
+.promo_thumbnail{
+  width:250px;
+  height:250px;
+  overflow:hidden;
+  position:relative;
+  display:inline-block;
+  padding:0px;
+  margin:0px;
+  border:0px;
+  background-size:cover;
+  background-repeat:no-repeat;
+  background-position:center;
+  content: "";
+}
+
+.datapack_icon{
+  position:relative;
+  display:inline-block;
+  width:35px;
+  content:" ";
+  height:35px;
+  background-image:url("https://www.gm4.co/images/datapack.svg");
+  background-repeat:no-repeat;
+  background-size:50px;
+  background-position:-9px -6px;
+  background-color:white;
+  border-radius:50%;
+  top:11px;
+  margin-left:5px;
+  margin-right:5px;
+}
+.more_icon{
+  position:relative;
+  display:inline-block;
+  width:35px;
+  content:" ";
+  height:35px;
+  background-image:url("https://www.gm4.co/images/rightArrow.svg");
+  background-repeat:no-repeat;
+  background-size:contain;
+  background-position:center;
+  background-color:white;
+  border-radius:50%;
+  top:11px;
+  margin-left:5px;
+  margin-right:5px;
+}
+.buttonLink{
+  color:white;
+  background-color:#4AA0C7;
+  padding:10px;
+  margin-top:10px;
+  padding-left:0px;
+}
+
+.buttonLink:link, .buttonLink:visited, .buttonLink:hover{
+  color:white;
+  text-decoration:none;
+}
+
