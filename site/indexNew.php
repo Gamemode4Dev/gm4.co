@@ -42,7 +42,20 @@ includes/homepage.js
 <script src="includes/homepage.js?nocache=<?php echo(rand(0,999999)); ?>"></script>
 </head>
 <body class="light">
+<div id="themeButton" onclick="toggleTheme()"></div>
 <p>Test</p>
-<div id = "categoriesContainer"></div>
+<div id = "categoriesContainer">
+  <h2>Resources &amp; Tools</h2>
+  <div class="categoryBar">
+    <div class="moduleCard noselect" data-resource_id="resourcepack">
+      <img src="images/resource_cards/resourcepack_icon.png">
+      <p class="cardName">Resource Pack</p>
+    </div><div class="moduleCard noselect" data-resource_id="generator">
+      <img src="images/resource_cards/generator_icon.png">
+      <p class="cardName">Module Template</p>
+    </div>
+  </div>
+</div>
+<iframe name='download_frame' style='display:none;'></iframe>
 </body>
 </html>
