@@ -14,7 +14,7 @@ $versions = json_decode(file_get_contents("../modules/SOURCES.json"),true);
 $mcmetafound = false;
 $path = "";
 //loop through versions until valid meta is found
-foreach($versions as $version){
+foreach($versions as $key=>$version){
   $path = "../modules/template/templates/" . $version["local"] . "/GM4_Datapacks-". str_replace("/","-",$version["branch"]) . "/gm4_" . $module_id . "/pack.mcmeta";
   if(file_exists($path)){
     //check this version of the module isn't hidden.
@@ -22,6 +22,13 @@ foreach($versions as $version){
     $json = json_decode($mcmeta,true);
     if($json["hidden"] != true){
       $mcmetafound = true;
+      $json["mcversion"] = $key;
+      if(file_exists("../modules/media/" . $module_id . "/site_meta.json")){
+        $promo = file_get_contents("../modules/media/" . $module_id . "/site_meta.json");
+        $promo = json_decode($promo,true);
+        $json["promo"] = $promo;
+      }
+      $mcmeta = json_encode($json);
       break;
     }
 
