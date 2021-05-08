@@ -44,25 +44,42 @@ includes/homepage.js
 <body class="light">
 <div id="themeButton" onclick="toggleTheme()"></div>
 <div id="dataRequestBox"><p>Allow GM4 to remember your preferences?</p><span class="smallButton" onclick="storeUserPreferences()">Allow</span> <span class="smallButton" onclick="$(this).parent().hide();dataprompted = true;">Dismiss</span></div>
-<div id="header">
-  <h1><img src="images/logo/logo_clear.svg" width="40px" height="40px" alt="Gamemode 4 Logo"/> Gamemode 4</h1>
-  <ul>
-    <a href="https://www.gm4.co/"><li>Home</li></a>
-    <a href="https://www.gm4.co/server"><li>Server</li></a>
-    <a href="https://www.gm4.co/wiki"><li>Wiki</li></a>
-    
-  </ul>
-</div>
-<div id="slideshowContainer">
-  <div id="slideshowLeft" class="slideshowArrow" onclick="slideshow('left')"></div>
-  <div id="slideshowRight" class="slideshowArrow" onclick="slideshow()"></div>
-  <div id="slideshowSubContainer" class="cardContainer">
-    
+<div id="landingGroup" width="100%">
+  <div id="headerGroup">
+    <div id="header" style="display: flex; margin-top: 4px">
+      <a href="https://www.gm4.co/" style="text-decoration: none;">
+        <h1 style="display: block;">
+          <img src="images/logo/logo_clear.svg" height="32px" alt="Gamemode 4 Logo"/>
+          <span >Gamemode 4</span>
+        </h1>
+      </a>
+      <ul style="display: flex;">
+        <span style="cursor: pointer;" onclick="switchView('All Modules', $('#allModules')[0], true)"><li>Modules</li></span>
+        <a href="https://www.gm4.co/wiki"><li> Wiki</li></a>
+        <a href="https://www.gm4.co/server"><li> Server</li></a>
+      </ul>
+    </div>
+    <div id="slideshowContainer">
+      <div id="slideshowLeft" class="slideshowArrow" onclick="slideshow('left')"></div>
+      <div id="slideshowRight" class="slideshowArrow" onclick="slideshow()"></div>
+      <div id="slideshowSubContainer" class="cardContainer">
+        
+      </div>
+    </div>
   </div>
+  <div class="pageShadowUp" style="height: 50px; ">
+    <div style="width: calc(100% / 1.2 - 20px); margin: auto; padding: 10px">
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non consequatur sit, quisquam soluta exercitationem hic! Reprehenderit repellendus rem velit blanditiis asperiores est tempora vel, magnam neque enim ipsa, sequi necessitatibus.
+    </div>
+  </div>
+</div>
+<div id="pageArrowDown" class="pageShadowDown" style="height: 50px; width: 120%; text-align: center">
+  ↓ Scroll down ↓
+</div>
 </div>
 <div id = "moduleNavBar">
   <span onclick = "switchView('Browse',this)" class="moduleNavButton moduleNavButtonSelected noselect">Browse</span>
-  <span onclick = "switchView('All Modules',this)" class="moduleNavButton noselect">All Modules</span>
+  <span id = "allModules" onclick = "switchView('All Modules',this)" class="moduleNavButton noselect">All Modules</span>
 </div>
 <div id = "allModulesContainer" style="display:none">
   <select id="versionSelect" class="textSpace" onchange="versionView()">

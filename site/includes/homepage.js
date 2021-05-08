@@ -28,11 +28,11 @@ window.onload = function(){
   $.ajax({url:"images/slideshow/slides.json"}).done(function(data){
     slides = data.slides;
     for(i=0;i<slides.length;i++){
-      slide = '<div class="slideshowSlide" style="background-image:url(images/slideshow/'+ slides[i]["background-image"] +');background-repeat:no-repeat;background-position:center;background-size:cover"><div style="position:absolute;width:100%;padding:10px;';
-      if(slides[i].text.position == "top-left")slide += "top:0px;left:25px;text-align:left;";
-      if(slides[i].text.position == "bottom-left")slide += "bottom:0px;left:25px;text-align:left;";
-      if(slides[i].text.position == "bottom-right")slide += "bottom:0px;right:25px;text-align:right;";
-      if(slides[i].text.position == "top-right")slide += "top:0px;right:25px;text-align:right;";
+      slide = '<div class="slideshowSlide" style="background-image:url(images/slideshow/'+ slides[i]["background-image"] +');background-repeat:no-repeat;background-position:center;background-size:cover"><div class="slideshowText" style="';
+      if(slides[i].text.position == "top-left") slide += "top:0px;left:25px;text-align:left;";
+      if(slides[i].text.position == "bottom-left") slide += "bottom:0px;left:25px;text-align:left;";
+      if(slides[i].text.position == "bottom-right") slide += "bottom:0px;right:25px;text-align:right;";
+      if(slides[i].text.position == "top-right") slide += "top:0px;right:25px;text-align:right;";
       
       slide +='"><h2>' + slides[i].text.header + '</h2><p>' + slides[i].text.paragraph + '</p>';
       slide += '</div></div>';
@@ -198,7 +198,6 @@ function loadCategories(){
 function slideshow(dir = "right"){
   
   if(dir == "right"){
-    console.log("sliding right");
     $("#slideshowSubContainer").find(".slideshowSlide").animate({"right":windowWidth+"px"},800,"swing",function(){
       $("#slideshowSubContainer").find(".slideshowSlide").css("right","0px");
     } );
@@ -328,7 +327,7 @@ function load_site_meta(moduleInfo){
   }
 }
 
-function switchView(view, caller){
+function switchView(view, caller, scroll = false){
   $(".moduleNavButton").removeClass("moduleNavButtonSelected");
   $(caller).addClass("moduleNavButtonSelected");
   if(view == "Browse"){
@@ -339,6 +338,7 @@ function switchView(view, caller){
     $("#allModulesContainer").show();
     $("#categoriesContainer").hide();
   }
+  if(scroll) caller.scrollIntoView();
 }
 
 function storeUserPreferences(){
