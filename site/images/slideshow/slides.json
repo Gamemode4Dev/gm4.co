@@ -1,0 +1,28 @@
+{
+  "slides":[
+    {
+      "background-image":"server7_3.png",
+      "text":{
+        "header":"Tanks &amp; Transportation",
+        "paragraph":"Store potions, lava and other liquids in specialized tanks.<br>Wanna transport liquids in Minecarts? Gamemode 4's got your back!",
+        "position":"bottom-left"
+      }
+    },
+    {
+      "background-image":"server7_1.png",
+      "text":{
+        "header":"Gamemode 4 Public Server",
+        "paragraph":"Join us on play.gm4.co",
+        "position":"bottom-left"
+      }
+    },
+    {
+      "background-image":"server7_2.png",
+      "text":{
+        "header":"Magical Cauldrons",
+        "paragraph":"Add a brand new brewing mechanic<br>for custom armor, potions and teleportation!",
+        "position":"bottom-left"
+      }
+    }
+  ]
+}

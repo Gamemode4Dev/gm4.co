@@ -42,7 +42,55 @@ includes/homepage.js
 <script src="includes/homepage.js?nocache=<?php echo(rand(0,999999)); ?>"></script>
 </head>
 <body class="light">
-<p>Test</p>
-<div id = "categoriesContainer"></div>
+<div id="themeButton" onclick="toggleTheme()"></div>
+<div id="dataRequestBox"><p>Allow GM4 to remember your preferences?</p><span class="smallButton" onclick="storeUserPreferences()">Allow</span> <span class="smallButton" onclick="$(this).parent().hide();dataprompted = true;">Dismiss</span></div>
+<div id="header">
+  <h1><img src="images/logo/logo_clear.svg" width="40px" height="40px" alt="Gamemode 4 Logo"/> Gamemode 4</h1>
+  <ul>
+    <a href="https://www.gm4.co/"><li>Home</li></a>
+    <a href="https://www.gm4.co/server"><li>Server</li></a>
+    <a href="https://www.gm4.co/wiki"><li>Wiki</li></a>
+    
+  </ul>
+</div>
+<div id="slideshowContainer">
+  <div id="slideshowLeft" class="slideshowArrow" onclick="slideshow('left')"></div>
+  <div id="slideshowRight" class="slideshowArrow" onclick="slideshow()"></div>
+  <div id="slideshowSubContainer" class="cardContainer">
+    
+  </div>
+</div>
+<div id = "moduleNavBar">
+  <span onclick = "switchView('Browse',this)" class="moduleNavButton moduleNavButtonSelected noselect">Browse</span>
+  <span onclick = "switchView('All Modules',this)" class="moduleNavButton noselect">All Modules</span>
+</div>
+<div id = "allModulesContainer" style="display:none">
+  <select id="versionSelect" class="textSpace" onchange="versionView()">
+    <option value="loading">Loading...</option>
+  </select><input id="textSearch" type="text" class="textSpace" placeholder="search..." onkeyup="textSearch()"/>
+  <br/>
+</div>
+<div id = "categoriesContainer">
+  <h2>Resources &amp; Tools</h2>
+  <div class="categoryBar">
+    <a href="https://www.gm4.co/resource-pack"><div id="resourcepack_card" class="moduleCard noselect" data-resource_id="resourcepack">
+      <p class="cardName">Resource Pack</p>
+    </div></a><div class="moduleCard noselect" data-resource_id="discord">
+      <iframe id="discordIFrame"src="" width="96%" height="96%" allowtransparency="true" style="position:absolute;top:2%;left:2%;border-radius:20px" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
+    </div><a href="https://gm4.co/modules/generator"><div id="generator_card" class="moduleCard noselect" data-resource_id="generator">
+      <img src="images/resource_cards/generator_icon.png">
+      <p class="cardName">Module Template</p>
+    </div></a>
+  </div>
+</div>
+<iframe name='download_frame' style='display:none;'></iframe>
+<div id="footer">
+  <div id="footerContainer">
+    <p>Copyright &copy; <?php echo(date(Y)); ?> Gamemode 4<br>
+    <a href = "https://discord.com/invite/erHDVhPY" target="_blank">Discord</a> | <a href = "https://github.com/Gamemode4Dev/GM4_Datapacks" target="_blank">Github</a> | <a href = "https://twitter.com/GM4Official" target="_blank">Twitter</a>
+    </p>
+    <p style="font-size:9pt">Gamemode 4 is not an official Minecraft product, and is not approved by or associated with Mojang Studios. "Minecraft" is a trademark of Mojang AB and any usage of the Minecraft brand on this site is used in accordance with Mojang Studios' <a href="https://account.mojang.com/terms?ref=ft#brand" target="_blank">Brand and Asset Guidelines</a>.</p>
+  </div>
+</div>
 </body>
 </html>
