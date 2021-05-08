@@ -107,6 +107,32 @@ function snug_fit_cards(){
   $("#allModulesContainer").css("padding-left",(windowWidth%243)/2 + "px");
 }
 
+$(window).resize(function(){
+  snug_fit_cards();
+});
+
+function snug_fit_cards(){
+  windowWidth = $(window).width();
+  visibleCards = Math.floor(windowWidth / cardWidth)-1;
+  difference = windowWidth - (visibleCards * cardWidth);
+  $(".moduleCard").width(cardWidth+(difference/visibleCards)-8);
+  $(".placeholderCard").width(cardWidth+(difference/visibleCards)-8);
+  $(".categoryBar").height(barHeight + (difference/visibleCards)-8);
+  $(".moduleCard img").width(150 + (difference/visibleCards)-8);
+  $(".moduleCard img").height(150 + (difference/visibleCards)-8);
+  $(".moduleCard img").css("top","calc(50% - " + (((150 + (difference/visibleCards)-8)/2) + 20) + "px");
+  $(".categoryBar").each(function(index){
+    cardCount = $(this).find(".moduleCard").length;
+    if(cardCount <= visibleCards){
+      $(this).find(".browseButton").hide();
+      $(this).find(".placeholderCard").remove();
+    }
+    else{
+      $(this).find(".browseButton").show();
+    }
+  });
+}
+
 function loadCategories(){
   $.ajax({url:"modules/module_categories.json"}).done(function(data){
     module_categories = data.module_categories;
