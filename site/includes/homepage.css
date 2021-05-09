@@ -4,6 +4,7 @@ CSS for the module browse page
 .dark{
   --main-bg-color:#111111;
   --main-text-color:#DDDDDD;
+  --thematic-element-color:#333333;
   --category-bg:rgba(0,0,0,0);
   --modulecard-bg-top:#2f3441;
   --modulecard-bg-bottom:#212531;
@@ -14,6 +15,7 @@ CSS for the module browse page
 .light{
   --main-bg-color:white;
   --main-text-color:black;
+  --thematic-element-color:#bfbfbf;
   --category-bg:rgba(0,0,0,0);
   --modulecard-bg-top:#5eccff;
   --modulecard-bg-bottom:#4AA0C7;
@@ -23,7 +25,8 @@ CSS for the module browse page
 }
 
 body{
-  font-family: Verdana,Geneva,sans-serif;
+  font-family: 'Raleway',sans-serif;
+  font-variant-numeric: lining-nums;
   font-weight: normal;
   font-size: 14pt;
   color: #4AA0C7;
@@ -32,7 +35,6 @@ body{
   width:100%;
   overflow-x:hidden;
   height:100vh;
-  margin-top: 8px;
   -webkit-font-smoothing: antialiased;
   background-color: var(--main-bg-color);
   color: var(--main-text-color);
@@ -41,6 +43,7 @@ body{
 h2{
   font-size:16pt;
   margin-bottom:1px;
+  margin-top:1px;
   padding-left:5px;
 }
 
@@ -60,36 +63,86 @@ a:visited{
 }
 
 #header{
-  min-height:112px;
   color:#4AA0C7;
-  font-family: 'Raleway',sans-serif;
   text-align:center;
+  margin: 4px auto 0px;
+  display: flex;
+}
+
+#landingGroup {
+  height: calc(100vh - 50px); 
+  display: flex; 
+  flex-flow: column;
+  margin: 0px;
+}
+
+#headerGroup{
+  height: 25vw; 
+  min-height: 300px;
+  display: flex; 
+  flex-flow: column;
+}
+
+#headerFullWidth{
+  border-bottom:1px solid var(--thematic-element-color);
+  width: 100%;
+  display: flex; 
+  flex-flow: column;
 }
 
 #header a{
   color:#4AA0C7;
+  text-decoration: none;
 }
 
 #header a:visited{
   color:#4AA0C7;
 }
-#header ul{
+
+#header a span{
+  display: inline-block; 
+  margin-bottom: 5px;
+}
+
+@media (max-width: 720px){
+    #header a span{
+        display: none;
+    }
+}
+
+#header ul {
   position: relative;
   top: 0px;
   left: 0px;
-  min-height: 41px;
+  height: auto;
   text-align: center;
-  margin: 0 auto;
   padding: 0;
-  width: 100%;
+  margin: 0;
+}
+
+#header h1{
+  display: block;
+  font-size: 29pt;
+  font-weight:bold;
+  height: auto;
+  margin: auto;
+  margin-right: 16px;
+  text-align: center;
+  padding: 0px 15px 0px 15px;
+}
+
+#header h1:hover{
+  box-shadow: 0px -35px 0px -33px #4AA0C7 inset;
+  -webkit-box-shadow: 0px -35px 0px -33px #4AA0C7 inset;
+  -moz-box-shadow: 0px -35px 0px -33px #4AA0C7 inset;
 }
 
 #header ul li{
-  font-size: 18pt;
+    font-size: 20pt;
     font-weight: bold;
     display: inline-block;
     height: 40px;
-    padding: 10px 15px 0px 15px;
+    padding: 10px 10px 0px 10px;
 }
 
 #header ul li:hover{
@@ -103,22 +156,21 @@ a:visited{
   position:relative;
 }
 
-#header h1{
-  font-size:40pt;
-  font-weight:100;
-  margin-top:10px;
-  margin-bottom:0px;
-}
-
 #slideshowContainer{
   width:100%;
   position:relative;
   overflow:hidden;
   background-color:var(--modulecard-bg-bottom);
-  height:25vw;
+  flex: auto;
   -webkit-box-shadow: inset 0px 0px 48px -8px rgba(0,0,0,0.39);
   -moz-box-shadow: inset 0px 0px 48px -8px rgba(0,0,0,0.39);
   box-shadow: inset 0px 0px 48px -8px rgba(0,0,0,0.39);
+}
+
+#slideshowContainer .slideshowSlide .slideshowText {
+  position:absolute;
+  padding:10px;
+  width: 90%;
 }
 
 .slideshowSlide{
@@ -171,6 +223,26 @@ a:visited{
   -moz-box-shadow: -29px -1px 29px -25px rgba(0,0,0,0.3) inset;
 }
 
+.pageShadowDown{
+  bottom:0px;
+  box-shadow: 0px -50px 50px -50px rgba(0,0,0,0.3) inset;
+  -webkit-box-shadow: 0px -50px 50px -50px rgba(0,0,0,0.3) inset;
+  -moz-box-shadow: 0px -50px 50px -50px rgba(0,0,0,0.3) inset;
+  border-bottom:1px solid var(--thematic-element-color);
+  width: 120%;
+  margin: 0 -10%;
+}
+
+.pageShadowUp{
+  bottom:0px;
+  box-shadow: 0px 50px 50px -50px rgba(0,0,0,0.3) inset;
+  -webkit-box-shadow: 0px 50px 50px -50px rgba(0,0,0,0.3) inset;
+  -moz-box-shadow: 0px 50px 50px -50px rgba(0,0,0,0.3) inset;
+  border-top:1px solid var(--thematic-element-color);
+  width: 120%;
+  margin: 0 -10%;
+}
+
 .textSpace{
   margin-left:5px;
   color:var(--main-text-color);
@@ -205,11 +277,8 @@ select option{
 }
 
 #themeButton{
-  position:absolute;
-  top:10px;
-  right:10px;
-  width:40px;
-  height:40px;
+  width:32px;
+  height:32px;
   content:"";
   background-image:url(../images/theme_button.svg);
   background-size:contain;
@@ -219,8 +288,8 @@ select option{
 
 #moduleNavBar{
   position:relative;
-  width:100%;
-  border-bottom:1px solid var(--main-text-color);
+  width:auto;
+  border-bottom:1px solid var(--thematic-element-color);
   opacity:0.8;
   padding-left:5px;
 }
@@ -237,7 +306,7 @@ select option{
 }
 
 .moduleNavButtonSelected{
-  border-bottom:1px solid var(--main-text-color);
+  border-bottom:1px solid var(--thematic-element-color);
 }
 
 .categoryBar{
