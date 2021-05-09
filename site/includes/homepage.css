@@ -15,7 +15,7 @@ CSS for the module browse page
 .light{
   --main-bg-color:white;
   --main-text-color:black;
-  --thematic-element-color:#999999;
+  --thematic-element-color:#bfbfbf;
   --category-bg:rgba(0,0,0,0);
   --modulecard-bg-top:#5eccff;
   --modulecard-bg-bottom:#4AA0C7;
@@ -26,6 +26,7 @@ CSS for the module browse page
 
 body{
   font-family: 'Raleway',sans-serif;
+  font-variant-numeric: lining-nums;
   font-weight: normal;
   font-size: 14pt;
   color: #4AA0C7;
@@ -64,7 +65,8 @@ a:visited{
 #header{
   color:#4AA0C7;
   text-align:center;
-  margin: 0 auto;
+  margin: 4px auto 0px;
+  display: flex;
 }
 
 #landingGroup {
@@ -81,8 +83,16 @@ a:visited{
   flex-flow: column;
 }
 
+#headerFullWidth{
+  border-bottom:1px solid var(--thematic-element-color);
+  width: 100%;
+  display: flex; 
+  flex-flow: column;
+}
+
 #header a{
   color:#4AA0C7;
+  text-decoration: none;
 }
 
 #header a:visited{
@@ -94,7 +104,7 @@ a:visited{
   margin-bottom: 5px;
 }
 
-@media (max-width: 640px){
+@media (max-width: 720px){
     #header a span{
         display: none;
     }
@@ -104,13 +114,14 @@ a:visited{
   position: relative;
   top: 0px;
   left: 0px;
-  min-height: auto;
+  height: auto;
   text-align: center;
   padding: 0;
   margin: 0;
 }
 
 #header h1{
+  display: block;
   font-size: 29pt;
   font-weight:bold;
   height: auto;
@@ -266,11 +277,8 @@ select option{
 }
 
 #themeButton{
-  position:absolute;
-  top:10px;
-  right:10px;
-  width:40px;
-  height:40px;
+  width:32px;
+  height:32px;
   content:"";
   background-image:url(../images/theme_button.svg);
   background-size:contain;

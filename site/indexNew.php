@@ -42,22 +42,24 @@ includes/homepage.js
 <script src="includes/homepage.js?nocache=<?php echo(rand(0,999999)); ?>"></script>
 </head>
 <body class="light">
-<div id="themeButton" onclick="toggleTheme()"></div>
 <div id="dataRequestBox"><p>Allow GM4 to remember your preferences?</p><span class="smallButton" onclick="storeUserPreferences()">Allow</span> <span class="smallButton" onclick="$(this).parent().hide();dataprompted = true;">Dismiss</span></div>
 <div id="landingGroup" width="100%">
   <div id="headerGroup">
-    <div id="header" style="display: flex; margin-top: 4px">
-      <a href="https://www.gm4.co/" style="text-decoration: none;">
-        <h1 style="display: block;">
-          <img src="images/logo/logo_clear.svg" height="32px" alt="Gamemode 4 Logo"/>
-          <span >Gamemode 4</span>
-        </h1>
-      </a>
-      <ul style="display: flex;">
-        <span style="cursor: pointer;" onclick="switchView('All Modules', $('#allModules')[0], true)"><li>Modules</li></span>
-        <a href="https://www.gm4.co/wiki"><li> Wiki</li></a>
-        <a href="https://www.gm4.co/server"><li> Server</li></a>
-      </ul>
+    <div id="headerFullWidth">
+      <div id="header">
+        <a href="https://www.gm4.co/">
+          <h1>
+            <img src="images/logo/logo_clear.svg" height="32px" alt="Gamemode 4 Logo"/>
+            <span>Gamemode 4</span>
+          </h1>
+        </a>
+        <ul style="display: flex;">
+          <span style="cursor: pointer;" onclick="switchView('All Modules', $('#allModules')[0], true)"><li>Modules</li></span>
+          <a href="https://www.gm4.co/wiki"><li> Wiki</li></a>
+          <a href="https://www.gm4.co/server"><li> Server</li></a>
+          <li><div id="themeButton" onclick="toggleTheme()"></div></li>
+        </ul>
+      </div>
     </div>
     <div id="slideshowContainer">
       <div id="slideshowLeft" class="slideshowArrow" onclick="slideshow('left')"></div>
