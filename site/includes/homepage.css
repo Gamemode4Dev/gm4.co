@@ -319,6 +319,10 @@ select option{
   overflow:hidden;
 }
 
+.categoryLengthText{
+  opacity:0.5;
+}
+
 #resourcepack_card{
   background-image:url(../images/resource_cards/resourcepack_promo.png);
   background-repeat:no-repeat;

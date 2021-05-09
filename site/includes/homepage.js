@@ -137,26 +137,27 @@ function loadCategories(){
   $.ajax({url:"modules/module_categories.json"}).done(function(data){
     module_categories = data.module_categories;
     if(module_categories != undefined){
-      console.log("loading " + module_categories.length + " categories");
       for(i=0;i<module_categories.length;i++){
-        cards = "";
+        $("#categoriesContainer").append('<h2>' + module_categories[i].title + ' <span class="categoryLengthText">(0)</span></h2><div class="categoryBar"><div class="cardContainer"></div></div>');
         cardarray = module_categories[i].modules;
-        if(module_categories[i].order != undefined && module_categories[i].order == "shuffled"){
-          shuffleArray(cardarray);
+        if(cardarray != undefined && cardarray.length>0){
+          populateCategory(i,module_categories[i]);
         }
-        for(j=0;j<cardarray.length;j++){
-          cards += '<div class="moduleCard noselect" data-module_id="'+cardarray[j]+'"><img src="modules/media/' + cardarray[j] + '/' + cardarray[j] + '.svg" onerror="image_error(this)"><p class="cardName">' + cardarray[j].replace(/_/g, " ") + '</p></div>';
+        else{
+          if(module_categories[i].populate_from != undefined){
+            $.ajax({url:module_categories[i].populate_from,pos:i,limit:module_categories[i].limit}).done(function(data){
+              category = {};
+              category.modules = JSON.parse(data);
+              if(this.limit!=undefined && this.limit >0){
+                category.modules.length=this.limit;
+              }
+              console.log(i);
+              populateCategory(this.pos, category);
+              snug_fit_cards();
+            });
+          }
         }
-        $("#categoriesContainer").append('<h2>' + module_categories[i].title + ' <span style="opacity:0.5">(' + cardarray.length + ')</span></h2><div class="categoryBar"><div class="cardContainer">' + cards + '</div></div>');
       }
-      //add listeners
-      $(".moduleCard").on("click",function(){
-        if($(this).attr("data-module_id")!=undefined){
-          $("#preview").remove();
-          $(this).parent().parent().after('<div id="preview"></div>');
-          loadPreview($(this).attr("data-module_id"));
-        }      
-      });
       
       $(".categoryBar").append('<div class="browseButton browseButtonLeft"></div><div class="browseButton browseButtonRight"></div>');
       snug_fit_cards();
@@ -192,6 +193,30 @@ function loadCategories(){
     else{
       alert("Something went wrong and modules couldn't be loaded");
     }
+  });
+}
+
+function populateCategory(pos,category){
+  //populate the category once the cards are loaded.
+  //in most cases this is instant but some may need to
+  //load external source data first.
+  cardarray = category.modules;
+  if(category.order != undefined && category.order == "shuffled"){
+    shuffleArray(cardarray);
+  }
+  cards = "";
+  for(j=0;j<cardarray.length;j++){
+    cards += '<div class="moduleCard noselect" data-module_id="'+cardarray[j]+'"><img src="modules/media/' + cardarray[j] + '/' + cardarray[j] + '.svg" onerror="image_error(this)"><p class="cardName">' + cardarray[j].replace(/_/g, " ") + '</p></div>';
+  }
+  $(".cardContainer").eq(pos+1).html(cards);
+  $(".categoryLengthText").eq(pos).html("(" + cardarray.length + ")");
+  //add listeners
+  $(".cardContainer").eq(pos+1).find(".moduleCard").on("click",function(){
+    if($(this).attr("data-module_id")!=undefined){
+      $("#preview").remove();
+      $(this).parent().parent().after('<div id="preview"></div>');
+      loadPreview($(this).attr("data-module_id"));
+    }      
   });
 }
 

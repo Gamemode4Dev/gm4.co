@@ -23,29 +23,8 @@
     },
     {
       "title":"Popular",
-      "modules":[
-        "custom_crafters",
-        "chairs",
-        "orbis",
-        "ziprails",
-        "dangerous_dungeons",
-        "tower_structures",
-        "desire_lines",
-        "heart_canisters",
-        "vertical_rails",
-        "liquid_tanks",
-        "better_armour_stands",
-        "enchantment_extractors",
-        "block_compressors",
-        "cooler_caves",
-        "better_fire",
-        "pig_tractors",
-        "standard_crafting",
-        "undead_players",
-        "sunken_treasure",
-        "ink_spitting_squid",
-        "bat_grenades"
-      ]
+      "populate_from":"includes/getmodulesbypopularity.php",
+      "limit":15
     },
     {
       "title":"Featured",
