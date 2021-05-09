@@ -55,7 +55,7 @@ includes/homepage.js
         </a>
         <ul style="display: flex;">
           <span style="cursor: pointer;" onclick="switchView('All Modules', $('#allModules')[0], true)"><li>Modules</li></span>
-          <a href="https://www.gm4.co/wiki"><li> Wiki</li></a>
+          <a href="https://www.gm4.co/wiki" target="_blank"><li> Wiki</li></a>
           <a href="https://www.gm4.co/server"><li> Server</li></a>
           <li><div id="themeButton" onclick="toggleTheme()"></div></li>
         </ul>
