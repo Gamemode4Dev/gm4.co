@@ -319,6 +319,11 @@ select option{
   overflow:hidden;
 }
 
+.categoryTitle{
+  margin-left:30px;
+  margin-top:15px;
+}
+
 .categoryLengthText{
   opacity:0.5;
 }

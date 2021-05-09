@@ -114,13 +114,21 @@ $(window).resize(function(){
 function snug_fit_cards(){
   windowWidth = $(window).width();
   visibleCards = Math.floor(windowWidth / cardWidth)-1;
+  if(visibleCards<4){
+    visibleCards = 4;
+    $(".cardName").css("font-size","2vw");
+  }
+  else{
+    $(".cardName").css("font-size","inherit");
+  }
   difference = windowWidth - (visibleCards * cardWidth);
   $(".moduleCard").width(cardWidth+(difference/visibleCards)-8);
   $(".placeholderCard").width(cardWidth+(difference/visibleCards)-8);
   $(".categoryBar").height(barHeight + (difference/visibleCards)-8);
-  $(".moduleCard img").width(150 + (difference/visibleCards)-8);
-  $(".moduleCard img").height(150 + (difference/visibleCards)-8);
-  $(".moduleCard img").css("top","calc(50% - " + (((150 + (difference/visibleCards)-8)/2) + 20) + "px");
+  $(".moduleCard img").width((cardWidth+(difference/visibleCards)-8)/100*80);
+  $(".moduleCard img").height((cardWidth+(difference/visibleCards)-8)/100*80);
+  $(".moduleCard img").css("top","10%");
+  $(".moduleCard img").css("left","10%");
   $(".categoryBar").each(function(index){
     cardCount = $(this).find(".moduleCard").length;
     if(cardCount <= visibleCards){
@@ -138,7 +146,7 @@ function loadCategories(){
     module_categories = data.module_categories;
     if(module_categories != undefined){
       for(i=0;i<module_categories.length;i++){
-        $("#categoriesContainer").append('<h2>' + module_categories[i].title + ' <span class="categoryLengthText">(0)</span></h2><div class="categoryBar"><div class="cardContainer"></div></div>');
+        $("#categoriesContainer").append('<h2 class="categoryTitle">' + module_categories[i].title + ' <span class="categoryLengthText">(0)</span></h2><div class="categoryBar"><div class="cardContainer"></div></div>');
         cardarray = module_categories[i].modules;
         if(cardarray != undefined && cardarray.length>0){
           populateCategory(i,module_categories[i]);
