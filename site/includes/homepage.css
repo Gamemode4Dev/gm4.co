@@ -113,6 +113,7 @@ a:visited {
   text-align: center;
   margin: 4px auto 0px;
   display: flex;
+  height: 50px;
 }
 
 #landingGroup {
@@ -179,9 +180,8 @@ a:visited {
 }
 
 #header h1:hover {
-  box-shadow: 0px -35px 0px -33px var(--main-accent-color) inset;
-  -webkit-box-shadow: 0px -35px 0px -33px var(--main-accent-color) inset;
-  -moz-box-shadow: 0px -35px 0px -33px var(--main-accent-color) inset;
+  height: 51px;
+  border-bottom: var(--main-accent-color) 3px solid;
 }
 
 .headerButton#modulesButton {
@@ -194,12 +194,12 @@ a:visited {
   display: inline-block;
   height: 40px;
   padding: 10px 10px 0px 10px;
+  box-sizing: content-box;
 }
 
-.headerButton:hover {
-  box-shadow: 0px -30px 0px -28px var(--main-accent-color) inset;
-  -webkit-box-shadow: 0px -30px 0px -28px var(--main-accent-color) inset;
-  -moz-box-shadow: 0px -30px 0px -28px var(--main-accent-color) inset;
+.headerButton:hover { 
+  height: 38px;
+  border-bottom: var(--main-accent-color) 3px solid;
 }
 
 #header img {
