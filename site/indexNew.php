@@ -54,7 +54,7 @@ includes/homepage.js
           </h1>
         </a>
         <ul id="headerButtonGroup">
-          <span style="cursor: pointer;" onclick="switchView('All Modules', $('#allModules')[0], true)"><li>Modules</li></span>
+          <span class="headerButton" id="modulesButton" onclick="switchView('All Modules', $('#allModules')[0], true)"><li>Modules</li></span>
           <a href="https://www.gm4.co/wiki" target="_blank"><li> Wiki</li></a>
           <a href="https://www.gm4.co/server"><li> Server</li></a>
           <li><div id="themeButton" onclick="toggleTheme()"></div></li>

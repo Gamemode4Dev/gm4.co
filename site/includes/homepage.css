@@ -184,6 +184,10 @@ a:visited {
   -moz-box-shadow: 0px -35px 0px -33px var(--main-accent-color) inset;
 }
 
+.headerButton#modulesButton {
+  cursor: pointer;
+}
+
 #header ul li {
   font-size: 20pt;
   font-weight: bold;
