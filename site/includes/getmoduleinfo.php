@@ -38,7 +38,10 @@ if($mcmetafound){
   echo($mcmeta);
 }
 else{
-  echo("Can't find module");
+  echo('{
+    "module_name": "' . str_replace("_"," ",$module_id) . '",
+    "site_description": "Error loading module. Contact site administrator."
+  }');
 }
 
 ?>

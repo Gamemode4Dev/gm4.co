@@ -183,6 +183,8 @@ function populateCategory(pos,category){
   $(".cardContainer").eq(pos+1).find(".moduleCard").on("click",function(){
     if($(this).attr("data-module_id")!=undefined){
       $("#preview").remove();
+      $('.moduleCardSelected').removeClass('moduleCardSelected');
+      $(this).addClass('moduleCardSelected');
       $(this).parent().parent().after('<div id="preview"></div>');
       loadPreview($(this).attr("data-module_id"));
     }      
@@ -244,10 +246,12 @@ function loadPreview(module_id){
       $("#preview").append("<div id='previewLeft'></div>");
       $("#preview").append("<div id='previewRight'><h3>" + data.module_name + "</h3></div>");
       $("#previewRight").append("<p>" + data.site_description + "</p><br>");
-      if(data.mcversion == LATEST_VERSION){
-        $("#previewRight").append("<a target='download_frame' href='modules/download/"+LATEST_VERSION+"/"+data.module_id.replace("_","-") +"' class='buttonLink'><span class='datapack_icon'></span> Download " + data.module_name + " for Java " + LATEST_VERSION + "</a>");
+      if(data.module_id){
+        if(data.mcversion == LATEST_VERSION){
+          $("#previewRight").append("<a target='download_frame' href='modules/download/"+LATEST_VERSION+"/"+data.module_id.replace("_","-") +"' class='buttonLink'><span class='datapack_icon'></span> Download " + data.module_name + " for Java " + LATEST_VERSION + "</a>");
+        }
+        $("#previewRight").append("<br><br><a class='buttonLink' href='https://www.gm4.co/modules/" + data.module_id.replace("_","-") + "'><span class='more_icon'></span> More Downloads &amp; Info</a><br><h3 class='dividingHeader'>Info Links</h3>");
       }
-      $("#previewRight").append("<br><br><a class='buttonLink' href='https://www.gm4.co/modules/" + data.module_id.replace("_","-") + "'><span class='more_icon'></span> More Downloads &amp; Info</a><br><h3 class='dividingHeader'>Info Links</h3>");
       if(data.wiki_link != undefined && data.wiki_link != ""){
         $("#previewRight").append("<p><a href='" + data.wiki_link + "' target='_BLANK'>Read about this on the Gamemode 4 Wiki</a></p>");
       }
