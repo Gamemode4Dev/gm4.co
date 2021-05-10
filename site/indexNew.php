@@ -53,12 +53,12 @@ includes/homepage.js
             <span>Gamemode 4</span>
           </h1>
         </a>
-        <ul id="headerButtonGroup">
-          <span class="headerButton" id="modulesButton" onclick="switchView('All Modules', $('#allModules')[0], true)"><li>Modules</li></span>
-          <a href="https://www.gm4.co/wiki" target="_blank"><li> Wiki</li></a>
-          <a href="https://www.gm4.co/server"><li> Server</li></a>
-          <li><div id="themeButton" onclick="toggleTheme()"></div></li>
-        </ul>
+        <span id="headerButtonGroup">
+          <span class="headerButton" id="modulesButton" onclick="switchView('All Modules', $('#allModules')[0], true)">Modules</span>
+          <a class="headerButton" href="https://www.gm4.co/wiki" target="_blank">Wiki</a>
+          <a class="headerButton" href="https://www.gm4.co/server">Server</a>
+          <span class="headerButton"><div  id="themeButton" onclick="toggleTheme()"></div></span>
+        </span>
       </div>
     </div>
     <div id="slideshowContainer">

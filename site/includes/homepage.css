@@ -188,7 +188,7 @@ a:visited {
   cursor: pointer;
 }
 
-#header ul li {
+.headerButton {
   font-size: 20pt;
   font-weight: bold;
   display: inline-block;
@@ -196,7 +196,7 @@ a:visited {
   padding: 10px 10px 0px 10px;
 }
 
-#header ul li:hover {
+.headerButton:hover {
   box-shadow: 0px -30px 0px -28px var(--main-accent-color) inset;
   -webkit-box-shadow: 0px -30px 0px -28px var(--main-accent-color) inset;
   -moz-box-shadow: 0px -30px 0px -28px var(--main-accent-color) inset;
