@@ -184,11 +184,8 @@ a:visited {
   border-bottom: var(--main-accent-color) 3px solid;
 }
 
-.headerButton#modulesButton {
-  cursor: pointer;
-}
-
 .headerButton {
+  cursor: pointer;
   font-size: 20pt;
   font-weight: bold;
   display: inline-block;
@@ -197,7 +194,7 @@ a:visited {
   box-sizing: content-box;
 }
 
-.headerButton:hover { 
+.headerButton:hover:not(.noHoverIndicator) { 
   height: 38px;
   border-bottom: var(--main-accent-color) 3px solid;
 }
