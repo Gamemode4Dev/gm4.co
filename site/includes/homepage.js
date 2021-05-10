@@ -148,11 +148,14 @@ function populateCategory(pos,category){
   //add listeners
   $(".cardContainer").eq(pos+1).find(".moduleCard").on("click",function(){
     if($(this).attr("data-module_id")!=undefined){
-      $("#preview").remove();
-      $('.moduleCardSelected').removeClass('moduleCardSelected');
-      $(this).addClass('moduleCardSelected');
-      $(this).parent().parent().after('<div id="preview"></div>');
-      loadPreview($(this).attr("data-module_id"));
+      if ($(this).hasClass('moduleCardSelected')) {
+        $(this).removeClass('moduleCardSelected');
+        $('#preview').remove();
+      } else {
+        $('.moduleCardSelected').removeClass('moduleCardSelected');
+        $(this).addClass('moduleCardSelected');
+        loadPreview($(this).parent().parent(), $(this).attr("data-module_id"));
+      }
     }      
   });
 }
@@ -204,11 +207,13 @@ function theme(mode){
   }
 }
 
-function loadPreview(module_id){
+function loadPreview(categoryBar, module_id){
   if(!$(this).hasClass("placeholderCard")){
     $.ajax({url:"includes/getmoduleinfo.php?module_id="+module_id}).done(function(data){
       data = JSON.parse(data);
       console.log(data);
+      $("#preview").remove();
+      categoryBar.after('<div id="preview"></div>')
       $("#preview").append("<div id='previewLeft'></div>");
       $("#preview").append("<div id='previewRight'><h3>" + data.module_name + "</h3></div>");
       $("#previewRight").append("<p>" + data.site_description + "</p><br>");
