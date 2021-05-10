@@ -6,12 +6,32 @@ CSS for the module browse page
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  --content-spacer: 70px;
+  --content-spacer: 5vw;
+  --module-cards: 7;
 }
 
-@media screen and (max-width: 460px) {
+@media screen and (max-width: 1200px) {
+  * {
+    --module-cards: 6;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  * {
+    --module-cards: 5;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  * {
+    --module-cards: 4;
+  }
+}
+
+@media screen and (max-width: 600px) {
   * {
     --content-spacer: 30px;
+    --module-cards: 3;
   }
 }
 
@@ -22,11 +42,10 @@ CSS for the module browse page
   --thematic-element-color: #333333;
   --modulecard-bg-top: #2f3441;
   --modulecard-bg-bottom: #212531;
-  --modulename-bg: #333333;
+  --modulename-bg: #333333a8;
   --modulename-color: white;
-  --lightness: 0%;
-  --preview-bg: #202020;
-  --preview-shade-bg: #202020;
+  --preview-bg: #1b1b1b;
+  --preview-shade-bg: #333333;
 }
 
 .light {
@@ -36,10 +55,10 @@ CSS for the module browse page
   --thematic-element-color: #bfbfbf;
   --modulecard-bg-top: #5eccff;
   --modulecard-bg-bottom: #4AA0C7;
-  --modulename-bg: #DDDDDD;
+  --modulename-bg: #DDDDDDa8;
   --modulename-color: #292929;
-  --lightness: 100%;
   --preview-bg: #DDDDDD;
+  --preview-shade-bg: #a7a7a7;
 }
 
 body {
@@ -338,10 +357,11 @@ select option {
 }
 
 .categoryBar {
+  --module-size: calc((100vw - var(--scrollbar-width, 0) - 2 * var(--content-spacer)) / var(--module-cards));
+  --offset: 0;
   width: 100%;
-  height: 240px;
+  height: calc(var(--module-size) - 2px);
   position: relative;
-  --offset: 0px;
 }
 
 .categoryTitle {
@@ -373,8 +393,8 @@ select option {
   height: 100%;
   display: flex;
   width: max-content;
-  left: calc(var(--content-spacer) - var(--offset));
-  transition: left 0.2s ease;
+  left: calc(var(--content-spacer) - min(var(--offset)) * var(--module-size));
+  transition: left 0.3s ease;
 }
 
 .browseButton {
@@ -383,11 +403,10 @@ select option {
   position: absolute;
   top: 0;
   z-index: 1;
-  background-repeat: no-repeat;
-  background-position: center;
   background-size: 30px;
   cursor: pointer;
-  background-color: hsla(0, 50%, var(--lightness), 0.5);
+  background-color: var(--main-bg-color);
+  opacity: 0.6;
 }
 
 .browseButtonHidden {
@@ -396,32 +415,57 @@ select option {
 
 .browseButton:hover {
   transform: scaleX(1.2);
-  background-color: hsla(0, 50%, var(--lightness), 0.6);
+  opacity: 0.7;
 }
 
 .browseButtonLeft {
   left: 0;
-  background-image: url(../images/leftArrow.svg);
 }
 
 .browseButtonRight {
   right: 0;
-  background-image: url(../images/rightArrow.svg);
+}
+
+.browseButtonLeft::after {
+  left: 0;
+  mask: url(../images/leftArrow.svg);
+  -webkit-mask: url(../images/leftArrow.svg);
+}
+
+.browseButtonRight::after {
+  right: 0;
+  mask: url(../images/rightArrow.svg);
+  -webkit-mask: url(../images/rightArrow.svg);
+}
+
+.browseButton::after {
+  content: '';
+  position: absolute;
+  width: var(--content-spacer);
+  opacity: 1;
+  height: 30px;
+  top: 50%;
+  transform: translateY(-50%);
+  mask-size: 30px;
+  -webkit-mask-size: 30px;
+  mask-repeat: no-repeat;
+  -webkit-mask-repeat: no-repeat;
+  mask-position: center;
+  -webkit-mask-position: center;
+  background-color: var(--main-text-color);
 }
 
 .moduleCard, .placeholderCard {
   position: relative;
   background: linear-gradient(to right bottom, var(--modulecard-bg-top) 50%, var(--modulecard-bg-bottom) 50%);
-  width: 236px;
+  width: calc(var(--module-size));
   overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 0 2px;
   border: 2px solid var(--main-bg-color);
-  transition: 0.1s;
   cursor: pointer;
-  border-radius: 20px;
+  border-radius: 10%;
 }
 
 .moduleCardSelected {
@@ -443,15 +487,15 @@ select option {
   left: 0px;
   padding: 5px;
   margin: 0px;
+  font-size: calc(var(--module-size) * 0.12);
   text-align: center;
   text-transform: capitalize;
 }
 
 .moduleCard img {
-  border-radius: 20px;
-  transition: 0.1s;
-  width: 150px;
-  height: 150px;
+  border-radius: 10%;
+  transition: transform 0.1s;
+  width: 80%;
 }
 
 .moduleCard:hover img {
@@ -532,9 +576,9 @@ select option {
 #preview {
   width: 100%;
   background-color: var(--preview-bg);
-  -webkit-box-shadow: inset 0px 0px 18px 0px #6b6b6b;
-  -moz-box-shadow: inset 0px 0px 18px 0px #6b6b6b;
-  box-shadow: inset 0px 0px 18px 0px #6b6b6b;
+  -webkit-box-shadow: inset 0px 0px 18px 0px var(--preview-shade-bg);
+  -moz-box-shadow: inset 0px 0px 18px 0px var(--preview-shade-bg);
+  box-shadow: inset 0px 0px 18px 0px var(--preview-shade-bg);
   padding: 20px var(--content-spacer);
   display: flex;
 }

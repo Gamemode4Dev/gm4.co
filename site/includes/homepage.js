@@ -5,8 +5,6 @@ JS for the module browse page
 const LATEST_VERSION = "1.16";
 
 var module_categories = {};
-var cardWidth = 240;
-var barHeight = 240;
 var windowWidth = 0;
 var visibleCards = 0;
 var allModules = "unloaded";
@@ -20,6 +18,8 @@ if(userdata != null){
 }
 
 window.onload = function(){
+  document.documentElement.style.setProperty('--scrollbar-width', (window.innerWidth - document.documentElement.clientWidth) + "px");
+
   if (window.matchMedia != "undefined" && window.matchMedia('(prefers-color-scheme: dark)').matches) {
     $("body").removeClass("light");
     $("body").addClass("dark");
@@ -78,39 +78,6 @@ window.onload = function(){
   });
 }
 
-
-$(window).resize(function(){
-  snug_fit_cards();
-});
-
-function snug_fit_cards(){
-  /*
-  windowWidth = $(window).width();
-  visibleCards = Math.floor(windowWidth / cardWidth)-1;
-  difference = windowWidth - (visibleCards * cardWidth);
-  $(".moduleCard").width(cardWidth+(difference/visibleCards)-8);
-  $(".placeholderCard").width(cardWidth+(difference/visibleCards)-8);
-  $(".categoryBar").height(barHeight + (difference/visibleCards)-8);
-  $(".moduleCard img").width(150 + (difference/visibleCards)-8);
-  $(".moduleCard img").height(150 + (difference/visibleCards)-8);
-  $(".moduleCard img").css("top","calc(50% - " + (((150 + (difference/visibleCards)-8)/2) + 20) + "px");
-  $(".categoryBar").each(function(index){
-    cardCount = $(this).find(".moduleCard").length;
-    if(cardCount <= visibleCards){
-      $(this).find(".browseButton").hide();
-      $(this).find(".placeholderCard").remove();
-    }
-    else{
-      $(this).find(".browseButton").show();
-    }
-  });
-  
-  //a-z list cards
-  $("#allModulesContainer").css("padding-left",(windowWidth%243)/2 + "px");
-  */
-}
-
-
 function loadCategories(){
   $.ajax({url:"modules/module_categories.json"}).done(function(data){
     module_categories = data.module_categories;
@@ -130,32 +97,31 @@ function loadCategories(){
                 category.modules.length=this.limit;
               }
               populateCategory(this.pos, category);
-              snug_fit_cards();
             });
           }
         }
       }
       
       $(".categoryBar").append('<div class="browseButton browseButtonLeft browseButtonHidden"></div><div class="browseButton browseButtonRight"></div>');
-      snug_fit_cards();
 
-      const changeOffset = (el, diff) => {
+      const changeOffset = (el, dir) => {
         const bar = el.parent();
         let offset = parseInt(bar.get(0).style.getPropertyValue("--offset") || "0");
         const max = bar.find(".moduleCard").length;
+        const shown = parseInt(getComputedStyle(bar.get(0)).getPropertyValue("--module-cards"))
 
-        offset = Math.max(0, Math.min((max - 3) * cardWidth, offset + diff * cardWidth));
+        offset = Math.max(0, Math.min(max - shown, offset + dir * (shown - 1)));
 
-        bar.get(0).style.setProperty("--offset", `${offset}px`);
+        bar.get(0).style.setProperty("--offset", `${offset}`);
         bar.find(".browseButtonLeft").toggleClass("browseButtonHidden", offset <= 0)
-        bar.find(".browseButtonRight").toggleClass("browseButtonHidden", offset >= (max - 3) * cardWidth)
+        bar.find(".browseButtonRight").toggleClass("browseButtonHidden", offset >= max - shown)
       }
 
       $(".browseButtonRight").on("click",function(){
-        changeOffset($(this), 3)
+        changeOffset($(this), 1)
       });
       $(".browseButtonLeft").on("click",function(){
-        changeOffset($(this), -3)
+        changeOffset($(this), -1)
       });
     }
     else{
