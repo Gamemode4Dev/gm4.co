@@ -43,7 +43,7 @@ includes/homepage.js
 </head>
 <body class="light">
 <div id="dataRequestBox"><p>Allow GM4 to remember your preferences?</p><span class="smallButton" onclick="storeUserPreferences()">Allow</span> <span class="smallButton" onclick="$(this).parent().hide();dataprompted = true;">Dismiss</span></div>
-<div id="landingGroup" width="100%">
+<div id="landingGroup">
   <div id="headerGroup">
     <div id="headerFullWidth">
       <div id="header">
@@ -69,10 +69,8 @@ includes/homepage.js
       </div>
     </div>
   </div>
-  <div class="pageShadowUp" style="height: 50px; ">
-    <div style="width: calc(100% / 1.2 - 20px); margin: auto; padding: 10px">
-      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non consequatur sit, quisquam soluta exercitationem hic! Reprehenderit repellendus rem velit blanditiis asperiores est tempora vel, magnam neque enim ipsa, sequi necessitatibus.
-    </div>
+  <div class="landingInfo">
+    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non consequatur sit, quisquam soluta exercitationem hic! Reprehenderit repellendus rem velit blanditiis asperiores est tempora vel, magnam neque enim ipsa, sequi necessitatibus.
   </div>
 </div>
 <div id="pageArrowDown" class="pageShadowDown" style="height: 50px; width: 120%; text-align: center">
@@ -90,7 +88,7 @@ includes/homepage.js
   <br/>
 </div>
 <div id = "categoriesContainer">
-  <h2>Resources &amp; Tools</h2>
+  <!-- <h2>Resources &amp; Tools</h2>
   <div class="categoryBar">
     <a href="https://www.gm4.co/resource-pack"><div id="resourcepack_card" class="moduleCard noselect" data-resource_id="resourcepack">
       <p class="cardName">Resource Pack</p>
@@ -100,7 +98,7 @@ includes/homepage.js
       <img src="images/resource_cards/generator_icon.png">
       <p class="cardName">Module Template</p>
     </div></a>
-  </div>
+  </div> -->
 </div>
 <iframe name='download_frame' style='display:none;'></iframe>
 <div id="footer">

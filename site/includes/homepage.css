@@ -2,6 +2,19 @@
 CSS for the module browse page
 */
 
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  --content-spacer: 70px;
+}
+
+@media screen and (max-width: 460px) {
+  * {
+    --content-spacer: 30px;
+  }
+}
+
 .dark {
   --main-bg-color: #111111;
   --main-text-color: #DDDDDD;
@@ -12,6 +25,7 @@ CSS for the module browse page
   --modulecard-bg-bottom: #212531;
   --modulename-bg: #333333;
   --modulename-color: white;
+  --lightness: 0%;
   --preview-bg: black;
 }
 
@@ -25,6 +39,7 @@ CSS for the module browse page
   --modulecard-bg-bottom: #4AA0C7;
   --modulename-bg: #DDDDDD;
   --modulename-color: #292929;
+  --lightness: 100%;
   --preview-bg: #DDDDDD;
 }
 
@@ -42,6 +57,10 @@ body {
   -webkit-font-smoothing: antialiased;
   background-color: var(--main-bg-color);
   color: var(--main-text-color);
+}
+
+p {
+  margin: 1em 0;
 }
 
 h2 {
@@ -252,17 +271,19 @@ a:visited {
   margin: 0 -10%;
 }
 
+.landingInfo {
+  margin: 20px var(--content-spacer);
+}
+
 .textSpace {
-  margin-left: 5px;
   color: var(--main-text-color);
   background-color: var(--main-bg-color);
-  border: 1px solid var(--main-text-color);
+  border: 1px solid var(--thematic-element-color);
   border-radius: 5px;
-  font-size: 15pt;
+  font-size: 1rem;
+  padding: 4px 6px;
   width: 233px;
-  margin-right: 5px;
-  margin-top: 10px;
-  margin-bottom: 10px;
+  margin: 10px 5px;
 }
 
 select option {
@@ -296,41 +317,37 @@ select option {
 }
 
 #moduleNavBar {
-  position: relative;
-  width: auto;
   border-bottom: 1px solid var(--thematic-element-color);
   opacity: 0.8;
-  padding-left: 5px;
+  padding: 0 var(--content-spacer);
+  display: flex;
 }
 
 .moduleNavButton {
-  display: inline-block;
   padding: 15px;
+  cursor: pointer;
 }
 
 .moduleNavButton:hover {
   border-bottom: 1px solid var(--main-accent-color);
   color: var(--main-accent-color);
-  cursor: pointer;
 }
 
 .moduleNavButtonSelected {
-  border-bottom: 1px solid var(--thematic-element-color);
+  border-bottom: 1px solid var(--main-text-color);
+  color: var(--main-text-color);
 }
 
 .categoryBar {
   background-color: var(--category-bg);
-  width: calc(100% - 10px);
-  margin-left: auto;
-  margin-right: auto;
-  height: 331px;
+  width: 100%;
+  height: 240px;
   position: relative;
-  overflow: hidden;
+  --offset: 0px;
 }
 
 .categoryTitle {
-  margin-left: 30px;
-  margin-top: 15px;
+  margin: 1.4em var(--content-spacer) 0;
 }
 
 .categoryLengthText {
@@ -354,49 +371,55 @@ select option {
 }
 
 .cardContainer {
+  position: absolute;
   height: 100%;
-  width: 5000px;
-  position: relative;
+  display: flex;
+  width: max-content;
+  left: calc(var(--content-spacer) - var(--offset));
+  transition: left 0.2s ease;
 }
 
 .browseButton {
   height: 100%;
-  width: 30px;
-  background-color: rgba(200, 200, 200, 0.5);
-  content: " ";
+  width: var(--content-spacer);
   position: absolute;
-  top: 0px;
+  top: 0;
   z-index: 1;
   background-repeat: no-repeat;
   background-position: center;
-  background-size: contain;
+  background-size: 30px;
+  cursor: pointer;
+  background-color: hsla(0, 50%, var(--lightness), 0.5);
+}
+
+.browseButtonHidden {
+  display: none;
 }
 
 .browseButton:hover {
-  transform: scale(1.2);
-  background-color: rgba(200, 200, 200, 0.9);
+  transform: scaleX(1.2);
+  background-color: hsla(0, 50%, var(--lightness), 0.6);
 }
 
 .browseButtonLeft {
-  left: 0px;
+  left: 0;
   background-image: url(../images/leftArrow.svg);
 }
 
 .browseButtonRight {
-  right: 0px;
+  right: 0;
   background-image: url(../images/rightArrow.svg);
 }
 
 .moduleCard, .placeholderCard {
   position: relative;
   background: linear-gradient(to right bottom, var(--modulecard-bg-top) 50%, var(--modulecard-bg-bottom) 50%);
-  height: calc(100% - 6px);
-  margin-top: 3px;
-  width: 233px;
+  width: 236px;
   overflow: hidden;
-  display: inline-block;
-  margin-left: 2px;
-  margin-right: 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 2px;
   transition: 0.1s;
   cursor: pointer;
   border-radius: 20px;
@@ -422,9 +445,6 @@ select option {
 }
 
 .moduleCard img {
-  position: absolute;
-  left: 41px;
-  top: calc(50% - 70px);
   border-radius: 20px;
   transition: 0.1s;
   width: 150px;
@@ -439,7 +459,7 @@ select option {
 
 #allModulesContainer {
   width: 100%;
-  padding-left: 10px;
+  padding: 10px var(--content-spacer);
 }
 
 .a-zCard {

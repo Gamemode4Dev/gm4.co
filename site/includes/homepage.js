@@ -5,8 +5,8 @@ JS for the module browse page
 const LATEST_VERSION = "1.16";
 
 var module_categories = {};
-var cardWidth = 237;
-var barHeight = 250;
+var cardWidth = 240;
+var barHeight = 240;
 var windowWidth = 0;
 var visibleCards = 0;
 var allModules = "unloaded";
@@ -78,11 +78,13 @@ window.onload = function(){
   });
 }
 
+
 $(window).resize(function(){
   snug_fit_cards();
 });
 
 function snug_fit_cards(){
+  /*
   windowWidth = $(window).width();
   visibleCards = Math.floor(windowWidth / cardWidth)-1;
   difference = windowWidth - (visibleCards * cardWidth);
@@ -105,41 +107,9 @@ function snug_fit_cards(){
   
   //a-z list cards
   $("#allModulesContainer").css("padding-left",(windowWidth%243)/2 + "px");
+  */
 }
 
-$(window).resize(function(){
-  snug_fit_cards();
-});
-
-function snug_fit_cards(){
-  windowWidth = $(window).width();
-  visibleCards = Math.floor(windowWidth / cardWidth)-1;
-  if(visibleCards<4){
-    visibleCards = 4;
-    $(".cardName").css("font-size","2vw");
-  }
-  else{
-    $(".cardName").css("font-size","inherit");
-  }
-  difference = windowWidth - (visibleCards * cardWidth);
-  $(".moduleCard").width(cardWidth+(difference/visibleCards)-8);
-  $(".placeholderCard").width(cardWidth+(difference/visibleCards)-8);
-  $(".categoryBar").height(barHeight + (difference/visibleCards)-8);
-  $(".moduleCard img").width((cardWidth+(difference/visibleCards)-8)/100*80);
-  $(".moduleCard img").height((cardWidth+(difference/visibleCards)-8)/100*80);
-  $(".moduleCard img").css("top","10%");
-  $(".moduleCard img").css("left","10%");
-  $(".categoryBar").each(function(index){
-    cardCount = $(this).find(".moduleCard").length;
-    if(cardCount <= visibleCards){
-      $(this).find(".browseButton").hide();
-      $(this).find(".placeholderCard").remove();
-    }
-    else{
-      $(this).find(".browseButton").show();
-    }
-  });
-}
 
 function loadCategories(){
   $.ajax({url:"modules/module_categories.json"}).done(function(data){
@@ -159,7 +129,6 @@ function loadCategories(){
               if(this.limit!=undefined && this.limit >0){
                 category.modules.length=this.limit;
               }
-              console.log(i);
               populateCategory(this.pos, category);
               snug_fit_cards();
             });
@@ -167,35 +136,26 @@ function loadCategories(){
         }
       }
       
-      $(".categoryBar").append('<div class="browseButton browseButtonLeft"></div><div class="browseButton browseButtonRight"></div>');
+      $(".categoryBar").append('<div class="browseButton browseButtonLeft browseButtonHidden"></div><div class="browseButton browseButtonRight"></div>');
       snug_fit_cards();
 
+      const changeOffset = (el, diff) => {
+        const bar = el.parent();
+        let offset = parseInt(bar.get(0).style.getPropertyValue("--offset") || "0");
+        const max = bar.find(".moduleCard").length;
+
+        offset = Math.max(0, Math.min((max - 3) * cardWidth, offset + diff * cardWidth));
+
+        bar.get(0).style.setProperty("--offset", `${offset}px`);
+        bar.find(".browseButtonLeft").toggleClass("browseButtonHidden", offset <= 0)
+        bar.find(".browseButtonRight").toggleClass("browseButtonHidden", offset >= (max - 3) * cardWidth)
+      }
+
       $(".browseButtonRight").on("click",function(){
-        if($(this).parent().find(".cardContainer").find(".placeholderCard").length == 0){
-          $(this).parent().find(".cardContainer").append('<div class="placeholderCard noselect moduleCard"><img src="images/enderpuff_by_qbert.png"  title="End of results. Artwork by Qbert" alt="End of results"/><p class="cardName">You\'ve reached the end</p></div>');
-          snug_fit_cards();
-        }
-        $(this).parent().find(".cardContainer").animate({"right":((cardWidth+(difference/visibleCards))*(visibleCards-1))+"px"},400,"swing",function(){
-          for(i=0;i<Math.max(visibleCards-1,1);i++){
-            $(this).append($(this).find(".moduleCard:first"));
-          }
-          $(this).css("right","0px");
-        });
-        
+        changeOffset($(this), 3)
       });
       $(".browseButtonLeft").on("click",function(){
-        if($(this).parent().find(".cardContainer").find(".placeholderCard").length == 0){
-          $(this).parent().find(".cardContainer").append('<div class="placeholderCard noselect moduleCard"><img src="images/enderpuff_by_qbert.png" title="End of results. Artwork by Qbert" alt="End of results"/><p class="cardName">You\'ve reached the end</p></div>');
-          snug_fit_cards();
-        }
-        $(this).parent().find(".cardContainer").css("right",((cardWidth+(difference/visibleCards))*(visibleCards-1))+"px");
-        for(i=0;i<Math.max(visibleCards-1,1);i++){
-          $(this).parent().find(".cardContainer").prepend($(this).parent().find(".cardContainer").find(".moduleCard:last"));
-        }
-        $(this).parent().find(".cardContainer").animate({"right":"0px"},400,"swing",function(){
-          
-        });
-        
+        changeOffset($(this), -3)
       });
     }
     else{
@@ -217,6 +177,7 @@ function populateCategory(pos,category){
     cards += '<div class="moduleCard noselect" data-module_id="'+cardarray[j]+'"><img src="modules/media/' + cardarray[j] + '/' + cardarray[j] + '.svg" onerror="image_error(this)"><p class="cardName">' + cardarray[j].replace(/_/g, " ") + '</p></div>';
   }
   $(".cardContainer").eq(pos+1).html(cards);
+  $(".cardContainer").eq(pos+1).append('<div class="noselect moduleCard"><img src="images/enderpuff_by_qbert.png" title="End of results. Artwork by Qbert" alt="End of results"/><p class="cardName">You\'ve reached the end</p></div>');
   $(".categoryLengthText").eq(pos).html("(" + cardarray.length + ")");
   //add listeners
   $(".cardContainer").eq(pos+1).find(".moduleCard").on("click",function(){
@@ -237,7 +198,6 @@ function slideshow(dir = "right"){
     setTimeout(function(){$("#slideshowSubContainer").append($("#slideshowSubContainer").find(".slideshowSlide:first"));},810);    
   }
   if(dir == "left"){
-    console.log("sliding left");
     $("#slideshowSubContainer").find(".slideshowSlide").css("right",windowWidth+"px");
     $("#slideshowSubContainer").prepend($("#slideshowSubContainer").find(".slideshowSlide:last"));
     $(".slideshowSlide").animate({"right":"0px"},800,"swing",function(){
