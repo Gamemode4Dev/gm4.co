@@ -53,7 +53,7 @@ includes/homepage.js
             <span>Gamemode 4</span>
           </h1>
         </a>
-        <ul style="display: flex;">
+        <ul id="headerButtonGroup">
           <span style="cursor: pointer;" onclick="switchView('All Modules', $('#allModules')[0], true)"><li>Modules</li></span>
           <a href="https://www.gm4.co/wiki" target="_blank"><li> Wiki</li></a>
           <a href="https://www.gm4.co/server"><li> Server</li></a>
