@@ -73,7 +73,7 @@ includes/homepage.js
     Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non consequatur sit, quisquam soluta exercitationem hic! Reprehenderit repellendus rem velit blanditiis asperiores est tempora vel, magnam neque enim ipsa, sequi necessitatibus.
   </div>
 </div>
-<div id="pageArrowDown" class="pageShadowDown" style="height: 50px; width: 120%; text-align: center">
+<div id="pageArrowDown" class="pageShadowDown">
   ↓ Scroll down ↓
 </div>
 </div>

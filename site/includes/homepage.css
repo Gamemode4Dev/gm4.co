@@ -8,6 +8,7 @@ CSS for the module browse page
   padding: 0;
   --content-spacer: 5vw;
   --module-cards: 7;
+  --arrow-down-size: 50px;
 }
 
 @media screen and (max-width: 1200px) {
@@ -115,7 +116,7 @@ a:visited {
 }
 
 #landingGroup {
-  height: calc(100vh - 50px);
+  height: calc(100vh - var(--arrow-down-size));
   display: flex;
   flex-flow: column;
   margin: 0px;
@@ -267,6 +268,12 @@ a:visited {
   box-shadow: -29px -1px 29px -25px rgba(0, 0, 0, 0.3) inset;
   -webkit-box-shadow: -29px -1px 29px -25px rgba(0, 0, 0, 0.3) inset;
   -moz-box-shadow: -29px -1px 29px -25px rgba(0, 0, 0, 0.3) inset;
+}
+
+#pageArrowDown {
+  height: var(--arrow-down-size);
+  width: 120%;
+  text-align: center
 }
 
 .pageShadowDown {
