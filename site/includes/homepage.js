@@ -4,15 +4,15 @@ JS for the module browse page
 
 const LATEST_VERSION = "1.16";
 
-var module_categories = {};
-var windowWidth = 0;
-var visibleCards = 0;
-var allModules = "unloaded";
+let module_categories = {};
+let allModules = "unloaded";
+let slides = [];
+let slideshowInterval = 0;
 
 //preferences
-var siteTheme = "light";
-var dataprompted = false;
-var userdata = JSON.parse(window.localStorage.getItem("user"));
+let siteTheme = "light";
+let dataprompted = false;
+let userdata = JSON.parse(window.localStorage.getItem("user"));
 if(userdata != null){
   dataprompted = true;
 }
@@ -28,28 +28,21 @@ window.onload = function(){
   $.ajax({url:"images/slideshow/slides.json"}).done(function(data){
     slides = data.slides;
     for(i=0;i<slides.length;i++){
-      slide = '<div class="slideshowSlide" style="background-image:url(images/slideshow/'+ slides[i]["background-image"] +');background-repeat:no-repeat;background-position:center;background-size:cover"><div class="slideshowText" style="';
-      if(slides[i].text.position == "top-left") slide += "top:0px;left:25px;text-align:left;";
-      if(slides[i].text.position == "bottom-left") slide += "bottom:0px;left:25px;text-align:left;";
-      if(slides[i].text.position == "bottom-right") slide += "bottom:0px;right:25px;text-align:right;";
-      if(slides[i].text.position == "top-right") slide += "top:0px;right:25px;text-align:right;";
-      
-      slide +='"><h2>' + slides[i].text.header + '</h2><p>' + slides[i].text.paragraph + '</p>';
-      slide += '</div></div>';
-      $("#slideshowSubContainer").append(slide);
+      slide = `<div class="slideshowSlide ${slides[i].text.position || "bottom-left"}" style="background-image:url(images/slideshow/${slides[i].background_image});">`;
+      if (slides[i].text) {
+        slide += `<h2>${slides[i].text.header}</h2><p>${slides[i].text.paragraph}</p>`;
+      }
+      slide += '</div>';
+      $("#slideshowContainer").append(slide);
     }
-    if(slides.length > 1){
-      setInterval(function(){
-        slideshow("right");
-      },8000);
-    }
+    startSlideshow()
   });
   
   if(userdata != null && userdata.theme != undefined && userdata.theme == "dark" && siteTheme == "light") theme("dark");
   if(userdata != null && userdata.theme != undefined && userdata.theme == "light" && siteTheme == "dark") theme("light");
   $("#discordIFrame").attr("src","https://discord.com/widget?id=151141188961828864&theme=" + siteTheme);
   loadCategories();
-  $.ajax({url:"../modules/moduleListAToZ.php"}).done(function(data){
+  $.ajax({url:"/modules/moduleListAToZ.php"}).done(function(data){
     allModules = JSON.parse(data);
     allModuleNamesAlphabetized = [];
     for(element in allModules){
@@ -76,6 +69,15 @@ window.onload = function(){
     $("#versionSelect").append("<option value='older'>Earlier Versions...</option>");
     versionView();
   });
+}
+
+function startSlideshow() {
+  clearInterval(slideshowInterval);
+  if (slides.length > 1) {
+    slideshowInterval = setInterval(function() {
+      slideshow(1);
+    }, 8000);
+  }
 }
 
 function loadCategories(){
@@ -142,11 +144,11 @@ function populateCategory(pos,category){
   for(j=0;j<cardarray.length;j++){
     cards += '<div class="moduleCard noselect" data-module_id="'+cardarray[j]+'"><img src="modules/media/' + cardarray[j] + '/' + cardarray[j] + '.svg" onerror="image_error(this)"><p class="cardName">' + cardarray[j].replace(/_/g, " ") + '</p></div>';
   }
-  $(".cardContainer").eq(pos+1).html(cards);
-  $(".cardContainer").eq(pos+1).append('<div class="noselect moduleCard"><img src="images/enderpuff_by_qbert.png" title="End of results. Artwork by Qbert" alt="End of results"/><p class="cardName">You\'ve reached the end</p></div>');
+  $(".cardContainer").eq(pos).html(cards);
+  $(".cardContainer").eq(pos).append('<div class="noselect moduleCard"><img src="images/enderpuff_by_qbert.png" title="End of results. Artwork by Qbert" alt="End of results"/><p class="cardName">You\'ve reached the end</p></div>');
   $(".categoryLengthText").eq(pos).html("(" + cardarray.length + ")");
   //add listeners
-  $(".cardContainer").eq(pos+1).find(".moduleCard").on("click",function(){
+  $(".cardContainer").eq(pos).find(".moduleCard").on("click",function(){
     if($(this).attr("data-module_id")!=undefined){
       if ($(this).hasClass('moduleCardSelected')) {
         $(this).removeClass('moduleCardSelected');
@@ -160,22 +162,13 @@ function populateCategory(pos,category){
   });
 }
 
-function slideshow(dir = "right"){
-  
-  if(dir == "right"){
-    $("#slideshowSubContainer").find(".slideshowSlide").animate({"right":windowWidth+"px"},800,"swing",function(){
-      $("#slideshowSubContainer").find(".slideshowSlide").css("right","0px");
-    } );
-    setTimeout(function(){$("#slideshowSubContainer").append($("#slideshowSubContainer").find(".slideshowSlide:first"));},810);    
-  }
-  if(dir == "left"){
-    $("#slideshowSubContainer").find(".slideshowSlide").css("right",windowWidth+"px");
-    $("#slideshowSubContainer").prepend($("#slideshowSubContainer").find(".slideshowSlide:last"));
-    $(".slideshowSlide").animate({"right":"0px"},800,"swing",function(){
-      
-    });
-  }
-  
+function slideshow(dir){
+  const slideshow = $("#slideshowContainer");
+  let offset = parseInt(slideshow.get(0).style.getPropertyValue("--offset") || "0");
+  const max = slideshow.find(".slideshowSlide").length;
+  offset = ((offset + dir) % max + max) % max;
+  slideshow.get(0).style.setProperty("--offset", `${offset}`);
+  startSlideshow();
 }
 
 function toggleTheme(){
