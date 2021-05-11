@@ -26,23 +26,25 @@ includes/homepage.js
 
 <link rel="icon" type="image/svg" href="images/logo/logo_clear.svg" sizes="any">
 <link href="https://fonts.googleapis.com/css?family=Raleway:200" rel="stylesheet" type="text/css">
-<link rel = "stylesheet" href="includes/homepage.css?nocache=<?php echo(rand(0,999999)); ?>" />
+<link rel="stylesheet" href="includes/homepage.css?nocache=<?php echo(rand(0,999999)); ?>" />
 <title>Gamemode 4</title>
 <script async="" src="//www.google-analytics.com/analytics.js"></script><script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
   })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
   ga('create', 'UA-63061711-1', 'auto');
   ga('send', 'pageview');
-
 </script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 <script src="includes/homepage.js?nocache=<?php echo(rand(0,999999)); ?>"></script>
 </head>
 <body class="light">
-<div id="dataRequestBox"><p>Allow GM4 to remember your preferences?</p><span class="smallButton" onclick="storeUserPreferences()">Allow</span> <span class="smallButton" onclick="$(this).parent().hide();dataprompted = true;">Dismiss</span></div>
+<div id="dataRequestBox">
+  <p>Allow GM4 to remember your preferences?</p>
+  <span class="smallButton" onclick="storeUserPreferences()">Allow</span>
+  <span class="smallButton" onclick="$(this).parent().hide();dataprompted=true;">Dismiss</span>
+</div>
 <div id="landingGroup">
   <div id="headerGroup">
     <div id="headerFullWidth">
@@ -71,21 +73,20 @@ includes/homepage.js
     Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non consequatur sit, quisquam soluta exercitationem hic! Reprehenderit repellendus rem velit blanditiis asperiores est tempora vel, magnam neque enim ipsa, sequi necessitatibus.
   </div>
 </div>
-<div id="pageArrowDown" class="pageShadowDown" style="height: 50px; width: 120%; text-align: center">
+<div class="pageShadowDown">
   ↓ Scroll down ↓
 </div>
+<div id="moduleNavBar">
+  <span onclick="switchView('Browse',this)" class="moduleNavButton moduleNavButtonSelected noselect">Browse</span>
+  <span id="allModules" onclick="switchView('All Modules',this)" class="moduleNavButton noselect">All Modules</span>
 </div>
-<div id = "moduleNavBar">
-  <span onclick = "switchView('Browse',this)" class="moduleNavButton moduleNavButtonSelected noselect">Browse</span>
-  <span id = "allModules" onclick = "switchView('All Modules',this)" class="moduleNavButton noselect">All Modules</span>
-</div>
-<div id = "allModulesContainer" style="display:none">
+<div id="allModulesContainer" style="display:none">
   <select id="versionSelect" class="textSpace" onchange="versionView()">
     <option value="loading">Loading...</option>
-  </select><input id="textSearch" type="text" class="textSpace" placeholder="search..." onkeyup="textSearch()"/>
-  <br/>
+  </select>
+  <input id="textSearch" type="text" class="textSpace" placeholder="search..." onkeyup="textSearch()"/>
 </div>
-<div id = "categoriesContainer">
+<div id="categoriesContainer">
   <!-- <h2>Resources &amp; Tools</h2>
   <div class="categoryBar">
     <a href="https://www.gm4.co/resource-pack"><div id="resourcepack_card" class="moduleCard noselect" data-resource_id="resourcepack">
@@ -102,7 +103,7 @@ includes/homepage.js
 <div id="footer">
   <div id="footerContainer">
     <p>Copyright &copy; <?php echo(date('Y')); ?> Gamemode 4<br>
-    <a href = "https://discord.com/invite/erHDVhPY" target="_blank">Discord</a> | <a href = "https://github.com/Gamemode4Dev/GM4_Datapacks" target="_blank">Github</a> | <a href = "https://twitter.com/GM4Official" target="_blank">Twitter</a>
+    <a href="https://discord.com/invite/erHDVhPY" target="_blank">Discord</a> | <a href="https://github.com/Gamemode4Dev/GM4_Datapacks" target="_blank">Github</a> | <a href="https://twitter.com/GM4Official" target="_blank">Twitter</a>
     </p>
     <p style="font-size:9pt">Gamemode 4 is not an official Minecraft product, and is not approved by or associated with Mojang Studios. "Minecraft" is a trademark of Mojang AB and any usage of the Minecraft brand on this site is used in accordance with Mojang Studios' <a href="https://account.mojang.com/terms?ref=ft#brand" target="_blank">Brand and Asset Guidelines</a>.</p>
   </div>

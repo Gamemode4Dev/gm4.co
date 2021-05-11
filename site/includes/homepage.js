@@ -8,6 +8,7 @@ let module_categories = {};
 let allModules = "unloaded";
 let slides = [];
 let slideshowInterval = 0;
+let cardTransitionTimeout = 0;
 
 //preferences
 let siteTheme = "light";
@@ -18,7 +19,7 @@ if(userdata != null){
 }
 
 window.onload = function(){
-  document.documentElement.style.setProperty('--scrollbar-width', (window.innerWidth - document.documentElement.clientWidth) + "px");
+  resize()
 
   if (window.matchMedia != "undefined" && window.matchMedia('(prefers-color-scheme: dark)').matches) {
     $("body").removeClass("light");
@@ -71,6 +72,18 @@ window.onload = function(){
   });
 }
 
+window.onresize = resize;
+
+function resize(){
+  const clientWidth = document.documentElement.clientWidth
+  const scrollbar = window.screen.width - clientWidth <= 1 ? 0 : window.innerWidth - clientWidth;
+  document.documentElement.style.setProperty('--scrollbar-width', scrollbar + "px");
+
+  $('#categoriesContainer .categoryBar').each(function() {
+    scrollOffset($(this), 0)
+  })
+}
+
 function startSlideshow() {
   clearInterval(slideshowInterval);
   if (slides.length > 1) {
@@ -85,7 +98,7 @@ function loadCategories(){
     module_categories = data.module_categories;
     if(module_categories != undefined){
       for(i=0;i<module_categories.length;i++){
-        $("#categoriesContainer").append('<h2 class="categoryTitle">' + module_categories[i].title + ' <span class="categoryLengthText">(0)</span></h2><div class="categoryBar"><div class="cardContainer"></div></div>');
+        $("#categoriesContainer").append('<h2 class="categoryTitle">' + module_categories[i].title + ' <span class="categoryLengthText">(0)</span></h2><div class="categoryBar"><div class="cardContainer"></div><div class="browseButton browseButtonLeft browseButtonHidden"></div><div class="browseButton browseButtonRight"></div></div>');
         cardarray = module_categories[i].modules;
         if(cardarray != undefined && cardarray.length>0){
           populateCategory(i,module_categories[i]);
@@ -102,34 +115,44 @@ function loadCategories(){
             });
           }
         }
-      }
-      
-      $(".categoryBar").append('<div class="browseButton browseButtonLeft browseButtonHidden"></div><div class="browseButton browseButtonRight"></div>');
-
-      const changeOffset = (el, dir) => {
-        const bar = el.parent();
-        let offset = parseInt(bar.get(0).style.getPropertyValue("--offset") || "0");
-        const max = bar.find(".moduleCard").length;
-        const shown = parseInt(getComputedStyle(bar.get(0)).getPropertyValue("--module-cards"))
-
-        offset = Math.max(0, Math.min(max - shown, offset + dir * (shown - 1)));
-
-        bar.get(0).style.setProperty("--offset", `${offset}`);
-        bar.find(".browseButtonLeft").toggleClass("browseButtonHidden", offset <= 0)
-        bar.find(".browseButtonRight").toggleClass("browseButtonHidden", offset >= max - shown)
+        scrollOffset($('#categoriesContainer .categoryBar').last(), 0)
       }
 
       $(".browseButtonRight").on("click",function(){
-        changeOffset($(this), 1)
+        scrollOffset($(this).parent(), 1)
       });
       $(".browseButtonLeft").on("click",function(){
-        changeOffset($(this), -1)
+        scrollOffset($(this).parent(), -1)
       });
     }
     else{
       alert("Something went wrong and modules couldn't be loaded");
     }
   });
+}
+
+const scrollOffset = (el, dir) => {
+  const cards = el.find(".moduleCard").length;
+  const shown = parseInt(getComputedStyle(el.get(0)).getPropertyValue("--module-cards"))
+  let offset = parseInt(el.get(0).style.getPropertyValue("--offset") || "0");
+  
+  const endCard = cards - 1 > shown;
+  const max = cards - shown - (endCard ? 0 : 1);
+  const target = offset + dir * Math.max(3, shown - 1);
+  offset = Math.max(0, Math.min(max, target));
+
+  if (dir !== 0) el.addClass('cardTransitioning');
+  el.get(0).style.setProperty("--offset", `${offset}`);
+  el.find(".browseButtonLeft").toggleClass("browseButtonHidden", offset <= 0);
+  el.find(".browseButtonRight").toggleClass("browseButtonHidden", offset >= max);
+  el.find(".scrollEndCard").toggleClass("cardHidden", !endCard);
+
+  if (dir !== 0) {
+    clearTimeout(cardTransitionTimeout)
+    cardTransitionTimeout = setTimeout(function(){
+      $('.categoryBar').removeClass('cardTransitioning')
+    }, 400)
+  }
 }
 
 function populateCategory(pos,category){
@@ -145,7 +168,7 @@ function populateCategory(pos,category){
     cards += '<div class="moduleCard noselect" data-module_id="'+cardarray[j]+'"><img src="modules/media/' + cardarray[j] + '/' + cardarray[j] + '.svg" onerror="image_error(this)"><p class="cardName">' + cardarray[j].replace(/_/g, " ") + '</p></div>';
   }
   $(".cardContainer").eq(pos).html(cards);
-  $(".cardContainer").eq(pos).append('<div class="noselect moduleCard"><img src="images/enderpuff_by_qbert.png" title="End of results. Artwork by Qbert" alt="End of results"/><p class="cardName">You\'ve reached the end</p></div>');
+  $(".cardContainer").eq(pos).append('<div class="moduleCard noselect scrollEndCard"><img src="images/enderpuff_by_qbert.png" title="End of results. Artwork by Qbert" alt="End of results"/><p class="cardName">You\'ve reached the end</p></div>');
   $(".categoryLengthText").eq(pos).html("(" + cardarray.length + ")");
   //add listeners
   $(".cardContainer").eq(pos).find(".moduleCard").on("click",function(){
