@@ -60,7 +60,7 @@ window.onload = function(){
         }
         versionclass += "version_" + allModules[moduleName].versions[j].replace(".","_") + " ";
       }
-      $("#allModulesContainer").append('<a href="https://www.gm4.co/modules/'+allModules[moduleName].id.replace("_","-")+'"><div class="a-zCard noselect '+versionclass+'"><img src="modules/media/'+allModules[moduleName].id+'/'+allModules[moduleName].id+'.svg" onerror="image_error(this)"/><p class="cardName">'+moduleName+'</p></div></a>');
+      $("#allModulesContainer").append('<a href="https://www.gm4.co/modules/'+allModules[moduleName].id.replace("_","-")+'"><div class="a-zCard noselect '+versionclass+'"><img src="modules/media/'+allModules[moduleName].id+'/'+allModules[moduleName].id+'.svg" onerror="image_error(this)"/><span class="cardName">'+moduleName+'</span></div></a>');
     }
     versions.sort(function(a,b){return b-a});
     $("#versionSelect").empty();
@@ -165,10 +165,10 @@ function populateCategory(pos,category){
   }
   cards = "";
   for(j=0;j<cardarray.length;j++){
-    cards += '<div class="moduleCard noselect" data-module_id="'+cardarray[j]+'"><img src="modules/media/' + cardarray[j] + '/' + cardarray[j] + '.svg" onerror="image_error(this)"><p class="cardName">' + cardarray[j].replace(/_/g, " ") + '</p></div>';
+    cards += '<div class="moduleCard noselect" data-module_id="'+cardarray[j]+'"><img src="modules/media/' + cardarray[j] + '/' + cardarray[j] + '.svg" onerror="image_error(this)"><span class="cardName">' + cardarray[j].replace(/_/g, " ") + '</span></div>';
   }
   $(".cardContainer").eq(pos).html(cards);
-  $(".cardContainer").eq(pos).append('<div class="moduleCard noselect scrollEndCard"><img src="images/enderpuff_by_qbert.png" title="End of results. Artwork by Qbert" alt="End of results"/><p class="cardName">You\'ve reached the end</p></div>');
+  $(".cardContainer").eq(pos).append('<div class="moduleCard noselect scrollEndCard"><img src="images/enderpuff_by_qbert.png" title="End of results. Artwork by Qbert" alt="End of results"/><span class="cardName">You\'ve reached the end</span></div>');
   $(".categoryLengthText").eq(pos).html("(" + cardarray.length + ")");
   //add listeners
   $(".cardContainer").eq(pos).find(".moduleCard").on("click",function(){

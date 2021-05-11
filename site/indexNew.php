@@ -45,29 +45,31 @@ includes/homepage.js
   <span class="smallButton" onclick="storeUserPreferences()">Allow</span>
   <span class="smallButton" onclick="$(this).parent().hide();dataprompted=true;">Dismiss</span>
 </div>
-<div id="landingGroup">
-  <div id="headerGroup">
-    <div id="headerFullWidth">
-      <div id="header">
-        <a href="https://www.gm4.co/">
-          <h1>
-            <img src="images/logo/logo_clear.svg" height="32px" alt="Gamemode 4 Logo"/>
-            <span>Gamemode 4</span>
-          </h1>
-        </a>
-        <ul style="display: flex;">
-          <span style="cursor: pointer;" onclick="switchView('All Modules', $('#allModules')[0], true)"><li>Modules</li></span>
-          <a href="https://www.gm4.co/wiki" target="_blank"><li> Wiki</li></a>
-          <a href="https://www.gm4.co/server"><li> Server</li></a>
-          <li><div id="themeButton" onclick="toggleTheme()"></div></li>
-        </ul>
-      </div>
-    </div>
-    <div class="slideshow">
-      <div class="slideshowArrow slideshowLeft" onclick="slideshow(-1)"></div>
-      <div class="slideshowArrow slideshowRight" onclick="slideshow(1)"></div>
-      <div id="slideshowContainer"></div>
-    </div>
+<div class="landing">
+  <header>
+    <a class="home" href="https://www.gm4.co/">
+      <img src="images/logo/logo_clear.svg" height="32px" alt="Gamemode 4 Logo"/>
+      <h1>Gamemode 4</h1>
+    </a>
+    <nav>
+      <ul>
+        <li>
+          <span onclick="switchView('All Modules', $('#allModules')[0], true)">Modules</span>
+        </li>
+        <li>
+          <a href="https://www.gm4.co/wiki" target="_blank">Wiki</a>
+        </li>
+        <li>
+          <a href="https://www.gm4.co/server">Server</a>
+        </li>
+      </ul>
+    </nav>
+    <span class="themeButton" onclick="toggleTheme()"></span>
+  </header>
+  <div class="slideshow">
+    <div class="slideshowArrow slideshowLeft" onclick="slideshow(-1)"></div>
+    <div class="slideshowArrow slideshowRight" onclick="slideshow(1)"></div>
+    <div id="slideshowContainer"></div>
   </div>
   <div class="landingInfo">
     Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non consequatur sit, quisquam soluta exercitationem hic! Reprehenderit repellendus rem velit blanditiis asperiores est tempora vel, magnam neque enim ipsa, sequi necessitatibus.
@@ -105,7 +107,7 @@ includes/homepage.js
     <p>Copyright &copy; <?php echo(date('Y')); ?> Gamemode 4<br>
     <a href="https://discord.com/invite/erHDVhPY" target="_blank">Discord</a> | <a href="https://github.com/Gamemode4Dev/GM4_Datapacks" target="_blank">Github</a> | <a href="https://twitter.com/GM4Official" target="_blank">Twitter</a>
     </p>
-    <p style="font-size:9pt">Gamemode 4 is not an official Minecraft product, and is not approved by or associated with Mojang Studios. "Minecraft" is a trademark of Mojang AB and any usage of the Minecraft brand on this site is used in accordance with Mojang Studios' <a href="https://account.mojang.com/terms?ref=ft#brand" target="_blank">Brand and Asset Guidelines</a>.</p>
+    <p class="small">Gamemode 4 is not an official Minecraft product, and is not approved by or associated with Mojang Studios. "Minecraft" is a trademark of Mojang AB and any usage of the Minecraft brand on this site is used in accordance with Mojang Studios' <a href="https://account.mojang.com/terms?ref=ft#brand" target="_blank">Brand and Asset Guidelines</a>.</p>
   </div>
 </div>
 </body>

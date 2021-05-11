@@ -74,8 +74,6 @@ body {
   font-weight: normal;
   font-size: 14pt;
   color: var(--main-accent-color);
-  padding: 0px;
-  margin: 0px;
   width: 100%;
   overflow-x: hidden;
   height: 100vh;
@@ -88,6 +86,10 @@ p {
   margin: 1em 0;
 }
 
+p.small {
+  font-size: 0.7em;
+}
+
 h2 {
   font-size: 16pt;
   margin-bottom: 1px;
@@ -96,114 +98,99 @@ h2 {
 }
 
 a {
-  color: var(--main-text-color);
+  text-decoration: none;
+  color: inherit;
 }
 
 a:visited {
-  color: var(--main-text-color);
+  color: inherit;
 }
 
 .noselect {
   -webkit-user-select: none;
-  /* Chrome all / Safari all */
   -moz-user-select: none;
-  /* Firefox all */
   -ms-user-select: none;
-  /* IE 10+ */
   user-select: none;
-  /* Likely future */
 }
 
-#header {
-  color: var(--main-accent-color);
-  text-align: center;
-  margin: 4px auto 0px;
-  display: flex;
-  overflow-x: hidden;
-}
-
-#landingGroup {
+.landing {
   height: calc(100vh - 50px);
   display: flex;
-  flex-flow: column;
-  margin: 0px;
+  flex-direction: column;
 }
 
-#headerGroup {
-  height: 25vw;
-  min-height: 300px;
+header {
+  margin: 6px 0;
   display: flex;
-  flex-flow: column;
-}
-
-#headerFullWidth {
-  width: 100%;
-  display: flex;
-  flex-flow: column;
-}
-
-#header a {
-  color: var(--main-accent-color);
-  text-decoration: none;
-}
-
-#header a:visited {
+  justify-content: center;
+  overflow-x: hidden;
   color: var(--main-accent-color);
 }
 
-#header a span {
-  display: inline-block;
-  margin-bottom: 5px;
+header .home {
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
+  margin-right: 20px;
+}
+
+header .home h1 {
+  padding: 0 10px;
+  font-weight: bold;
+  font-size: 38px;
 }
 
 @media (max-width: 720px) {
-  #header a span {
+  header .home h1 {
     display: none;
   }
 }
 
-#header ul {
-  position: relative;
-  top: 0px;
-  left: 0px;
-  height: auto;
-  text-align: center;
-  padding: 0;
-  margin: 0;
+header ul {
+  display: flex;
+  height: 100%;
+  list-style: none;
 }
 
-#header h1 {
+header li > * {
   display: block;
-  font-size: 29pt;
+  height: 100%;
+  font-size: 24px;
   font-weight: bold;
-  height: auto;
-  margin: auto;
-  text-align: center;
-  padding: 0px 15px 0px 15px;
+  padding: 10px;
+  cursor: pointer;
 }
 
-#header h1:hover {
-  box-shadow: 0px -35px 0px -33px var(--main-accent-color) inset;
+@media (max-width: 480px) {
+  header li > * {
+    font-size: 18px;
+    padding: 10px 6px;
+  }
 }
 
-#header ul li {
-  font-size: 20pt;
-  font-weight: bold;
-  display: inline-block;
-  height: 40px;
-  padding: 10px 10px 0px 10px;
-}
-
-#header ul li:hover {
+header .home:hover,
+header li > *:hover {
   box-shadow: 0px -30px 0px -28px var(--main-accent-color) inset;
 }
 
-#header img {
-  top: 2px;
-  position: relative;
+.themeButton {
+  width: 32px;
+  height: 32px;
+  align-self: center;
+  margin: 0 15px;
+  mask: no-repeat center / contain url(/images/theme_button.svg);
+  -webkit-mask: no-repeat center / contain url(/images/theme_button.svg);
+  background-color: var(--main-text-color);
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+.themeButton:hover {
+  opacity: 0.7;
 }
 
 .slideshow {
+  height: 25vw;
   width: 100%;
   position: relative;
   overflow: hidden;
@@ -375,16 +362,6 @@ select option {
   display: none;
 }
 
-#themeButton {
-  width: 32px;
-  height: 32px;
-  content: "";
-  background-image: url(/images/theme_button.svg);
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
 #moduleNavBar {
   border-bottom: 1px solid var(--thematic-element-color);
   opacity: 0.8;
@@ -539,9 +516,7 @@ select option {
   position: absolute;
   width: 100%;
   bottom: 0px;
-  left: 0px;
   padding: 5px;
-  margin: 0px;
   font-size: calc(var(--module-size) * 0.12);
   text-align: center;
   text-transform: capitalize;
@@ -591,7 +566,6 @@ select option {
   bottom: 0px;
   left: 0px;
   padding: 5px;
-  margin: 0px;
   text-align: center;
   text-transform: capitalize;
 }
@@ -666,8 +640,6 @@ select option {
   overflow: hidden;
   position: relative;
   display: inline-block;
-  padding: 0px;
-  margin: 0px;
   border: 0px;
   background-size: cover;
   background-repeat: no-repeat;
