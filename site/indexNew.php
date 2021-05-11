@@ -61,12 +61,10 @@ includes/homepage.js
         </span>
       </div>
     </div>
-    <div id="slideshowContainer">
-      <div id="slideshowLeft" class="slideshowArrow" onclick="slideshow('left')"></div>
-      <div id="slideshowRight" class="slideshowArrow" onclick="slideshow()"></div>
-      <div id="slideshowSubContainer" class="cardContainer">
-        
-      </div>
+    <div class="slideshow">
+      <div class="slideshowArrow slideshowLeft" onclick="slideshow(-1)"></div>
+      <div class="slideshowArrow slideshowRight" onclick="slideshow(1)"></div>
+      <div id="slideshowContainer"></div>
     </div>
   </div>
   <div class="landingInfo">
