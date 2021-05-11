@@ -406,6 +406,7 @@ select option {
   width: 100%;
   height: calc(var(--module-size) - 2px);
   position: relative;
+  overflow:hidden;
 }
 
 .categoryTitle {
