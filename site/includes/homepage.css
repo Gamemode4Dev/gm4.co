@@ -12,7 +12,7 @@ CSS for the module browse page
 
 @media screen and (max-width: 1800px) {
   * {
-    --content-spacer: 7.5vw;
+    --content-spacer: 5vw;
     --module-cards: 7;
   }
 }
@@ -37,7 +37,7 @@ CSS for the module browse page
 
 @media screen and (max-width: 600px) {
   * {
-    --content-spacer: 45px;
+    --content-spacer: 30px;
     --module-cards: 3;
   }
 }
@@ -214,7 +214,7 @@ header li > *:hover {
   height: 100%;
   display: flex;
   width: max-content;
-  left: calc(var(--track-spacer, 0px) - var(--offset, 0px) * var(--item-width));
+  left: calc(var(--track-spacer, 0px) - var(--offset, 0) * var(--item-width) - var(--partial-offset, 0px));
 }
 
 .track.transitioning .trackContainer {

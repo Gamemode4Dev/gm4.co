@@ -67,8 +67,8 @@ includes/homepage.js
     <span class="themeButton" onclick="toggleTheme()"></span>
   </header>
   <div class="slideshow track">
-    <div class="trackButton trackButtonLeft" onclick="slideshow(-1)"></div>
-    <div class="trackButton trackButtonRight" onclick="slideshow(1)"></div>
+    <div class="trackButton trackButtonLeft"></div>
+    <div class="trackButton trackButtonRight"></div>
     <div class="trackContainer"></div>
   </div>
   <div class="landingInfo">

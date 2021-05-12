@@ -19,8 +19,6 @@ if(userdata != null){
 }
 
 window.onload = function(){
-  resize()
-
   if (window.matchMedia != "undefined" && window.matchMedia('(prefers-color-scheme: dark)').matches) {
     $("body").removeClass("light");
     $("body").addClass("dark");
@@ -36,7 +34,7 @@ window.onload = function(){
       slide += '</div>';
       $(".slideshow > .trackContainer").append(slide);
     }
-    startSlideshow()
+    initTrack($(".slideshow"), 8000)
   });
   
   if(userdata != null && userdata.theme != undefined && userdata.theme == "dark" && siteTheme == "light") theme("dark");
@@ -70,37 +68,31 @@ window.onload = function(){
     $("#versionSelect").append("<option value='older'>Earlier Versions...</option>");
     versionView();
   });
+
+  updateScrollbar()
 }
 
 window.onresize = resize;
 
-function resize(){
+function updateScrollbar() {
   const clientWidth = document.documentElement.clientWidth
   const scrollbar = Math.abs(window.screen.width - clientWidth) <= 1 ? 0 : window.innerWidth - clientWidth;
-  document.documentElement.style.setProperty('--scrollbar-width', scrollbar + "px");
+  document.documentElement.style.setProperty("--scrollbar-width", scrollbar + "px");
+}
 
-  $('#categoriesContainer .categoryBar').each(function() {
-    scrollTrack($(this), 0)
+function resize(){
+  updateScrollbar();
+
+  $('.track').each(function() {
+    let interval = parseInt(this.style.getPropertyValue("--track-interval"))
+    if (isNaN(interval)) scrollTrack($(this), 0)
   })
 }
 
-function slideshow(dir){
-  scrollTrack($('.slideshow'), dir, true);
-  startSlideshow();
-}
-
-function startSlideshow() {
-  clearInterval(slideshowInterval);
-  if (slides.length > 1) {
-    slideshowInterval = setInterval(function() {
-      slideshow(1);
-    }, 8000);
-  }
-}
-
-function scrollTrack(el, dir, wrap = false) {
+function scrollTrack(el, dir, loop, dist) {
   const total = el.find(".trackItem").length;
   const style = getComputedStyle(el.get(0));
+  const width = parseInt(style.getPropertyValue("--item-width"));
   const visible = parseInt(style.getPropertyValue("--visible-items"));
   let offset = parseInt(style.getPropertyValue("--offset"));
   if (isNaN(offset)) offset = 0;
@@ -108,26 +100,81 @@ function scrollTrack(el, dir, wrap = false) {
   const endItem = total - 1 > visible;
   const target = offset + dir * Math.max(1, visible - 1);
   const maxOffset = total - visible - (endItem ? 0 : 1);
-  if (wrap) {
+  if (loop) {
     offset = (target % total + total) % total;
   } else {
     offset = Math.max(0, Math.min(maxOffset, target));
   }
 
-  if (dir !== 0) el.addClass('transitioning');
+  if (dir !== 0) el.addClass("transitioning");
   el.get(0).style.setProperty("--offset", `${offset}`);
   if (dir !== 0) {
     clearTimeout(trackTransition);
     trackTransition = setTimeout(function(){
-      $('.track').removeClass('transitioning')
+      $(".track").removeClass("transitioning");
     }, 1000);
   }
 
-  if (!wrap) {
+  if (!loop) {
     el.find(".trackButtonLeft").toggleClass("hidden", offset <= 0);
     el.find(".trackButtonRight").toggleClass("hidden", offset >= maxOffset);
     el.find(".trackEndItem").toggleClass("hidden", !endItem);
   }
+}
+
+
+function initTrack(el, loop) {
+  let loopInterval;
+  function startLoop() {
+    if (!loop) return;
+    if (loopInterval) clearInterval(loopInterval);
+    loopInterval = setInterval(function() {
+      scrollTrack(el, 1, loop);
+    }, loop);
+  }
+  startLoop();
+
+  scrollTrack(el, 0, loop);
+  el.find(".trackButtonLeft").on("click",function(){
+    scrollTrack(el, -1, loop);
+    startLoop();
+  });
+  el.find(".trackButtonRight").on("click",function(){
+    scrollTrack(el, 1, loop);
+    startLoop();
+  });
+
+  function clientX(e) {
+    return (e.changedTouches ? e.changedTouches[0] : e).clientX;
+  }
+
+  let x0 = null;
+  function start(e) {
+    x0 = clientX(e);
+    el.removeClass("transitioning");
+    if (loopInterval) clearInterval(loopInterval);
+  }
+
+  function move(e) {
+    if (x0 !== null) {
+      const partial = Math.round(x0 - clientX(e));
+      el.get(0).style.setProperty("--partial-offset", `${partial}px`);
+    }
+  }
+
+  function end(e) {
+    if(x0 !== null) {
+      let dx = x0 - clientX(e);
+      scrollTrack(el, Math.sign(dx), loop, dx);
+      x0 = null;
+    }
+    startLoop();
+    el.get(0).style.setProperty('--partial-offset', '0px');
+  }
+
+  el.get(0).addEventListener("touchstart", start, false);
+  el.get(0).addEventListener("touchmove", move, false);
+  el.get(0).addEventListener("touchend", end, false);
 }
 
 function loadCategories(){
@@ -139,7 +186,7 @@ function loadCategories(){
         cardarray = module_categories[i].modules;
         if(cardarray != undefined && cardarray.length>0){
           populateCategory(i,module_categories[i]);
-          scrollTrack($('#categoriesContainer .categoryBar').eq(i), 0)
+          initTrack($('#categoriesContainer .categoryBar').eq(i), 0)
         }
         else{
           if(module_categories[i].populate_from != undefined){
@@ -150,18 +197,11 @@ function loadCategories(){
                 category.modules.length=this.limit;
               }
               populateCategory(this.pos, category);
-              scrollTrack($('#categoriesContainer .categoryBar').eq(this.pos), 0)
+              initTrack($('#categoriesContainer .categoryBar').eq(this.pos), 0)
             });
           }
         }
       }
-
-      $("#categoriesContainer .trackButtonLeft").on("click",function(){
-        scrollTrack($(this).parent(), -1)
-      });
-      $("#categoriesContainer .trackButtonRight").on("click",function(){
-        scrollTrack($(this).parent(), 1)
-      });
     }
     else{
       alert("Something went wrong and modules couldn't be loaded");
