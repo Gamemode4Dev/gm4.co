@@ -66,10 +66,10 @@ includes/homepage.js
     </nav>
     <span class="themeButton" onclick="toggleTheme()"></span>
   </header>
-  <div class="slideshow">
-    <div class="slideshowArrow slideshowLeft" onclick="slideshow(-1)"></div>
-    <div class="slideshowArrow slideshowRight" onclick="slideshow(1)"></div>
-    <div class="slideshowContainer"></div>
+  <div class="slideshow track">
+    <div class="trackButton trackButtonLeft" onclick="slideshow(-1)"></div>
+    <div class="trackButton trackButtonRight" onclick="slideshow(1)"></div>
+    <div class="trackContainer"></div>
   </div>
   <div class="landingInfo">
     Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non consequatur sit, quisquam soluta exercitationem hic! Reprehenderit repellendus rem velit blanditiis asperiores est tempora vel, magnam neque enim ipsa, sequi necessitatibus.

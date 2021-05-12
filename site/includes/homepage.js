@@ -8,8 +8,7 @@ let module_categories = {};
 let allModules = "unloaded";
 let slides = [];
 let slideshowInterval = 0;
-let cardTransitionTimeout = 0;
-let slideTransitionTimeout = 0;
+let trackTransition = 0;
 
 //preferences
 let siteTheme = "light";
@@ -30,12 +29,12 @@ window.onload = function(){
   $.ajax({url:"images/slideshow/slides.json"}).done(function(data){
     slides = data.slides;
     for(i=0;i<slides.length;i++){
-      slide = `<div class="slideshowSlide ${slides[i].text.position || "bottom-left"}" style="background-image:url(images/slideshow/${slides[i].background_image});">`;
+      slide = `<div class="trackItem ${slides[i].text.position || "bottom-left"}" style="background-image:url(images/slideshow/${slides[i].background_image});">`;
       if (slides[i].text) {
         slide += `<h2>${slides[i].text.header}</h2><p>${slides[i].text.paragraph}</p>`;
       }
       slide += '</div>';
-      $(".slideshowContainer").append(slide);
+      $(".slideshow > .trackContainer").append(slide);
     }
     startSlideshow()
   });
@@ -81,8 +80,13 @@ function resize(){
   document.documentElement.style.setProperty('--scrollbar-width', scrollbar + "px");
 
   $('#categoriesContainer .categoryBar').each(function() {
-    scrollOffset($(this), 0)
+    scrollTrack($(this), 0)
   })
+}
+
+function slideshow(dir){
+  scrollTrack($('.slideshow'), dir, true);
+  startSlideshow();
 }
 
 function startSlideshow() {
@@ -94,15 +98,48 @@ function startSlideshow() {
   }
 }
 
+function scrollTrack(el, dir, wrap = false) {
+  const total = el.find(".trackItem").length;
+  const style = getComputedStyle(el.get(0));
+  const visible = parseInt(style.getPropertyValue("--visible-items"));
+  let offset = parseInt(style.getPropertyValue("--offset"));
+  if (isNaN(offset)) offset = 0;
+  
+  const endItem = total - 1 > visible;
+  const target = offset + dir * Math.max(1, visible - 1);
+  const maxOffset = total - visible - (endItem ? 0 : 1);
+  if (wrap) {
+    offset = (target % total + total) % total;
+  } else {
+    offset = Math.max(0, Math.min(maxOffset, target));
+  }
+
+  if (dir !== 0) el.addClass('transitioning');
+  el.get(0).style.setProperty("--offset", `${offset}`);
+  if (dir !== 0) {
+    clearTimeout(trackTransition);
+    trackTransition = setTimeout(function(){
+      $('.track').removeClass('transitioning')
+    }, 1000);
+  }
+
+  if (!wrap) {
+    el.find(".trackButtonLeft").toggleClass("hidden", offset <= 0);
+    el.find(".trackButtonRight").toggleClass("hidden", offset >= maxOffset);
+    el.find(".trackEndItem").toggleClass("hidden", !endItem);
+  }
+}
+
 function loadCategories(){
   $.ajax({url:"modules/module_categories.json"}).done(function(data){
     module_categories = data.module_categories;
     if(module_categories != undefined){
       for(i=0;i<module_categories.length;i++){
-        $("#categoriesContainer").append('<h2 class="categoryTitle">' + module_categories[i].title + ' <span class="categoryLengthText">(0)</span></h2><div class="categoryBar"><div class="cardContainer"></div><div class="browseButton browseButtonLeft browseButtonHidden"></div><div class="browseButton browseButtonRight"></div></div>');
+        $("#categoriesContainer").append('<h2 class="categoryTitle">' + module_categories[i].title + ' <span class="categoryLengthText">(0)</span></h2><div class="categoryBar track"><div class="trackContainer"></div><div class="trackButton trackButtonLeft hidden"></div><div class="trackButton trackButtonRight"></div></div>');
         cardarray = module_categories[i].modules;
         if(cardarray != undefined && cardarray.length>0){
           populateCategory(i,module_categories[i]);
+          scrollTrack($('#categoriesContainer .categoryBar').eq(i), 0)
         }
         else{
           if(module_categories[i].populate_from != undefined){
@@ -113,17 +150,17 @@ function loadCategories(){
                 category.modules.length=this.limit;
               }
               populateCategory(this.pos, category);
+              scrollTrack($('#categoriesContainer .categoryBar').eq(this.pos), 0)
             });
           }
         }
-        scrollOffset($('#categoriesContainer .categoryBar').last(), 0)
       }
 
-      $(".browseButtonRight").on("click",function(){
-        scrollOffset($(this).parent(), 1)
+      $("#categoriesContainer .trackButtonLeft").on("click",function(){
+        scrollTrack($(this).parent(), -1)
       });
-      $(".browseButtonLeft").on("click",function(){
-        scrollOffset($(this).parent(), -1)
+      $("#categoriesContainer .trackButtonRight").on("click",function(){
+        scrollTrack($(this).parent(), 1)
       });
     }
     else{
@@ -132,73 +169,35 @@ function loadCategories(){
   });
 }
 
-const scrollOffset = (el, dir) => {
-  const cards = el.find(".moduleCard").length;
-  const shown = parseInt(getComputedStyle(el.get(0)).getPropertyValue("--module-cards"))
-  let offset = parseInt(el.get(0).style.getPropertyValue("--offset") || "0");
-  
-  const endCard = cards - 1 > shown;
-  const max = cards - shown - (endCard ? 0 : 1);
-  const target = offset + dir * Math.max(3, shown - 1);
-  offset = Math.max(0, Math.min(max, target));
-
-  if (dir !== 0) el.addClass('cardTransitioning');
-  el.get(0).style.setProperty("--offset", `${offset}`);
-  el.find(".browseButtonLeft").toggleClass("browseButtonHidden", offset <= 0);
-  el.find(".browseButtonRight").toggleClass("browseButtonHidden", offset >= max);
-  el.find(".scrollEndCard").toggleClass("cardHidden", !endCard);
-
-  if (dir !== 0) {
-    clearTimeout(cardTransitionTimeout)
-    cardTransitionTimeout = setTimeout(function(){
-      $('.categoryBar').removeClass('cardTransitioning')
-    }, 400)
-  }
-}
-
 function populateCategory(pos,category){
   //populate the category once the cards are loaded.
   //in most cases this is instant but some may need to
   //load external source data first.
+  const track = $("#categoriesContainer .trackContainer").eq(pos);
   cardarray = category.modules;
   if(category.order != undefined && category.order == "shuffled"){
     shuffleArray(cardarray);
   }
   cards = "";
   for(j=0;j<cardarray.length;j++){
-    cards += '<div class="moduleCard noselect" data-module_id="'+cardarray[j]+'"><img src="modules/media/' + cardarray[j] + '/' + cardarray[j] + '.svg" onerror="image_error(this)"><span class="cardName">' + cardarray[j].replace(/_/g, " ") + '</span></div>';
+    cards += '<div class="trackItem moduleCard noselect" data-module_id="'+cardarray[j]+'"><img src="modules/media/' + cardarray[j] + '/' + cardarray[j] + '.svg" onerror="image_error(this)"><span class="cardName">' + cardarray[j].replace(/_/g, " ") + '</span></div>';
   }
-  $(".cardContainer").eq(pos).html(cards);
-  $(".cardContainer").eq(pos).append('<div class="moduleCard noselect scrollEndCard"><img src="images/enderpuff_by_qbert.png" title="End of results. Artwork by Qbert" alt="End of results"/><span class="cardName">You\'ve reached the end</span></div>');
+  track.html(cards);
+  track.append('<div class="trackItem moduleCard trackEndItem noselect"><img src="images/enderpuff_by_qbert.png" title="End of results. Artwork by Qbert" alt="End of results"/><span class="cardName">You\'ve reached the end</span></div>');
   $(".categoryLengthText").eq(pos).html("(" + cardarray.length + ")");
   //add listeners
-  $(".cardContainer").eq(pos).find(".moduleCard").on("click",function(){
+  track.find(".moduleCard").on("click",function(){
     if($(this).attr("data-module_id")!=undefined){
-      if ($(this).hasClass('moduleCardSelected')) {
-        $(this).removeClass('moduleCardSelected');
+      if ($(this).hasClass('selected')) {
+        $(this).removeClass('selected');
         $('#preview').remove();
       } else {
-        $('.moduleCardSelected').removeClass('moduleCardSelected');
-        $(this).addClass('moduleCardSelected');
+        $('.selected').removeClass('selected');
+        $(this).addClass('selected');
         loadPreview($(this).parent().parent(), $(this).attr("data-module_id"));
       }
     }      
   });
-}
-
-function slideshow(dir){
-  const slideshow = $('.slideshow');
-  let offset = parseInt(slideshow.get(0).style.getPropertyValue("--offset") || "0");
-  const max = slideshow.find(".slideshowSlide").length;
-  offset = ((offset + dir) % max + max) % max;
-
-  slideshow.addClass('slideTransitioning');
-  slideshow.get(0).style.setProperty("--offset", `${offset}`);
-  startSlideshow();
-  clearTimeout(cardTransitionTimeout)
-    cardTransitionTimeout = setTimeout(function(){
-      slideshow.removeClass('slideTransitioning')
-    }, 900)
 }
 
 function toggleTheme(){

@@ -106,11 +106,7 @@ a:visited {
   user-select: none;
 }
 
-.landing {
-  height: calc(100vh - 50px);
-  display: flex;
-  flex-direction: column;
-}
+/* Header */
 
 header {
   margin: 6px 0;
@@ -183,118 +179,102 @@ header li > *:hover {
   opacity: 0.7;
 }
 
-.slideshow {
+/* Landing */
+
+.landing {
+  height: calc(100vh - 50px);
+  display: flex;
+  flex-direction: column;
+}
+
+.pageShadowDown {
+  bottom: 0px;
+  box-shadow: 0px -50px 50px -50px rgba(0, 0, 0, 0.3) inset;
+  border-bottom: 1px solid var(--thematic-element-color);
+  height: 50px;
+  text-align: center;
+}
+
+.landingInfo {
+  margin: 20px var(--content-spacer);
+}
+
+/* Tracks */
+
+.track {
   --offset: 0;
-  height: 25vw;
-  min-height: 30vh;
-  max-height: 40vh;
+  --item-width: calc((100vw - var(--scrollbar-width, 0) - 2 * var(--track-spacer, 0px)) / var(--visible-items, 1));
   width: 100%;
   position: relative;
   overflow: hidden;
-  background-color: var(--modulecard-bg-bottom);
-  flex-shrink: 0;
-  box-shadow: inset 0px 0px 48px -8px rgba(0, 0, 0, 0.39);
 }
 
-.slideshowContainer {
+.trackContainer {
   position: absolute;
   height: 100%;
   display: flex;
   width: max-content;
-  left: calc(-1 * 100vw * var(--offset));
+  left: calc(var(--track-spacer, 0px) - var(--offset, 0px) * var(--item-width));
 }
 
-.slideTransitioning .slideshowContainer {
-  transition: left 0.8s ease;
+.track.transitioning .trackContainer {
+  transition: left var(--transition-time) ease;
 }
 
-.slideshowSlide {
-  width: 100vw;
-  flex-direction: column;
-  display: flex;
-  padding: 10px calc(var(--content-spacer) + var(--scrollbar-width, 0)) 10px var(--content-spacer);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+.trackItem {
+  position: relative;
+  width: var(--item-width);
 }
 
-.slideshowSlide h2 {
-  text-shadow: 0px 0px 6px black;
-  color: white;
-  font-size: 32px;
+.trackItem.hidden {
+  display: none;
 }
 
-.slideshowSlide p {
-  text-shadow: 0px 0px 6px black;
-  color: white;
-  font-size: 25px;
-}
-
-
-@media (max-width: 480px) {
-  .slideshowSlide h2 {
-    font-size: 22px;
-  }
-  
-  .slideshowSlide p {
-    font-size: 16px;
-  }
-}
-
-.slideshowSlide.top-left {
-  justify-content: flex-start;
-  align-items: flex-start;
-}
-
-.slideshowSlide.top-right {
-  justify-content: flex-start;
-  align-items: flex-end;
-  text-align: right;
-}
-
-.slideshowSlide.bottom-left {
-  justify-content: flex-end;
-  align-items: flex-start;
-}
-
-.slideshowSlide.bottom-right {
-  justify-content: flex-end;
-  align-items: flex-end;
-  text-align: right;
-}
-
-.slideshowSlide p {
-  margin: 0.5em 0;
-}
-
-.slideshowArrow {
+.trackButton {
   height: 100%;
   width: var(--content-spacer);
   position: absolute;
-  top: 0px;
+  top: 0;
   z-index: 1;
-  background: no-repeat;
-  background-position: center;
-  background-size: contain;
+  background-size: 30px;
   cursor: pointer;
+  background-color: var(--main-bg-color);
+  opacity: 0.6;
 }
 
-.slideshowArrow:hover {
-  transform: scale(1.2);
+.trackButton.hidden {
+  display: none;
 }
 
-.slideshowLeft {
-  left: 0px;
+.trackButton:hover {
+  transform: scaleX(1.2);
+  opacity: 0.7;
 }
 
-.slideshowRight {
-  right: 0px;
+.trackButtonLeft {
+  left: 0;
 }
 
-.slideshowArrow::after {
+.trackButtonRight {
+  right: 0;
+}
+
+.trackButtonLeft::after {
+  left: 0;
+  mask: url(/images/leftArrow.svg);
+  -webkit-mask: url(/images/leftArrow.svg);
+}
+
+.trackButtonRight::after {
+  right: 0;
+  mask: url(/images/rightArrow.svg);
+  -webkit-mask: url(/images/rightArrow.svg);
+}
+
+.trackButton::after {
   content: '';
   position: absolute;
-  width: 100%;
+  width: var(--content-spacer);
   opacity: 1;
   height: 30px;
   top: 50%;
@@ -308,67 +288,78 @@ header li > *:hover {
   background-color: var(--main-text-color);
 }
 
-.slideshowLeft::after {
-  left: 0;
-  mask-image: url(/images/leftArrow.svg);
-  -webkit-mask-image: url(/images/leftArrow.svg);
+/* Slideshow */
+
+.slideshow {
+  --visible-items: 1;
+  --transition-time: 800ms;
+  --item-width: 100vw;
+  height: 25vw;
+  min-height: 30vh;
+  max-height: 40vh;
+  flex-shrink: 0;
+  background-color: var(--modulecard-bg-bottom);
+  box-shadow: inset 0px 0px 48px -8px rgba(0, 0, 0, 1);
 }
 
-.slideshowRight::after {
-  right: 0;
-  mask-image: url(/images/rightArrow.svg);
-  -webkit-mask-image: url(/images/rightArrow.svg);
+.slideshow .trackItem {
+  width: 100vw;
+  flex-direction: column;
+  display: flex;
+  padding: 10px calc(var(--content-spacer) + var(--scrollbar-width, 0)) 10px var(--content-spacer);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
-.pageShadowDown {
-  bottom: 0px;
-  box-shadow: 0px -50px 50px -50px rgba(0, 0, 0, 0.3) inset;
-  border-bottom: 1px solid var(--thematic-element-color);
-  height: 50px;
-  text-align: center;
+.slideshow .trackItem h2 {
+  text-shadow: 0px 0px 6px black;
+  color: white;
+  font-size: 32px;
 }
 
-.pageShadowUp {
-  bottom: 0px;
-  box-shadow: 0px 50px 50px -50px rgba(0, 0, 0, 0.3) inset;
-  border-top: 1px solid var(--thematic-element-color);
-  width: 120%;
-  margin: 0 -10%;
+.slideshow .trackItem p {
+  text-shadow: 0px 0px 6px black;
+  color: white;
+  font-size: 25px;
 }
 
-.landingInfo {
-  margin: 20px var(--content-spacer);
+
+@media (max-width: 480px) {
+  .slideshow .trackItem h2 {
+    font-size: 22px;
+  }
+  
+  .slideshow .trackItem p {
+    font-size: 16px;
+  }
 }
 
-.textSpace {
-  color: var(--main-text-color);
-  background-color: var(--main-bg-color);
-  border: 1px solid var(--thematic-element-color);
-  border-radius: 5px;
-  font-size: 1rem;
-  padding: 4px 6px;
-  width: 233px;
-  margin: 10px 5px;
+.slideshow .trackItem.top-left {
+  justify-content: flex-start;
+  align-items: flex-start;
 }
 
-select option {
-  background: var(--main-bg-color);
-  color: var(--main-text-color);
+.slideshow .trackItem.top-right {
+  justify-content: flex-start;
+  align-items: flex-end;
+  text-align: right;
 }
 
-#dataRequestBox {
-  position: fixed;
-  left: calc(50vw - 160px);
-  width: 320px;
-  font-size: 12pxt;
-  background-color: var(--preview-bg);
-  color: var(--main-text-color);
-  border: 1px solid var(--main-text-color);
-  border-radius: 5px;
-  text-align: center;
-  z-index: 2;
-  padding-bottom: 20px;
-  display: none;
+.slideshow .trackItem.bottom-left {
+  justify-content: flex-end;
+  align-items: flex-start;
+}
+
+.slideshow .trackItem.bottom-right {
+  justify-content: flex-end;
+  align-items: flex-end;
+  text-align: right;
+}
+
+.slideshow .trackButton {
+  background: none;
+  opacity: 1;
 }
 
 .moduleNavBar {
@@ -393,14 +384,7 @@ select option {
   color: var(--main-text-color);
 }
 
-.categoryBar {
-  --module-size: calc((100vw - var(--scrollbar-width, 0) - 2 * var(--content-spacer)) / var(--module-cards));
-  --offset: 0;
-  width: 100%;
-  height: calc(var(--module-size) - 2px);
-  position: relative;
-  overflow: hidden;
-}
+/* Module Categories */
 
 .categoryTitle {
   margin: 1.4em var(--content-spacer) 0;
@@ -410,94 +394,18 @@ select option {
   opacity: 0.5;
 }
 
-#resourcepack_card {
-  background-image: url(/images/resource_cards/resourcepack_promo.png);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position-x: center;
-}
-
-#generator_card {
-  background-image: url(/images/resource_cards/generator_background_transparent.png);
-  background-repeat: no-repeat;
-  background-size: cover;
-  box-shadow: inset 0px 0px 48px -8px rgba(0, 0, 0, 0.2);
-}
-
-.cardContainer {
-  position: absolute;
-  height: 100%;
-  display: flex;
-  width: max-content;
-  left: calc(var(--content-spacer) - var(--offset) * var(--module-size));
-}
-
-.cardTransitioning .cardContainer {
-  transition: left 0.3s ease;
-}
-
-.browseButton {
-  height: 100%;
-  width: var(--content-spacer);
-  position: absolute;
-  top: 0;
-  z-index: 1;
-  background-size: 30px;
-  cursor: pointer;
-  background-color: var(--main-bg-color);
-  opacity: 0.6;
-}
-
-.browseButtonHidden {
-  display: none;
-}
-
-.browseButton:hover {
-  transform: scaleX(1.2);
-  opacity: 0.7;
-}
-
-.browseButtonLeft {
-  left: 0;
-}
-
-.browseButtonRight {
-  right: 0;
-}
-
-.browseButtonLeft::after {
-  left: 0;
-  mask: url(/images/leftArrow.svg);
-  -webkit-mask: url(/images/leftArrow.svg);
-}
-
-.browseButtonRight::after {
-  right: 0;
-  mask: url(/images/rightArrow.svg);
-  -webkit-mask: url(/images/rightArrow.svg);
-}
-
-.browseButton::after {
-  content: '';
-  position: absolute;
-  width: var(--content-spacer);
-  opacity: 1;
-  height: 30px;
-  top: 50%;
-  transform: translateY(-50%);
-  mask-size: 30px;
-  -webkit-mask-size: 30px;
-  mask-repeat: no-repeat;
-  -webkit-mask-repeat: no-repeat;
-  mask-position: center;
-  -webkit-mask-position: center;
-  background-color: var(--main-text-color);
-}
-
-.moduleCard, .placeholderCard {
+.categoryBar {
+  --transition-time: 300ms;
+  --visible-items: var(--module-cards);
+  --track-spacer: var(--content-spacer);
+  width: 100%;
+  height: calc(var(--item-width) - 2px);
   position: relative;
+  overflow: hidden;
+}
+
+.moduleCard {
   background: linear-gradient(to right bottom, var(--modulecard-bg-top) 50%, var(--modulecard-bg-bottom) 50%);
-  width: calc(var(--module-size));
   overflow: hidden;
   display: flex;
   justify-content: center;
@@ -507,12 +415,8 @@ select option {
   border-radius: 10%;
 }
 
-.moduleCardSelected {
+.moduleCard.selected {
   border-color: var(--main-text-color);
-}
-
-.cardHidden {
-  display: none;
 }
 
 .moduleCard:hover {
@@ -526,7 +430,7 @@ select option {
   width: 100%;
   bottom: 0px;
   padding: 5px;
-  font-size: calc(var(--module-size) * 0.12);
+  font-size: calc(var(--item-width) * 0.12);
   text-align: center;
   text-transform: capitalize;
 }
@@ -543,9 +447,27 @@ select option {
   transform: scale(1.03);
 }
 
+/* All Modules */
+
 #allModulesContainer {
   width: 100%;
   padding: 10px var(--content-spacer);
+}
+
+.textSpace {
+  color: var(--main-text-color);
+  background-color: var(--main-bg-color);
+  border: 1px solid var(--thematic-element-color);
+  border-radius: 5px;
+  font-size: 1rem;
+  padding: 4px 6px;
+  width: 233px;
+  margin: 10px 5px;
+}
+
+select.textSpace option {
+  background: var(--main-bg-color);
+  color: var(--main-text-color);
 }
 
 .a-zCard {
@@ -732,4 +654,19 @@ select option {
   width: 60%;
   margin-left: auto;
   margin-right: auto;
+}
+
+#dataRequestBox {
+  position: fixed;
+  left: calc(50vw - 160px);
+  width: 320px;
+  font-size: 12pxt;
+  background-color: var(--preview-bg);
+  color: var(--main-text-color);
+  border: 1px solid var(--main-text-color);
+  border-radius: 5px;
+  text-align: center;
+  z-index: 2;
+  padding-bottom: 20px;
+  display: none;
 }
