@@ -72,7 +72,7 @@ body {
   font-family: 'Raleway', sans-serif;
   font-variant-numeric: lining-nums;
   font-weight: normal;
-  font-size: 14pt;
+  font-size: 18px;
   color: var(--main-accent-color);
   width: 100%;
   overflow-x: hidden;
@@ -88,13 +88,6 @@ p {
 
 p.small {
   font-size: 0.7em;
-}
-
-h2 {
-  font-size: 16pt;
-  margin-bottom: 1px;
-  margin-top: 1px;
-  padding-left: 5px;
 }
 
 a {
@@ -124,6 +117,7 @@ header {
   display: flex;
   justify-content: center;
   overflow-x: hidden;
+  flex-shrink: 0;
   color: var(--main-accent-color);
 }
 
@@ -190,30 +184,35 @@ header li > *:hover {
 }
 
 .slideshow {
+  --offset: 0;
   height: 25vw;
+  min-height: 30vh;
+  max-height: 40vh;
   width: 100%;
   position: relative;
   overflow: hidden;
   background-color: var(--modulecard-bg-bottom);
-  flex-grow: 1;
+  flex-shrink: 0;
   box-shadow: inset 0px 0px 48px -8px rgba(0, 0, 0, 0.39);
 }
 
-#slideshowContainer {
-  --offset: 0;
+.slideshowContainer {
   position: absolute;
   height: 100%;
   display: flex;
   width: max-content;
   left: calc(-1 * 100vw * var(--offset));
-  transition: left 0.8s;
+}
+
+.slideTransitioning .slideshowContainer {
+  transition: left 0.8s ease;
 }
 
 .slideshowSlide {
   width: 100vw;
   flex-direction: column;
   display: flex;
-  padding: 10px 40px;
+  padding: 10px calc(var(--content-spacer) + var(--scrollbar-width, 0)) 10px var(--content-spacer);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -221,7 +220,6 @@ header li > *:hover {
 
 .slideshowSlide h2 {
   text-shadow: 0px 0px 6px black;
-  ;
   color: white;
   font-size: 32px;
 }
@@ -230,6 +228,17 @@ header li > *:hover {
   text-shadow: 0px 0px 6px black;
   color: white;
   font-size: 25px;
+}
+
+
+@media (max-width: 480px) {
+  .slideshowSlide h2 {
+    font-size: 22px;
+  }
+  
+  .slideshowSlide p {
+    font-size: 16px;
+  }
 }
 
 .slideshowSlide.top-left {
@@ -260,7 +269,7 @@ header li > *:hover {
 
 .slideshowArrow {
   height: 100%;
-  width: 50px;
+  width: var(--content-spacer);
   position: absolute;
   top: 0px;
   z-index: 1;
@@ -351,7 +360,7 @@ select option {
   position: fixed;
   left: calc(50vw - 160px);
   width: 320px;
-  font-size: 10pt;
+  font-size: 12pxt;
   background-color: var(--preview-bg);
   color: var(--main-text-color);
   border: 1px solid var(--main-text-color);
@@ -362,7 +371,7 @@ select option {
   display: none;
 }
 
-#moduleNavBar {
+.moduleNavBar {
   border-bottom: 1px solid var(--thematic-element-color);
   opacity: 0.8;
   padding: 0 var(--content-spacer);
@@ -723,5 +732,4 @@ select option {
   width: 60%;
   margin-left: auto;
   margin-right: auto;
-  font-size: 12pt;
 }

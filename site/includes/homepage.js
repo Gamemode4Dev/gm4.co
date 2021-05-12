@@ -9,6 +9,7 @@ let allModules = "unloaded";
 let slides = [];
 let slideshowInterval = 0;
 let cardTransitionTimeout = 0;
+let slideTransitionTimeout = 0;
 
 //preferences
 let siteTheme = "light";
@@ -34,7 +35,7 @@ window.onload = function(){
         slide += `<h2>${slides[i].text.header}</h2><p>${slides[i].text.paragraph}</p>`;
       }
       slide += '</div>';
-      $("#slideshowContainer").append(slide);
+      $(".slideshowContainer").append(slide);
     }
     startSlideshow()
   });
@@ -58,9 +59,9 @@ window.onload = function(){
         if(versions.indexOf(allModules[moduleName].versions[j])==-1){
           versions.push(allModules[moduleName].versions[j]);
         }
-        versionclass += "version_" + allModules[moduleName].versions[j].replace(".","_") + " ";
+        versionclass += "version_" + allModules[moduleName].versions[j].replaceAll(".","_") + " ";
       }
-      $("#allModulesContainer").append('<a href="https://www.gm4.co/modules/'+allModules[moduleName].id.replace("_","-")+'"><div class="a-zCard noselect '+versionclass+'"><img src="modules/media/'+allModules[moduleName].id+'/'+allModules[moduleName].id+'.svg" onerror="image_error(this)"/><span class="cardName">'+moduleName+'</span></div></a>');
+      $("#allModulesContainer").append('<a href="https://www.gm4.co/modules/'+allModules[moduleName].id.replaceAll("_","-")+'"><div class="a-zCard noselect '+versionclass+'"><img src="modules/media/'+allModules[moduleName].id+'/'+allModules[moduleName].id+'.svg" onerror="image_error(this)"/><span class="cardName">'+moduleName+'</span></div></a>');
     }
     versions.sort(function(a,b){return b-a});
     $("#versionSelect").empty();
@@ -76,7 +77,7 @@ window.onresize = resize;
 
 function resize(){
   const clientWidth = document.documentElement.clientWidth
-  const scrollbar = window.screen.width - clientWidth <= 1 ? 0 : window.innerWidth - clientWidth;
+  const scrollbar = Math.abs(window.screen.width - clientWidth) <= 1 ? 0 : window.innerWidth - clientWidth;
   document.documentElement.style.setProperty('--scrollbar-width', scrollbar + "px");
 
   $('#categoriesContainer .categoryBar').each(function() {
@@ -186,12 +187,18 @@ function populateCategory(pos,category){
 }
 
 function slideshow(dir){
-  const slideshow = $("#slideshowContainer");
+  const slideshow = $('.slideshow');
   let offset = parseInt(slideshow.get(0).style.getPropertyValue("--offset") || "0");
   const max = slideshow.find(".slideshowSlide").length;
   offset = ((offset + dir) % max + max) % max;
+
+  slideshow.addClass('slideTransitioning');
   slideshow.get(0).style.setProperty("--offset", `${offset}`);
   startSlideshow();
+  clearTimeout(cardTransitionTimeout)
+    cardTransitionTimeout = setTimeout(function(){
+      slideshow.removeClass('slideTransitioning')
+    }, 900)
 }
 
 function toggleTheme(){
@@ -235,9 +242,9 @@ function loadPreview(categoryBar, module_id){
       $("#previewRight").append("<p>" + data.site_description + "</p><br>");
       if(data.module_id){
         if(data.mcversion == LATEST_VERSION){
-          $("#previewRight").append("<a target='download_frame' href='modules/download/"+LATEST_VERSION+"/"+data.module_id.replace("_","-") +"' class='buttonLink'><span class='datapack_icon'></span> Download " + data.module_name + " for Java " + LATEST_VERSION + "</a>");
+          $("#previewRight").append("<a target='download_frame' href='modules/download/"+LATEST_VERSION+"/"+data.module_id.replaceAll("_","-") +"' class='buttonLink'><span class='datapack_icon'></span> Download " + data.module_name + " for Java " + LATEST_VERSION + "</a>");
         }
-        $("#previewRight").append("<br><br><a class='buttonLink' href='https://www.gm4.co/modules/" + data.module_id.replace("_","-") + "'><span class='more_icon'></span> More Downloads &amp; Info</a><br><h3 class='dividingHeader'>Info Links</h3>");
+        $("#previewRight").append("<br><br><a class='buttonLink' href='https://www.gm4.co/modules/" + data.module_id.replaceAll("_","-") + "'><span class='more_icon'></span> More Downloads &amp; Info</a><br><h3 class='dividingHeader'>Info Links</h3>");
       }
       if(data.wiki_link != undefined && data.wiki_link != ""){
         $("#previewRight").append("<p><a href='" + data.wiki_link + "' target='_BLANK'>Read about this on the Gamemode 4 Wiki</a></p>");
@@ -258,7 +265,7 @@ function versionView(){
     window.location="https://gm4.co/old-modules/";
   }
   else{
-    version = "version_" + $("#versionSelect").val().replace(".","_");
+    version = "version_" + $("#versionSelect").val().replaceAll(".","_");
     $("#allModulesContainer").find(".a-zCard").hide();
     $("#allModulesContainer").find("." + version).show();
   }

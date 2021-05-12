@@ -69,7 +69,7 @@ includes/homepage.js
   <div class="slideshow">
     <div class="slideshowArrow slideshowLeft" onclick="slideshow(-1)"></div>
     <div class="slideshowArrow slideshowRight" onclick="slideshow(1)"></div>
-    <div id="slideshowContainer"></div>
+    <div class="slideshowContainer"></div>
   </div>
   <div class="landingInfo">
     Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non consequatur sit, quisquam soluta exercitationem hic! Reprehenderit repellendus rem velit blanditiis asperiores est tempora vel, magnam neque enim ipsa, sequi necessitatibus.
@@ -78,7 +78,7 @@ includes/homepage.js
 <div class="pageShadowDown">
   ↓ Scroll down ↓
 </div>
-<div id="moduleNavBar">
+<div class="moduleNavBar">
   <span onclick="switchView('Browse',this)" class="moduleNavButton moduleNavButtonSelected noselect">Browse</span>
   <span id="allModules" onclick="switchView('All Modules',this)" class="moduleNavButton noselect">All Modules</span>
 </div>
