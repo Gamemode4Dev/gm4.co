@@ -83,27 +83,35 @@ function updateScrollbar() {
 function resize(){
   updateScrollbar();
 
-  $('.track').each(function() {
-    let interval = parseInt(this.style.getPropertyValue("--track-interval"))
-    if (isNaN(interval)) scrollTrack($(this), 0)
+  $(".track.resizable").each(function() {
+    scrollTrack($(this), 0)
   })
 }
 
-function scrollTrack(el, dir, loop, dist) {
+function scrollTrack(el, dir, loop, partial) {
   const total = el.find(".trackItem").length;
   const style = getComputedStyle(el.get(0));
-  const width = parseInt(style.getPropertyValue("--item-width"));
   const visible = parseInt(style.getPropertyValue("--visible-items"));
   let offset = parseInt(style.getPropertyValue("--offset"));
-  if (isNaN(offset)) offset = 0;
-  
-  const endItem = total - 1 > visible;
-  const target = offset + dir * Math.max(1, visible - 1);
-  const maxOffset = total - visible - (endItem ? 0 : 1);
+
+  let target;
+  if (partial) {
+    const width = el.find(".trackItem").get(0).clientWidth;
+    target = offset + Math.round(partial / width);
+  } else {
+    target = offset + dir * Math.max(1, partial ? 1 : visible - 1);
+  }
+
   if (loop) {
     offset = (target % total + total) % total;
   } else {
+    const endItem = total - 1 > visible;
+    const maxOffset = total - visible - (endItem ? 0 : 1);
     offset = Math.max(0, Math.min(maxOffset, target));
+
+    el.find(".trackButtonLeft").toggleClass("hidden", offset <= 0);
+    el.find(".trackButtonRight").toggleClass("hidden", offset >= maxOffset);
+    el.find(".trackEndItem").toggleClass("hidden", !endItem);
   }
 
   if (dir !== 0) el.addClass("transitioning");
@@ -114,14 +122,7 @@ function scrollTrack(el, dir, loop, dist) {
       $(".track").removeClass("transitioning");
     }, 1000);
   }
-
-  if (!loop) {
-    el.find(".trackButtonLeft").toggleClass("hidden", offset <= 0);
-    el.find(".trackButtonRight").toggleClass("hidden", offset >= maxOffset);
-    el.find(".trackEndItem").toggleClass("hidden", !endItem);
-  }
 }
-
 
 function initTrack(el, loop) {
   let loopInterval;
@@ -169,12 +170,13 @@ function initTrack(el, loop) {
       x0 = null;
     }
     startLoop();
-    el.get(0).style.setProperty('--partial-offset', '0px');
+    el.get(0).style.removeProperty("--partial-offset");
   }
 
   el.get(0).addEventListener("touchstart", start, false);
   el.get(0).addEventListener("touchmove", move, false);
   el.get(0).addEventListener("touchend", end, false);
+  el.get(0).addEventListener("touchcancel", end, false);
 }
 
 function loadCategories(){
@@ -182,7 +184,7 @@ function loadCategories(){
     module_categories = data.module_categories;
     if(module_categories != undefined){
       for(i=0;i<module_categories.length;i++){
-        $("#categoriesContainer").append('<h2 class="categoryTitle">' + module_categories[i].title + ' <span class="categoryLengthText">(0)</span></h2><div class="categoryBar track"><div class="trackContainer"></div><div class="trackButton trackButtonLeft hidden"></div><div class="trackButton trackButtonRight"></div></div>');
+        $("#categoriesContainer").append('<h2 class="categoryTitle">' + module_categories[i].title + ' <span class="categoryLengthText">(0)</span></h2><div class="categoryBar track resizable"><div class="trackContainer"></div><div class="trackButton trackButtonLeft"></div><div class="trackButton trackButtonRight"></div></div>');
         cardarray = module_categories[i].modules;
         if(cardarray != undefined && cardarray.length>0){
           populateCategory(i,module_categories[i]);
