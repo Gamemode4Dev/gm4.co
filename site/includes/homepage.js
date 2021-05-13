@@ -58,7 +58,7 @@ window.onload = function(){
         }
         versionclass += "version_" + allModules[moduleName].versions[j].replaceAll(".","_") + " ";
       }
-      $("#allModulesContainer").append('<a href="https://www.gm4.co/modules/'+allModules[moduleName].id.replaceAll("_","-")+'"><div class="a-zCard noselect '+versionclass+'"><img src="modules/media/'+allModules[moduleName].id+'/'+allModules[moduleName].id+'.svg" onerror="image_error(this)"/><span class="cardName">'+moduleName+'</span></div></a>');
+      $("#modules").append('<a href="https://www.gm4.co/modules/'+allModules[moduleName].id.replaceAll("_","-")+'"><div class="moduleCard noselect '+versionclass+'"><img src="modules/media/'+allModules[moduleName].id+'/'+allModules[moduleName].id+'.svg" onerror="image_error(this)"/><span class="cardName">'+moduleName+'</span></div></a>');
     }
     versions.sort(function(a,b){return b-a});
     $("#versionSelect").empty();
@@ -184,11 +184,11 @@ function loadCategories(){
     module_categories = data.module_categories;
     if(module_categories != undefined){
       for(i=0;i<module_categories.length;i++){
-        $("#categoriesContainer").append('<h2 class="categoryTitle">' + module_categories[i].title + ' <span class="categoryLengthText">(0)</span></h2><div class="categoryBar track resizable"><div class="trackContainer"></div><div class="trackButton trackButtonLeft"></div><div class="trackButton trackButtonRight"></div></div>');
+        $("#browse").append('<h2 class="categoryTitle">' + module_categories[i].title + ' <span class="categoryLengthText">(0)</span></h2><div class="categoryBar track resizable"><div class="trackContainer"></div><div class="trackButton trackButtonLeft"></div><div class="trackButton trackButtonRight"></div></div>');
         cardarray = module_categories[i].modules;
         if(cardarray != undefined && cardarray.length>0){
           populateCategory(i,module_categories[i]);
-          initTrack($('#categoriesContainer .categoryBar').eq(i), 0)
+          initTrack($('#browse .categoryBar').eq(i), 0)
         }
         else{
           if(module_categories[i].populate_from != undefined){
@@ -199,7 +199,7 @@ function loadCategories(){
                 category.modules.length=this.limit;
               }
               populateCategory(this.pos, category);
-              initTrack($('#categoriesContainer .categoryBar').eq(this.pos), 0)
+              initTrack($('#browse .categoryBar').eq(this.pos), 0)
             });
           }
         }
@@ -215,7 +215,7 @@ function populateCategory(pos,category){
   //populate the category once the cards are loaded.
   //in most cases this is instant but some may need to
   //load external source data first.
-  const track = $("#categoriesContainer .trackContainer").eq(pos);
+  const track = $("#browse .trackContainer").eq(pos);
   cardarray = category.modules;
   if(category.order != undefined && category.order == "shuffled"){
     shuffleArray(cardarray);
@@ -273,7 +273,7 @@ function theme(mode){
 
 function loadPreview(categoryBar, module_id){
   if(!$(this).hasClass("placeholderCard")){
-    $.ajax({url:"includes/getmoduleinfo.php?module_id="+module_id}).done(function(data){
+    $.ajax({url:"/includes/getmoduleinfo.php?module_id="+module_id}).done(function(data){
       data = JSON.parse(data);
       console.log(data);
       $("#preview").remove();
@@ -307,15 +307,15 @@ function versionView(){
   }
   else{
     version = "version_" + $("#versionSelect").val().replaceAll(".","_");
-    $("#allModulesContainer").find(".a-zCard").hide();
-    $("#allModulesContainer").find("." + version).show();
+    $("#modules").find(".a-zCard").hide();
+    $("#modules").find("." + version).show();
   }
 }
 
 function textSearch(){
   searchString = $("#textSearch").val().toLowerCase();
   versionView();
-  $("#allModulesContainer").find(".cardName").each(function(){
+  $("#modules").find(".cardName").each(function(){
     if($(this).html().toLowerCase().indexOf(searchString) == -1){
       $(this).parent().hide();
     }
@@ -363,12 +363,12 @@ function switchView(view, caller, scroll = false){
   $(".moduleNavButton").removeClass("moduleNavButtonSelected");
   $(caller).addClass("moduleNavButtonSelected");
   if(view == "Browse"){
-    $("#allModulesContainer").hide();
-    $("#categoriesContainer").show();
+    $("#modules").hide();
+    $("#browse").show();
   }
   if(view == "All Modules"){
-    $("#allModulesContainer").show();
-    $("#categoriesContainer").hide();
+    $("#modules").show();
+    $("#browse").hide();
   }
   if(scroll) caller.scrollIntoView();
 }

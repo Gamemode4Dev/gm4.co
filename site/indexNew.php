@@ -82,33 +82,24 @@ includes/homepage.js
   <span onclick="switchView('Browse',this)" class="moduleNavButton moduleNavButtonSelected noselect">Browse</span>
   <span id="allModules" onclick="switchView('All Modules',this)" class="moduleNavButton noselect">All Modules</span>
 </div>
-<div id="allModulesContainer" style="display:none">
-  <select id="versionSelect" class="textSpace" onchange="versionView()">
-    <option value="loading">Loading...</option>
-  </select>
-  <input id="textSearch" type="text" class="textSpace" placeholder="search..." onkeyup="textSearch()"/>
-</div>
-<div id="categoriesContainer">
-  <!-- <h2>Resources &amp; Tools</h2>
-  <div class="categoryBar">
-    <a href="https://www.gm4.co/resource-pack"><div id="resourcepack_card" class="moduleCard noselect" data-resource_id="resourcepack">
-      <p class="cardName">Resource Pack</p>
-    </div></a><div class="moduleCard noselect" data-resource_id="discord">
-      <iframe id="discordIFrame"src="" width="96%" height="96%" allowtransparency="true" style="position:absolute;top:2%;left:2%;border-radius:20px" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
-    </div><a href="https://gm4.co/modules/generator"><div id="generator_card" class="moduleCard noselect" data-resource_id="generator">
-      <img src="images/resource_cards/generator_icon.png">
-      <p class="cardName">Module Template</p>
-    </div></a>
-  </div> -->
-</div>
-<iframe name='download_frame' style='display:none;'></iframe>
-<div id="footer">
-  <div id="footerContainer">
-    <p>Copyright &copy; <?php echo(date('Y')); ?> Gamemode 4<br>
-    <a href="https://discord.com/invite/erHDVhPY" target="_blank">Discord</a> | <a href="https://github.com/Gamemode4Dev/GM4_Datapacks" target="_blank">Github</a> | <a href="https://twitter.com/GM4Official" target="_blank">Twitter</a>
-    </p>
-    <p class="small">Gamemode 4 is not an official Minecraft product, and is not approved by or associated with Mojang Studios. "Minecraft" is a trademark of Mojang AB and any usage of the Minecraft brand on this site is used in accordance with Mojang Studios' <a href="https://account.mojang.com/terms?ref=ft#brand" target="_blank">Brand and Asset Guidelines</a>.</p>
+<div id="modules" style="display:none">
+  <div class="moduleFilter">
+    <select id="versionSelect" onchange="versionView()">
+      <option value="loading">Loading...</option>
+    </select>
+    <input id="textSearch" type="text" placeholder="search..." onkeyup="textSearch()"/>
   </div>
 </div>
+<div id="browse"></div>
+<iframe name='download_frame' style='display:none;'></iframe>
+<footer>
+  <p>
+    Copyright &copy; <?php echo(date('Y')); ?> Gamemode 4<br>
+    <a href="https://discord.com/invite/erHDVhPY" target="_blank">Discord</a> | <a href="https://github.com/Gamemode4Dev/GM4_Datapacks" target="_blank">Github</a> | <a href="https://twitter.com/GM4Official" target="_blank">Twitter</a>
+  </p>
+  <p class="small">
+    Gamemode 4 is not an official Minecraft product, and is not approved by or associated with Mojang Studios. "Minecraft" is a trademark of Mojang AB and any usage of the Minecraft brand on this site is used in accordance with Mojang Studios' <a href="https://account.mojang.com/terms?ref=ft#brand" target="_blank">Brand and Asset Guidelines</a>.
+  </p>
+</footer>
 </body>
 </html>

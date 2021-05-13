@@ -49,8 +49,6 @@ CSS for the module browse page
   --thematic-element-color: #333333;
   --modulecard-bg-top: #2f3441;
   --modulecard-bg-bottom: #212531;
-  --modulename-bg: #333333a8;
-  --modulename-color: white;
   --preview-bg: #1b1b1b;
   --preview-shade-bg: #333333;
 }
@@ -62,8 +60,6 @@ CSS for the module browse page
   --thematic-element-color: #bfbfbf;
   --modulecard-bg-top: #5eccff;
   --modulecard-bg-bottom: #4AA0C7;
-  --modulename-bg: #DDDDDDa8;
-  --modulename-color: #292929;
   --preview-bg: #DDDDDD;
   --preview-shade-bg: #a7a7a7;
 }
@@ -320,7 +316,7 @@ header li > *:hover {
   left: 0;
   bottom: 0;
   right: 0;
-  background: #0004;
+  background: #0002;
 }
 
 .slideshow .trackItem > * {
@@ -337,7 +333,6 @@ header li > *:hover {
   font-size: 25px;
   margin: 0.5em 0;
 }
-
 
 @media (max-width: 480px) {
   .slideshow .trackItem h2 {
@@ -398,7 +393,7 @@ header li > *:hover {
   color: var(--main-text-color);
 }
 
-/* Module Categories */
+/* Modules */
 
 .categoryTitle {
   margin: 1.4em var(--content-spacer) 0;
@@ -413,7 +408,7 @@ header li > *:hover {
   --visible-items: var(--module-cards);
   --track-spacer: var(--content-spacer);
   width: 100%;
-  height: calc(var(--item-width) - 2px);
+  height: calc(var(--item-width) * 1.2);
   position: relative;
   overflow: hidden;
 }
@@ -422,6 +417,7 @@ header li > *:hover {
   background: linear-gradient(to right bottom, var(--modulecard-bg-top) 50%, var(--modulecard-bg-bottom) 50%);
   overflow: hidden;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   border: 2px solid var(--main-bg-color);
@@ -433,50 +429,71 @@ header li > *:hover {
   border-color: var(--main-text-color);
 }
 
+.moduleCard img {
+  border-radius: 10%;
+  transition: transform 0.1s;
+  height: calc(var(--item-width) * 0.75);
+  flex-shrink: 0;
+}
+
+.moduleCard::before {
+  content: '';
+  width: 100%;
+  padding-top: 10%;
+}
+
+.moduleCard .cardName {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+  padding: 5px;
+  font-size: calc(var(--item-width) * 0.11);
+  font-weight: bold;
+  letter-spacing: 0.5px;
+  text-align: center;
+  text-transform: capitalize;
+  color: var(--modulename-color);
+  filter: drop-shadow(0 0 12px black);
+}
+
 .moduleCard:hover {
   box-shadow: inset 0px 0px 48px -8px rgba(0, 0, 0, 0.39);
 }
 
-.moduleCard .cardName {
-  background-color: var(--modulename-bg);
-  color: var(--modulename-color);
-  position: absolute;
-  width: 100%;
-  bottom: 0px;
-  padding: 5px;
-  font-size: calc(var(--item-width) * 0.12);
-  text-align: center;
-  text-transform: capitalize;
-}
-
-.moduleCard img {
-  border-radius: 10%;
-  transition: transform 0.1s;
-  width: 80%;
-}
-
 .moduleCard:hover img {
-  transform: translateX(-3px);
-  transform: translateY(-3px);
-  transform: scale(1.03);
+  transform: scale(1.04);
 }
 
 /* All Modules */
 
-#allModulesContainer {
+#modules {
   width: 100%;
-  padding: 10px var(--content-spacer);
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 var(--content-spacer);
+  --item-width: calc((100vw - var(--scrollbar-width, 0) - 2 * var(--content-spacer, 0px)) / var(--module-cards, 1));
 }
 
-.textSpace {
+#modules .moduleCard {
+  width: var(--item-width);
+  height: calc(var(--item-width) * 1.2);
+}
+
+.moduleFilter {
+  flex-basis: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.moduleFilter > * {
   color: var(--main-text-color);
   background-color: var(--main-bg-color);
   border: 1px solid var(--thematic-element-color);
   border-radius: 5px;
-  font-size: 1rem;
-  padding: 4px 6px;
+  font-size: 1.2rem;
+  padding: 6px 12px;
   width: 233px;
-  margin: 10px 5px;
+  margin: 24px 2px 12px;
 }
 
 select.textSpace option {
@@ -651,23 +668,13 @@ select.textSpace option {
   cursor: pointer;
 }
 
-#footer {
+footer {
+  display: flex;
+  flex-direction: column;
   margin-top: 30px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  position: relative;
-  bottom: 0px;
-  left: 0px;
-  width: 100%;
+  padding: 0 var(--content-spacer);
   border-top: 1px solid var(--thematic-element-color);
-  background-color: var(--main-bg-bottom);
   min-height: 120px;
-}
-
-#footerContainer {
-  width: 60%;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 #dataRequestBox {
