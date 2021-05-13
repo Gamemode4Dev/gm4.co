@@ -27,7 +27,7 @@ window.onload = function(){
   $.ajax({url:"images/slideshow/slides.json"}).done(function(data){
     slides = data.slides;
     for(i=0;i<slides.length;i++){
-      slide = `<div class="trackItem ${slides[i].text.position || "bottom-left"}" style="background-image:url(images/slideshow/${slides[i].background_image});">`;
+      slide = `<div class="trackItem ${slides[i].text.position || "bottom-left"} ${slides[i].darken ? "darken" : ""}" style="background-image:url(images/slideshow/${slides[i].background_image});">`;
       if (slides[i].text) {
         slide += `<h2>${slides[i].text.header}</h2><p>${slides[i].text.paragraph}</p>`;
       }

@@ -6,7 +6,8 @@
         "header":"Tanks & Transportation",
         "paragraph":"Store potions, lava and other liquids in specialized tanks.<br>Wanna transport liquids in Minecarts? Gamemode 4's got your back!",
         "position":"bottom-left"
-      }
+      },
+      "darken": true
     },
     {
       "background_image":"server7_1.png",
@@ -14,7 +15,8 @@
         "header":"Gamemode 4 Public Server",
         "paragraph":"Join us on play.gm4.co",
         "position":"bottom-left"
-      }
+      },
+      "darken": true
     },
     {
       "background_image":"zauber_cauldrons_1.png",
