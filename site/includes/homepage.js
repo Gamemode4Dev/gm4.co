@@ -41,7 +41,7 @@ window.onload = function(){
   if(userdata != null && userdata.theme != undefined && userdata.theme == "light" && siteTheme == "dark") theme("light");
   $("#discordIFrame").attr("src","https://discord.com/widget?id=151141188961828864&theme=" + siteTheme);
   loadCategories();
-  $.ajax({url:"/modules/moduleListAToZ.php"}).done(function(data){
+  $.ajax({url:"https://gm4.co/modules/moduleListAToZ.php"}).done(function(data){
     allModules = JSON.parse(data);
     allModuleNamesAlphabetized = [];
     for(element in allModules){
@@ -232,7 +232,7 @@ function populateCategory(pos,category){
     if($(this).attr("data-module_id")!=undefined){
       if ($(this).hasClass('selected')) {
         $(this).removeClass('selected');
-        $('#preview').remove();
+        $('#browse .preview').remove();
       } else {
         $('.selected').removeClass('selected');
         $(this).addClass('selected');
@@ -273,30 +273,23 @@ function theme(mode){
 
 function loadPreview(categoryBar, module_id){
   if(!$(this).hasClass("placeholderCard")){
-    $.ajax({url:"/includes/getmoduleinfo.php?module_id="+module_id}).done(function(data){
+    $.ajax({url:"https://gm4.co/includes/getmoduleinfo.php?module_id="+module_id}).done(function(data){
       data = JSON.parse(data);
       console.log(data);
-      $("#preview").remove();
-      categoryBar.after('<div id="preview"></div>')
-      $("#preview").append("<div id='previewLeft'></div>");
-      $("#preview").append("<div id='previewRight'><h3>" + data.module_name + "</h3></div>");
-      $("#previewRight").append("<p>" + data.site_description + "</p><br>");
-      if(data.module_id){
-        if(data.mcversion == LATEST_VERSION){
-          $("#previewRight").append("<a target='download_frame' href='modules/download/"+LATEST_VERSION+"/"+data.module_id.replaceAll("_","-") +"' class='buttonLink'><span class='datapack_icon'></span> Download " + data.module_name + " for Java " + LATEST_VERSION + "</a>");
-        }
-        $("#previewRight").append("<br><br><a class='buttonLink' href='https://www.gm4.co/modules/" + data.module_id.replaceAll("_","-") + "'><span class='more_icon'></span> More Downloads &amp; Info</a><br><h3 class='dividingHeader'>Info Links</h3>");
+      $("#browse .preview").remove();
+      categoryBar.after('<div class="preview"><div class="previewMedia"></div><div class="previewInfo"></div></div>');
+      const previewMedia = $("#browse .previewMedia");
+      const previewInfo = $("#browse .previewInfo");
+      previewInfo.append(`<h3>${data.module_name}</h3><p>${data.site_description}</p>`);
+      if (data.mcversion === LATEST_VERSION) {
+        previewInfo.append(`<a class="buttonLink datapackLink" target="download_frame" href="https://gm4.co/modules/download/${LATEST_VERSION}/${data.module_id.replaceAll("_","-")}">Download for Java ${LATEST_VERSION}</a>`)
       }
-      if(data.wiki_link != undefined && data.wiki_link != ""){
-        $("#previewRight").append("<p><a href='" + data.wiki_link + "' target='_BLANK'>Read about this on the Gamemode 4 Wiki</a></p>");
+      previewInfo.append(`<a class="buttonLink moreLink" href="https://www.gm4.co/modules/${data.module_id.replaceAll("_","-")}">More Downloads & Info</a>`);
+      if (data.wiki_link){
+        previewInfo.append(`<a class="buttonLink wikiLink" href="${data.wiki_link}" target="_blank">Read about this on the Wiki</a>`);
       }
-      //load images from site meta
-      if(data.promo != undefined && data.promo != null && data.promo != "null" && data.promo != ""){
-        load_site_meta(data);
-      }
-      else{
-        $("#previewLeft").append("<img width='500px' height='500px' src='modules/media/" + module_id + "/" + module_id + ".svg' />");
-      }
+      // TODO: show images from site meta if available
+      previewMedia.append(`<img src="modules/media/${module_id}/${module_id}.svg">`)
     });
   }
 }
@@ -307,7 +300,7 @@ function versionView(){
   }
   else{
     version = "version_" + $("#versionSelect").val().replaceAll(".","_");
-    $("#modules").find(".a-zCard").hide();
+    $("#modules").find(".moduleCard").hide();
     $("#modules").find("." + version).show();
   }
 }

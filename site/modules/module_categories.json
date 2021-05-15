@@ -23,7 +23,7 @@
     },
     {
       "title":"Popular",
-      "populate_from":"includes/getmodulesbypopularity.php",
+      "populate_from":"https://gm4.co/includes/getmodulesbypopularity.php",
       "limit":15
     },
     {

@@ -40,6 +40,7 @@ if($mcmetafound){
 else{
   echo('{
     "module_name": "' . str_replace("_"," ",$module_id) . '",
+    "module_id": "' . $module_id . '",
     "site_description": "Error loading module. Contact site administrator."
   }');
 }

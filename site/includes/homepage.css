@@ -49,8 +49,8 @@ CSS for the module browse page
   --thematic-element-color: #333333;
   --modulecard-bg-top: #2f3441;
   --modulecard-bg-bottom: #212531;
-  --preview-bg: #1b1b1b;
-  --preview-shade-bg: #333333;
+  --preview-bg: #1f2122;
+  --preview-shade-bg: #232b2f;
 }
 
 .light {
@@ -58,10 +58,10 @@ CSS for the module browse page
   --main-text-color: black;
   --main-accent-color: #4AA0C7;
   --thematic-element-color: #bfbfbf;
-  --modulecard-bg-top: #5eccff;
-  --modulecard-bg-bottom: #4AA0C7;
-  --preview-bg: #DDDDDD;
-  --preview-shade-bg: #a7a7a7;
+  --modulecard-bg-top: #80b4cc;
+  --modulecard-bg-bottom: #5e91a8;
+  --preview-bg: #c1ccd1;
+  --preview-shade-bg: #b0b7bb;
 }
 
 body {
@@ -556,43 +556,37 @@ select.textSpace option {
   border-radius: 0% !important;
 }
 
-.dividingHeader {
-  width: 100%;
-  border-bottom: 1px solid var(--main-text-color);
-  margin-top: 30px;
-}
+/* Preview */
 
-#preview {
+.preview {
   width: 100%;
   background-color: var(--preview-bg);
   box-shadow: inset 0px 0px 18px 0px var(--preview-shade-bg);
   padding: 20px var(--content-spacer);
   display: flex;
+  align-items: flex-start;
 }
 
-#previewLeft {
-  width: 500px;
-  height: 500px;
+.previewMedia {
+  flex: 1 1 50%;
   background-color: #CECECE;
-  overflow: hidden;
+  display: flex;
+  flex-direction: column;
   border-radius: 20px;
-  position: relative;
-  display: inline-block;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
+  overflow: hidden;
 }
 
-#previewRight {
+.previewInfo {
+  flex: 0 1 50%;
+  max-width: 500px;
   height: 100%;
-  min-width: 500px;
-  padding: 10px;
-  position: relative;
-  display: inline-block;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
   margin-left: 10px;
 }
 
-#previewRight h3 {
+.previewInfo h3 {
   text-transform: capitalize;
 }
 
@@ -609,54 +603,73 @@ select.textSpace option {
   content: "";
 }
 
-.datapack_icon {
-  position: relative;
-  display: inline-block;
-  width: 35px;
-  content: " ";
-  height: 35px;
-  background-image: url("https://www.gm4.co/images/datapack.svg");
-  background-repeat: no-repeat;
-  background-size: 50px;
-  background-position: -9px -6px;
-  background-color: white;
-  border-radius: 50%;
-  top: 11px;
-  margin-left: 5px;
-  margin-right: 5px;
-}
-
-.more_icon {
-  position: relative;
-  display: inline-block;
-  width: 35px;
-  content: " ";
-  height: 35px;
-  background-image: url("https://www.gm4.co/images/rightArrow.svg");
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center;
-  background-color: white;
-  border-radius: 50%;
-  top: 11px;
-  margin-left: 5px;
-  margin-right: 5px;
-}
-
 .buttonLink {
-  color: white;
-  background-color: var(--main-accent-color);
-  padding: 10px;
-  margin-top: 10px;
-  padding-left: 0px;
-  border: 0px;
-  text-align: center;
+  display: block;
+  position: relative;
+  padding: 10px 10px 10px 50px;
+  margin-bottom: 10px;
+  color: var(--main-text-color);
+  background-color: var(--modulecard-bg-top);
+  font-weight: bold;
+  text-shadow: 0 0 6px var(--main-bg-color);
+  transition: padding 0.2s;
 }
 
-.buttonLink:link, .buttonLink:visited, .buttonLink:hover {
-  color: white;
-  text-decoration: none;
+.buttonLink::before {
+  position: absolute;
+  display: inline-block;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 35px;
+  height: 35px;
+  background-color: white;
+  border-radius: 50%;
+  margin-left: 5px;
+  transition: left 0.2s;
 }
+
+.buttonLink:hover {
+  padding: 10px 16px 10px 56px;
+}
+
+.buttonLink:hover::before {
+  left: 6px;
+}
+
+.datapackLink {
+  background-color: var(--main-accent-color);
+}
+
+.datapackLink::before {
+  content: url("/images/datapack.svg");
+}
+
+.moreLink::before {
+  content: url("/images/rightArrow.svg");
+}
+
+.wikiLink {
+  padding-left: 10px;
+}
+
+.wikiLink:hover {
+  padding-left: 16px;
+}
+
+@media screen and (max-width: 768px) {
+  .preview {
+    flex-direction: column-reverse;
+    align-items: stretch;
+  }
+
+  .previewInfo {
+    margin-left: 0;
+    margin-bottom: 10px;
+  }
+}
+
+/* Other */
 
 .smallButton {
   color: white;
