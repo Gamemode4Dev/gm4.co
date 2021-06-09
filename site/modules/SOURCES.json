@@ -1,8 +1,8 @@
 {
     "1.16":{
       "platform":"java",
-      "download": "https://github.com/Gamemode4Dev/GM4_Datapacks/archive/master.zip",
-      "branch": "master",
+      "download": "https://github.com/Gamemode4Dev/GM4_Datapacks/archive/ver/1.16.zip",
+      "branch": "ver/1.16",
       "local": "master-1.16",
       "version_offset":16000,
       "packager_version":1
