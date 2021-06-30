@@ -221,6 +221,11 @@ header li > *:hover {
   background-color: #5865F2;
 }
 
+.patreonLink {
+  color: #ffffff;
+  background-color: #FF424D;
+}
+
 .githubLink {
   color: #000 !important;
   background-color: #ffffff;

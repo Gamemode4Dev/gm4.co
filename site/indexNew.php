@@ -72,7 +72,11 @@ includes/homepage.js
 </div>
 <div class="landing">
   <div class="landingInfo">
-    Gamemode 4 is a collection of carefully constructed datapack modules that can be easily added to your Minecraft world to add to your gameplay experience without the need for mods!
+    <h2>Gamemode 4</h2>
+    <p>Gamemode 4 is an open-source data pack collection designed to augment the vanilla survival experience. We aim to provide well balanced, vanilla-like extensions, all whilst having minimal performance impact!</p>
+    <p>Extensive documentation, focus on compatibility and our design language make Gamemode 4 the number one choice for accessible survival mods.</p>
+    <p>Our history originates from the 1.8 update with the introduction of the more flexible command syntax. With each update, we have consistently updated, optimized and created new content as the tools available have been expanded.</p>
+    <p>These modules have been featured on a season of Hermitcraft, used in a variety of Lets Play worlds and currently feature on our bleeding-edge Public Server, where we test the lastest changes.</p>
   </div>
   <div class="landingLinks">
     <h2>Join our community</h2>
@@ -80,7 +84,10 @@ includes/homepage.js
       <img src="/images/logo/discord.svg" alt="Discord Logo">Discord
     </a>
     <a class="githubLink" href="https://github.com/Gamemode4Dev/GM4_Datapacks">
-    <img src="/images/logo/github.svg" alt="GitHub Logo">GitHub
+      <img src="/images/logo/github.svg" alt="GitHub Logo">GitHub
+    </a>
+    <a class="patreonLink" href="https://discord.gg/0qLGgv7JGfIXf45t">
+      <img src="/images/logo/patreon.png" alt="Patreon Logo">Patreon
     </a>
   </div>
 </div>
