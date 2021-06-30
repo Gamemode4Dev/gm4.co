@@ -45,38 +45,44 @@ includes/homepage.js
   <span class="smallButton" onclick="storeUserPreferences()">Allow</span>
   <span class="smallButton" onclick="$(this).parent().hide();dataprompted=true;">Dismiss</span>
 </div>
-<div class="landing">
-  <header>
-    <a class="home" href="https://www.gm4.co/">
-      <img src="images/logo/logo_clear.svg" height="32px" alt="Gamemode 4 Logo"/>
-      <h1>Gamemode 4</h1>
-    </a>
-    <nav>
-      <ul>
-        <li>
-          <span onclick="switchView('All Modules', $('#allModules')[0], true)">Modules</span>
-        </li>
-        <li>
-          <a href="https://www.gm4.co/wiki" target="_blank">Wiki</a>
-        </li>
-        <li>
-          <a href="https://www.gm4.co/server">Server</a>
-        </li>
-      </ul>
-    </nav>
-    <span class="themeButton" onclick="toggleTheme()"></span>
-  </header>
-  <div class="slideshow track">
-    <div class="trackButton trackButtonLeft"></div>
-    <div class="trackButton trackButtonRight"></div>
-    <div class="trackContainer"></div>
-  </div>
-  <div class="landingInfo">
-    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non consequatur sit, quisquam soluta exercitationem hic! Reprehenderit repellendus rem velit blanditiis asperiores est tempora vel, magnam neque enim ipsa, sequi necessitatibus.
-  </div>
+<header>
+  <a class="home" href="https://www.gm4.co/">
+    <img src="images/logo/logo_clear.svg" height="32px" alt="Gamemode 4 Logo"/>
+    <h1>Gamemode 4</h1>
+  </a>
+  <nav>
+    <ul>
+      <li>
+        <span onclick="switchView('All Modules', $('#allModules')[0], true)">Modules</span>
+      </li>
+      <li>
+        <a href="https://www.gm4.co/wiki" target="_blank">Wiki</a>
+      </li>
+      <li>
+        <a href="https://www.gm4.co/server">Server</a>
+      </li>
+    </ul>
+  </nav>
+  <span class="themeButton" onclick="toggleTheme()"></span>
+</header>
+<div class="slideshow track">
+  <div class="trackButton trackButtonLeft"></div>
+  <div class="trackButton trackButtonRight"></div>
+  <div class="trackContainer"></div>
 </div>
-<div class="pageShadowDown">
-  ↓ Scroll down ↓
+<div class="landing">
+  <div class="landingInfo">
+    Gamemode 4 is a collection of carefully constructed datapack modules that can be easily added to your Minecraft world to add to your gameplay experience without the need for mods!
+  </div>
+  <div class="landingLinks">
+    <h2>Join our community</h2>
+    <a class="discordLink" href="https://discord.gg/0qLGgv7JGfIXf45t">
+      <img src="/images/logo/discord.svg" alt="Discord Logo">Discord
+    </a>
+    <a class="githubLink" href="https://github.com/Gamemode4Dev/GM4_Datapacks">
+    <img src="/images/logo/github.svg" alt="GitHub Logo">GitHub
+    </a>
+  </div>
 </div>
 <div class="moduleNavBar">
   <span onclick="switchView('Browse',this)" class="moduleNavButton moduleNavButtonSelected noselect">Browse</span>

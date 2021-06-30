@@ -178,21 +178,52 @@ header li > *:hover {
 /* Landing */
 
 .landing {
-  height: calc(100vh - 50px);
   display: flex;
-  flex-direction: column;
-}
-
-.pageShadowDown {
-  bottom: 0px;
-  box-shadow: 0px -50px 50px -50px rgba(0, 0, 0, 0.3) inset;
-  border-bottom: 1px solid var(--thematic-element-color);
-  height: 50px;
-  text-align: center;
+  padding: 40px var(--content-spacer) 20px;
+  max-width: 1100px;
+  margin: 0 auto;
 }
 
 .landingInfo {
-  margin: 20px var(--content-spacer);
+  flex: 2;
+  margin-right: 20px;
+}
+
+.landingLinks {
+  flex: 1;
+  max-width: 300px;
+}
+
+.landingLinks h2 {
+  margin-bottom: 1rem;
+}
+
+.landingLinks a {
+  display: block;
+  padding: 0.5rem 1rem;
+  margin-bottom: 10px;
+  border-radius: 100rem;
+  font-weight: bold;
+  font-size: 20px;
+  box-shadow: 0 1px 6px -3px #000;
+  text-decoration: none;
+  text-align: center;
+}
+
+.landingLinks a img {
+  margin-right: 10px;
+  vertical-align: middle;
+  height: 1.5rem;
+}
+
+.discordLink {
+  color: #ffffff;
+  background-color: #5865F2;
+}
+
+.githubLink {
+  color: #000 !important;
+  background-color: #ffffff;
 }
 
 /* Tracks */
@@ -658,6 +689,19 @@ select.textSpace option {
 }
 
 @media screen and (max-width: 768px) {
+  .landing {
+    flex-direction: column;
+  }
+
+  .landingInfo {
+    margin-right: unset;
+  }
+
+  .landingLinks {
+    margin-top: 20px;
+    max-width: unset;
+  }
+
   .preview {
     flex-direction: column-reverse;
     align-items: stretch;
