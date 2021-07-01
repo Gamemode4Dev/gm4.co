@@ -210,6 +210,10 @@ header li > *:hover {
   text-align: center;
 }
 
+.landingLinks a:hover {
+  box-shadow: inset 300px 0px rgba(0,0,0,0.1);
+}
+
 .landingLinks a img {
   margin-right: 10px;
   vertical-align: middle;
