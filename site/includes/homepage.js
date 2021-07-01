@@ -20,9 +20,7 @@ if(userdata != null){
 
 window.onload = function(){
   if (window.matchMedia != "undefined" && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-    $("body").removeClass("light");
-    $("body").addClass("dark");
-    siteTheme = "dark";
+    theme("dark")
   }
   $.ajax({url:"images/slideshow/slides.json"}).done(function(data){
     slides = data.slides;
@@ -73,6 +71,15 @@ window.onload = function(){
 }
 
 window.onresize = resize;
+
+window.onpopstate = reload
+
+function reload() {
+  $(".moduleNavButton").removeClass("active");
+  $(`.moduleNavButton[href="${location.hash}"]`).addClass("active");
+  $(".moduleView").removeClass("active");
+  $(location.hash).addClass("active");
+}
 
 function updateScrollbar() {
   const clientWidth = document.documentElement.clientWidth
@@ -256,7 +263,6 @@ function toggleTheme(){
     userdata.theme = siteTheme;
     savePreferences();
   }
-  $("#discordIFrame").attr("src","https://discord.com/widget?id=151141188961828864&theme=" + siteTheme);
 }
 function theme(mode){
   if(mode=="light"){
@@ -350,20 +356,6 @@ function load_site_meta(moduleInfo){
       }
     }
   }
-}
-
-function switchView(view, caller, scroll = false){
-  $(".moduleNavButton").removeClass("moduleNavButtonSelected");
-  $(caller).addClass("moduleNavButtonSelected");
-  if(view == "Browse"){
-    $("#modules").hide();
-    $("#browse").show();
-  }
-  if(view == "All Modules"){
-    $("#modules").show();
-    $("#browse").hide();
-  }
-  if(scroll) caller.scrollIntoView();
 }
 
 function storeUserPreferences(){

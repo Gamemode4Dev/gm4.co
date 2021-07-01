@@ -45,26 +45,7 @@ includes/homepage.js
   <span class="smallButton" onclick="storeUserPreferences()">Allow</span>
   <span class="smallButton" onclick="$(this).parent().hide();dataprompted=true;">Dismiss</span>
 </div>
-<header>
-  <a class="home" href="https://www.gm4.co/">
-    <img src="images/logo/logo_clear.svg" height="32px" alt="Gamemode 4 Logo"/>
-    <h1>Gamemode 4</h1>
-  </a>
-  <nav>
-    <ul>
-      <li>
-        <span onclick="switchView('All Modules', $('#allModules')[0], true)">Modules</span>
-      </li>
-      <li>
-        <a href="https://www.gm4.co/wiki" target="_blank">Wiki</a>
-      </li>
-      <li>
-        <a href="https://www.gm4.co/server">Server</a>
-      </li>
-    </ul>
-  </nav>
-  <span class="themeButton" onclick="toggleTheme()"></span>
-</header>
+<?php include 'includes/headerNew.php';?>
 <div class="slideshow track">
   <div class="trackButton trackButtonLeft"></div>
   <div class="trackButton trackButtonRight"></div>
@@ -74,28 +55,29 @@ includes/homepage.js
   <div class="landingInfo">
     <h2>Gamemode 4</h2>
     <p>Gamemode 4 is an open-source data pack collection designed to augment the vanilla survival experience. We aim to provide well balanced, vanilla-like extensions, all whilst having minimal performance impact!</p>
-    <p>Extensive documentation, focus on compatibility and our design language make Gamemode 4 the number one choice for accessible survival mods.</p>
+    <p>Extensive documentation, focus on compatibility, and our design language make Gamemode 4 the number one choice for accessible survival mods.</p>
     <p>Our history originates from the 1.8 update with the introduction of the more flexible command syntax. With each update, we have consistently updated, optimized and created new content as the tools available have been expanded.</p>
-    <p>These modules have been featured on a season of Hermitcraft, used in a variety of Lets Play worlds and currently feature on our bleeding-edge Public Server, where we test the lastest changes.</p>
+    <p>These modules have been featured on a season of Hermitcraft, used in a variety of Lets Play worlds, and currently feature on our bleeding-edge Public Server, where we test the latest changes.</p>
   </div>
   <div class="landingLinks">
     <h2>Join our community</h2>
-    <a class="discordLink" href="https://discord.gg/0qLGgv7JGfIXf45t">
+    <a class="discordLink" href="https://discord.gg/0qLGgv7JGfIXf45t" target="_blank">
       <img src="/images/logo/discord.svg" alt="Discord Logo">Discord
     </a>
-    <a class="githubLink" href="https://github.com/Gamemode4Dev/GM4_Datapacks">
+    <a class="githubLink" href="https://github.com/Gamemode4Dev/GM4_Datapacks" target="_blank">
       <img src="/images/logo/github.svg" alt="GitHub Logo">GitHub
     </a>
-    <a class="patreonLink" href="https://discord.gg/0qLGgv7JGfIXf45t">
+    <a class="patreonLink" href="https://www.patreon.com/gamemode4" target="_blank">
       <img src="/images/logo/patreon.png" alt="Patreon Logo">Patreon
     </a>
   </div>
 </div>
 <div class="moduleNavBar">
-  <span onclick="switchView('Browse',this)" class="moduleNavButton moduleNavButtonSelected noselect">Browse</span>
-  <span id="allModules" onclick="switchView('All Modules',this)" class="moduleNavButton noselect">All Modules</span>
+  <a href="#browse" class="moduleNavButton active noselect">Browse</a>
+  <a href="#modules" class="moduleNavButton noselect">All Modules</a>
 </div>
-<div id="modules" style="display:none">
+<div id="browse" class="moduleView active"></div>
+<div id="modules" class="moduleView">
   <div class="moduleFilter">
     <select id="versionSelect" onchange="versionView()">
       <option value="loading">Loading...</option>
@@ -103,16 +85,7 @@ includes/homepage.js
     <input id="textSearch" type="text" placeholder="search..." onkeyup="textSearch()"/>
   </div>
 </div>
-<div id="browse"></div>
 <iframe name='download_frame' style='display:none;'></iframe>
-<footer>
-  <p>
-    Copyright &copy; <?php echo(date('Y')); ?> Gamemode 4<br>
-    <a href="https://discord.com/invite/erHDVhPY" target="_blank">Discord</a> | <a href="https://github.com/Gamemode4Dev/GM4_Datapacks" target="_blank">Github</a> | <a href="https://twitter.com/GM4Official" target="_blank">Twitter</a>
-  </p>
-  <p class="small">
-    Gamemode 4 is not an official Minecraft product, and is not approved by or associated with Mojang Studios. "Minecraft" is a trademark of Mojang AB and any usage of the Minecraft brand on this site is used in accordance with Mojang Studios' <a href="https://account.mojang.com/terms?ref=ft#brand" target="_blank">Brand and Asset Guidelines</a>.
-  </p>
-</footer>
+<?php include 'includes/footer.php';?>
 </body>
 </html>

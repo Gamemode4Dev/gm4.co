@@ -217,17 +217,17 @@ header li > *:hover {
 }
 
 .discordLink {
-  color: #ffffff;
+  color: #ffffff !important;
   background-color: #5865F2;
 }
 
 .patreonLink {
-  color: #ffffff;
+  color: #ffffff !important;
   background-color: #FF424D;
 }
 
 .githubLink {
-  color: #000 !important;
+  color: #000000 !important;
   background-color: #ffffff;
 }
 
@@ -424,12 +424,22 @@ header li > *:hover {
   color: var(--main-accent-color);
 }
 
-.moduleNavButtonSelected {
+.moduleNavButton.active {
   border-bottom: 1px solid var(--main-text-color);
   color: var(--main-text-color);
 }
 
 /* Modules */
+
+.moduleView {
+  margin-top: -53px;
+  padding-top: 53px;
+  display: none;
+}
+
+.moduleView.active {
+  display: block;
+}
 
 .categoryTitle {
   margin: 1.4em var(--content-spacer) 0;
@@ -504,10 +514,14 @@ header li > *:hover {
 
 #modules {
   width: 100%;
-  display: flex;
   flex-wrap: wrap;
-  padding: 0 var(--content-spacer);
+  padding-left: var(--content-spacer);
+  padding-right: var(--content-spacer);
   --item-width: calc((100vw - var(--scrollbar-width, 0) - 2 * var(--content-spacer, 0px)) / var(--module-cards, 1));
+}
+
+#modules.active {
+  display: flex;
 }
 
 #modules .moduleCard {
