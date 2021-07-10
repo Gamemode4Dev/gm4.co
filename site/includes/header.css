@@ -154,8 +154,8 @@ header {
     height: 32px;
     align-self: center;
     margin: 0 15px;
-    mask: no-repeat center / contain url(https://www.gm4.co/images/theme_button.svg);
-    -webkit-mask: no-repeat center / contain url(https://www.gm4.co/images/theme_button.svg);
+    mask: no-repeat center / contain url("https://www.gm4.co/images/theme_button.svg");
+    -webkit-mask: no-repeat center / contain url("https://www.gm4.co/images/theme_button.svg");
     background-color: var(--main-text-color);
     opacity: 0.5;
     cursor: pointer;
@@ -164,3 +164,18 @@ header {
   .themeButton:hover {
     opacity: 0.7;
   }
+
+  /*Footer */
+
+  footer {
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+    padding: 0 var(--content-spacer);
+    border-top: 1px solid var(--thematic-element-color);
+    min-height: 120px;
+}
+
+p.footer-small{
+    font-size: 0.7em;
+}
