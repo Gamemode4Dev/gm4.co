@@ -19,3 +19,8 @@
   </nav>
   <span class="themeButton" onclick="toggleTheme()"></span>
 </header>
+<div id="dataRequestBox">
+  <p>Allow GM4 to remember your preferences?</p>
+  <span class="smallButton" onclick="storeUserPreferences()">Allow</span>
+  <span class="smallButton" onclick="$(this).parent().hide();dataprompted=true;">Dismiss</span>
+</div>

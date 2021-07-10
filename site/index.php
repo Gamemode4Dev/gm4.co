@@ -40,11 +40,6 @@ includes/homepage.js
 <script src="includes/homepage.js?nocache=<?php echo(rand(0,999999)); ?>"></script>
 </head>
 <body class="light">
-<div id="dataRequestBox">
-  <p>Allow GM4 to remember your preferences?</p>
-  <span class="smallButton" onclick="storeUserPreferences()">Allow</span>
-  <span class="smallButton" onclick="$(this).parent().hide();dataprompted=true;">Dismiss</span>
-</div>
 <?php include 'includes/header.php';?>
 <div class="slideshow track">
   <div class="trackButton trackButtonLeft"></div>

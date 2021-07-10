@@ -595,30 +595,3 @@ select.textSpace option {
     margin-bottom: 10px;
   }
 }
-
-/* Other */
-
-.smallButton {
-  color: white;
-  background-color: var(--main-accent-color);
-  padding: 5px;
-  border: 0px;
-  text-align: center;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-#dataRequestBox {
-  position: fixed;
-  left: calc(50vw - 160px);
-  width: 320px;
-  font-size: 12pxt;
-  background-color: var(--preview-bg);
-  color: var(--main-text-color);
-  border: 1px solid var(--main-text-color);
-  border-radius: 5px;
-  text-align: center;
-  z-index: 2;
-  padding-bottom: 20px;
-  display: none;
-}
