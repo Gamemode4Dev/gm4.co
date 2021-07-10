@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="includes/header.css?nocache=<?php echo(rand(0,999999)); ?>" />
+<link rel="stylesheet" href="https://www.gm4.co/includes/header.css?nocache=<?php echo(rand(0,999999)); ?>" />
 <header>
   <a class="home" href="https://www.gm4.co/">
     <img src="https://www.gm4.co/images/logo/logo_clear.svg" height="32px" alt="Gamemode 4 Logo"/>
@@ -7,7 +7,7 @@
   <nav>
     <ul>
       <li>
-        <a href="#modules">Modules</a>
+        <a href="https://www.gm4.co/#modules">Modules</a>
       </li>
       <li>
         <a href="https://www.gm4.co/wiki" target="_blank">Wiki</a>

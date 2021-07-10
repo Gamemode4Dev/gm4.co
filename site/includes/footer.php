@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="includes/footer.css?nocache=<?php echo(rand(0,999999)); ?>" />
+<link rel="stylesheet" href="https://www.gm4.co/includes/footer.css?nocache=<?php echo(rand(0,999999)); ?>" />
 <footer>
   <p>
     Copyright &copy; <?php echo(date('Y')); ?> Gamemode 4<br>
