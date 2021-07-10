@@ -455,6 +455,8 @@ select.textSpace option {
   flex-direction: column;
   border-radius: 20px;
   overflow: hidden;
+  min-width: 300px;
+  max-width: 100vh;
 }
 
 .previewInfo {
