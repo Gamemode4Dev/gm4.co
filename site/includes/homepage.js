@@ -40,7 +40,7 @@ function headerSaysWindowLoaded(){
         }
         versionclass += "version_" + allModules[moduleName].versions[j].replaceAll(".","_") + " ";
       }
-      $("#modules").append('<a href="https://gm4.co/modules/'+allModules[moduleName].id.replaceAll("_","-")+'"><div class="moduleCard noselect '+versionclass+'"><img src="modules/media/'+allModules[moduleName].id+'/'+allModules[moduleName].id+'.svg" onerror="image_error(this)"/><span class="cardName">'+moduleName+'</span></div></a>');
+      $("#modules").append('<a href="https://gm4.co/modules/'+allModules[moduleName].id.replaceAll("_","-")+'"><div class="moduleCard noselect '+versionclass+'"><img src="modules/template/templates/master-' + LATEST_VERSION + '/GM4_Datapacks-ver-' + LATEST_VERSION + '/gm4_' + cardarray[j] + '/' + 'pack.svg" onerror="image_error(this)"/><span class="cardName">'+moduleName+'</span></div></a>');
     }
     versions.sort(function(a,b){return b-a});
     $("#versionSelect").empty();
@@ -213,7 +213,7 @@ function populateCategory(pos,category){
   }
   cards = "";
   for(j=0;j<cardarray.length;j++){
-    cards += '<div class="trackItem moduleCard noselect" data-module_id="'+cardarray[j]+'"><img src="' + 'modules/template/templates/master-' + LATEST_VERSION + '/GM4_Datapacks-ver-' + LATEST_VERSION + '/gm4_' + cardarray[j] + '/' + 'pack.svg" onerror="image_error(this)"><span class="cardName">' + cardarray[j].replace(/_/g, " ") + '</span></div>';
+    cards += '<div class="trackItem moduleCard noselect" data-module_id="'+cardarray[j]+'"><img src="modules/template/templates/master-' + LATEST_VERSION + '/GM4_Datapacks-ver-' + LATEST_VERSION + '/gm4_' + cardarray[j] + '/' + 'pack.svg" onerror="image_error(this)"><span class="cardName">' + cardarray[j].replace(/_/g, " ") + '</span></div>';
   }
   track.html(cards);
   track.append('<div class="trackItem moduleCard trackEndItem noselect"><img src="images/enderpuff_by_qbert.png" title="End of results. Artwork by Qbert" alt="End of results"/><span class="cardName">You\'ve reached the end</span></div>');
