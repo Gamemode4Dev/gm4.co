@@ -45,7 +45,7 @@ includes/homepage.js
   <span class="smallButton" onclick="storeUserPreferences()">Allow</span>
   <span class="smallButton" onclick="$(this).parent().hide();dataprompted=true;">Dismiss</span>
 </div>
-<?php include 'includes/headerNew.php';?>
+<?php include 'includes/header.php';?>
 <div class="slideshow track">
   <div class="trackButton trackButtonLeft"></div>
   <div class="trackButton trackButtonRight"></div>

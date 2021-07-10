@@ -1,12 +1,12 @@
 <header>
-  <a class="home" href="/indexNew.php">
-    <img src="/images/logo/logo_clear.svg" height="32px" alt="Gamemode 4 Logo"/>
+  <a class="home" href="https://www.gm4.co/">
+    <img src="https://www.gm4.co/images/logo/logo_clear.svg" height="32px" alt="Gamemode 4 Logo"/>
     <h1>Gamemode 4</h1>
   </a>
   <nav>
     <ul>
       <li>
-        <a href="/indexNew.php#modules">Modules</a>
+        <a href="#modules">Modules</a>
       </li>
       <li>
         <a href="https://www.gm4.co/wiki" target="_blank">Wiki</a>
