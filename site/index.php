@@ -56,7 +56,7 @@ created 19 august 2020
       <img src="/images/logo/github.svg" alt="GitHub Logo">GitHub
     </a>
     <a class="patreonLink" href="https://www.patreon.com/gamemode4" target="_blank">
-      <img src="/images/logo/patreon.png" alt="Patreon Logo">Patreon
+      <img src="/images/logo/patreon.svg" alt="Patreon Logo">Patreon
     </a>
   </div>
 </div>
