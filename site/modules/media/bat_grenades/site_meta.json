@@ -1,0 +1,10 @@
+{
+    "promo_images":[
+        {
+            "type":"video",
+            "image":"bat_grenades.svg",
+            "link":"https://www.youtube.com/watch?v=uUoEKtte1GQ",
+            "alt":"Bat Grenades explaination video."
+        }
+    ]
+}

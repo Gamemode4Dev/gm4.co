@@ -5,12 +5,6 @@
         "image":"promo_1.png",
         "credit":"Bloo",
         "alt":"Cozy in the cold"
-      },
-      {
-        "type":"video",
-        "image":"cozy_campfires.svg",
-        "link":"https://www.youtube.com/watch?v=uUoEKtte1GQ",
-        "alt":"Bat Grenades explaination video."
       }
   ]
 }

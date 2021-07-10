@@ -252,7 +252,12 @@ function loadPreview(categoryBar, module_id){
         previewInfo.append(`<a class="buttonLink wikiLink" href="${data.wiki_link}" target="_blank">Read about this on the Wiki</a>`);
       }
       // TODO: show images from site meta if available
-      previewMedia.append(`<img src="modules/media/${module_id}/${module_id}.svg">`)
+      if(data.promo == undefined){
+        previewMedia.append(`<img src="modules/media/${module_id}/${module_id}.svg">`)
+      }
+      else{
+        load_site_meta(data);
+      }
     });
   }
 }
