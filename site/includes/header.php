@@ -1,20 +1,20 @@
-<link rel="stylesheet" href="https://www.gm4.co/includes/header.css?nocache=<?php echo(rand(0,999999)); ?>" />
-<script src="https://www.gm4.co/includes/header.js?nocache=<?php echo(rand(0,999999)); ?>"></script>
+<link rel="stylesheet" href="https://gm4.co/includes/header.css?nocache=<?php echo(rand(0,999999)); ?>" />
+<script src="https://gm4.co/includes/header.js?nocache=<?php echo(rand(0,999999)); ?>"></script>
 <header>
-  <a class="home" href="https://www.gm4.co/">
-    <img src="https://www.gm4.co/images/logo/logo_clear.svg" height="32px" alt="Gamemode 4 Logo"/>
+  <a class="home" href="https://gm4.co/">
+    <img src="https://gm4.co/images/logo/logo_clear.svg" height="32px" alt="Gamemode 4 Logo"/>
     <h1>Gamemode 4</h1>
   </a>
   <nav>
     <ul>
       <li>
-        <a href="https://www.gm4.co/#modules">Modules</a>
+        <a href="https://gm4.co/#modules">Modules</a>
       </li>
       <li>
-        <a href="https://www.gm4.co/wiki" target="_blank">Wiki</a>
+        <a href="https://gm4.co/wiki" target="_blank">Wiki</a>
       </li>
       <li>
-        <a href="https://www.gm4.co/server">Server</a>
+        <a href="https://gm4.co/server">Server</a>
       </li>
     </ul>
   </nav>
