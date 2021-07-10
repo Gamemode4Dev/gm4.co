@@ -1,10 +1,10 @@
 {
-  "promo_images":[
-      {
-        "type":"image",
-        "image":"promo_1.png",
-        "credit":"Bloo",
-        "alt":"Cozy in the cold"
-      }
+  "promo_images": [
+    {
+      "type": "image",
+      "image": "promo_1.png",
+      "credit": "Bloo",
+      "alt": "Cozy in the cold"
+    }
   ]
 }

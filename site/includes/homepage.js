@@ -295,8 +295,7 @@ function load_site_meta(moduleInfo){
   }
   if(data.promo_images != undefined && data.promo_images.length==1){
     if(data.promo_images[0].type=="image"){
-      $(".previewMedia").css("background-image","url(modules/media/" + moduleInfo.module_id + "/" + data.promo_images[0].image + ")");
-      $(".previewMedia").prop("title",data.promo_images[0].alt + " (image credit: " + data.promo_images[0].credit + ")");
+      $(".previewMedia").append(`<img src="modules/media/${moduleInfo.module_id}/${data.promo_images[0].image}" alt="${data.promo_images[0].alt}" title="${data.promo_images[0].alt} (credit: ${data.promo_images[0].credit})">`)
     }
     if(data.promo_images[0].type=="video"){
       $(".previewMedia").append("<a href='" + data.promo_images[i].image + "'><div class='promo_thumbnail' style='background-image:url(modules/media/" + module_id + "/" + module_id + ".svg)' title='" + data.promo_images[i].alt + "'><img style='width:125px;position:absolute;left:62px;top:62px;' src='images/play.svg' title='" + data.promo_images[i].alt + "'/></div></a>");
@@ -311,7 +310,7 @@ function load_site_meta(moduleInfo){
     if(tileTotal > 4) tileTotal = 4;
     for(i=0;i<tileTotal;i++){
       if(data.promo_images[i].type=="image"){
-        $(".previewMedia").append("<div class='promo_thumbnail' title='" + data.promo_images[i].alt + " (image credit: " + data.promo_images[i].credit + ")' style='background-image:url(modules/media/" + moduleInfo.module_id + "/" + data.promo_images[i].image + ")'></div>");
+        $(".previewMedia").append(`<img src="modules/media/${moduleInfo.module_id}/${data.promo_images[0].image}" alt="${data.promo_images[0].alt}" title="${data.promo_images[0].alt} (credit: ${data.promo_images[0].credit})">`)
       }
       if(data.promo_images[i].type=="video"){
         $(".previewMedia").append("<a href='" + data.promo_images[i].link + "'><div class='promo_thumbnail' style='background-image:url(modules/media/" + moduleInfo.module_id + "/" + data.promo_images[i].image + ")' title='" + data.promo_images[i].alt + "'><img style='width:125px;position:absolute;left:62px;top:62px;' src='images/play.svg' title='" + data.promo_images[i].alt + "'/></div></a>");

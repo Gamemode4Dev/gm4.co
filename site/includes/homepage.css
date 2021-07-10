@@ -450,7 +450,6 @@ select.textSpace option {
 
 .previewMedia {
   flex: 1 1 50%;
-  background-color: #CECECE;
   display: flex;
   flex-direction: column;
   border-radius: 20px;

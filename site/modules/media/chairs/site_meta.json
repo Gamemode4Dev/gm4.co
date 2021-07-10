@@ -1,10 +1,10 @@
 {
-  "promo_images":[
-      {
-        "type":"image",
-        "image":"promo_1.gif",
-        "credit":"Hero29",
-        "alt":"Creating a chair"
-      }
+  "promo_images": [
+    {
+      "type": "image",
+      "image": "promo_1.gif",
+      "credit": "Hero29",
+      "alt": "Creating a chair"
+    }
   ]
 }
