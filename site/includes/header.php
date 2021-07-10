@@ -1,4 +1,5 @@
 <link rel="stylesheet" href="https://www.gm4.co/includes/header.css?nocache=<?php echo(rand(0,999999)); ?>" />
+<script src="https://www.gm4.co/includes/header.js"></script>
 <header>
   <a class="home" href="https://www.gm4.co/">
     <img src="https://www.gm4.co/images/logo/logo_clear.svg" height="32px" alt="Gamemode 4 Logo"/>
