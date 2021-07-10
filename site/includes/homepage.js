@@ -40,7 +40,7 @@ function headerSaysWindowLoaded(){
         }
         versionclass += "version_" + allModules[moduleName].versions[j].replaceAll(".","_") + " ";
       }
-      $("#modules").append('<a href="https://gm4.co/modules/'+allModules[moduleName].id.replaceAll("_","-")+'"><div class="moduleCard noselect '+versionclass+'"><img src="modules/template/templates/master-' + LATEST_VERSION + '/GM4_Datapacks-ver-' + LATEST_VERSION + '/gm4_' + cardarray[j] + '/' + 'pack.svg" onerror="image_error(this)"/><span class="cardName">'+moduleName+'</span></div></a>');
+      $("#modules").append('<a href="https://gm4.co/modules/'+allModules[moduleName].id.replaceAll("_","-")+'"><div class="moduleCard noselect '+versionclass+'"><img src="modules/template/templates/master-' + LATEST_VERSION + '/GM4_Datapacks-ver-' + LATEST_VERSION + '/gm4_' + allModules[moduleName].id + '/' + 'pack.svg" onerror="image_error(this)"/><span class="cardName">'+moduleName+'</span></div></a>');
     }
     versions.sort(function(a,b){return b-a});
     $("#versionSelect").empty();
