@@ -1,0 +1,141 @@
+/*site-wide CSS */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    --content-spacer: 135px;
+    --module-cards: 8;
+  }
+
+  .dark {
+    --main-bg-color: #111111;
+    --main-text-color: #DDDDDD;
+    --main-accent-color: #4AA0C7;
+    --thematic-element-color: #333333;
+    --modulecard-bg-top: #2f3441;
+    --modulecard-bg-bottom: #212531;
+    --preview-bg: #1f2122;
+    --preview-shade-bg: #232b2f;
+  }
+  
+  .light {
+    --main-bg-color: white;
+    --main-text-color: black;
+    --main-accent-color: #4AA0C7;
+    --thematic-element-color: #bfbfbf;
+    --modulecard-bg-top: #80b4cc;
+    --modulecard-bg-bottom: #5e91a8;
+    --preview-bg: #c1ccd1;
+    --preview-shade-bg: #b0b7bb;
+  }
+  
+  body {
+    font-family: 'Raleway', sans-serif;
+    font-variant-numeric: lining-nums;
+    font-weight: normal;
+    font-size: 18px;
+    color: var(--main-accent-color);
+    width: 100%;
+    overflow-x: hidden;
+    height: 100vh;
+    -webkit-font-smoothing: antialiased;
+    background-color: var(--main-bg-color);
+    color: var(--main-text-color);
+  }
+  
+  p {
+    margin: 1em 0;
+  }
+  
+  p.small {
+    font-size: 0.7em;
+  }
+  
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  a:visited {
+    color: inherit;
+  }
+  
+  .noselect {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+
+/*Header */
+
+header {
+    margin: 6px 0;
+    display: flex;
+    justify-content: center;
+    overflow-x: hidden;
+    flex-shrink: 0;
+    color: var(--main-accent-color);
+  }
+  
+  header .home {
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+    margin-right: 20px;
+  }
+  
+  header .home h1 {
+    padding: 0 10px;
+    font-weight: bold;
+    font-size: 38px;
+  }
+  
+  @media (max-width: 720px) {
+    header .home h1 {
+      display: none;
+    }
+  }
+  
+  header ul {
+    display: flex;
+    height: 100%;
+    list-style: none;
+  }
+  
+  header li > * {
+    display: block;
+    height: 100%;
+    font-size: 24px;
+    font-weight: bold;
+    padding: 10px;
+    cursor: pointer;
+  }
+  
+  @media (max-width: 480px) {
+    header li > * {
+      font-size: 18px;
+      padding: 10px 6px;
+    }
+  }
+  
+  header .home:hover,
+  header li > *:hover {
+    box-shadow: 0px -30px 0px -28px var(--main-accent-color) inset;
+  }
+  
+  .themeButton {
+    width: 32px;
+    height: 32px;
+    align-self: center;
+    margin: 0 15px;
+    mask: no-repeat center / contain url(/images/theme_button.svg);
+    -webkit-mask: no-repeat center / contain url(/images/theme_button.svg);
+    background-color: var(--main-text-color);
+    opacity: 0.5;
+    cursor: pointer;
+  }
+  
+  .themeButton:hover {
+    opacity: 0.7;
+  }
