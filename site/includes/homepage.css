@@ -472,17 +472,24 @@ select.textSpace option {
   text-transform: capitalize;
 }
 
-.promo_thumbnail {
-  width: 250px;
-  height: 250px;
-  overflow: hidden;
+.promoVideo {
+  display: block;
   position: relative;
-  display: inline-block;
-  border: 0px;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  content: "";
+}
+
+.promoVideo::after {
+  content: url(/images/play.svg);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 40%;
+  pointer-events: none;
+}
+
+.promoVideo img {
+  display: block;
+  filter: blur(3px);
 }
 
 .buttonLink {

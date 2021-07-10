@@ -40,7 +40,7 @@ function headerSaysWindowLoaded(){
         }
         versionclass += "version_" + allModules[moduleName].versions[j].replaceAll(".","_") + " ";
       }
-      $("#modules").append('<a href="https://gm4.co/modules/'+allModules[moduleName].id.replaceAll("_","-")+'"><div class="moduleCard noselect '+versionclass+'"><img src="modules/template/templates/master-' + LATEST_VERSION + '/GM4_Datapacks-ver-' + LATEST_VERSION + '/gm4_' + allModules[moduleName].id + '/' + 'pack.svg" onerror="image_error(this)"/><span class="cardName">'+moduleName+'</span></div></a>');
+      $("#modules").append(`<a href="https://gm4.co/modules/${allModules[moduleName].id.replaceAll("_","-")}"><div class="moduleCard noselect ${versionclass}"><img src="${get_module_icon(allModules[moduleName].id)}" onerror="image_error(this)"/><span class="cardName">${moduleName}</span></div></a>`);
     }
     versions.sort(function(a,b){return b-a});
     $("#versionSelect").empty();
@@ -213,7 +213,7 @@ function populateCategory(pos,category){
   }
   cards = "";
   for(j=0;j<cardarray.length;j++){
-    cards += '<div class="trackItem moduleCard noselect" data-module_id="'+cardarray[j]+'"><img src="modules/template/templates/master-' + LATEST_VERSION + '/GM4_Datapacks-ver-' + LATEST_VERSION + '/gm4_' + cardarray[j] + '/' + 'pack.svg" onerror="image_error(this)"><span class="cardName">' + cardarray[j].replace(/_/g, " ") + '</span></div>';
+    cards += `<div class="trackItem moduleCard noselect" data-module_id="${cardarray[j]}"><img src="${get_module_icon(cardarray[j])}" onerror="image_error(this)"><span class="cardName">${cardarray[j].replace(/_/g, " ")}</span></div>`;
   }
   track.html(cards);
   track.append('<div class="trackItem moduleCard trackEndItem noselect"><img src="images/enderpuff_by_qbert.png" title="End of results. Artwork by Qbert" alt="End of results"/><span class="cardName">You\'ve reached the end</span></div>');
@@ -252,11 +252,10 @@ function loadPreview(categoryBar, module_id){
         previewInfo.append(`<a class="buttonLink wikiLink" href="${data.wiki_link}" target="_blank">Read about this on the Wiki</a>`);
       }
       // TODO: show images from site meta if available
-      if(data.promo == undefined){
-        previewMedia.append(`<img src="modules/media/${module_id}/${module_id}.svg">`)
-      }
-      else{
-        load_site_meta(data);
+      if (data.promo) {
+        load_site_meta(previewMedia, module_id, data.promo);
+      } else {
+        previewMedia.append(`<img src="${get_module_icon(module_id)}">`)
       }
     });
   }
@@ -287,36 +286,24 @@ function image_error(caller){
   $(caller).prop("src","../modules/media/placeholder.png");
 }
 
-function load_site_meta(moduleInfo){
-  console.log("loading site meta for " + moduleInfo.module_id); 
-  data = moduleInfo.promo;
+function load_site_meta(previewMedia, id, data){
+  console.log("loading site meta for " + id);
   if(data.promo_images == undefined || data.promo_images.length==0){
-    $(".previewMedia").append("<img width='500px' height='500px' src='modules/media/" + module_id + "/" + module_id + ".svg' />");
+    previewMedia.append(`<img src="${get_module_icon(id)}">`)
   }
-  if(data.promo_images != undefined && data.promo_images.length==1){
-    if(data.promo_images[0].type=="image"){
-      $(".previewMedia").append(`<img src="modules/media/${moduleInfo.module_id}/${data.promo_images[0].image}" alt="${data.promo_images[0].alt}" title="${data.promo_images[0].alt} (credit: ${data.promo_images[0].credit})">`)
+  for (const promo of data.promo_images) {
+    console.log(promo)
+    if(promo.type=="image"){
+      previewMedia.append(`<img src="modules/media/${id}/${promo.image}" alt="${promo.alt}" title="${promo.alt} (credit: ${promo.credit})">`)
     }
-    if(data.promo_images[0].type=="video"){
-      $(".previewMedia").append("<a href='" + data.promo_images[i].image + "'><div class='promo_thumbnail' style='background-image:url(modules/media/" + module_id + "/" + module_id + ".svg)' title='" + data.promo_images[i].alt + "'><img style='width:125px;position:absolute;left:62px;top:62px;' src='images/play.svg' title='" + data.promo_images[i].alt + "'/></div></a>");
-    }
-  }
-  if(data.promo_images.length == 2){
-    $(".previewMedia").css("width","250px");
-  }
-  if(data.promo_images.length > 1){
-    tileTotal = data.promo_images.length;
-    
-    if(tileTotal > 4) tileTotal = 4;
-    for(i=0;i<tileTotal;i++){
-      if(data.promo_images[i].type=="image"){
-        $(".previewMedia").append(`<img src="modules/media/${moduleInfo.module_id}/${data.promo_images[0].image}" alt="${data.promo_images[0].alt}" title="${data.promo_images[0].alt} (credit: ${data.promo_images[0].credit})">`)
-      }
-      if(data.promo_images[i].type=="video"){
-        $(".previewMedia").append("<a href='" + data.promo_images[i].link + "'><div class='promo_thumbnail' style='background-image:url(modules/media/" + moduleInfo.module_id + "/" + data.promo_images[i].image + ")' title='" + data.promo_images[i].alt + "'><img style='width:125px;position:absolute;left:62px;top:62px;' src='images/play.svg' title='" + data.promo_images[i].alt + "'/></div></a>");
-      }
+    if(promo.type=="video"){
+      previewMedia.append(`<a class="promoVideo" href="${promo.link}"><img src="${get_module_icon(id)}" title="${promo.alt}"/></a>`);
     }
   }
+}
+
+function get_module_icon(id) {
+  return `https://gm4.co/modules/template/templates/master-${LATEST_VERSION}/GM4_Datapacks-ver-${LATEST_VERSION}/gm4_${id}/pack.svg`
 }
 
 function shuffleArray(arr) {

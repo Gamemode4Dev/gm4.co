@@ -30,6 +30,7 @@
       "title":"Featured",
       "order":"shuffled",
       "modules":[
+        "bat_grenades",
         "metallurgy",
         "liquid_tanks",
         "liquid_minecarts",
