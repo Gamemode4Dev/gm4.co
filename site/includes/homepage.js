@@ -291,19 +291,19 @@ function load_site_meta(moduleInfo){
   console.log("loading site meta for " + moduleInfo.module_id); 
   data = moduleInfo.promo;
   if(data.promo_images == undefined || data.promo_images.length==0){
-    $("#previewLeft").append("<img width='500px' height='500px' src='modules/media/" + module_id + "/" + module_id + ".svg' />");
+    $(".previewMedia").append("<img width='500px' height='500px' src='modules/media/" + module_id + "/" + module_id + ".svg' />");
   }
   if(data.promo_images != undefined && data.promo_images.length==1){
     if(data.promo_images[0].type=="image"){
-      $("#previewLeft").css("background-image","url(modules/media/" + moduleInfo.module_id + "/" + data.promo_images[0].image + ")");
-      $("#previewLeft").prop("title",data.promo_images[0].alt + " (image credit: " + data.promo_images[0].credit + ")");
+      $(".previewMedia").css("background-image","url(modules/media/" + moduleInfo.module_id + "/" + data.promo_images[0].image + ")");
+      $(".previewMedia").prop("title",data.promo_images[0].alt + " (image credit: " + data.promo_images[0].credit + ")");
     }
     if(data.promo_images[0].type=="video"){
-      $("#previewLeft").append("<a href='" + data.promo_images[i].image + "'><div class='promo_thumbnail' style='background-image:url(modules/media/" + module_id + "/" + module_id + ".svg)' title='" + data.promo_images[i].alt + "'><img style='width:125px;position:absolute;left:62px;top:62px;' src='images/play.svg' title='" + data.promo_images[i].alt + "'/></div></a>");
+      $(".previewMedia").append("<a href='" + data.promo_images[i].image + "'><div class='promo_thumbnail' style='background-image:url(modules/media/" + module_id + "/" + module_id + ".svg)' title='" + data.promo_images[i].alt + "'><img style='width:125px;position:absolute;left:62px;top:62px;' src='images/play.svg' title='" + data.promo_images[i].alt + "'/></div></a>");
     }
   }
   if(data.promo_images.length == 2){
-    $("#previewLeft").css("width","250px");
+    $(".previewMedia").css("width","250px");
   }
   if(data.promo_images.length > 1){
     tileTotal = data.promo_images.length;
@@ -311,10 +311,10 @@ function load_site_meta(moduleInfo){
     if(tileTotal > 4) tileTotal = 4;
     for(i=0;i<tileTotal;i++){
       if(data.promo_images[i].type=="image"){
-        $("#previewLeft").append("<div class='promo_thumbnail' title='" + data.promo_images[i].alt + " (image credit: " + data.promo_images[i].credit + ")' style='background-image:url(modules/media/" + moduleInfo.module_id + "/" + data.promo_images[i].image + ")'></div>");
+        $(".previewMedia").append("<div class='promo_thumbnail' title='" + data.promo_images[i].alt + " (image credit: " + data.promo_images[i].credit + ")' style='background-image:url(modules/media/" + moduleInfo.module_id + "/" + data.promo_images[i].image + ")'></div>");
       }
       if(data.promo_images[i].type=="video"){
-        $("#previewLeft").append("<a href='" + data.promo_images[i].link + "'><div class='promo_thumbnail' style='background-image:url(modules/media/" + moduleInfo.module_id + "/" + data.promo_images[i].image + ")' title='" + data.promo_images[i].alt + "'><img style='width:125px;position:absolute;left:62px;top:62px;' src='images/play.svg' title='" + data.promo_images[i].alt + "'/></div></a>");
+        $(".previewMedia").append("<a href='" + data.promo_images[i].link + "'><div class='promo_thumbnail' style='background-image:url(modules/media/" + moduleInfo.module_id + "/" + data.promo_images[i].image + ")' title='" + data.promo_images[i].alt + "'><img style='width:125px;position:absolute;left:62px;top:62px;' src='images/play.svg' title='" + data.promo_images[i].alt + "'/></div></a>");
       }
     }
   }
