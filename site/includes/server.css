@@ -1,0 +1,50 @@
+#infoContainer{
+	width:95%;
+	max-width:1075px;
+	position:relative;
+	margin-left:auto;
+	margin-right:auto;
+	margin-top:40px;
+	text-align:center;
+  padding-top:30px;
+}
+
+.slideCaption{
+	position:absolute;
+	bottom:0px;
+	width:100%;
+	height:100%;
+	text-align:left;
+	color:#FFFFFF;
+	font-size:20pt;
+
+background: rgba(0,0,0,0.6);
+background: -moz-linear-gradient(top, rgba(0,0,0,0.6) 0%, rgba(126,126,126,0) 50%, rgba(252,252,252,0) 100%);
+background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(0,0,0,0.6)), color-stop(50%, rgba(126,126,126,0)), color-stop(100%, rgba(252,252,252,0)));
+background: -webkit-linear-gradient(top, rgba(0,0,0,0.6) 0%, rgba(126,126,126,0) 50%, rgba(252,252,252,0) 100%);
+background: -o-linear-gradient(top, rgba(0,0,0,0.6) 0%, rgba(126,126,126,0) 50%, rgba(252,252,252,0) 100%);
+background: -ms-linear-gradient(top, rgba(0,0,0,0.6) 0%, rgba(126,126,126,0) 50%, rgba(252,252,252,0) 100%);
+background: linear-gradient(to bottom, rgba(0,0,0,0.6) 0%, rgba(126,126,126,0) 50%, rgba(252,252,252,0) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#fcfcfc', GradientType=0 );
+}
+
+.slideCaption p{
+	margin-bottom:10px;
+	margin-top:5px;
+	padding-left:10px;
+}
+.slideCaption h3{
+	padding-left:10px;
+	margin-bottom:1px;
+	margin-top:10px;
+}
+
+.slide{
+	position:relative;
+}
+
+.slideshow{
+	position:relative;
+	width:100%;
+	height:300px;
+}
