@@ -9,7 +9,7 @@ let slides = [];
 let slideshowInterval = 0;
 let trackTransition = 0;
 
-window.onload = function(){
+function headerSaysWindowLoaded(){
   $.ajax({url:"images/slideshow/slides.json"}).done(function(data){
     slides = data.slides;
     for(i=0;i<slides.length;i++){

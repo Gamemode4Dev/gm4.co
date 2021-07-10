@@ -1,13 +1,6 @@
 <?php
 /*
 created 19 august 2020
-
-This is the module browse page. It is currently intended to be the homepage of
-the entire website and will eventually feature cards and categories for things
-other than modules - advertising cards for Discord, wiki etc.
-
-Essentially it is a container page that is populated with actual content by
-includes/homepage.js
 */
 ?>
 <!DOCTYPE html>
