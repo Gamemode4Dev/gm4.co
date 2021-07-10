@@ -154,8 +154,8 @@ header {
     height: 32px;
     align-self: center;
     margin: 0 15px;
-    mask: no-repeat center / contain url(/images/theme_button.svg);
-    -webkit-mask: no-repeat center / contain url(/images/theme_button.svg);
+    mask: no-repeat center / contain url(https://gm4.co/images/theme_button.svg);
+    -webkit-mask: no-repeat center / contain url(https://gm4.co/images/theme_button.svg);
     background-color: var(--main-text-color);
     opacity: 0.5;
     cursor: pointer;
