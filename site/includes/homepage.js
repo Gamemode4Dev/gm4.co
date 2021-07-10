@@ -3,7 +3,6 @@ JS for the module browse page
 */
 
 const LATEST_VERSION = "1.16";
-
 let module_categories = {};
 let allModules = "unloaded";
 let slides = [];
@@ -229,7 +228,7 @@ function populateCategory(pos,category){
   }
   cards = "";
   for(j=0;j<cardarray.length;j++){
-    cards += '<div class="trackItem moduleCard noselect" data-module_id="'+cardarray[j]+'"><img src="modules/media/' + cardarray[j] + '/' + cardarray[j] + '.svg" onerror="image_error(this)"><span class="cardName">' + cardarray[j].replace(/_/g, " ") + '</span></div>';
+    cards += '<div class="trackItem moduleCard noselect" data-module_id="'+cardarray[j]+'"><img src="' + 'modules/template/templates/master-' + LATEST_VERSION + '/GM4_Datapacks-ver-' + LATEST_VERSION + '/gm4_' + cardarray[j] + '/' + 'pack.svg" onerror="image_error(this)"><span class="cardName">' + cardarray[j].replace(/_/g, " ") + '</span></div>';
   }
   track.html(cards);
   track.append('<div class="trackItem moduleCard trackEndItem noselect"><img src="images/enderpuff_by_qbert.png" title="End of results. Artwork by Qbert" alt="End of results"/><span class="cardName">You\'ve reached the end</span></div>');
