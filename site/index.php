@@ -30,10 +30,10 @@ created 19 august 2020
   ga('send', 'pageview');
 </script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-<script src="includes/homepage.js?nocache=<?php echo(rand(0,999999)); ?>"></script>
 </head>
 <body class="light">
 <?php include 'includes/header.php';?>
+<script src="includes/homepage.js?nocache=<?php echo(rand(0,999999)); ?>"></script>
 <div class="slideshow track">
   <div class="trackButton trackButtonLeft"></div>
   <div class="trackButton trackButtonRight"></div>
