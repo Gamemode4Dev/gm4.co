@@ -1,0 +1,12 @@
+footer {
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+    padding: 0 var(--content-spacer);
+    border-top: 1px solid var(--thematic-element-color);
+    min-height: 120px;
+}
+
+p.footer-small{
+    font-size: 0.7em;
+}
