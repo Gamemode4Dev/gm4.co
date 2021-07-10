@@ -456,7 +456,7 @@ select.textSpace option {
   border-radius: 20px;
   overflow: hidden;
   min-width: 300px;
-  max-width: 100vh;
+  max-width: 50vh;
 }
 
 .previewInfo {
@@ -496,6 +496,8 @@ select.textSpace option {
   font-weight: bold;
   text-shadow: 0 0 6px var(--main-bg-color);
   transition: padding 0.2s;
+  min-width:260px;
+  border-radius:30px;
 }
 
 .buttonLink::before {
