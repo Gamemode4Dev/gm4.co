@@ -3,49 +3,33 @@ JS for the module browse page
 */
 
 const LATEST_VERSION = "1.16";
-let module_categories = {};
-let allModules = "unloaded";
-let slides = [];
-let slideshowInterval = 0;
-let trackTransition = 0;
 
 function headerSaysWindowLoaded(){
-  $.ajax({url:"images/slideshow/slides.json"}).done(function(data){
-    slides = data.slides;
-    for(i=0;i<slides.length;i++){
-      slide = `<div class="trackItem ${slides[i].text.position || "bottom-left"} ${slides[i].darken ? "darken" : ""}" style="background-image:url(images/slideshow/${slides[i].background_image});">`;
-      if (slides[i].text) {
-        slide += `<h2>${slides[i].text.header}</h2><p>${slides[i].text.paragraph}</p>`;
-      }
-      slide += '</div>';
-      $(".slideshow > .trackContainer").append(slide);
+  $.ajax({url:"images/slideshow/slides.json"}).done(function(data) {
+    for (const slide of data.slides) {
+      $(".slideshow > .trackContainer").append(`<div class="trackItem ${slide.text.position || "bottom-left"} ${slide.darken ? "darken" : ""}" style="background-image:url(images/slideshow/${slide.background_image});">${slide.text ? `<h2>${slide.text.header}</h2><p>${slide.text.paragraph}</p>` : ''}</div>`)
     }
     initTrack($(".slideshow"), 8000)
   });
   loadCategories();
-  $.ajax({url:"https://gm4.co/modules/moduleListAToZ.php"}).done(function(data){
-    allModules = JSON.parse(data);
-    allModuleNamesAlphabetized = [];
-    for(element in allModules){
-      allModuleNamesAlphabetized.push(element);
-    }
-    allModuleNamesAlphabetized.sort();
-    versions = [];
-    for(i=0;i<allModuleNamesAlphabetized.length;i++){
+  $.ajax({url:"https://gm4.co/modules/moduleListAToZ.php"}).done(function(data) {
+    const allModules = JSON.parse(data);
+    const allModuleNamesAlphabetized = Object.keys(allModules)
+      .map(name => ({ name, ...allModules[name] }))
+      .sort((a, b) => a.name.localeCompare(b.name))
+    const versions = new Set();
+    for (const module of allModuleNamesAlphabetized) {
       versionclass = "";
-      moduleName = allModuleNamesAlphabetized[i];
-      for(j=0;j<allModules[moduleName].versions.length;j++){
-        if(versions.indexOf(allModules[moduleName].versions[j])==-1){
-          versions.push(allModules[moduleName].versions[j]);
-        }
-        versionclass += "version_" + allModules[moduleName].versions[j].replaceAll(".","_") + " ";
+      for (const version of module.versions) {
+        versions.add(version)
+        versionclass += "version_" + version.replaceAll(".","_") + " ";
       }
-      $("#modules").append(`<a href="https://gm4.co/modules/${allModules[moduleName].id.replaceAll("_","-")}"><div class="moduleCard noselect ${versionclass}"><img src="${get_module_icon(allModules[moduleName].id)}" onerror="image_error(this)"/><span class="cardName">${moduleName}</span></div></a>`);
+      const latestVersion = module.versions.sort((a, b) => b - a)[0]
+      $("#modules").append(`<a href="https://gm4.co/modules/${module.id.replaceAll("_","-")}"><div class="moduleCard noselect ${versionclass}"><img src="${get_module_icon(module.id, latestVersion)}" onerror="image_error(this)"/><span class="cardName">${module.name}</span></div></a>`);
     }
-    versions.sort(function(a,b){return b-a});
     $("#versionSelect").empty();
-    for(i=0;i<versions.length;i++){
-      $("#versionSelect").append("<option value='" + versions[i] + "'>Minecraft Java " + versions[i] + "</option>");
+    for (const version of [...versions].sort((a, b) => b - a)) {
+      $("#versionSelect").append(`<option value="${version}">Minecraft Java ${version}</option>`);
     }
     $("#versionSelect").append("<option value='older'>Earlier Versions...</option>");
     versionView();
@@ -107,10 +91,11 @@ function scrollTrack(el, dir, loop, partial) {
 
   if (dir !== 0) el.addClass("transitioning");
   el.get(0).style.setProperty("--offset", `${offset}`);
+  let trackTransition;
   if (dir !== 0) {
     clearTimeout(trackTransition);
     trackTransition = setTimeout(function(){
-      $(".track").removeClass("transitioning");
+      el.removeClass("transitioning");
     }, 1000);
   }
 }
@@ -171,53 +156,40 @@ function initTrack(el, loop) {
 }
 
 function loadCategories(){
-  $.ajax({url:"modules/module_categories.json"}).done(function(data){
-    module_categories = data.module_categories;
-    if(module_categories != undefined){
-      for(i=0;i<module_categories.length;i++){
-        $("#browse").append('<h2 class="categoryTitle">' + module_categories[i].title + ' <span class="categoryLengthText">(0)</span></h2><div class="categoryBar track resizable"><div class="trackContainer"></div><div class="trackButton trackButtonLeft"></div><div class="trackButton trackButtonRight"></div></div>');
-        cardarray = module_categories[i].modules;
-        if(cardarray != undefined && cardarray.length>0){
-          populateCategory(i,module_categories[i]);
-          initTrack($('#browse .categoryBar').eq(i), 0)
+  $.ajax({url:"modules/module_categories.json"}).done(function(data) {
+    let pos = 0
+    for (const category of data.module_categories || []) {
+      $("#browse").append(`<h2 class="categoryTitle">${category.title}<span class="categoryLengthText">(0)</span></h2><div class="categoryBar track resizable"><div class="trackContainer"></div><div class="trackButton trackButtonLeft"></div><div class="trackButton trackButtonRight"></div></div>`);
+      if (category.populate_from) {
+        $.ajax({url: category.populate_from, pos, limit: category.limit }).done(function(data) {
+          const modules = JSON.parse(data).slice(0, this.limit)
+          populateCategory(this.pos, modules);
+          initTrack($('#browse .categoryBar').eq(this.pos), 0)
+        });
+      } else {
+        if(category.order === "shuffled"){
+          shuffleArray(category.modules);
         }
-        else{
-          if(module_categories[i].populate_from != undefined){
-            $.ajax({url:module_categories[i].populate_from,pos:i,limit:module_categories[i].limit}).done(function(data){
-              category = {};
-              category.modules = JSON.parse(data);
-              if(this.limit!=undefined && this.limit >0){
-                category.modules.length=this.limit;
-              }
-              populateCategory(this.pos, category);
-              initTrack($('#browse .categoryBar').eq(this.pos), 0)
-            });
-          }
-        }
+        populateCategory(pos, category.modules);
+        initTrack($('#browse .categoryBar').eq(pos), 0)
       }
-    }
-    else{
-      alert("Something went wrong and modules couldn't be loaded");
+      pos += 1
     }
   });
 }
 
-function populateCategory(pos,category){
+function populateCategory(pos, modules){
   //populate the category once the cards are loaded.
   //in most cases this is instant but some may need to
   //load external source data first.
   const track = $("#browse .trackContainer").eq(pos);
-  cardarray = category.modules;
-  if(category.order != undefined && category.order == "shuffled"){
-    shuffleArray(cardarray);
-  }
   cards = "";
-  for(j=0;j<cardarray.length;j++){
-    cards += `<div class="trackItem moduleCard noselect" data-module_id="${cardarray[j]}"><img src="${get_module_icon(cardarray[j])}" onerror="image_error(this)"><span class="cardName">${cardarray[j].replace(/_/g, " ")}</span></div>`;
+  for(j=0;j<modules.length;j++){
+    cards += `<div class="trackItem moduleCard noselect" data-module_id="${modules[j]}"><img src="${get_module_icon(modules[j])}" onerror="image_error(this)"><span class="cardName">${modules[j].replace(/_/g, " ")}</span></div>`;
   }
   track.html(cards);
   track.append('<div class="trackItem moduleCard trackEndItem noselect"><img src="images/enderpuff_by_qbert.png" title="End of results. Artwork by Qbert" alt="End of results"/><span class="cardName">You\'ve reached the end</span></div>');
-  $(".categoryLengthText").eq(pos).html("(" + cardarray.length + ")");
+  $(".categoryLengthText").eq(pos).html(`(${modules.length})`);
   //add listeners
   track.find(".moduleCard").on("click",function(){
     if($(this).attr("data-module_id")!=undefined){
@@ -238,7 +210,6 @@ function loadPreview(categoryBar, module_id){
   if(!$(this).hasClass("placeholderCard")){
     $.ajax({url:"https://gm4.co/includes/getmoduleinfo.php?module_id="+module_id}).done(function(data){
       data = JSON.parse(data);
-      console.log(data);
       $("#browse .preview").remove();
       categoryBar.after('<div class="preview"><div class="previewMedia"></div><div class="previewInfo"></div></div>');
       const previewMedia = $("#browse .previewMedia");
@@ -251,7 +222,6 @@ function loadPreview(categoryBar, module_id){
       if (data.wiki_link){
         previewInfo.append(`<a class="buttonLink wikiLink" href="${data.wiki_link}" target="_blank">Read about this on the Wiki</a>`);
       }
-      // TODO: show images from site meta if available
       if (data.promo) {
         load_site_meta(previewMedia, module_id, data.promo);
       } else {
@@ -287,12 +257,10 @@ function image_error(caller){
 }
 
 function load_site_meta(previewMedia, id, data){
-  console.log("loading site meta for " + id);
   if(data.promo_images == undefined || data.promo_images.length==0){
     previewMedia.append(`<img src="${get_module_icon(id)}">`)
   }
   for (const promo of data.promo_images) {
-    console.log(promo)
     if(promo.type=="image"){
       previewMedia.append(`<img src="modules/media/${id}/${promo.image}" alt="${promo.alt}" title="${promo.alt} (credit: ${promo.credit})">`)
     }
@@ -302,8 +270,8 @@ function load_site_meta(previewMedia, id, data){
   }
 }
 
-function get_module_icon(id) {
-  return `https://gm4.co/modules/template/templates/master-${LATEST_VERSION}/GM4_Datapacks-ver-${LATEST_VERSION}/gm4_${id}/pack.svg`
+function get_module_icon(id, version=LATEST_VERSION) {
+  return `https://gm4.co/modules/template/templates/master-${version}/GM4_Datapacks-ver-${version}/gm4_${id}/pack.svg`
 }
 
 function shuffleArray(arr) {
