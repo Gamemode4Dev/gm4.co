@@ -2,39 +2,6 @@
 CSS for the module browse page
 */
 
-
-@media screen and (max-width: 1800px) {
-  * {
-    --content-spacer: 5vw;
-    --module-cards: 7;
-  }
-}
-
-@media screen and (max-width: 1200px) {
-  * {
-    --module-cards: 6;
-  }
-}
-
-@media screen and (max-width: 1024px) {
-  * {
-    --module-cards: 5;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  * {
-    --module-cards: 4;
-  }
-}
-
-@media screen and (max-width: 600px) {
-  * {
-    --content-spacer: 30px;
-    --module-cards: 3;
-  }
-}
-
 /* Landing */
 
 .landing {
