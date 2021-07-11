@@ -348,7 +348,7 @@ CSS for the module browse page
   flex-wrap: wrap;
   padding-left: var(--content-spacer);
   padding-right: var(--content-spacer);
-  --item-width: calc((100vw - var(--scrollbar-width, 0) - 2 * var(--content-spacer, 0px)) / var(--module-cards, 1));
+  --item-width: calc((100vw - var(--scrollbar-width, 0) - 2 * var(--content-spacer, 0px)) / var(--module-cards, 1) - 1px);
 }
 
 #modules.active {
