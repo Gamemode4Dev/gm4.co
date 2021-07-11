@@ -159,7 +159,7 @@ function loadCategories(){
   $.ajax({url:"modules/module_categories.json"}).done(function(data) {
     let pos = 0
     for (const category of data.module_categories || []) {
-      $("#browse").append(`<h2 class="categoryTitle">${category.title}<span class="categoryLengthText">(0)</span></h2><div class="categoryBar track resizable"><div class="trackContainer"></div><div class="trackButton trackButtonLeft"></div><div class="trackButton trackButtonRight"></div></div>`);
+      $("#browse").append(`<h2 class="categoryTitle">${category.title} <span class="categoryLengthText">(0)</span></h2><div class="categoryBar track resizable"><div class="trackContainer"></div><div class="trackButton trackButtonLeft"></div><div class="trackButton trackButtonRight"></div></div>`);
       if (category.populate_from) {
         $.ajax({url: category.populate_from, pos, limit: category.limit }).done(function(data) {
           const modules = JSON.parse(data).slice(0, this.limit)
