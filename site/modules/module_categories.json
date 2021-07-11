@@ -106,6 +106,10 @@
     },
     {
       "title":"Metallurgy",
+      "order":{
+        "mode":"shuffled",
+        "from":1
+      },
       "modules":[
         "metallurgy",
         "fulcio_shamir",

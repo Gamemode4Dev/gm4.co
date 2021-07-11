@@ -169,6 +169,8 @@ function loadCategories(){
       } else {
         if(category.order === "shuffled"){
           shuffleArray(category.modules);
+        } else if (category.order.mode === "shuffled") {
+          shuffleArray(category.modules, category.order.from);
         }
         populateCategory(pos, category.modules);
         initTrack($('#browse .categoryBar').eq(pos), 0)
@@ -274,6 +276,6 @@ function get_module_icon(id, version=LATEST_VERSION) {
   return `https://gm4.co/modules/template/templates/master-${version}/GM4_Datapacks-ver-${version}/gm4_${id}/pack.svg`
 }
 
-function shuffleArray(arr) {
-  arr.sort(() => Math.random() - 0.5);
+function shuffleArray(arr, shuffleFrom = 0) {
+  arr = arr.slice(0,shuffleFrom).concat((arr.slice(shuffleFrom)).sort(() => Math.random() - 0.5));
 }
