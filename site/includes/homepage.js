@@ -168,9 +168,9 @@ function loadCategories(){
         });
       } else {
         if(category.order === "shuffled"){
-          arr = shuffleArray(category.modules);
+          category.modules = shuffleArray(category.modules);
         } else if (typeof category.order == "object" && category.order.mode === "shuffled") {
-          arr = shuffleArray(category.modules, category.order.from);
+          category.modules = shuffleArray(category.modules, category.order.from);
         }
         populateCategory(pos, category.modules);
         initTrack($('#browse .categoryBar').eq(pos), 0)
