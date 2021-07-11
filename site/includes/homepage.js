@@ -169,7 +169,7 @@ function loadCategories(){
       } else {
         if(category.order === "shuffled"){
           shuffleArray(category.modules);
-        } else if (category.order.mode === "shuffled") {
+        } else if (typeof category.order == "object" && category.order.mode === "shuffled") {
           shuffleArray(category.modules, category.order.from);
         }
         populateCategory(pos, category.modules);
