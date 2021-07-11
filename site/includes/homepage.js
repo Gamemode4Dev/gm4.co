@@ -168,9 +168,9 @@ function loadCategories(){
         });
       } else {
         if(category.order === "shuffled"){
-          shuffleArray(category.modules);
+          arr = shuffleArray(category.modules);
         } else if (typeof category.order == "object" && category.order.mode === "shuffled") {
-          shuffleArray(category.modules, category.order.from);
+          arr = shuffleArray(category.modules, category.order.from);
         }
         populateCategory(pos, category.modules);
         initTrack($('#browse .categoryBar').eq(pos), 0)
@@ -277,5 +277,5 @@ function get_module_icon(id, version=LATEST_VERSION) {
 }
 
 function shuffleArray(arr, shuffleFrom = 0) {
-  arr = arr.slice(0,shuffleFrom).concat((arr.slice(shuffleFrom)).sort(() => Math.random() - 0.5));
+  return arr.slice(0,shuffleFrom).concat((arr.slice(shuffleFrom)).sort(() => Math.random() - 0.5));
 }
