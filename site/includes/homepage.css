@@ -458,6 +458,11 @@ select.textSpace option {
   max-width: 50vh;
 }
 
+.previewMedia img {
+  min-width: 300px;
+  max-width: 50vh;
+}
+
 .previewInfo {
   flex: 0 1 50%;
   max-width: 500px;
