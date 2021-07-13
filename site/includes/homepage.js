@@ -218,11 +218,11 @@ function loadPreview(categoryBar, module_id){
       const previewInfo = $("#browse .previewInfo");
       previewInfo.append(`<h3>${data.module_name}</h3><p>${data.site_description}</p>`);
       if (data.mcversion === LATEST_VERSION) {
-        previewInfo.append(`<a class="buttonLink datapackLink" target="download_frame" href="https://gm4.co/modules/download/${LATEST_VERSION}/${data.module_id.replaceAll("_","-")}">Download for Java ${LATEST_VERSION}</a>`)
+        previewInfo.append(`<a class="buttonLink datapackLink" target="download_frame" href="https://gm4.co/modules/download/${LATEST_VERSION}/${data.module_id.replaceAll("_", "-")}"><img src="/images/datapack.svg" alt="Datapack Icon">Download for Java ${LATEST_VERSION}</a>`)
       }
-      previewInfo.append(`<a class="buttonLink moreLink" href="https://www.gm4.co/modules/${data.module_id.replaceAll("_","-")}">More Downloads & Info</a>`);
+      previewInfo.append(`<a class="buttonLink moreLink" href="https://www.gm4.co/modules/${data.module_id.replaceAll("_", "-")}"><img src="/images/rightArrow.svg" alt="Info Icon">More Downloads & Info</a>`);
       if (data.wiki_link){
-        previewInfo.append(`<a class="buttonLink wikiLink" href="${data.wiki_link}" target="_blank">Read about this on the Wiki</a>`);
+        previewInfo.append(`<a class="buttonLink wikiLink" href="${data.wiki_link}" target="_blank"><img src="/images/wiki.svg" alt="Wiki Icon">Read about this on the Wiki</a>`);
       }
       if (data.promo) {
         load_site_meta(previewMedia, module_id, data.promo);

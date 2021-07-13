@@ -2,6 +2,32 @@
 CSS for the module browse page
 */
 
+/* Squircle Links */
+.squircleLink {
+  display: block;
+  padding: 0.5rem 1rem;
+  margin-bottom: 0.6rem;
+  border-radius: 2rem;
+  font-weight: bold;
+  font-size: 20px;
+  box-shadow: 0 1px 6px -3px #000;
+  text-decoration: none;
+  text-align: center;
+  transition: border-radius 0.3s;
+}
+
+.squircleLink:hover {
+  box-shadow: inset 0rem 10rem rgba(0,0,0,0.1);
+  border-radius: 0.5rem;
+}
+
+.squircleLink img {
+  margin-right: 10px;
+  vertical-align: middle;
+  height: 1.5rem;
+}
+
+
 /* Landing */
 
 .landing {
@@ -23,28 +49,6 @@ CSS for the module browse page
 
 .landingLinks h2 {
   margin-bottom: 1rem;
-}
-
-.landingLinks a {
-  display: block;
-  padding: 0.5rem 1rem;
-  margin-bottom: 10px;
-  border-radius: 100rem;
-  font-weight: bold;
-  font-size: 20px;
-  box-shadow: 0 1px 6px -3px #000;
-  text-decoration: none;
-  text-align: center;
-}
-
-.landingLinks a:hover {
-  box-shadow: inset 0px 300px rgba(0,0,0,0.1);
-}
-
-.landingLinks a img {
-  margin-right: 10px;
-  vertical-align: middle;
-  height: 1.5rem;
 }
 
 .discordLink {
@@ -465,11 +469,10 @@ select.textSpace option {
 
 .previewInfo {
   flex: 0 1 50%;
-  max-width: 500px;
+  max-width: 50vh;
   height: 100%;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
   margin-left: 10px;
 }
 
@@ -497,60 +500,19 @@ select.textSpace option {
   filter: blur(3px);
 }
 
-.buttonLink {
-  display: block;
-  position: relative;
-  padding: 10px 10px 10px 50px;
-  margin-bottom: 10px;
-  color: var(--main-text-color);
-  background-color: var(--modulecard-bg-top);
-  font-weight: bold;
-  text-shadow: 0 0 6px var(--main-bg-color);
-  transition: padding 0.2s;
-  min-width:260px;
-  border-radius:30px;
-}
-
-.buttonLink::before {
-  position: absolute;
-  display: inline-block;
-  left: 0;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 35px;
-  height: 35px;
-  background-color: white;
-  border-radius: 50%;
-  margin-left: 5px;
-  transition: left 0.2s;
-}
-
-.buttonLink:hover {
-  padding: 10px 16px 10px 56px;
-}
-
-.buttonLink:hover::before {
-  left: 6px;
-}
-
 .datapackLink {
+  color: var(--main-text-color) !important;
   background-color: var(--main-accent-color);
 }
 
-.datapackLink::before {
-  content: url("/images/datapack.svg");
-}
-
-.moreLink::before {
-  content: url("/images/rightArrow.svg");
+.moreLink {
+  color: var(--main-text-color) !important;
+  background-color: var(--modulecard-bg-top);
 }
 
 .wikiLink {
-  padding-left: 10px;
-}
-
-.wikiLink:hover {
-  padding-left: 16px;
+  color: var(--main-text-color) !important;
+  background-color: var(--modulecard-bg-top);
 }
 
 @media screen and (max-width: 768px) {
