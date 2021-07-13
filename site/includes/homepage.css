@@ -38,7 +38,7 @@ CSS for the module browse page
 }
 
 .landingLinks a:hover {
-  box-shadow: inset 300px 0px rgba(0,0,0,0.1);
+  box-shadow: inset 0px 300px rgba(0,0,0,0.1);
 }
 
 .landingLinks a img {
