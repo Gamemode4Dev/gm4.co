@@ -187,7 +187,7 @@ function populateCategory(pos, modules){
   const track = $("#browse .trackContainer").eq(pos);
   cards = "";
   for(j=0;j<modules.length;j++){
-    cards += `<div class="trackItem moduleCard noselect" data-module_id="${modules[j]}"><img src="${get_module_icon(modules[j])}" onerror="image_error(this)"><span class="cardName">${modules[j].replace(/_/g, " ")}</span></div>`;
+    cards += `<div class="trackItem moduleCard noselect" data-module_id="${modules[j]}"><img src="${get_module_icon(modules[j])}" onerror="image_error(this)" alt="${modules[j].replace(/_/g, " ")} Icon"><span class="cardName">${modules[j].replace(/_/g, " ")}</span></div>`;
   }
   track.html(cards);
   track.append('<div class="trackItem moduleCard trackEndItem noselect"><img src="images/enderpuff_by_qbert.png" title="End of results. Artwork by Qbert" alt="End of results"/><span class="cardName">You\'ve reached the end</span></div>');
