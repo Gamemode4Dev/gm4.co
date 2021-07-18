@@ -39,9 +39,9 @@
 		<div id="slideshow">
 			<div class='slide'>
 			<h2>Gamemode 4 has a Public Server!</h2>
-            <h1>IP: server.gm4.co</h1>
-            <h3>Gamemode 4's public server is here! We have an active community of players of all ages playing survival together with that extra Gamemode 4 twist! To keep up to date with all the latest news, <a href='https://gm4.co/discord'>join our Discord Server!</a></h3>
-				<iframe style="position:relative;display:inline-block;width:95vw;max-width:1075px;height:53vw;max-height:604px;border:0px;" src="https://www.youtube.com/embed/NoVf5PMTK-c" allowfullscreen></iframe>
+            <h3>IP: server.gm4.co</h3>
+            <h4>Gamemode 4's public server is here! We have an active community of players of all ages playing survival together with that extra Gamemode 4 twist! To keep up to date with all the latest news, <a href='https://gm4.co/discord'>join our Discord Server!</a></h4>
+				<iframe title="Gamemode 4 public server trailer" style="position:relative;display:inline-block;width:95vw;max-width:1075px;height:53vw;max-height:604px;border:0px;" src="https://www.youtube.com/embed/NoVf5PMTK-c" allowfullscreen></iframe>
 			</div>
 			<div class='slide'>
 

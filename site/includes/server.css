@@ -1,3 +1,12 @@
+h2{
+	font-size:27px;
+}
+h3{
+	font-size:36px;
+}
+h4{
+	font-size:21px;
+}
 #infoContainer{
 	width:95%;
 	max-width:1075px;
