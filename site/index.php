@@ -71,7 +71,7 @@ created 19 august 2020
   <div class="moduleFilter">
     <select id="versionSelect" onchange="versionView()">
       <option value="loading">Loading...</option>
-    </select>
+    </select><label for="versionSelect" style="display:none">Select Version</label>
     <input id="textSearch" type="text" placeholder="search..." onkeyup="textSearch()"/><label for="textSearch" style="display:none">Search</label>
   </div>
 </div>

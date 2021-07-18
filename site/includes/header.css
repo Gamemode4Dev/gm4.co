@@ -161,6 +161,10 @@ header ul {
   list-style: none;
 }
 
+header ul li h1{
+  font-size:24px;
+}
+
 header li>* {
   display: block;
   height: 100%;

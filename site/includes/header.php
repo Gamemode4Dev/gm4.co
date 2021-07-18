@@ -8,13 +8,13 @@
   <nav>
     <ul>
       <li>
-        <a href="https://gm4.co/#modules">Modules</a>
+        <a href="https://gm4.co/#modules"><h1>Modules</h1></a>
       </li>
       <li>
-        <a href="https://gm4.co/wiki" target="_blank">Wiki</a>
+        <a href="https://gm4.co/wiki" target="_blank"><h1>Wiki</h1></a>
       </li>
       <li>
-        <a href="https://gm4.co/server">Server</a>
+        <a href="https://gm4.co/server"><h1>Server</h1></a>
       </li>
     </ul>
   </nav>
