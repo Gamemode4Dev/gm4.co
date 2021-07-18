@@ -30,7 +30,7 @@ created 19 august 2020
   ga('create', 'UA-63061711-1', 'auto');
   ga('send', 'pageview');
 </script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://www.gm4.co/includes/jquery-3.6.0.min.js"></script>
 </head>
 <body class="light">
 <?php include 'includes/header.php';?>
