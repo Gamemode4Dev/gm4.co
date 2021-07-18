@@ -19,7 +19,7 @@ gtag('config', 'UA-63061711-1');
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#4AA0C7">
-<meta name="keywords" content="data packs, data pack, data packs, data packs, minecraft, minecraft java, commands, mods, mod, plugins, plugin, vanilla, how to install, community, quality of life, balanced, server, public, free, 1.17, 1.16, 1.15, 1.14, 1.13">
+<meta name="keywords" content="data packs, data pack, datapack, datapacks, minecraft, minecraft java, commands, mods, mod, plugins, plugin, vanilla, how to install, community, quality of life, balanced, server, public, free, 1.17, 1.16, 1.15, 1.14, 1.13">
 <meta name="description" content="A collection of datapacks that can be added to survival Minecraft in any combination to create a new, exciting feel without the use of mods or plugins.">
 <meta property="og:site_name" content="Gamemode 4">
 <meta property="og:title" content="Minecraft data packs carefully balanced for spicing up survival gameplay."/>
