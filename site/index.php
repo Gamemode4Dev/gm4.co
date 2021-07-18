@@ -20,7 +20,7 @@ created 19 august 2020
 
 <link rel="icon" type="image/svg" href="images/logo/logo_clear.svg" sizes="any">
 <link href="https://fonts.googleapis.com/css?family=Raleway:200" rel="stylesheet" type="text/css">
-<link rel="stylesheet" href="includes/homepage.css?nocache=<?php echo(rand(0,999999)); ?>" />
+<link rel="stylesheet" href="includes/homepage.css?hash=<?php echo hash_file("crc32","includes/homepage.css"); ?>" />
 <title>Gamemode 4</title>
 <script async="" src="//www.google-analytics.com/analytics.js"></script><script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -34,7 +34,7 @@ created 19 august 2020
 </head>
 <body class="light">
 <?php include 'includes/header.php';?>
-<script src="includes/homepage.js?nocache=<?php echo(rand(0,999999)); ?>"></script>
+<script src="includes/homepage.js?hash=<?php echo hash_file("crc32","includes/homepage.js"); ?>"></script>
 <div class="slideshow track">
   <div class="trackButton trackButtonLeft"></div>
   <div class="trackButton trackButtonRight"></div>
