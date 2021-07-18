@@ -172,10 +172,10 @@ function initTrack(el, loop) {
     el.get(0).style.removeProperty("--partial-offset");
   }
 
-  el.get(0).addEventListener("touchstart", start, false);
-  el.get(0).addEventListener("touchmove", move, false);
-  el.get(0).addEventListener("touchend", end, false);
-  el.get(0).addEventListener("touchcancel", end, false);
+  el.get(0).addEventListener("touchstart", start, {capture:false,passive:true});
+  el.get(0).addEventListener("touchmove", move, {capture:false,passive:true});
+  el.get(0).addEventListener("touchend", end, {capture:false,passive:true});
+  el.get(0).addEventListener("touchcancel", end, {capture:false,passive:true});
 }
 
 function loadCategories(){
