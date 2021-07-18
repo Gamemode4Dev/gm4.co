@@ -1,5 +1,5 @@
-<link rel="stylesheet" href="https://gm4.co/includes/header.css?nocache=<?php echo(rand(0,999999)); ?>" />
-<script src="https://gm4.co/includes/header.js?nocache=<?php echo(rand(0,999999)); ?>"></script>
+<link rel="stylesheet" href="https://gm4.co/includes/header.css?hash=<?php echo hash_file("crc32","https://gm4.co/includes/header.css"); ?>" />
+<script src="https://gm4.co/includes/header.js?hash=<?php echo hash_file("crc32","https://gm4.co/includes/header.js"); ?>"></script>
 <header>
   <a class="home" href="https://gm4.co/">
     <img src="https://gm4.co/images/logo/logo_clear.svg" height="32" alt="Gamemode 4 Logo"/>

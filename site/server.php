@@ -1,8 +1,5 @@
 <?php
 //created 14 December
-$my_root = "https://www.gm4.co/";
-$dev = "";
-$nav = 'server';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -21,9 +18,9 @@ $nav = 'server';
 
 <link rel="icon" type="image/svg" href="https://www.gm4.co/images/logo/logo_clear.svg" sizes="any">
 <link href="https://fonts.googleapis.com/css?family=Raleway:200" rel="stylesheet" type="text/css">
-<link rel = "stylesheet" href="<?php echo($my_root.$dev);?>includes/header.css?nocache=<?php echo rand(0,1000000); ?>" />
+<link rel = "stylesheet" href="includes/header.css?hash=<?php echo hash_file("crc32","includes/header.css"); ?>" />
 <script src="https://www.gm4.co/includes/jquery-3.3.1.min.js"></script>
-<link rel = "stylesheet" href="https://www.gm4.co/includes/server.css?nocache=<?php echo rand(0,1000000); ?>" />
+<link rel = "stylesheet" href="https://www.gm4.co/includes/server.css?hash=<?php echo hash_file("crc32","includes/server.css"); ?>" />
 <title>Gamemode 4 - Server</title>
 <script async="" src="//www.google-analytics.com/analytics.js"></script><script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
