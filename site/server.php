@@ -29,7 +29,6 @@ gtag('config', 'UA-63061711-1', {cookie_flags:'SameSite=None;Secure'});
 <meta property="og:image:height" content="256"/>
 
 <link rel="icon" type="image/svg" href="https://www.gm4.co/images/logo/logo_clear.svg" sizes="any">
-<link href="https://fonts.googleapis.com/css?family=Raleway:200" rel="stylesheet" type="text/css">
 <link rel = "stylesheet" href="includes/header.css?hash=<?php echo hash_file("crc32","includes/header.css"); ?>" />
 <script src="https://www.gm4.co/includes/jquery-3.6.0.min.js"></script>
 <script>function headerSaysWindowLoaded(){return null}</script>
