@@ -39,7 +39,7 @@ function headerSaysWindowLoaded(){
 
   console.log("GM4/Github sync. Reading git repo...")
   $.ajax({
-    url:"createLocalGitCopy.php",
+    url:"modules/createLocalGitCopy.php",
     success: function(data){
       console.log("Response: " + data);
     },
