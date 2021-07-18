@@ -35,7 +35,18 @@ function headerSaysWindowLoaded(){
     versionView();
   });
 
-  updateScrollbar()
+  updateScrollbar();
+
+  console.log("GM4/Github sync. Reading git repo...")
+  $.ajax({
+    url:"createLocalGitCopy.php",
+    success: function(data){
+      console.log("Response: " + data);
+    },
+    error: function(){
+      console.log("Failed to talk to Gamemode 4...");
+    }
+  });
 }
 
 window.onresize = resize;
