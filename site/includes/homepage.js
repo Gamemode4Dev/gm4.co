@@ -123,14 +123,26 @@ function initTrack(el, loop) {
   startLoop();
 
   scrollTrack(el, 0, loop);
-  el.find(".trackButtonLeft").on("click",function(){
+  el.find(".trackButtonLeft").each(function(){
+    this.addEventListener("click",function(){
+      scrollTrack(el, -1, loop);
+      startLoop();
+    },{passive:true});
+  });
+  el.find(".trackButtonRight").each(function(){
+    this.addEventListener("click",function(){
+      scrollTrack(el, 1, loop);
+      startLoop();
+    },{passive:true});
+  });
+  /*el.find(".trackButtonLeft").on("click",function(){
     scrollTrack(el, -1, loop);
     startLoop();
   });
   el.find(".trackButtonRight").on("click",function(){
     scrollTrack(el, 1, loop);
     startLoop();
-  });
+  });*/
 
   function clientX(e) {
     return (e.changedTouches ? e.changedTouches[0] : e).clientX;
@@ -204,7 +216,21 @@ function populateCategory(pos, modules){
   track.append('<div class="trackItem moduleCard trackEndItem noselect"><img src="images/enderpuff_by_qbert.png" title="End of results. Artwork by Qbert" alt="End of data pack results"/><span class="cardName">You\'ve reached the end</span></div>');
   $(".categoryLengthText").eq(pos).html(`(${modules.length})`);
   //add listeners
-  track.find(".moduleCard").on("click",function(){
+  track.find(".moduleCard").each(function(){
+    this.addEventListener("click",function(){
+      if($(this).attr("data-module_id")!=undefined){
+        if ($(this).hasClass('selected')) {
+          $(this).removeClass('selected');
+          $('#browse .preview').remove();
+        } else {
+          $('.selected').removeClass('selected');
+          $(this).addClass('selected');
+          loadPreview($(this).parent().parent(), $(this).attr("data-module_id"));
+        }
+      }
+    },{passive:true});
+  });
+  /*track.find(".moduleCard").on("click",function(){
     if($(this).attr("data-module_id")!=undefined){
       if ($(this).hasClass('selected')) {
         $(this).removeClass('selected');
@@ -215,7 +241,7 @@ function populateCategory(pos, modules){
         loadPreview($(this).parent().parent(), $(this).attr("data-module_id"));
       }
     }      
-  });
+  });*/
 }
 
 
