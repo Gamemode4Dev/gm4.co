@@ -9,13 +9,14 @@ created 19 august 2020
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#4AA0C7">
-<meta property="og:site_name" content="Gamemode 4"/>
+<meta name="keywords" content="data packs, data pack, datapacks, data packs, minecraft, minecraft java, commands, mods, mod, plugins, plugin, vanilla, how to install, community, quality of life, balanced, server, public, free, 1.17, 1.16, 1.15, 1.14, 1.13">
+<meta property="og:site_name" content="Gamemode 4">
 <meta property="og:title" content="Minecraft Datapacks carefully balanced for spicing up survival gameplay."/>
-<meta property="og:description" content="A collection of game plugins using datapacks that can be added to survival Minecraft in any combination to create a new, exciting feel without the use of mods or plugins."/>
+<meta property="og:description" content="A collection of game plugins using datapacks that can be added to survival Minecraft in any combination to create a new, exciting feel without the use of mods or plugins.">
 <meta property="og:image" content="https://gm4.co/images/logo/logo_256.png">
 <meta property="og:url" content="https://gm4.co">
-<meta property="og:image:width" content="256"/>
-<meta property="og:image:height" content="256"/>
+<meta property="og:image:width" content="256">
+<meta property="og:image:height" content="256">
 
 <link rel="icon" type="image/svg" href="images/logo/logo_clear.svg" sizes="any">
 <link href="https://fonts.googleapis.com/css?family=Raleway:200" rel="stylesheet" type="text/css">
