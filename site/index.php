@@ -30,7 +30,7 @@ gtag('config', 'UA-63061711-1');
 <meta property="og:image:height" content="256">
 
 <link rel="icon" type="image/svg" href="images/logo/logo_clear.svg" sizes="any">
-<link href="https://fonts.googleapis.com/css?family=Raleway:200" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Raleway:200&display=swap" rel="stylesheet" rel="preload" as="font" type="text/css">
 <link rel="stylesheet" href="includes/homepage.css?hash=<?php echo hash_file("crc32","includes/homepage.css"); ?>" />
 <title>Gamemode 4</title>
 <script src="https://www.gm4.co/includes/jquery-3.6.0.min.js"></script>
