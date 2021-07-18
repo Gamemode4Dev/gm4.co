@@ -25,7 +25,7 @@ function headerSaysWindowLoaded(){
         versionclass += "version_" + version.replaceAll(".","_") + " ";
       }
       const latestVersion = module.versions.sort((a, b) => b - a)[0]
-      $("#modules").append(`<a href="https://gm4.co/modules/${module.id.replaceAll("_","-")}"><div class="moduleCard noselect ${versionclass}"><img src="${get_module_icon(module.id, latestVersion)}" onerror="image_error(this)" alt="Module Icon"/><span class="cardName">${module.name}</span></div></a>`);
+      $("#modules").append(`<a href="https://gm4.co/modules/${module.id.replaceAll("_","-")}"><div class="moduleCard noselect ${versionclass}"><img data-src="${get_module_icon(module.id, latestVersion)}" onerror="image_error(this)" alt="Data pack icon" class="lazyload"/><span class="cardName">${module.name}</span></div></a>`);
     }
     $("#versionSelect").empty();
     for (const version of [...versions].sort((a, b) => b - a)) {
@@ -198,10 +198,10 @@ function populateCategory(pos, modules){
   const track = $("#browse .trackContainer").eq(pos);
   cards = "";
   for(j=0;j<modules.length;j++){
-    cards += `<div class="trackItem moduleCard noselect" data-module_id="${modules[j]}"><img src="${get_module_icon(modules[j])}" onerror="image_error(this)" alt="${modules[j].replace(/_/g, " ")} Icon"><span class="cardName">${modules[j].replace(/_/g, " ")}</span></div>`;
+    cards += `<div class="trackItem moduleCard noselect" data-module_id="${modules[j]}"><img src="${get_module_icon(modules[j])}" onerror="image_error(this)" alt="${modules[j].replace(/_/g, " ")} icon"><span class="cardName">${modules[j].replace(/_/g, " ")}</span></div>`;
   }
   track.html(cards);
-  track.append('<div class="trackItem moduleCard trackEndItem noselect"><img src="images/enderpuff_by_qbert.png" title="End of results. Artwork by Qbert" alt="End of results"/><span class="cardName">You\'ve reached the end</span></div>');
+  track.append('<div class="trackItem moduleCard trackEndItem noselect"><img src="images/enderpuff_by_qbert.png" title="End of results. Artwork by Qbert" alt="End of data pack results"/><span class="cardName">You\'ve reached the end</span></div>');
   $(".categoryLengthText").eq(pos).html(`(${modules.length})`);
   //add listeners
   track.find(".moduleCard").on("click",function(){
@@ -231,9 +231,9 @@ function loadPreview(categoryBar, module_id){
       if (data.mcversion === LATEST_VERSION) {
         previewInfo.append(`<a class="squircleLink datapackLink" target="download_frame" href="https://gm4.co/modules/download/${LATEST_VERSION}/${data.module_id.replaceAll("_", "-")}"><img src="/images/datapack.svg" alt="Datapack Icon">Download for Java ${LATEST_VERSION}</a>`)
       }
-      previewInfo.append(`<a class="squircleLink moreLink" href="https://www.gm4.co/modules/${data.module_id.replaceAll("_", "-")}"><img src="/images/rightArrow.svg" alt="Info Icon">More Downloads & Info</a>`);
+      previewInfo.append(`<a class="squircleLink moreLink" href="https://www.gm4.co/modules/${data.module_id.replaceAll("_", "-")}"><img src="/images/rightArrow.svg" alt="Info icon">More Downloads & Info</a>`);
       if (data.wiki_link){
-        previewInfo.append(`<a class="squircleLink wikiLink" href="${data.wiki_link}" target="_blank"><img src="/images/wiki.svg" alt="Wiki Icon">Read about this on the Wiki</a>`);
+        previewInfo.append(`<a class="squircleLink wikiLink" href="${data.wiki_link}" target="_blank"><img src="/images/wiki.svg" alt="Wiki icon">Read about this on the Wiki</a>`);
       }
       if (data.promo) {
         load_site_meta(previewMedia, module_id, data.promo);
