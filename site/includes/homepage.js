@@ -25,7 +25,7 @@ function headerSaysWindowLoaded(){
         versionclass += "version_" + version.replaceAll(".","_") + " ";
       }
       const latestVersion = module.versions.sort((a, b) => b - a)[0]
-      $("#modules").append(`<a href="https://gm4.co/modules/${module.id.replaceAll("_","-")}"><div class="moduleCard noselect ${versionclass}"><img src="${get_module_icon(module.id, latestVersion)}" onerror="image_error(this)"/><span class="cardName">${module.name}</span></div></a>`);
+      $("#modules").append(`<a href="https://gm4.co/modules/${module.id.replaceAll("_","-")}"><div class="moduleCard noselect ${versionclass}"><img src="${get_module_icon(module.id, latestVersion)}" onerror="image_error(this)" alt="Module Icon"/><span class="cardName">${module.name}</span></div></a>`);
     }
     $("#versionSelect").empty();
     for (const version of [...versions].sort((a, b) => b - a)) {
