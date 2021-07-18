@@ -72,7 +72,7 @@ created 19 august 2020
     <select id="versionSelect" onchange="versionView()">
       <option value="loading">Loading...</option>
     </select>
-    <input id="textSearch" type="text" placeholder="search..." onkeyup="textSearch()"/>
+    <input id="textSearch" type="text" placeholder="search..." onkeyup="textSearch()"/><label for="textSearch" style="display:none">Search</label>
   </div>
 </div>
 <iframe name='download_frame' style='display:none;'></iframe>
