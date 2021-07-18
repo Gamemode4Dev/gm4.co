@@ -11,7 +11,7 @@
 /* raleway-200 - latin */
 @font-face {
   font-family: 'Raleway';
-  font-style: 'light';
+  font-style: normal;
   font-weight: 200;
   src: url('../fonts/raleway-v22-latin-200.eot'); /* IE9 Compat Modes */
   src: local(''),
@@ -39,7 +39,7 @@
 /* raleway-700 - latin */
 @font-face {
   font-family: 'Raleway';
-  font-style: bold;
+  font-style: normal;
   font-weight: 700;
   src: url('../fonts/raleway-v22-latin-700.eot'); /* IE9 Compat Modes */
   src: local(''),
