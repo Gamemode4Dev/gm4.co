@@ -21,7 +21,7 @@ function headerSaysWindowLoaded(){
     for (const module of allModuleNamesAlphabetized) {
       versionclass = "";
       for (const version of module.versions) {
-        versions.add(version)
+        versions.add(version);
         versionclass += "version_" + version.replaceAll(".","_") + " ";
       }
       const latestVersion = module.versions.sort((a, b) => b - a)[0]
@@ -51,7 +51,7 @@ function headerSaysWindowLoaded(){
 
 window.onresize = resize;
 
-window.onpopstate = reload
+window.onpopstate = reload;
 
 function reload() {
   $(".moduleNavButton").removeClass("active");
@@ -70,8 +70,8 @@ function resize(){
   updateScrollbar();
 
   $(".track.resizable").each(function() {
-    scrollTrack($(this), 0)
-  })
+    scrollTrack($(this), 0);
+  });
 }
 
 function scrollTrack(el, dir, loop, partial) {
