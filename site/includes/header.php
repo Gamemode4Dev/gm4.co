@@ -3,7 +3,7 @@
 <script src="https://gm4.co/includes/lazysizes.min.js" async></script>
 <header>
   <a class="home" href="https://gm4.co/">
-    <img src="https://gm4.co/images/logo/logo_clear.svg" height="32" alt="Gamemode 4 Logo"/>
+    <img src="https://gm4.co/images/logo/logo_clear.svg" height="32" width="32" alt="Gamemode 4 Logo"/>
     <h1>Gamemode 4</h1>
   </a>
   <nav>
