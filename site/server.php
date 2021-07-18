@@ -21,6 +21,7 @@
 <link href="https://fonts.googleapis.com/css?family=Raleway:200" rel="stylesheet" type="text/css">
 <link rel = "stylesheet" href="includes/header.css?hash=<?php echo hash_file("crc32","includes/header.css"); ?>" />
 <script src="https://www.gm4.co/includes/jquery-3.6.0.min.js"></script>
+<script>function headerSaysWindowLoaded(){return null}</script>
 <link rel = "stylesheet" href="https://www.gm4.co/includes/server.css?hash=<?php echo hash_file("crc32","includes/server.css"); ?>" />
 <title>Gamemode 4 - Server</title>
 <script async="" src="//www.google-analytics.com/analytics.js"></script><script>
