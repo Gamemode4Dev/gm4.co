@@ -50,13 +50,13 @@ created 19 august 2020
   </div>
   <div class="landingLinks">
     <h2>Join our community</h2>
-    <a class="discordLink squircleLink" href="https://discord.gg/0qLGgv7JGfIXf45t" target="_blank">
+    <a class="discordLink squircleLink" href="https://discord.gg/0qLGgv7JGfIXf45t" target="_blank" rel="noopener">
       <img src="/images/logo/discord.svg" alt="Discord Logo">Discord
     </a>
-    <a class="githubLink squircleLink" href="https://github.com/Gamemode4Dev/GM4_Datapacks" target="_blank">
+    <a class="githubLink squircleLink" href="https://github.com/Gamemode4Dev/GM4_Datapacks" target="_blank" rel="noopener">
       <img src="/images/logo/github.svg" alt="GitHub Logo">GitHub
     </a>
-    <a class="patreonLink squircleLink" href="https://www.patreon.com/gamemode4" target="_blank">
+    <a class="patreonLink squircleLink" href="https://www.patreon.com/gamemode4" target="_blank" rel="noopener">
       <img src="/images/logo/patreon.svg" alt="Patreon Logo">Patreon
     </a>
   </div>
