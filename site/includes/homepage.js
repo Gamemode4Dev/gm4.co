@@ -7,7 +7,7 @@ const LATEST_VERSION = "1.16";
 function headerSaysWindowLoaded(){
   $.ajax({url:"images/slideshow/slides.json"}).done(function(data) {
     for (const slide of data.slides) {
-      $(".slideshow > .trackContainer").append(`<div class="trackItem ${slide.text.position || "bottom-left"} ${slide.darken ? "darken" : ""}" style="background-image:url(images/slideshow/${slide.background_image});">${slide.text ? `<h2>${slide.text.header}</h2><p>${slide.text.paragraph}</p>` : ''}</div>`)
+      $(".slideshow > .trackContainer").append(`<div data-bg="images/slideshow/${slide.background_image}" class="lazyload trackItem ${slide.text.position || "bottom-left"} ${slide.darken ? "darken" : ""}" style="background-image:url(images/slideshow/${slide.low_resolution_background_image});">${slide.text ? `<h2>${slide.text.header}</h2><p>${slide.text.paragraph}</p>` : ''}</div>`)
     }
     initTrack($(".slideshow"), 8000)
   });
@@ -45,6 +45,14 @@ function headerSaysWindowLoaded(){
     },
     error: function(){
       console.log("Failed to talk to Gamemode 4...");
+    }
+  });
+
+  //scale up lazyloaded low res background images (such as the slideshow)
+  document.addEventListener('lazybeforeunveil', function(e){
+    var bg = e.target.getAttribute('data-bg');
+    if(bg){
+        e.target.style.backgroundImage = 'url(' + bg + ')';
     }
   });
 }
