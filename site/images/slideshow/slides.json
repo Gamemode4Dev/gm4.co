@@ -1,7 +1,7 @@
 {
   "slides":[
     {
-      "low_resolution_background_image":"liquid_tanks_1.jpg",
+      "low_resolution_background_image":"liquid_tanks_.jpg",
       "background_image":"liquid_tanks_1.png",
       "text":{
         "header":"Tanks & Transportation",
@@ -11,7 +11,7 @@
       "darken": true
     },
     {
-      "low_resolution_background_image":"server7_1.jpg",
+      "low_resolution_background_image":"server7_.jpg",
       "background_image":"server7_1.png",
       "text":{
         "header":"Gamemode 4 Public Server",
@@ -21,7 +21,7 @@
       "darken": true
     },
     {
-      "low_resolution_background_image":"zauber_cauldrons_1.jpg",
+      "low_resolution_background_image":"zauber_cauldrons_.jpg",
       "background_image":"zauber_cauldrons_1.png",
       "text":{
         "header":"Magical Cauldrons",
