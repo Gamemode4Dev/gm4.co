@@ -1,6 +1,12 @@
 {
   "promo_images": [
     {
+      "type": "image",
+      "image": "bat_grenades.webp",
+      "credit": "Denniss",
+      "alt": "Exploding Bat"
+    },
+    {
       "type": "video",
       "image": "bat_grenades.svg",
       "link": "https://www.youtube.com/watch?v=uUoEKtte1GQ",
