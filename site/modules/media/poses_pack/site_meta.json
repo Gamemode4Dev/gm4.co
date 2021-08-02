@@ -2,9 +2,9 @@
   "promo_images": [
     {
       "type": "image",
-      "image": "chairs.webp",
+      "image": "poses_pack.webp",
       "credit": "Denniss",
-      "alt": "Creating a chair"
+      "alt": "Modifying the pose of an armour stand"
     }
   ]
 }

@@ -2,9 +2,9 @@
   "promo_images": [
     {
       "type": "image",
-      "image": "chairs.webp",
+      "image": "particles_pack.webp",
       "credit": "Denniss",
-      "alt": "Creating a chair"
+      "alt": "Creating particles"
     }
   ]
 }

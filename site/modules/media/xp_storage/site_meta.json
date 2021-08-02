@@ -2,9 +2,9 @@
   "promo_images": [
     {
       "type": "image",
-      "image": "chairs.webp",
+      "image": "xp_storage.webp",
       "credit": "Denniss",
-      "alt": "Creating a chair"
+      "alt": "Storing experience in an ender chest"
     }
   ]
 }

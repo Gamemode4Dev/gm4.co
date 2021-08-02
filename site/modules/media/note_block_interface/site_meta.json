@@ -2,9 +2,9 @@
   "promo_images": [
     {
       "type": "image",
-      "image": "chairs.webp",
+      "image": "note_block_interface.webp",
       "credit": "Denniss",
-      "alt": "Creating a chair"
+      "alt": "Using a noteblock"
     }
   ]
 }
