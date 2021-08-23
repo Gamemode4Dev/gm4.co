@@ -35,6 +35,7 @@
       "title":"Featured",
       "order":"shuffled",
       "modules":[
+        "zauber_cauldrons",
         "bat_grenades",
         "metallurgy",
         "liquid_tanks",
