@@ -44,8 +44,6 @@ function headerSaysWindowLoaded(){
 
   updateScrollbar();
 
-  // Temporarily disable github syncing until the cache is working again
-  /*
   console.log("GM4/Github sync. Reading git repo...")
   $.ajax({
     url:"modules/createLocalGitCopy.php",
@@ -56,7 +54,6 @@ function headerSaysWindowLoaded(){
       console.log("Failed to talk to Gamemode 4...");
     }
   });
-  */
 }
 
 window.onresize = resize;
