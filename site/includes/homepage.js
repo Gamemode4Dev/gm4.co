@@ -317,9 +317,9 @@ function load_site_meta(previewMedia, id, data){
 }
 
 function get_module_icon(id, version=LATEST_VERSION) {
-  folderSuffix = version;
-  if(version == "1.13") folderSuffix = "download";
-  return `https://gm4.co/modules/template/templates/master-${folderSuffix}/GM4_Datapacks-ver-${version}/gm4_${id}/pack.svg`
+  const folderSuffix = version === '1.13' ? 'download' : version
+  const branch = version === LATEST_VERSION ? 'master' : `ver-${version}`
+  return `https://gm4.co/modules/template/templates/master-${folderSuffix}/GM4_Datapacks-${branch}/gm4_${id}/pack.svg`
 }
 
 function shuffleArray(arr, shuffleFrom = 0) {
