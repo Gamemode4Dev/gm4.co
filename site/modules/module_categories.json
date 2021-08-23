@@ -3,6 +3,12 @@
     {
       "title":"New Modules",
       "modules":[
+        "audere_shamir",
+        "iacio_shamir",
+        "vecto_shamir",
+        "vigere_shamir",
+        "metallurgy",
+        "better_armour_stands",
         "display_frames",
         "apple_trees",
         "orb_of_ankou",
@@ -16,7 +22,6 @@
         "percurro_shamir",
         "fulcio_shamir",
         "lumos_shamir",
-        "moneo_shamir",
         "podzol_rooting_soil",
         "crossbow_cartridges"
       ]
