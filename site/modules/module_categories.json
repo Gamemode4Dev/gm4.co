@@ -118,6 +118,10 @@
       },
       "modules":[
         "metallurgy",
+        "audere_shamir",
+        "iacio_shamir",
+        "vecto_shamir",
+        "vigere_shamir",
         "fulcio_shamir",
         "lumos_shamir",
         "percurro_shamir",
