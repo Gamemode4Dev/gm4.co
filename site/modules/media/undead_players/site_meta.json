@@ -1,0 +1,10 @@
+{
+  "promo_images": [
+    {
+      "type": "image",
+      "image": "undead_players.webp",
+      "credit": "Denniss",
+      "alt": "Undead player spawning and picking up items"
+    }
+  ]
+}
