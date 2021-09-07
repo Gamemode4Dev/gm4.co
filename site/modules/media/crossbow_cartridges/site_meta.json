@@ -1,0 +1,10 @@
+{
+  "promo_images": [
+    {
+      "type": "image",
+      "image": "crossbow_cartridges.webp",
+      "credit": "Denniss",
+      "alt": "Shooting various items from a crossbow"
+    }
+  ]
+}
