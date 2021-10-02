@@ -3,6 +3,7 @@
     {
       "title":"New Modules",
       "modules":[
+        "animi_shamir",
         "audere_shamir",
         "iacio_shamir",
         "vecto_shamir",
@@ -118,6 +119,7 @@
       },
       "modules":[
         "metallurgy",
+        "animi_shamir",
         "audere_shamir",
         "iacio_shamir",
         "vecto_shamir",
