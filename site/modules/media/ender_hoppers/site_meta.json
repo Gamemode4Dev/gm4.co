@@ -1,0 +1,10 @@
+{
+  "promo_images": [
+    {
+      "type": "image",
+      "image": "ender_hoppers.webp",
+      "credit": "Denniss",
+      "alt": "Creating and using an Ender Hopper"
+    }
+  ]
+}
