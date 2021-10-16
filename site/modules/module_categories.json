@@ -3,6 +3,7 @@
     {
       "title":"New Modules",
       "modules":[
+        "shroomites",
         "chest_boats",
         "animi_shamir",
         "audere_shamir",
