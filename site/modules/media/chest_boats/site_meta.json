@@ -1,0 +1,10 @@
+{
+  "promo_images": [
+    {
+      "type": "image",
+      "image": "promo_1.png",
+      "credit": "Bloo",
+      "alt": "A chest inside a boat"
+    }
+  ]
+}
