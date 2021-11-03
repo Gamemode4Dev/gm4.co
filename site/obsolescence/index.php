@@ -31,10 +31,22 @@ gtag('config', 'UA-63061711-1');
 </head>
 <body class="light">
 <?php include '../includes/header.php';?>
+<div id="splash">
+  <div id="logo"></div>
+</div>
 <div id="poster">
-<h1>Gamemode 4: Obsolescence</h1>
-<p>A complete-the-monument adventure map featuring Gamemode 4<p>
-<h2>Coming Soon</h2>
+<h1>Obsolescence is an open world, co-op “Complete the Monument” map</h1>
+<p>The goal: Bring together the pieces of an ancient rite to complete the magic ritual and restore natural balance in this strange world.<p>
+<p>To find the pieces for the ritual, you must defeat monsters, solve puzzles, and use Gamemode 4 Modules – our awesome survival datapacks!</p>
+<p>Our data packs have been carefully crafted to compliment the vanilla game: boosted potions, ziplines, redstone-ready machines and more.<p>
+<p>Throughout the map these packs will be introduced, and unlocking their true potential is key to progress.</p>
+<p>Obsolesence contains enough variety for all play styles. Want lore to unpack? You can explore tattered notes and the design of the world. Looking for a challenging puzzle? Tackle a dungeon! Have a desire to go caving and fight monsters? Try and find one of our large custom caves.</p>
+<h2 style="font-style:italic">Why is the world floating? What are these ruins? What is hidden behind the mysterious gates in the mountains? All this and more... in <strong>Obsolescence<strong>!<h2>
+<br>
+<h3>Coming Soon</h3>
+<br>
+<p class="credits">Obsolescence is a Gamemode 4 project. It was created by Thanathor, BluePsychoRanger, ToffeeMax, MichaelMiner137, Bloo___, TheEpyonProjects, Kyrkis, JP12_, miraku_memo, Kruthers, SpecialBuilder32. Cover and logo art by miraku_memo.
+</p>
 
 </div>
 
