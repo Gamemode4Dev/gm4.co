@@ -53,7 +53,7 @@ gtag('config', 'UA-63061711-1');
   <p>To find the pieces for the ritual, you must defeat monsters, solve puzzles, and use Gamemode 4 Modules – our awesome survival datapacks!</p>
   <br>
   <br>
-  <a href="" class="squircleLink worldDownloadLink">Download Coming Soon</a>
+  <a href="https://github.com/Gamemode4Dev/obsolescence/releases/tag/1.0-w" class="squircleLink worldDownloadLink">Download from GitHub</a>
   <br>
 </div>
 <div id ="browse" class="moduleView active">
