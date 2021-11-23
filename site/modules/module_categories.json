@@ -3,6 +3,7 @@
     {
       "title":"New Modules",
       "modules":[
+        "lightning_in_a_bottle",
         "shroomites",
         "chest_boats",
         "animi_shamir",
@@ -62,6 +63,7 @@
         "disassemblers",
         "enchantment_extractors",
         "ender_hoppers",
+        "lightning_in_a_bottle",
         "liquid_minecarts",
         "liquid_tanks",
         "master_crafting",
