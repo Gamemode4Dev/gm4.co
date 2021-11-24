@@ -445,6 +445,24 @@ select.textSpace option {
   padding:20px;
 }
 
+.resourcePackDownloadLink {
+    color: var(--main-text-color) !important;
+    background-color: var(--modulecard-bg-top);
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+}
+
+.viewCodeLink {
+    color: var(--main-text-color) !important;
+    background-color: var(--modulecard-bg-top);
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+}
+
 .moreLink {
   color: var(--main-text-color) !important;
   background-color: var(--modulecard-bg-top);

@@ -53,7 +53,20 @@ gtag('config', 'UA-63061711-1');
   <p>To find the pieces for the ritual, you must defeat monsters, solve puzzles, and use Gamemode 4 Modules – our awesome survival datapacks!</p>
   <br>
   <br>
-  <a href="https://github.com/Gamemode4Dev/obsolescence/releases/download/1.0-w/Obsolescence_v1.zip" class="squircleLink worldDownloadLink">Download from GitHub</a>
+  <div class="buttonGrid">
+    <a href="https://github.com/Gamemode4Dev/obsolescence/releases/download/1.0-w/Obsolescence_v1.zip" class="squircleLink worldDownloadLink">
+    <img src="/images/datapack.svg">
+    Download from GitHub
+</a>
+    <a href="https://github.com/Gamemode4Dev/obsolescence/releases/download/1.0-w/Obsolescence_RP.zip" class="squircleLink resourcePackDownloadLink">
+    <img src="/images/datapack.svg">
+    Download Resource Pack
+</a>
+    <a href="https://github.com/Gamemode4Dev/obsolescence/releases/tag/1.0-w" class="squircleLink viewCodeLink">
+    <img src="/images/logo/github.svg">
+    Read Install Instructions
+</a>
+</div>
   <br>
 </div>
 <div id ="browse" class="moduleView active">
