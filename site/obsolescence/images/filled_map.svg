@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 23.0.6, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="module_name" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+	 y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+<style type="text/css">
+	.st0{display:none;}
+	.st1{display:inline;fill:#FFFFFF;}
+	.st2{fill:#F2F2F2;}
+	.st3{fill:#333333;}
+	.st4{fill:#999999;}
+	.st5{fill:#808080;}
+</style>
+<g id="Background" class="st0">
+	<rect class="st1" width="512" height="512"/>
+</g>
+<g id="L3Md3w.tif" class="st0">
+	
+		<image style="display:inline;overflow:visible;" width="48" height="48" id="Layer_0_1_" xlink:href="CE0E0F2E35DA0F30.png"  transform="matrix(10.6667 0 0 10.6667 0 0)">
+	</image>
+</g>
+<g id="map">
+	<g id="background">
+		<rect x="96" y="192" class="st2" width="320" height="160"/>
+		<rect x="160" y="160" class="st2" width="288" height="160"/>
+		<rect x="192" y="128" class="st2" width="224" height="160"/>
+		<rect x="256" y="96" class="st2" width="128" height="256"/>
+		<rect x="288" y="64" class="st2" width="64" height="320"/>
+		<rect x="64" y="224" class="st2" width="448" height="32"/>
+		<rect x="64" y="224" class="st2" width="416" height="64"/>
+		<rect x="96" y="192" class="st2" width="384" height="96"/>
+		<rect x="32" y="256" class="st2" width="448" height="32"/>
+		<rect x="64" y="224" class="st2" width="384" height="96"/>
+		<rect x="128" y="192" class="st2" width="224" height="192"/>
+		<rect x="160" y="160" class="st2" width="160" height="256"/>
+		<rect x="192" y="128" class="st2" width="64" height="320"/>
+	</g>
+	<g id="writing">
+		<rect x="96" y="224" class="st3" width="32" height="64"/>
+		<rect x="96" y="256" class="st3" width="64" height="32"/>
+		<rect x="160" y="288" class="st3" width="32" height="32"/>
+		<rect x="224" y="288" class="st3" width="64" height="32"/>
+		<rect x="256" y="288" class="st3" width="32" height="64"/>
+		<rect x="192" y="224" class="st3" width="32" height="32"/>
+		<rect x="256" y="128" class="st3" width="32" height="96"/>
+		<rect x="256" y="160" class="st3" width="64" height="32"/>
+		<rect x="288" y="224" class="st3" width="32" height="64"/>
+		<rect x="288" y="256" class="st3" width="64" height="32"/>
+		<rect x="160" y="256" class="st3" width="32" height="32"/>
+		<rect x="224" y="192" class="st3" width="32" height="32"/>
+		<rect x="192" y="320" class="st3" width="32" height="32"/>
+	</g>
+	<g id="border">
+		<rect x="32" y="256" class="st4" width="32" height="32"/>
+		<rect x="64" y="288" class="st5" width="32" height="32"/>
+		<rect x="96" y="320" class="st5" width="32" height="32"/>
+		<rect x="128" y="352" class="st5" width="32" height="32"/>
+		<rect x="160" y="384" class="st5" width="32" height="32"/>
+		<rect x="192" y="416" class="st5" width="64" height="32"/>
+		<rect x="256" y="384" class="st5" width="64" height="32"/>
+		<rect x="320" y="352" class="st5" width="32" height="32"/>
+		<rect x="352" y="320" class="st5" width="64" height="32"/>
+		<rect x="416" y="288" class="st5" width="32" height="32"/>
+		<rect x="448" y="256" class="st5" width="32" height="32"/>
+		<rect x="480" y="224" class="st5" width="32" height="32"/>
+		<rect x="448" y="192" class="st5" width="32" height="32"/>
+		<rect x="416" y="160" class="st4" width="32" height="32"/>
+		<rect x="384" y="128" class="st4" width="32" height="32"/>
+		<rect x="352" y="96" class="st4" width="32" height="32"/>
+		<rect x="288" y="64" class="st4" width="64" height="32"/>
+		<rect x="256" y="96" class="st4" width="32" height="32"/>
+		<rect x="192" y="128" class="st4" width="64" height="32"/>
+		<rect x="160" y="160" class="st4" width="32" height="32"/>
+		<rect x="96" y="192" class="st4" width="64" height="32"/>
+		<rect x="64" y="224" class="st4" width="32" height="32"/>
+	</g>
+</g>
+</svg>
