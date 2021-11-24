@@ -1,0 +1,10 @@
+{
+  "promo_images": [
+    {
+      "type": "image",
+      "image": "lightning_in_a_bottle.webp",
+      "credit": "Denniss",
+      "alt": "Make lightning in a bottle and create a shulker"
+    }
+  ]
+}
