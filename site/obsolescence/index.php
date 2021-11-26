@@ -54,7 +54,7 @@ gtag('config', 'UA-63061711-1');
   <br>
   <br>
   <div class="buttonGrid">
-    <a href="https://github.com/Gamemode4Dev/obsolescence/releases/download/1.0-w/Obsolescence_v1.zip" class="squircleLink worldDownloadLink">
+    <a href="https://github.com/Gamemode4Dev/obsolescence/releases/download/1.0-w/Obsolescence_v1.1.zip" class="squircleLink worldDownloadLink">
     <img src="/obsolescence/images/filled_map.svg">
     Download the Map
 </a>
