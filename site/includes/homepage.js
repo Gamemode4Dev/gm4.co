@@ -2,7 +2,7 @@
 JS for the module browse page
 */
 
-const LATEST_VERSION = "1.17";
+const LATEST_VERSION = "1.18";
 
 function headerSaysWindowLoaded(){
   $.ajax({url:"images/slideshow/slides.json"}).done(function(data) {
