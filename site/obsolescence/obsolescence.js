@@ -1,23 +1,18 @@
 const LATEST_VERSION = "1.17";
 
-function headerSaysWindowLoaded(){
+$(document).ready(function onload() {
   //initTrack($(".slideshow"), 8000);
   loadCategories();
   resizeVideo();
-}
+})
 
 updateScrollbar();
-
-window.onresize = resize;
-
-window.onpopstate = reload;
-
-function reload() {
+window.addEventListener('popstate', function reload() {
   $(".moduleNavButton").removeClass("active");
   $(`.moduleNavButton[href="${location.hash}"]`).addClass("active");
   $(".moduleView").removeClass("active");
   $(location.hash).addClass("active");
-}
+})
 
 function updateScrollbar() {
   const clientWidth = document.documentElement.clientWidth
@@ -25,13 +20,13 @@ function updateScrollbar() {
   document.documentElement.style.setProperty("--scrollbar-width", scrollbar + "px");
 }
 
-function resize(){
+window.addEventListener('resize', function resize() {
   updateScrollbar();
   resizeVideo();
   $(".track.resizable").each(function() {
     scrollTrack($(this), 0);
   });
-}
+})
 
 function resizeVideo(){
   $("iframe").each(function(){
@@ -235,8 +230,10 @@ function load_site_meta(previewMedia, id, data){
 }
 
 function get_module_icon(id, version=LATEST_VERSION) {
+  // modified because 1.17 icons broke
+  version = '1.18';
   const folderSuffix = version === '1.13' ? 'download' : version
-  const branch = version === LATEST_VERSION ? 'master' : `ver-${version}`
+  const branch = version === '1.18' ? 'master' : `ver-${version}`
   return `https://gm4.co/modules/template/templates/master-${folderSuffix}/GM4_Datapacks-${branch}/gm4_${id}/pack.svg`
 }
 

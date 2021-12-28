@@ -1,5 +1,5 @@
 let pageLoaded = false;
-function headerSaysWindowLoaded(){
+$(document).ready(function onload() {
   pageLoaded = true;
   
   if($("#latest_change_box").length > 0){
@@ -12,7 +12,7 @@ function headerSaysWindowLoaded(){
       $("#more_changelogs_link").html("View Older Changes");
     });
   }
-}
+})
 
 loadWait = setInterval(function(){ //triggered by document.onload in header
    if(pageLoaded){

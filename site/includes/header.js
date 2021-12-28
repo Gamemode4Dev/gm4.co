@@ -6,15 +6,14 @@ if(userdata != null){
   dataprompted = true;
 }
 
-window.onload = function(){
+$(document).ready(function onload() {
   if (window.matchMedia != "undefined" && window.matchMedia('(prefers-color-scheme: dark)').matches) {
     theme("dark")
-  }  
+  }
   if(userdata != null && userdata.theme != undefined && userdata.theme == "dark" && siteTheme == "light") theme("dark");
   if(userdata != null && userdata.theme != undefined && userdata.theme == "light" && siteTheme == "dark") theme("light");
   $("#discordIFrame").attr("src","https://discord.com/widget?id=151141188961828864&theme=" + siteTheme);
-  headerSaysWindowLoaded();
-}
+})
 
 function toggleTheme(){
   if(siteTheme=="light"){

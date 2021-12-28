@@ -4,7 +4,7 @@ JS for the module browse page
 
 const LATEST_VERSION = "1.18";
 
-function headerSaysWindowLoaded(){
+$(document).ready(function onload() {
   $.ajax({url:"images/slideshow/slides.json"}).done(function(data) {
     for (const slide of data.slides) {
       $(".slideshow > .trackContainer").append(`<div data-bg="images/slideshow/${slide.background_image}" class="lazyload trackItem ${slide.text.position || "bottom-left"} ${slide.darken ? "darken" : ""}" style="background-image:url(images/slideshow/${slide.low_resolution_background_image});">${slide.text ? `<h2>${slide.text.header}</h2><p>${slide.text.paragraph}</p>` : ''}</div>`)
@@ -54,18 +54,14 @@ function headerSaysWindowLoaded(){
       console.log("Failed to talk to Gamemode 4...");
     }
   });
-}
+})
 
-window.onresize = resize;
-
-window.onpopstate = reload;
-
-function reload() {
+window.addEventListener('popstate', function reload() {
   $(".moduleNavButton").removeClass("active");
   $(`.moduleNavButton[href="${location.hash}"]`).addClass("active");
   $(".moduleView").removeClass("active");
   $(location.hash).addClass("active");
-}
+})
 
 function updateScrollbar() {
   const clientWidth = document.documentElement.clientWidth
@@ -73,13 +69,13 @@ function updateScrollbar() {
   document.documentElement.style.setProperty("--scrollbar-width", scrollbar + "px");
 }
 
-function resize(){
+window.addEventListener('resize', function resize() {
   updateScrollbar();
 
   $(".track.resizable").each(function() {
     scrollTrack($(this), 0);
   });
-}
+})
 
 function scrollTrack(el, dir, loop, partial) {
   const total = el.find(".trackItem").length;

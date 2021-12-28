@@ -31,7 +31,6 @@ gtag('config', 'UA-63061711-1', {cookie_flags:'SameSite=None;Secure'});
 <link rel="icon" type="image/svg" href="https://www.gm4.co/images/logo/logo_clear.svg" sizes="any">
 <link rel = "stylesheet" href="includes/header.css?hash=<?php echo hash_file("crc32","includes/header.css"); ?>" />
 <script src="https://www.gm4.co/includes/jquery-3.6.0.min.js"></script>
-<script>function headerSaysWindowLoaded(){return null}</script>
 <link rel = "stylesheet" href="https://www.gm4.co/includes/server.css?hash=<?php echo hash_file("crc32","includes/server.css"); ?>" />
 <title>Gamemode 4 - Server</title>
 </head>
