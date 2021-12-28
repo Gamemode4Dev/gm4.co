@@ -36,6 +36,7 @@ gtag('config', 'UA-63061711-1');
 </head>
 <body class="light">
 <?php include 'includes/header.php';?>
+<script src="includes/modules.js?hash=<?php echo hash_file("crc32","includes/modules.js"); ?>"></script>
 <script src="includes/homepage.js?hash=<?php echo hash_file("crc32","includes/homepage.js"); ?>"></script>
 <div class="slideshow track">
   <div class="trackButton trackButtonLeft"></div>
