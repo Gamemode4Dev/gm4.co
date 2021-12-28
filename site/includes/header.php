@@ -1,5 +1,5 @@
-<link rel="stylesheet" href="/includes/header.css" />
-<script src="/includes/header.js"></script>
+<link rel="stylesheet" href="https://gm4.co/includes/header.css?hash=<?php echo hash_file("crc32","https://gm4.co/includes/header.css"); ?>" />
+<script src="https://gm4.co/includes/header.js?hash=<?php echo hash_file("crc32","https://gm4.co/includes/header.js"); ?>"></script>
 <script src="https://gm4.co/includes/lazysizes.min.js" async></script>
 <header>
   <a class="home" href="https://gm4.co/">
