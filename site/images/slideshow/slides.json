@@ -18,7 +18,8 @@
         "paragraph":"Join us on play.gm4.co",
         "position":"bottom-left"
       },
-      "darken": true
+      "darken": true,
+      "link":"https://gm4.co/server"
     },
     {
       "low_resolution_background_image":"zauber_cauldrons_1.jpg",
@@ -27,7 +28,8 @@
         "header":"Magical Cauldrons",
         "paragraph":"Add a brand new brewing mechanic<br>for custom armor, potions and teleportation!",
         "position":"bottom-left"
-      }
+      },
+      "link":"https://gm4.co/modules/zauber-cauldrons"
     }
   ]
 }

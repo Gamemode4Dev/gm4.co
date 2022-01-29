@@ -5,7 +5,7 @@ JS for the module browse page
 $(document).ready(function onload() {
   $.ajax({url:"images/slideshow/slides.json"}).done(function(data) {
     for (const slide of data.slides) {
-      $(".slideshow > .trackContainer").append(`<div data-bg="images/slideshow/${slide.background_image}" class="lazyload trackItem ${slide.text.position || "bottom-left"} ${slide.darken ? "darken" : ""}" style="background-image:url(images/slideshow/${slide.low_resolution_background_image});">${slide.text ? `<h2>${slide.text.header}</h2><p>${slide.text.paragraph}</p>` : ''}</div>`)
+      $(".slideshow > .trackContainer").append(`<${slide.link ? `a href=${slide.link}` : `div`} data-bg="images/slideshow/${slide.background_image}" class="lazyload trackItem ${slide.text.position || "bottom-left"} ${slide.darken ? "darken" : ""}" style="background-image:url(images/slideshow/${slide.low_resolution_background_image});">${slide.text ? `<h2>${slide.text.header}</h2><p>${slide.text.paragraph}</p>` : ''}${slide.link ? `</a>` : `</div>`}`)
     }
     initTrack($(".slideshow"), 8000);
     //scale up lazyloaded low res background images (such as the slideshow)
