@@ -8,7 +8,8 @@
         "paragraph":"Store potions, lava and other liquids in specialized tanks.<br>Wanna transport liquids in Minecarts? Gamemode 4's got your back!",
         "position":"bottom-left"
       },
-      "darken": true
+      "darken": true,
+      "link":"https://gm4.co/modules/liquid-tanks"
     },
     {
       "low_resolution_background_image":"server8_1.jpg",
