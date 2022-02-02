@@ -86,16 +86,17 @@ function initTrack(el, loop) {
   startLoop();
 
   scrollTrack(el, 0, loop);
+  // init scroll buttons
   el.find(".trackButtonLeft").each(function(){
     this.addEventListener("click",function(){
       scrollTrack(el, -1, loop);
-      startLoop();
+      if (loopInterval) clearInterval(loopInterval)
     },{passive:true});
   });
   el.find(".trackButtonRight").each(function(){
     this.addEventListener("click",function(){
       scrollTrack(el, 1, loop);
-      startLoop();
+      if (loopInterval) clearInterval(loopInterval)
     },{passive:true});
   });
 
