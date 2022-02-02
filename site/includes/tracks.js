@@ -133,7 +133,7 @@ function initTrack(el, loop) {
   el.get(0).addEventListener("touchcancel", end, {capture:false,passive:true});
 }
 
-console.log("Load modules.js")
+console.log("Load tracks.js")
 
 /**
  * 
