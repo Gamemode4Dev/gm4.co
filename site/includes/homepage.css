@@ -2,32 +2,6 @@
 CSS for the module browse page
 */
 
-/* Squircle Links */
-.squircleLink {
-  display: block;
-  padding: 0.5rem 1rem;
-  margin-bottom: 0.6rem;
-  border-radius: 2rem;
-  font-weight: bold;
-  font-size: 20px;
-  box-shadow: 0 1px 6px -3px #000;
-  text-decoration: none;
-  text-align: center;
-  transition: border-radius 0.3s;
-}
-
-.squircleLink:hover {
-  box-shadow: inset 0rem 10rem rgba(0,0,0,0.1);
-  border-radius: 0.5rem;
-}
-
-.squircleLink img {
-  margin-right: 10px;
-  vertical-align: middle;
-  height: 1.5rem;
-}
-
-
 /* Landing */
 
 .landing {

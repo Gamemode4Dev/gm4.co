@@ -172,6 +172,35 @@ a:visited {
   display: none;
 }
 
+/* Squircle Links */
+.squircleLink {
+  display: block;
+  padding: 0.5rem 1rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  border-radius: 2rem;
+  font-weight: bold;
+  font-size: 20px;
+  box-shadow: 0 1px 6px -3px #000;
+  text-decoration: none;
+  text-align: center;
+  transition: border-radius 0.3s;
+  white-space: nowrap;
+  position: relative;
+}
+
+.squircleLink[href]:hover {
+  box-shadow: inset 0rem 10rem rgba(0,0,0,0.1);
+  border-radius: 0.5rem;
+}
+
+.squircleLink img,
+.squircleLink svg {
+  margin-right: 0.5rem;
+  vertical-align: middle;
+  height: 1.5rem;
+}
+
 /*Header */
 
 header {

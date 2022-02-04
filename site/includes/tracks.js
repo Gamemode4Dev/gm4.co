@@ -36,6 +36,7 @@ function scrollTrack(el, dir, loop, partial) {
   const total = el.find(".trackItem").length;
   const style = getComputedStyle(el.get(0));
   const visible = parseInt(style.getPropertyValue("--visible-items"));
+  const hasEndItem = el.find(".trackEndItem").length;
   let offset = parseInt(style.getPropertyValue("--offset"));
 
   let target;
@@ -49,7 +50,7 @@ function scrollTrack(el, dir, loop, partial) {
   if (loop) {
     offset = (target % total + total) % total;
   } else {
-    const endItem = total - 1 > visible;
+    const endItem = total - hasEndItem > visible;
     const maxOffset = total - visible - (endItem ? 0 : 1);
     offset = Math.max(0, Math.min(maxOffset, target));
 
