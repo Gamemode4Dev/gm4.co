@@ -1,8 +1,6 @@
 /**
  * Handles loading of modules, tracks and the slideshow
  */
-let LATEST_VERSION = '1.18'
-
 
 $(document).ready(function onload() {
   updateScrollbar();
