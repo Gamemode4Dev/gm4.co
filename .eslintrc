@@ -7,6 +7,9 @@
   "extends": [
     "eslint:recommended"
   ],
+  "ignorePatterns": [
+    "*.min.js"
+  ],
   "rules": {
     "indent": [
       "error",
