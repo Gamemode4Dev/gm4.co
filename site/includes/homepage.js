@@ -26,7 +26,7 @@ window.addEventListener('DOMContentLoaded', () => {
     // Browse tab
     Promise.all(categories.module_categories.map(category => {
       if (category.populate_from) {
-        return fetch(category.populate_from).then(r => r.json())
+        return cachedFetch(category.populate_from, 24 * 60 * 60).then(r => r.json())
           .then(e => e.slice(0, category.limit));
       }
       if (category.order === 'shuffled' || category.order?.mode === 'shuffled') {
