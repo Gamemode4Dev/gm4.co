@@ -3,7 +3,7 @@
 <head>
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-63061711-1"></script>
-<script src="https://gm4.co/includes/lazysizes.min.js" async=""></script>
+<script async src="https://gm4.co/includes/lazysizes.min.js"></script>
 <script>
 window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}

@@ -8,6 +8,7 @@ created 19 august 2020
 <head>
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-63061711-1"></script>
+<script async src="https://gm4.co/includes/lazysizes.min.js"></script>
 <script>
 window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
@@ -33,12 +34,12 @@ gtag('config', 'UA-63061711-1');
 <link rel="stylesheet" href="includes/homepage.css?hash=<?php echo hash_file("crc32","includes/homepage.css"); ?>" />
 <title>Gamemode 4</title>
 <script src="https://www.gm4.co/includes/jquery-3.6.0.min.js"></script>
-</head>
-<body class="light">
-<?php include 'includes/header.php';?>
 <script src="includes/tracks.js?hash=<?php echo hash_file("crc32","includes/tracks.js"); ?>"></script>
 <script src="includes/module.js?hash=<?php echo hash_file("crc32","includes/module.js"); ?>"></script>
 <script src="includes/homepage.js?hash=<?php echo hash_file("crc32","includes/homepage.js"); ?>"></script>
+</head>
+<body class="light">
+<?php include 'includes/header.php';?>
 <div class="slideshow track">
   <div class="trackButton trackButtonLeft"></div>
   <div class="trackButton trackButtonRight"></div>
