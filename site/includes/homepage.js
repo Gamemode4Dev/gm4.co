@@ -1,4 +1,4 @@
-/* global LATEST_VERSION MODULE_SOURCES modules fetchModulesAndResources initTrack createModuleTrack createModuleCard */
+/* global LATEST_VERSION MODULE_SOURCES modules fetchModulesAndResources initTrack createModuleCard loadModuleCategories */
 
 window.addEventListener('DOMContentLoaded', () => {
 	Promise.all([
@@ -22,27 +22,7 @@ window.addEventListener('DOMContentLoaded', () => {
 			});
 
 			// Browse tab
-			Promise.all(categories.module_categories.map(category => {
-				if (category.populate_from) {
-					return cachedFetch(category.populate_from, 24 * 60 * 60).then(r => r.json())
-						.then(e => e.slice(0, category.limit));
-				}
-				if (category.order === 'shuffled' || category.order?.mode === 'shuffled') {
-					category.modules = shuffleArray(category.modules, category.order.from);
-				}
-				return new Promise(res => res(category.modules));
-			})).then(populatedCategories => {
-				populatedCategories.forEach((category, i) => {
-					const div = document.createElement('div');
-					const title = categories.module_categories[i].title;
-					div.insertAdjacentHTML('afterbegin', `<h2 class="categoryTitle">${title} <span class="categoryLengthText">(${category.length})</span></h2>`);
-					const track = createModuleTrack(LATEST_VERSION, category.map(id => `gm4_${id}`));
-					track.querySelector('.trackContainer').insertAdjacentHTML('beforeend', '<div class="trackItem moduleCard trackEndItem noselect"><img width="100%" height="100%" src="/images/enderpuff_by_qbert.png" title="End of results. Artwork by Qbert" alt="End of data pack results"/><span class="cardName">You\'ve reached the end</span></div>');
-					div.append(track);
-					$('#browse').append(div);
-					initTrack($(track));
-				});
-			});
+			loadModuleCategories(document.getElementById('browse'), categories.module_categories);
 
 			// All Modules tab
 			const moduleFilter = createModuleFilter();
@@ -108,33 +88,4 @@ function createModuleFilter() {
 	moduleFilter.append(textSearch);
 
 	return moduleFilter;
-}
-
-function shuffleArray(arr, shuffleFrom = 0) {
-	return arr.slice(0, shuffleFrom).concat((arr.slice(shuffleFrom)).sort(() => Math.random() - 0.5));
-}
-
-const CACHE_NAME = 'gm4-v1';
-
-/**
- * @param {string} url the url to fetch
- * @param {number} ttl time to live in seconds
- */
-async function cachedFetch(url, ttl) {
-	const now = new Date().getTime();
-	const cache = await caches.open(CACHE_NAME);
-	const cacheResponse = await cache.match(url);
-	if (cacheResponse && cacheResponse.ok) {
-		const expires = new Date(cacheResponse.headers.get('Expires')).getTime();
-		if (now < expires) {
-			return cacheResponse;
-		}
-	}
-
-	const fetchResponse = await fetch(url);
-	const storedResponse = new Response(fetchResponse.clone().body, { headers: {
-		Expires: new Date(now + ttl * 1000).toUTCString(),
-	} });
-	await cache.put(url, storedResponse);
-	return fetchResponse;
 }

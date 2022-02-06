@@ -1,6 +1,13 @@
+/* global fetchModulesAndResources loadModuleCategories */
+
 $(document).ready(() => {
-	loadCategories('module_categories.json');
 	resizeVideo();
+	Promise.all([
+		fetchModulesAndResources(),
+		fetch('module_categories.json').then(r => r.json()),
+	]).then(([, categories]) => {
+		loadModuleCategories(document.getElementById('browse'), categories.module_categories);
+	});
 });
 
 function resizeVideo() {

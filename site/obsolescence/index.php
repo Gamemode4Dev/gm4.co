@@ -29,6 +29,7 @@ gtag('config', 'UA-63061711-1');
 <title>Gamemode 4: Obsolescence</title>
 <script src="https://www.gm4.co/includes/jquery-3.6.0.min.js"></script>
 <script src="../includes/tracks.js?hash=<?php echo hash_file("crc32","../includes/tracks.js"); ?>"></script>
+<script src="../includes/module.js?hash=<?php echo hash_file("crc32","../includes/module.js"); ?>"></script>
 <script src="obsolescence.js?hash=<?php echo hash_file("crc32","obsolescence.js"); ?>"></script>
 </head>
 <body class="light">
