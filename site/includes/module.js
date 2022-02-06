@@ -83,11 +83,14 @@ function createPromoLinkContainer(moduleId) {
 	promoLinkContainer.classList.add('horizontalSplitDisplay');
 	const mod = modules.get(moduleId);
 	if (mod.important_note) {
-		const el = createSquircle(WARNING_ICON, 'Note', '#');
+		const el = createSquircle(WARNING_ICON, 'Note', true);
 		el.classList.add('promoLink');
 		el.id = 'importantNoteLink';
 		el.addEventListener('click', (evt) => {
-			el.querySelectorAll('.popup').forEach(e => e.remove());
+			if (el.querySelector('.popup')) {
+				el.querySelector('.popup').remove();
+				return;
+			}
 			evt.stopPropagation();
 			document.body.addEventListener('click', () => {
 				el.querySelectorAll('.popup').forEach(e => e.remove());
@@ -120,17 +123,22 @@ function createPromoLinkContainer(moduleId) {
  * Creates a squircle link from the supplied image and with a link to the supplied link.
  * @param {string} image An img to display on the button as an html tag
  * @param {string} text The text to display on the button
- * @param {string} target The site to link to
+ * @param {string | true} target The site to link to
  */
 function createSquircle(image, text, target) {
 	const el = document.createElement('a');
 	el.classList.add('noselect', 'squircleLink');
 
 	if (target) {
-		el.href = target;
-	}
-	if (target.startsWith('https://')) {
-		el.target = '_blank';
+		if (typeof target === 'string') {
+			el.href = target;
+			if (target.startsWith('https://')) {
+				el.target = '_blank';
+				el.rel = 'noreferrer';
+			}
+		}
+	} else {
+		el.classList.add('noHover');
 	}
 	el.insertAdjacentHTML('afterbegin', image);
 	el.insertAdjacentText('beforeend', text);
@@ -205,6 +213,10 @@ function createModuleTrack(version, moduleIds, onDownloadAll) {
 	const trackContainer = document.createElement('div');
 	trackContainer.classList.add('trackContainer');
 	moduleIds.forEach(moduleId => {
+		if (!modules.has(moduleId)) {
+			console.warn(`Module ${moduleId} does not exits!`);
+			return;
+		}
 		const item = createModuleCard(moduleId);
 		item.addEventListener('click', () => {
 			if (!item.classList.contains('selected')) {
@@ -314,7 +326,6 @@ async function createPreview(moduleId, onDownload) {
  */
 function fetchModulePromo(moduleId) {
 	const mod = modules.get(moduleId);
-	console.log(moduleId, mod);
 	if (mod.promo) {
 		return new Promise(res => res(mod.promo));
 	}
@@ -339,6 +350,11 @@ function createModulePromo(moduleId) {
 			const img = document.createElement('img');
 			img.src = getModuleIconUrl(moduleId);
 			img.alt = `${modules.get(moduleId).name}'s Logo`;
+			const iconCredit = (modules.get(moduleId).credits['Icon Design'] ?? [])
+				.map(c => c.name).join(', ');
+			if (iconCredit) {
+				img.title = `(credit: ${iconCredit})`;
+			}
 			return img;
 		}
 		if (promoImages.length < 4) {

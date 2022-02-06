@@ -201,7 +201,11 @@ a:visited {
   position: relative;
 }
 
-.squircleLink[href]:hover {
+.squircleLink:not(.noHover) {
+  cursor: pointer;
+}
+
+.squircleLink:not(.noHover):hover {
   box-shadow: inset 0rem 10rem rgba(0,0,0,0.1);
   border-radius: 0.5rem;
 }

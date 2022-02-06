@@ -20,7 +20,6 @@ window.addEventListener('DOMContentLoaded', () => {
 		.then(() => createModulePromo(loadedModuleId))
 		.then((promo) => {
 			const mod = modules.get(loadedModuleId);
-			console.log(mod);
 			document.title = `${mod.name} - Gamemode 4`;
 			document.getElementById('moduleIcon').append(promo);
 			document.getElementById('moduleDescription').textContent = mod.description;

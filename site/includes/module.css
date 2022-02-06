@@ -213,7 +213,6 @@ section.changingStep {
 
 .selectedVersion {
 	background-color: var(--main-accent-color);
-	color: #1f2122;
 }
 
 .trackSection {
