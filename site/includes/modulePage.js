@@ -66,7 +66,7 @@ window.addEventListener('DOMContentLoaded', () => {
 			div.append(error);
 			if (!modules.has(loadedModuleId)) {
 				error.textContent = 'Sorry, this module doesn\'t exits!';
-				const browseButton = createSquircle('', 'Browse our modules instead', 'https://gm4.co/#browse');
+				const browseButton = createSquircle('', 'Browse our modules instead', '/#browse');
 				browseButton.classList.add('browseButton');
 				div.append(browseButton);
 			}

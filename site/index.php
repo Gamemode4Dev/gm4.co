@@ -30,13 +30,13 @@ gtag('config', 'UA-63061711-1');
 <meta property="og:image:width" content="256">
 <meta property="og:image:height" content="256">
 
-<link rel="icon" type="image/svg" href="images/logo/logo_clear.svg" sizes="any">
-<link rel="stylesheet" href="includes/homepage.css?hash=<?php echo hash_file("crc32","includes/homepage.css"); ?>" />
+<link rel="icon" type="image/svg" href="/images/logo/logo_clear.svg" sizes="any">
+<link rel="stylesheet" href="/includes/homepage.css?hash=<?php echo hash_file("crc32", __DIR__ . "/includes/homepage.css"); ?>" />
 <title>Gamemode 4</title>
 <script src="https://www.gm4.co/includes/jquery-3.6.0.min.js"></script>
-<script src="includes/tracks.js?hash=<?php echo hash_file("crc32","includes/tracks.js"); ?>"></script>
-<script src="includes/module.js?hash=<?php echo hash_file("crc32","includes/module.js"); ?>"></script>
-<script src="includes/homepage.js?hash=<?php echo hash_file("crc32","includes/homepage.js"); ?>"></script>
+<script src="/includes/tracks.js?hash=<?php echo hash_file("crc32", __DIR__ . "/includes/tracks.js"); ?>"></script>
+<script src="/includes/module.js?hash=<?php echo hash_file("crc32", __DIR__ . "/includes/module.js"); ?>"></script>
+<script src="/includes/homepage.js?hash=<?php echo hash_file("crc32", __DIR__ . "/includes/homepage.js"); ?>"></script>
 </head>
 <body class="light">
 <?php include 'includes/header.php';?>
