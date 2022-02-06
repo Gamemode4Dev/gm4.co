@@ -3,32 +3,34 @@ const MODULE_SOURCES = [
 		type: 'datapack',
 		url: 'https://raw.githubusercontent.com/Gamemode4Dev/GM4_Datapacks',
 		versions: [
-			{ id: '1.18', branch: 'master' },
-			{ id: '1.17', branch: 'ver/1.17' },
-			{ id: '1.16', branch: 'ver/1.16' },
-			{ id: '1.15', branch: 'ver/1.15' },
-			{ id: '1.14', branch: 'ver/1.14' },
-			{ id: '1.13', branch: 'ver/1.13' },
+			{ id: '1.18', name: 'Minecraft Java 1.18', branch: 'master' },
+			{ id: '1.17', name: 'Minecraft Java 1.17', branch: 'ver/1.17' },
+			{ id: '1.16', name: 'Minecraft Java 1.16', branch: 'ver/1.16' },
+			{ id: '1.15', name: 'Minecraft Java 1.15', branch: 'ver/1.15' },
+			{ id: '1.14', name: 'Minecraft Java 1.14', branch: 'ver/1.14' },
+			{ id: '1.13', name: 'Minecraft Java 1.13', branch: 'ver/1.13' },
 		],
 	},
 	{
 		type: 'resourcepack',
 		url: 'https://raw.githubusercontent.com/Gamemode4Dev/GM4_Resources',
 		versions: [
-			{ id: '1.18', branch: 'master' },
+			{ id: '1.18', name: 'Minecraft Java 1.18', branch: 'master' },
 		],
 	}
 ];
-const LATEST_VERSION = MODULE_SOURCES[0].versions[0];
+const LATEST_VERSION = MODULE_SOURCES[0].versions[0].id;
 
 const OLD_MODULES = new Set(['bat_grenades', 'enderman_support_class', 'weighted_armour', 'undead_players', 'potion_swords', 'ink_spitting_squid', 'better_fire', 'desire_lines', 'vertical_rails', 'custom_crafters', 'record_crafting', 'standard_crafting', 'heart_canisters', 'master_crafting', 'sunken_treasure', 'better_armour_stands', 'liquid_tanks', 'lightning_rods', 'enchantment_extractors', 'trapped_signs', 'block_compressors', 'speed_paths', 'ender_hoppers', 'zauber_cauldrons', 'sweethearts', 'standard_liquids', 'potion_liquids', 'particles_pack', 'poses_pack', 'ender_hoppers', 'tnt_landmines', 'xp_storage', 'disassemblers', 'blast_furnaces', 'enchantment_extractors', 'boots_of_ostara', 'cooler_caves', 'dangerous_dungeons', 'tower_structures', 'spawner_minecarts', 'pig_tractors'])
 
-const DOWNLOAD_ICON = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="24" height="24"><path fill-rule="evenodd" d="M7.47 10.78a.75.75 0 001.06 0l3.75-3.75a.75.75 0 00-1.06-1.06L8.75 8.44V1.75a.75.75 0 00-1.5 0v6.69L4.78 5.97a.75.75 0 00-1.06 1.06l3.75 3.75zM3.75 13a.75.75 0 000 1.5h8.5a.75.75 0 000-1.5h-8.5z"></path></svg>';
+const DOWNLOAD_ICON = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="24" height="24"><path fill-rule="evenodd" d="M7.47 10.78a.75.75 0 001.06 0l3.75-3.75a.75.75 0 00-1.06-1.06L8.75 8.44V1.75a.75.75 0 00-1.5 0v6.69L4.78 5.97a.75.75 0 00-1.06 1.06l3.75 3.75zM3.75 13a.75.75 0 000 1.5h8.5a.75.75 0 000-1.5h-8.5z" fill="var(--main-text-color)"></path></svg>';
 const WARNING_ICON = '<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="var(--main-text-color)" class="bi bi-exclamation-circle" viewBox="0 0 16 16"><path d ="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"></path><path d="M7.002 11a1 1 0 1 1 2 0 1 1 0 0 1-2 0zM7.1 4.995a.905.905 0 1 1 1.8 0l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 4.995z"></path></svg >';
+const RIGHT_ARROW_ICON = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M102.4 51.8L154.1 0l255.5 256h0 0L154.1 512l-51.7-51.8L306.1 256z" fill="var(--main-text-color)" /></svg>'
 const WIKI_ICON = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 878.79 878.79"><defs><clipPath id="A"><path d="M140.32 140.14h603.89v603.89H140.32z" fill="none"/></clipPath><clipPath id="B"><path d="M165.29 164.35h555.75V720.1H165.29z" fill="none"/></clipPath></defs><g clip-path="url(#A)"><g clip-path="url(#A)"><g opacity="0"><g clip-path="url(#B)"><rect x="165.29" y="164.35" width="555.75" height="555.75" rx="48.1" fill="var(--main-text-color)"/></g></g><g fill="var(--main-text-color)"><rect x="241" y="240.15" width="100.01" height="100.01" rx="13.74"/><rect x="392.16" y="240.15" width="100.01" height="100.01" rx="13.74"/><rect x="543.33" y="240.15" width="100.01" height="100.01" rx="13.74"/><rect x="241" y="391.54" width="100.01" height="100.01" rx="13.74"/><rect x="393.16" y="391.54" width="100.01" height="100.01" rx="13.74"/><rect x="543.33" y="391.54" width="100.01" height="100.01" rx="13.74"/><rect x="241" y="542.94" width="100.01" height="100.01" rx="13.74"/><rect x="392.16" y="542.94" width="100.01" height="100.01" rx="13.74"/><rect x="543.33" y="542.94" width="100.01" height="100.01" rx="13.74"/></g></g></g><path d="M223.71 188.4h105.51a10.3 10.3 0 0 0 10.31-10.31v-27.48a10.31 10.31 0 0 0-10.31-10.31H213.39a72.24 72.24 0 0 0-72.15 72.15v449.24a82.46 82.46 0 0 0 82.47 82.46h105.51a10.3 10.3 0 0 0 10.31-10.31v-27.48a10.31 10.31 0 0 0-10.31-10.31H223.71a34.36 34.36 0 0 1-34.37-34.36V222.77a34.37 34.37 0 0 1 34.37-34.37zm438.92-48.1h-109a10.32 10.32 0 0 0-10.31 10.31v27.48a10.31 10.31 0 0 0 10.31 10.31h109A34.36 34.36 0 0 1 697 222.77v438.92a34.36 34.36 0 0 1-34.36 34.36h-109a10.32 10.32 0 0 0-10.31 10.31v27.48a10.31 10.31 0 0 0 10.31 10.31h109a82.46 82.46 0 0 0 82.46-82.46V222.77a82.46 82.46 0 0 0-82.47-82.47z" fill="var(--main-text-color)"/></svg>';
 const YOUTUBE_ICON = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 71.412 50" width="24" height="24"><mask id="mask"><rect id="bg" x="0" y="0" width="100%" height="100%" fill="white"/><path d="M47.176 25L28.588 14.294v21.412z" fill="black"/></mask><path d="M69.941 7.824a8.95 8.95 0 0 0-6.294-6.294C58.059 0 35.706 0 35.706 0S13.353 0 7.765 1.471c-3 .824-5.471 3.294-6.294 6.353C0 13.412 0 25 0 25s0 11.647 1.471 17.176a8.95 8.95 0 0 0 6.294 6.294C13.412 50 35.706 50 35.706 50s22.353 0 27.941-1.471a8.95 8.95 0 0 0 6.294-6.294c1.471-5.588 1.471-17.176 1.471-17.176s.059-11.647-1.471-17.235z" fill="var(--main-text-color)" mask="url(#mask)"/></svg>';
 
 let modules = new Map();
+let selectedVersion = LATEST_VERSION;
 
 /**
  * Fetch modules from the datapacks and resourcepacks repos.
@@ -224,10 +226,13 @@ function createModuleTrack(version, moduleIds, onDownloadAll) {
  */
 function createModuleCard(moduleId) {
 	const card = document.createElement('div');
-	card.classList.add('trackItem', 'moduleCard');
+	card.classList.add('trackItem', 'moduleCard', 'noselect');
 	const img = document.createElement('img');
 	img.src = getModuleIconUrl(moduleId);
-	img.alt = `${modules.get(moduleId).name}'s Logo`
+	img.alt = `${modules.get(moduleId).name}'s Logo`;
+	img.addEventListener('error', () => {
+		img.src = '/modules/media/placeholder.png';
+	});
 	card.append(img);
 	const cardName = document.createElement('span');
 	cardName.classList.add('cardName');
@@ -264,11 +269,16 @@ async function createPreview(moduleId, onDownload) {
 	previewInfo.insertAdjacentHTML('beforeend', `<p>${mod.description}</p>`)
 	previewInfo.classList.add('previewInfo')
 	const downloadButton = createVersionButton(selectedVersion, moduleId, `Download for Java ${selectedVersion}`)
+	downloadButton.classList.add('datapackLink')
 	if (onDownload) downloadButton.addEventListener('click', onDownload)
 	previewInfo.append(downloadButton)
-	previewInfo.insertAdjacentHTML('beforeend', `<a class="squircleLink moreLink" href="https://www.gm4.co/modules/${moduleId.replace(/gm4_/, '').replaceAll("_", "-")}"><img src="https://gm4.co/images/rightArrow.svg" alt="Info icon">More Downloads & Info</a>`)
+	const moreButton = createSquircle(RIGHT_ARROW_ICON, 'More Downloads & Info', `/modules/${moduleId.replace(/gm4_/, '').replaceAll("_", "-")}`)
+	moreButton.classList.add('moreLink')
+	previewInfo.append(moreButton)
 	if (mod.wiki_link) {
-		previewInfo.insertAdjacentHTML('beforeend', `<a class="squircleLink wikiLink" href="${mod.wiki_link}" target="_blank"><img src="https://gm4.co/images/wiki.svg" alt="Wiki icon">Read about this on the Wiki</a>`)
+		const wikiButton = createSquircle(WIKI_ICON, 'Read about this on the Wiki', mod.wiki_link)
+		wikiButton.classList.add('wikiLink')
+		previewInfo.append(wikiButton)
 	}
 	preview.append(previewInfo)
 

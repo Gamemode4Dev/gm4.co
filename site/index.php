@@ -37,6 +37,7 @@ gtag('config', 'UA-63061711-1');
 <body class="light">
 <?php include 'includes/header.php';?>
 <script src="includes/tracks.js?hash=<?php echo hash_file("crc32","includes/tracks.js"); ?>"></script>
+<script src="includes/module.js?hash=<?php echo hash_file("crc32","includes/module.js"); ?>"></script>
 <script src="includes/homepage.js?hash=<?php echo hash_file("crc32","includes/homepage.js"); ?>"></script>
 <div class="slideshow track">
   <div class="trackButton trackButtonLeft"></div>
@@ -69,14 +70,7 @@ gtag('config', 'UA-63061711-1');
   <a href="#modules" class="moduleNavButton noselect">All Modules</a>
 </div>
 <div id="browse" class="moduleView active"></div>
-<div id="modules" class="moduleView">
-  <div class="moduleFilter">
-    <select id="versionSelect" onchange="versionView()">
-      <option value="loading">Loading...</option>
-    </select><label for="versionSelect" style="display:none">Select Version</label>
-    <input id="textSearch" type="text" placeholder="search..." onkeyup="textSearch()"/><label for="textSearch" style="display:none">Search</label>
-  </div>
-</div>
+<div id="modules" class="moduleView"></div>
 <iframe name='download_frame' style='display:none;'></iframe>
 <?php include 'includes/footer.php';?>
 </body>

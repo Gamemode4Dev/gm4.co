@@ -231,7 +231,7 @@ h2{
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border: 2px solid var(--main-bg-color);
+  border: 2px solid var(--track-bg, var(--main-bg-color));
   cursor: pointer;
   border-radius: 10%;
 }
@@ -310,66 +310,6 @@ h2{
   padding: 6px 12px;
   width: 233px;
   margin: 24px 2px 12px;
-}
-
-select.textSpace option {
-  background: var(--main-bg-color);
-  color: var(--main-text-color);
-}
-
-.a-zCard {
-  position: relative;
-  background: linear-gradient(to right bottom, var(--modulecard-bg-top) 50%, var(--modulecard-bg-bottom) 50%);
-  height: 331px;
-  margin-top: 3px;
-  width: 233px;
-  overflow: hidden;
-  display: inline-block;
-  margin-left: 5px;
-  margin-right: 5px;
-  transition: 0.1s;
-  cursor: pointer;
-  border-radius: 20px;
-}
-
-.a-zCard:hover {
-  box-shadow: inset 0px 0px 48px -8px rgba(0, 0, 0, 0.39);
-}
-
-.a-zCard .cardName {
-  background-color: var(--modulename-bg);
-  color: var(--modulename-color);
-  position: absolute;
-  width: 100%;
-  bottom: 0px;
-  left: 0px;
-  padding: 5px;
-  text-align: center;
-  text-transform: capitalize;
-}
-
-.a-zCard img {
-  position: absolute;
-  left: 41px;
-  top: calc(50% - 70px);
-  border-radius: 20px;
-  transition: 0.1s;
-  width: 150px;
-  height: 150px;
-}
-
-.a-zCard:hover img {
-  transform: translateX(-3px);
-  transform: translateY(-3px);
-  transform: scale(1.03);
-}
-
-.moduleCardbg {
-  filter: blur(4px);
-  -webkit-filter: blur(4px);
-  top: 0px !important;
-  left: 0px !important;
-  border-radius: 0% !important;
 }
 
 /* Preview */

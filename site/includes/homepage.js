@@ -2,55 +2,69 @@
 JS for the module browse page
 */
 
-$(document).ready(function onload() {
-  $.ajax({url:"images/slideshow/slides.json"}).done(function(data) {
-    for (const slide of data.slides) {
-      $(".slideshow > .trackContainer").append(`<${slide.link ? `a href=${slide.link}` : `div`} data-bg="images/slideshow/${slide.background_image}" class="lazyload trackItem ${slide.text.position || "bottom-left"} ${slide.darken ? "darken" : ""}" style="background-image:url(images/slideshow/${slide.low_resolution_background_image});">${slide.text ? `<h2>${slide.text.header}</h2><p>${slide.text.paragraph}</p>` : ''}${slide.link ? `</a>` : `</div>`}`)
+window.addEventListener('DOMContentLoaded', () => {
+  Promise.all([
+    fetchModulesAndResources(),
+    fetch('/images/slideshow/slides.json').then(r => r.json()),
+    fetch('/modules/module_categories.json').then(r => r.json()),
+  ])
+  .then(async ([modules, slideshow, categories]) => {
+
+    // Header slideshow
+    for (const slide of slideshow.slides) {
+      $(".slideshow > .trackContainer").append(`<${slide.link ? `a href=${slide.link}` : `div`} data-bg="images/slideshow/${slide.background_image}" class="lazyload trackItem ${slide.text.position || "bottom-left"} ${slide.darken ? "darken" : ""}" style="background-image:url(images/slideshow/${slide.low_resolution_background_image});">${slide.text ? `<h2>${slide.text.header}</h2><p>${slide.text.paragraph}</p>` : ''}${slide.link ? `</a>` : `</div>`}`);
     }
     initTrack($(".slideshow"), 8000);
     //scale up lazyloaded low res background images (such as the slideshow)
     document.addEventListener('lazybeforeunveil', function(e){
       var bg = e.target.getAttribute('data-bg');
       if(bg){
-          e.target.style.backgroundImage = 'url(' + bg + ')';
+        e.target.style.backgroundImage = 'url(' + bg + ')';
       }
     });
-  });
-  loadCategories("modules/module_categories.json");
-  $.ajax({url:"https://gm4.co/modules/moduleListAToZ.php"}).done(function(data) {
-    const allModules = JSON.parse(data);
-    const allModuleNamesAlphabetized = Object.keys(allModules)
-      .map(name => ({ name, ...allModules[name] }))
-      .sort((a, b) => a.name.localeCompare(b.name))
-    const versions = new Set();
-    for (const module of allModuleNamesAlphabetized) {
-      versionclass = "";
-      for (const version of module.versions) {
-        versions.add(version);
-        versionclass += "version_" + version.replaceAll(".","_") + " ";
+
+    // Browse tab
+    Promise.all(categories.module_categories.map(category => {
+      if (category.populate_from) {
+        return fetch(category.populate_from).then(r => r.json())
+          .then(e => e.slice(0, category.limit));
       }
-      const latestVersion = module.versions.sort((a, b) => b - a)[0]
-      $("#modules").append(`<a href="https://gm4.co/modules/${module.id.replaceAll("_","-")}"><div class="moduleCard noselect ${versionclass}"><img data-src="${get_module_icon(module.id, latestVersion)}" onerror="image_error(this)" alt="Data pack icon" class="lazyload"/><span class="cardName">${module.name}</span></div></a>`);
-    }
-    $("#versionSelect").empty();
-    for (const version of [...versions].sort((a, b) => b - a)) {
-      $("#versionSelect").append(`<option value="${version}">Minecraft Java ${version}</option>`);
-    }
-    $("#versionSelect").append("<option value='older'>Earlier Versions...</option>");
-    versionView();
-  });
+      if (category.order === 'shuffled' || category.order?.mode === 'shuffled') {
+        category.modules = shuffleArray(category.modules, category.order.from);
+      }
+      return new Promise(res => res(category.modules))
+    })).then(populatedCategories => {
+      populatedCategories.forEach((category, i) => {
+        const div = document.createElement('div');
+        const title = categories.module_categories[i].title;
+        div.insertAdjacentHTML('afterbegin', `<h2 class="categoryTitle">${title} <span class="categoryLengthText">(${category.length})</span></h2>`);
+        const track = createModuleTrack(LATEST_VERSION, category.map(id => `gm4_${id}`));
+        track.querySelector('.trackContainer').insertAdjacentHTML('beforeend', '<div class="trackItem moduleCard trackEndItem noselect"><img width="100%" height="100%" src="/images/enderpuff_by_qbert.png" title="End of results. Artwork by Qbert" alt="End of data pack results"/><span class="cardName">You\'ve reached the end</span></div>');
+        div.append(track);
+        $("#browse").append(div);
+        initTrack($(track));
+      });
+    });
 
+    // All Modules tab
+    const moduleFilter = createModuleFilter();
+    document.getElementById('modules').append(moduleFilter);
 
-  console.log("GM4/Github sync. Reading git repo...")
-  $.ajax({
-    url:"modules/createLocalGitCopy.php",
-    success: function(data){
-      console.log("Response: " + data);
-    },
-    error: function(){
-      console.log("Failed to talk to Gamemode 4...");
-    }
-  });
+    [...modules.values()]
+      .filter(mod => mod.type === 'datapack')
+      .sort((a, b) => a.name.localeCompare(b.name))
+      .forEach(mod => {
+        const moduleLink = document.createElement('a');
+        if (!mod.versions.includes(LATEST_VERSION)) {
+          moduleLink.classList.add('wrongVersion');
+        }
+        moduleLink.setAttribute('data-module', mod.id)
+        moduleLink.href = `/modules/${mod.id.replace(/^gm4_/, '').replace(/_/g, '-')}`;
+        const moduleCard = createModuleCard(mod.id);
+        moduleLink.append(moduleCard);
+        document.getElementById('modules').append(moduleLink);
+      });
+  })
 })
 
 window.addEventListener('popstate', function reload() {
@@ -60,24 +74,44 @@ window.addEventListener('popstate', function reload() {
   $(location.hash).addClass("active");
 })
 
+function createModuleFilter() {
+  const moduleFilter = document.createElement('div');
+  moduleFilter.classList.add('moduleFilter');
 
-function versionView(){
-  if($("#versionSelect").val() == "older"){
-    window.location="https://gm4.co/old-modules/";
+  const filterModules = (name, predicate) => {
+    document.querySelectorAll('[data-module]').forEach(e => {
+      const mod = modules.get(e.getAttribute('data-module'));
+      e.classList.toggle(name, !predicate(mod));
+    });
   }
-  else{
-    version = "version_" + $("#versionSelect").val().replaceAll(".","_");
-    $("#modules").find(".moduleCard").hide();
-    $("#modules").find("." + version).show();
-  }
-}
 
-function textSearch(){
-  searchString = $("#textSearch").val().toLowerCase();
-  versionView();
-  $("#modules").find(".cardName").each(function(){
-    if($(this).html().toLowerCase().indexOf(searchString) == -1){
-      $(this).parent().hide();
+  const versionSelect = document.createElement('select');
+  [...MODULE_SOURCES[0].versions, { id: 'older', name: 'Earlier Versions...' }].forEach(version => {
+    const option = document.createElement('option')
+    option.value = version.id;
+    option.textContent = version.name;
+    versionSelect.append(option);
+  });
+  versionSelect.addEventListener('change', () => {
+    if (versionSelect.value === 'older') {
+      window.location = '/old-modules';
+    } else {
+      filterModules('wrongVersion', mod => mod.versions.includes(versionSelect.value))
     }
   });
+  moduleFilter.append(versionSelect);
+
+  const textSearch = document.createElement('input');
+  textSearch.placeholder = 'Search...';
+  textSearch.addEventListener('keyup', () => {
+    const filter = textSearch.value.toLowerCase();
+    filterModules('wrongFilter', mod => mod.name.toLowerCase().includes(filter));
+  });
+  moduleFilter.append(textSearch);
+
+  return moduleFilter;
+}
+
+function shuffleArray(arr, shuffleFrom = 0) {
+  return arr.slice(0,shuffleFrom).concat((arr.slice(shuffleFrom)).sort(() => Math.random() - 0.5));
 }

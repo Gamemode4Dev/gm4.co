@@ -29,9 +29,9 @@ gtag('config', 'UA-63061711-1');
 <link rel = "stylesheet" href="includes/module.css" />
 <link rel = "stylesheet" href="includes/homepage.css" />
 <script src="https://www.gm4.co/includes/jquery-3.6.0.min.js"></script>
-<script src="includes/tracks.js?hash=<?php echo hash_file("crc32","includes/tracks.css"); ?>"></script>
-<script src="includes/module.js?hash=<?php echo hash_file("crc32","includes/module.css"); ?>"></script>
-<script src="includes/modulePage.js?hash=<?php echo hash_file("crc32","includes/modulePage.css"); ?>"></script>
+<script src="includes/tracks.js?hash=<?php echo hash_file("crc32","includes/tracks.js"); ?>"></script>
+<script src="includes/module.js?hash=<?php echo hash_file("crc32","includes/module.js"); ?>"></script>
+<script src="includes/modulePage.js?hash=<?php echo hash_file("crc32","includes/modulePage.js"); ?>"></script>
 <title>ModuleName - Gamemode 4 Data Pack</title>
 </head>
 <body class="light">

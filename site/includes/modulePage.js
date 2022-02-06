@@ -1,5 +1,4 @@
 
-let selectedVersion = LATEST_VERSION;
 let currentStep = 'download';
 
 // let loadedModuleId = window.location.pathname.replace(/\/modules\//, '')
