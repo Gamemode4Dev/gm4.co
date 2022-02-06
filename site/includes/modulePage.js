@@ -58,7 +58,8 @@ window.addEventListener('DOMContentLoaded', () => {
 			creditsSection.append(creditsFrame);
 			document.querySelector('main').append(creditsSection);
 		})
-		.catch(() => {
+		.catch(e => {
+			console.error(e);
 			const div = document.createElement('div');
 			div.classList.add('moduleError');
 			const error = document.createElement('h2');

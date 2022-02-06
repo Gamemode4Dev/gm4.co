@@ -30,7 +30,8 @@ const WIKI_ICON = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 878.79 8
 const YOUTUBE_ICON = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 71.412 50" width="24" height="24"><mask id="mask"><rect id="bg" x="0" y="0" width="100%" height="100%" fill="white"/><path d="M47.176 25L28.588 14.294v21.412z" fill="black"/></mask><path d="M69.941 7.824a8.95 8.95 0 0 0-6.294-6.294C58.059 0 35.706 0 35.706 0S13.353 0 7.765 1.471c-3 .824-5.471 3.294-6.294 6.353C0 13.412 0 25 0 25s0 11.647 1.471 17.176a8.95 8.95 0 0 0 6.294 6.294C13.412 50 35.706 50 35.706 50s22.353 0 27.941-1.471a8.95 8.95 0 0 0 6.294-6.294c1.471-5.588 1.471-17.176 1.471-17.176s.059-11.647-1.471-17.235z" fill="var(--main-text-color)" mask="url(#mask)"/></svg>';
 
 const modules = new Map();
-const selectedVersion = LATEST_VERSION;
+// eslint-disable-next-line prefer-const
+let selectedVersion = LATEST_VERSION;
 
 /**
  * Fetch modules from the datapacks and resourcepacks repos.
@@ -127,6 +128,9 @@ function createSquircle(image, text, target) {
 
 	if (target) {
 		el.href = target;
+	}
+	if (target.startsWith('https://')) {
+		el.target = '_blank';
 	}
 	el.insertAdjacentHTML('afterbegin', image);
 	el.insertAdjacentText('beforeend', text);
@@ -241,6 +245,8 @@ function createModuleCard(moduleId) {
 	const img = document.createElement('img');
 	img.src = getModuleIconUrl(moduleId);
 	img.alt = `${modules.get(moduleId).name}'s Logo`;
+	img.setAttribute('width', '128');
+	img.setAttribute('height', '128');
 	img.addEventListener('error', () => {
 		img.src = '/modules/media/placeholder.png';
 	});
@@ -290,6 +296,11 @@ async function createPreview(moduleId, onDownload) {
 		const wikiButton = createSquircle(WIKI_ICON, 'Read about this on the Wiki', mod.wiki_link);
 		wikiButton.classList.add('wikiLink');
 		previewInfo.append(wikiButton);
+	}
+	if (mod.video_link) {
+		const videoButton = createSquircle(YOUTUBE_ICON, 'Watch a video about this', mod.video_link);
+		videoButton.classList.add('videoLink');
+		previewInfo.append(videoButton);
 	}
 	preview.append(previewInfo);
 

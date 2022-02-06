@@ -289,7 +289,7 @@ CSS for the module browse page
   border-radius: 10%;
   transition: transform 0.1s;
   height: calc(var(--item-width) * 0.75);
-  width:auto;
+  width: auto;
   flex-shrink: 0;
 }
 
@@ -308,8 +308,6 @@ CSS for the module browse page
   font-weight: bold;
   letter-spacing: 0.5px;
   text-align: center;
-  text-transform: capitalize;
-  color: var(--modulename-color);
   filter: drop-shadow(0 0 12px black);
 }
 
@@ -344,6 +342,7 @@ CSS for the module browse page
   flex-basis: 100%;
   display: flex;
   flex-wrap: wrap;
+  margin: 24px 0 12px;
 }
 
 .moduleFilter > * {
@@ -354,7 +353,7 @@ CSS for the module browse page
   font-size: 1.2rem;
   padding: 6px 12px;
   width: 233px;
-  margin: 24px 2px 12px;
+  margin: 2px;
 }
 
 #modules .wrongVersion,
@@ -390,15 +389,12 @@ CSS for the module browse page
 
 .previewInfo {
   flex: 0 1 50%;
+  min-width: 340px;
   max-width: 50vh;
   height: 100%;
   display: flex;
   flex-direction: column;
   margin-left: 10px;
-}
-
-.previewInfo h3 {
-  text-transform: capitalize;
 }
 
 .promoVideo {
@@ -426,12 +422,7 @@ CSS for the module browse page
   background-color: var(--main-accent-color);
 }
 
-.moreLink {
-  color: var(--main-text-color) !important;
-  background-color: var(--modulecard-bg-top);
-}
-
-.wikiLink {
+.moreLink, .wikiLink, .videoLink {
   color: var(--main-text-color) !important;
   background-color: var(--modulecard-bg-top);
 }
@@ -455,8 +446,21 @@ CSS for the module browse page
     align-items: stretch;
   }
 
+  .previewMedia {
+    min-width: unset;
+    max-width: unset;
+  }
+
   .previewInfo {
     margin-left: 0;
     margin-bottom: 10px;
+    min-width: unset;
+    max-width: calc(100vw - 2 * var(--content-spacer));
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .previewInfo .squircleLink {
+    font-size: 16px;
   }
 }

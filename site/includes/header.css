@@ -87,6 +87,18 @@
   }
 }
 
+@media screen and (max-width: 420px) {
+  * {
+    --module-cards: 2;
+  }
+}
+
+@media screen and (max-width: 256px) {
+  * {
+    --module-cards: 1;
+  }
+}
+
 .dark {
   --main-bg-color: #111111;
   --main-text-color: #DDDDDD;
