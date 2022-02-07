@@ -1,21 +1,20 @@
-<link rel="stylesheet" href="https://gm4.co/includes/header.css?hash=<?php echo hash_file("crc32","https://gm4.co/includes/header.css"); ?>" />
-<script src="https://gm4.co/includes/header.js?hash=<?php echo hash_file("crc32","https://gm4.co/includes/header.js"); ?>"></script>
-<script src="https://gm4.co/includes/lazysizes.min.js" async></script>
+<link rel="stylesheet" href="/includes/header.css?hash=<?php echo hash_file("crc32", __DIR__ . "/header.css"); ?>" />
+<script src="/includes/header.js?hash=<?php echo hash_file("crc32", __DIR__ . "/header.js"); ?>"></script>
 <header>
-  <a class="home" href="https://gm4.co/">
-    <img src="https://gm4.co/images/logo/logo_clear.svg" height="32" width="32" alt="Gamemode 4 Logo"/>
+  <a class="home" href="/">
+    <img src="/images/logo/logo_clear.svg" height="32" width="32" alt="Gamemode 4 Logo"/>
     <h1>Gamemode 4</h1>
   </a>
   <nav>
     <ul>
       <li>
-        <a href="https://gm4.co/#modules"><h1>Modules</h1></a>
+        <a href="/#modules"><h1>Modules</h1></a>
       </li>
       <li>
-        <a href="https://gm4.co/wiki" target="_blank"><h1>Wiki</h1></a>
+        <a href="/wiki" target="_blank" rel="noreferrer"><h1>Wiki</h1></a>
       </li>
       <li>
-        <a href="https://gm4.co/server"><h1>Server</h1></a>
+        <a href="/server"><h1>Server</h1></a>
       </li>
     </ul>
   </nav>

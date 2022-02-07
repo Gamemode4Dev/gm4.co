@@ -1,0 +1,96 @@
+{
+  "env": {
+    "es2021": true,
+    "browser": true,
+    "jquery": true
+  },
+  "extends": [
+    "eslint:recommended"
+  ],
+  "ignorePatterns": [
+    "*.min.js"
+  ],
+  "rules": {
+    "indent": [
+      "error",
+      "tab",
+      {
+        "SwitchCase": 1
+      }
+    ],
+    "max-len": [
+      "error",
+      {
+        "code": 120,
+        "ignoreComments": true,
+        "ignoreTrailingComments": true,
+        "ignoreUrls": true,
+        "ignoreStrings": true,
+        "ignoreTemplateLiterals": true,
+        "ignoreRegExpLiterals": true
+      }
+    ],
+    "quotes": [
+      "error",
+      "single"
+    ],
+    "comma-dangle": [
+      "error",
+      "always-multiline"
+    ],
+    "semi": [
+      "error",
+      "always"
+    ],
+    "brace-style": [
+      "error",
+      "1tbs",
+      {
+        "allowSingleLine": true
+      }
+    ],
+    "comma-spacing": "error",
+    "comma-style": "error",
+    "curly": [
+      "error",
+      "multi-line",
+      "consistent"
+    ],
+    "dot-location": [
+      "error",
+      "property"
+    ],
+    "max-nested-callbacks": [
+      "error",
+      {
+        "max": 4
+      }
+    ],
+    "max-statements-per-line": [
+      "error",
+      {
+        "max": 2
+      }
+    ],
+    "no-console": "off",
+    "no-empty-function": "error",
+    "no-floating-decimal": "error",
+    "no-lonely-if": "error",
+    "no-multi-spaces": "error",
+    "no-trailing-spaces": [
+      "error"
+    ],
+    "no-var": "error",
+    "object-curly-spacing": [
+      "error",
+      "always"
+    ],
+    "prefer-const": "error",
+    "prefer-arrow-callback": "error",
+    "space-before-blocks": "error",
+    "space-in-parens": "error",
+    "space-infix-ops": "error",
+    "space-unary-ops": "error",
+    "yoda": "error"
+  }
+}

@@ -3,7 +3,7 @@
 <head>
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-63061711-1"></script>
-<script src="https://gm4.co/includes/lazysizes.min.js" async=""></script>
+<script async src="https://gm4.co/includes/lazysizes.min.js"></script>
 <script>
 window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
@@ -11,7 +11,6 @@ gtag('js', new Date());
 
 gtag('config', 'UA-63061711-1');
 </script>
-<link rel="stylesheet" href="obsolescence.css?hash=a<?php echo hash_file("crc32","obsolescence.css"); ?>" />
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#4AA0C7">
@@ -27,9 +26,15 @@ gtag('config', 'UA-63061711-1');
 
 <link rel="icon" type="image/svg" href="../images/logo/logo_clear.svg" sizes="any">
 <title>Gamemode 4: Obsolescence</title>
+<link rel="stylesheet" href="../includes/homepage.css?hash=a<?php echo hash_file("crc32","../includes/homepage.css"); ?>" />
+<link rel="stylesheet" href="obsolescence.css?hash=a<?php echo hash_file("crc32","obsolescence.css"); ?>" />
 <script src="https://www.gm4.co/includes/jquery-3.6.0.min.js"></script>
 <script src="../includes/tracks.js?hash=<?php echo hash_file("crc32","../includes/tracks.js"); ?>"></script>
+<script src="../includes/module.js?hash=<?php echo hash_file("crc32","../includes/module.js"); ?>"></script>
 <script src="obsolescence.js?hash=<?php echo hash_file("crc32","obsolescence.js"); ?>"></script>
+<script>
+	const MODULE_SOURCES = JSON.parse(`<?php echo file_get_contents('../modules/module_sources.json') ?>`)
+</script>
 </head>
 <body class="light">
 <?php include '../includes/header.php';?>

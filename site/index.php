@@ -8,6 +8,7 @@ created 19 august 2020
 <head>
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-63061711-1"></script>
+<script async src="https://gm4.co/includes/lazysizes.min.js"></script>
 <script>
 window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
@@ -29,15 +30,19 @@ gtag('config', 'UA-63061711-1');
 <meta property="og:image:width" content="256">
 <meta property="og:image:height" content="256">
 
-<link rel="icon" type="image/svg" href="images/logo/logo_clear.svg" sizes="any">
-<link rel="stylesheet" href="includes/homepage.css?hash=<?php echo hash_file("crc32","includes/homepage.css"); ?>" />
+<link rel="icon" type="image/svg" href="/images/logo/logo_clear.svg" sizes="any">
+<link rel="stylesheet" href="/includes/homepage.css?hash=<?php echo hash_file("crc32", __DIR__ . "/includes/homepage.css"); ?>" />
 <title>Gamemode 4</title>
 <script src="https://www.gm4.co/includes/jquery-3.6.0.min.js"></script>
+<script src="/includes/tracks.js?hash=<?php echo hash_file("crc32", __DIR__ . "/includes/tracks.js"); ?>"></script>
+<script src="/includes/module.js?hash=<?php echo hash_file("crc32", __DIR__ . "/includes/module.js"); ?>"></script>
+<script src="/includes/homepage.js?hash=<?php echo hash_file("crc32", __DIR__ . "/includes/homepage.js"); ?>"></script>
+<script>
+	const MODULE_SOURCES = JSON.parse(`<?php echo file_get_contents('modules/module_sources.json') ?>`)
+</script>
 </head>
 <body class="light">
 <?php include 'includes/header.php';?>
-<script src="includes/tracks.js?hash=<?php echo hash_file("crc32","includes/tracks.js"); ?>"></script>
-<script src="includes/homepage.js?hash=<?php echo hash_file("crc32","includes/homepage.js"); ?>"></script>
 <div class="slideshow track">
   <div class="trackButton trackButtonLeft"></div>
   <div class="trackButton trackButtonRight"></div>
@@ -69,14 +74,7 @@ gtag('config', 'UA-63061711-1');
   <a href="#modules" class="moduleNavButton noselect">All Modules</a>
 </div>
 <div id="browse" class="moduleView active"></div>
-<div id="modules" class="moduleView">
-  <div class="moduleFilter">
-    <select id="versionSelect" onchange="versionView()">
-      <option value="loading">Loading...</option>
-    </select><label for="versionSelect" style="display:none">Select Version</label>
-    <input id="textSearch" type="text" placeholder="search..." onkeyup="textSearch()"/><label for="textSearch" style="display:none">Search</label>
-  </div>
-</div>
+<div id="modules" class="moduleView"></div>
 <iframe name='download_frame' style='display:none;'></iframe>
 <?php include 'includes/footer.php';?>
 </body>
