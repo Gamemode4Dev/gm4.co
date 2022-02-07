@@ -35,7 +35,7 @@ function fetchModulesAndResources() {
 					modules.set(mod.id, {
 						type: source.type,
 						...mod,
-						recommends: [...mod.recommends, 'gm4_resources'],
+						recommends: mod.recommends,
 						versions: [source.version.id],
 						credits: Object.fromEntries(Object.entries(mod.credits).map(
 							([title, names]) => [title, names.map(name =>
@@ -46,6 +46,10 @@ function fetchModulesAndResources() {
 				}
 			});
 		}
+		modules.get('gm4_resource_pack').recommends.push(...[...modules.values()]
+			.filter(m => m.recommends.includes('gm4_resource_pack'))
+			.sort((a, b) => a.name.localeCompare(b.name))
+			.map(m => m.id));
 		return modules;
 	});
 }
