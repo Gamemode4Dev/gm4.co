@@ -1,10 +1,37 @@
 <?php
-	require_once __DIR__ . '/includes/loadModule.php';
-
 	// /module.php?module=apple-trees -> $module="gm4_apple_trees"
 	$module_id = "gm4_" . preg_replace("/-/","_", $_GET['module']);
 
-	["module" => $module] = load_module($module_id);
+	$sources = json_decode(file_get_contents('modules/module_sources.json'), true);
+
+	$module = NULL;
+	foreach ($sources as $source) {
+		foreach ($source["versions"] as $version) {
+			global $module;
+
+			$cache = preg_replace("/\//", "-", $source["repo"]) . "-" . $version["id"] . ".cache";
+			if (file_exists($cache) && time() - filemtime($cache) < 60 * 60 * 24) {
+				$contents = file_get_contents($cache);
+			} else {
+				$meta_url = "https://raw.githubusercontent.com/" . $source["repo"] . "/release/" . $version["id"] . "/meta.json";
+				$contents = file_get_contents($meta_url);
+				file_put_contents($cache, $contents);
+			}
+
+			$meta = json_decode($contents, true);
+			$results = array_filter($meta["modules"], function($el) {
+				global $module_id;
+				return $el["id"] == $module_id;
+			});
+			if (count($results) > 0) {
+				$module = current($results);
+				break;
+			}
+		}
+		if ($module != NULL) {
+			break;
+		}
+	}
 
 	if (!isset($module)) {
 		$module = [
