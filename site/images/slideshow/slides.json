@@ -1,6 +1,16 @@
 {
   "slides":[
     {
+      "low_resolution_background_image": "resourcepack_1.jpg",
+      "background_image": "resourcepack_1.png",
+      "text": {
+        "header": "Resource Pack",
+        "paragraph": "Get textures and models for<br>the definite Gamemode 4 experience!",
+        "position": "bottom-left"
+      },
+      "link": "https://gm4.co/modules/zauber-cauldrons"
+    },
+    {
       "low_resolution_background_image":"liquid_tanks_1.jpg",
       "background_image":"liquid_tanks_1.png",
       "text":{
