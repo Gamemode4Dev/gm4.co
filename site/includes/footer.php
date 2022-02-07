@@ -1,3 +1,4 @@
+<iframe name='download_frame' style='display:none;'></iframe>
 <footer>
   <p>
     Copyright &copy; <?php echo(date('Y')); ?> Gamemode 4<br>

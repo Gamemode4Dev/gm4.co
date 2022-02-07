@@ -75,7 +75,6 @@ gtag('config', 'UA-63061711-1');
 </div>
 <div id="browse" class="moduleView active"></div>
 <div id="modules" class="moduleView"></div>
-<iframe name='download_frame' style='display:none;'></iframe>
 <?php include 'includes/footer.php';?>
 </body>
 </html>

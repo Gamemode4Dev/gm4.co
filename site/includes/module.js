@@ -101,17 +101,18 @@ function createPromoLinkContainer(moduleId) {
  * Creates a squircle link from the supplied image and with a link to the supplied link.
  * @param {string} image An img to display on the button as an html tag
  * @param {string} text The text to display on the button
- * @param {string | true} target The site to link to
+ * @param {string | true} href The site to link to
+ * @param {string | undefined} target the target, defaults to _blank if href starts with `https://`
  */
-function createSquircle(image, text, target) {
+function createSquircle(image, text, href, target) {
 	const el = document.createElement('a');
 	el.classList.add('noselect', 'squircleLink');
 
-	if (target) {
-		if (typeof target === 'string') {
-			el.href = target;
-			if (target.startsWith('https://')) {
-				el.target = '_blank';
+	if (href) {
+		if (typeof href === 'string') {
+			el.href = href;
+			if (href.startsWith('https://')) {
+				el.target = target || '_blank';
 				el.rel = 'noreferrer';
 			}
 		}
@@ -132,7 +133,7 @@ function createSquircle(image, text, target) {
  * @returns an HTMLElement
  */
 function createVersionButton(version, moduleId, text) {
-	const el = createSquircle(DOWNLOAD_ICON, text || version, getModuleDownload(version, moduleId));
+	const el = createSquircle(DOWNLOAD_ICON, text || version, getModuleDownload(version, moduleId), 'download_frame');
 	if (version === selectedVersion) {
 		el.classList.add('selectedVersion');
 	}
