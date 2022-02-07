@@ -139,9 +139,24 @@ function createSquircle(image, text, href, target) {
  * @returns an HTMLElement
  */
 function createVersionButton(version, moduleId, text) {
-	const el = createSquircle(DOWNLOAD_ICON, text || version, getModuleDownload(version, moduleId), 'download_frame');
+	const url = getModuleDownload(version, moduleId);
+	const el = createSquircle(DOWNLOAD_ICON, text || version, url, 'download_frame');
 	if (version === selectedVersion) {
 		el.classList.add('selectedVersion');
+	}
+	// Detect Safari, because it doesn't support http-equiv=refresh
+	// see https://stackoverflow.com/a/23522755
+	if (/^((?!chrome|android).)*safari/i.test(navigator.userAgent)) {
+		el.removeAttribute('href');
+		el.addEventListener('click', () => {
+			fetch(url).then(r => r.text()).then(text => {
+				const realUrl = text.match(/https:\/\/.+\.zip/);
+				console.log(realUrl);
+				if (realUrl) {
+					location.href = realUrl[0];
+				}
+			});
+		});
 	}
 	return el;
 }
