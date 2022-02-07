@@ -1,0 +1,10 @@
+{
+    "promo_images": [
+        {
+            "type": "image",
+            "image": "resourcepack-showcase-boat.png",
+            "credit": "Bloo, JP12, kyrkis, Thanathor",
+            "alt": "A selection of items and blocks that feature custom textures."
+        }
+    ]
+}
