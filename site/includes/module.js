@@ -114,6 +114,8 @@ function createSquircle(image, text, href, target) {
 			if (href.startsWith('https://')) {
 				el.target = target || '_blank';
 				el.rel = 'noreferrer';
+			} else if (target) {
+				el.target = target;
 			}
 		}
 	} else {
@@ -384,7 +386,7 @@ function getModuleIconUrl(moduleId) {
  */
 function getModuleDownload(version, moduleId) {
 	const id = moduleId.replace(/^gm4_/, '').replace(/_/g, '-');
-	return `https://gm4.co/modules/download/${version}/${id}`;
+	return `/modules/download/${version}/${id}`;
 }
 
 /**

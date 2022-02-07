@@ -1,36 +1,16 @@
 <?php
+	require_once __DIR__ . '/includes/loadModule.php';
+
 	// /module.php?module=apple-trees -> $module="gm4_apple_trees"
 	$module_id = "gm4_" . preg_replace("/-/","_", $_GET['module']);
 
-	$sources = json_decode(file_get_contents('modules/module_sources.json'), true);
+	["module" => $module] = load_module($module_id);
 
-	$module = false;
-	foreach ($sources as $source) {
-		foreach ($source["versions"] as $version) {
-			global $module;
-
-			$cache = preg_replace("/\//", "-", $source["repo"]) . "-" . $version["id"] . ".cache";
-			if (file_exists($cache) && time() - filemtime($cache) < 60 * 60 * 24) {
-				$contents = file_get_contents($cache);
-			} else {
-				$meta_url = "https://raw.githubusercontent.com/" . $source["repo"] . "/release/" . $version["id"] . "/meta.json";
-				$contents = file_get_contents($meta_url);
-				file_put_contents($cache, $contents);
-			}
-	
-			$meta = json_decode($contents, true);
-			$results = array_filter($meta["modules"], function($el) {
-				global $module_id;
-				return $el["id"] == $module_id;
-			});
-			if (count($results) > 0) {
-				$module = current($results);
-				break;
-			}
-		}
-		if ($module != false) {
-			break;
-		}
+	if (!isset($module)) {
+		$module = [
+			"name" => "Unknown module",
+			"description" => "Sorry, this module doesn't exist!",
+		];
 	}
 
 	$module_icon = "https://raw.githubusercontent.com/Gamemode4Dev/GM4_Datapacks/master/" . $module_id . "/pack.png";
@@ -75,7 +55,7 @@ gtag('config', 'UA-63061711-1');
 <script src="/includes/modulePage.js?hash=<?php echo hash_file("crc32", __DIR__ . "/includes/modulePage.js"); ?>"></script>
 <script>
 	loadedModuleId = '<?php echo $module_id ?>';
-	const MODULE_SOURCES = JSON.parse('<?php echo json_encode($sources) ?>')
+	const MODULE_SOURCES = JSON.parse(`<?php echo file_get_contents('modules/module_sources.json') ?>`);
 </script>
 <title><?php echo $module["name"] ?> - Gamemode 4 Data Pack</title>
 </head>
