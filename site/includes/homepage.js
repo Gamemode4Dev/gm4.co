@@ -1,4 +1,4 @@
-/* global LATEST_VERSION MODULE_SOURCES modules fetchModulesAndResources initTrack createModuleCard loadModuleCategories */
+/* global MODULE_SOURCES selectedVersion modules fetchModulesAndResources initTrack createModuleCard loadModuleCategories */
 
 window.addEventListener('DOMContentLoaded', () => {
 	Promise.all([
@@ -33,7 +33,7 @@ window.addEventListener('DOMContentLoaded', () => {
 				.sort((a, b) => a.name.localeCompare(b.name))
 				.forEach(mod => {
 					const moduleLink = document.createElement('a');
-					if (!mod.versions.includes(LATEST_VERSION)) {
+					if (!mod.versions.includes(selectedVersion)) {
 						moduleLink.classList.add('wrongVersion');
 					}
 					moduleLink.setAttribute('data-module', mod.id);

@@ -32,6 +32,9 @@ gtag('config', 'UA-63061711-1');
 <script src="../includes/tracks.js?hash=<?php echo hash_file("crc32","../includes/tracks.js"); ?>"></script>
 <script src="../includes/module.js?hash=<?php echo hash_file("crc32","../includes/module.js"); ?>"></script>
 <script src="obsolescence.js?hash=<?php echo hash_file("crc32","obsolescence.js"); ?>"></script>
+<script>
+	const MODULE_SOURCES = JSON.parse(`<?php echo file_get_contents('../modules/module_sources.json') ?>`)
+</script>
 </head>
 <body class="light">
 <?php include '../includes/header.php';?>

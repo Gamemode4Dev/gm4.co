@@ -2,26 +2,33 @@
 	// /module.php?module=apple-trees -> $module="gm4_apple_trees"
 	$module_id = "gm4_" . preg_replace("/-/","_", $_GET['module']);
 
+	$sources = json_decode(file_get_contents('modules/module_sources.json'), true);
+
 	$module = false;
-	foreach (array("1.18", "1.17", "1.16", "1.15", "1.14", "1.13") as $version) {
-		global $module;
+	foreach ($sources as $source) {
+		foreach ($source["versions"] as $version) {
+			global $module;
 
-		$meta_url = "https://raw.githubusercontent.com/Gamemode4Dev/GM4_Datapacks/release/" . $version . "/meta.json";
-		$cache = "meta-" . $version . ".cache";
-		if (file_exists($cache) && time() - filemtime($cache) < 60 * 60 * 24) {
-			$contents = file_get_contents($cache);
-		} else {
-			$contents = file_get_contents($meta_url);
-			file_put_contents($cache, $contents);
+			$cache = preg_replace("/\//", "-", $source["repo"]) . "-" . $version["id"] . ".cache";
+			if (file_exists($cache) && time() - filemtime($cache) < 60 * 60 * 24) {
+				$contents = file_get_contents($cache);
+			} else {
+				$meta_url = "https://raw.githubusercontent.com/" . $source["repo"] . "/release/" . $version["id"] . "/meta.json";
+				$contents = file_get_contents($meta_url);
+				file_put_contents($cache, $contents);
+			}
+	
+			$meta = json_decode($contents, true);
+			$results = array_filter($meta["modules"], function($el) {
+				global $module_id;
+				return $el["id"] == $module_id;
+			});
+			if (count($results) > 0) {
+				$module = current($results);
+				break;
+			}
 		}
-
-		$meta = json_decode($contents, true);
-		$results = array_filter($meta["modules"], function($el) {
-			global $module_id; 
-			return $el["id"] == $module_id;
-		});
-		if (count($results) > 0) {
-			$module = current($results);
+		if ($module != false) {
 			break;
 		}
 	}
@@ -68,6 +75,7 @@ gtag('config', 'UA-63061711-1');
 <script src="/includes/modulePage.js?hash=<?php echo hash_file("crc32", __DIR__ . "/includes/modulePage.js"); ?>"></script>
 <script>
 	loadedModuleId = '<?php echo $module_id ?>';
+	const MODULE_SOURCES = JSON.parse('<?php echo json_encode($sources) ?>')
 </script>
 <title><?php echo $module["name"] ?> - Gamemode 4 Data Pack</title>
 </head>

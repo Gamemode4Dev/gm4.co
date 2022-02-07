@@ -1,27 +1,5 @@
 /* global initTrack */
-
-const MODULE_SOURCES = [
-	{
-		type: 'datapack',
-		url: 'https://raw.githubusercontent.com/Gamemode4Dev/GM4_Datapacks',
-		versions: [
-			{ id: '1.18', name: 'Minecraft Java 1.18', branch: 'master' },
-			{ id: '1.17', name: 'Minecraft Java 1.17', branch: 'ver/1.17' },
-			{ id: '1.16', name: 'Minecraft Java 1.16', branch: 'ver/1.16' },
-			{ id: '1.15', name: 'Minecraft Java 1.15', branch: 'ver/1.15' },
-			{ id: '1.14', name: 'Minecraft Java 1.14', branch: 'ver/1.14' },
-			{ id: '1.13', name: 'Minecraft Java 1.13', branch: 'ver/1.13' },
-		],
-	},
-	{
-		type: 'resourcepack',
-		url: 'https://raw.githubusercontent.com/Gamemode4Dev/GM4_Resources',
-		versions: [
-			{ id: '1.18', name: 'Minecraft Java 1.18', branch: 'master' },
-		],
-	},
-];
-const LATEST_VERSION = MODULE_SOURCES[0].versions[0].id;
+/* global MODULE_SOURCES */
 
 const DOWNLOAD_ICON = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="24" height="24"><path fill-rule="evenodd" d="M7.47 10.78a.75.75 0 001.06 0l3.75-3.75a.75.75 0 00-1.06-1.06L8.75 8.44V1.75a.75.75 0 00-1.5 0v6.69L4.78 5.97a.75.75 0 00-1.06 1.06l3.75 3.75zM3.75 13a.75.75 0 000 1.5h8.5a.75.75 0 000-1.5h-8.5z" fill="var(--main-text-color)"></path></svg>';
 const WARNING_ICON = '<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="var(--main-text-color)" class="bi bi-exclamation-circle" viewBox="0 0 16 16"><path d ="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"></path><path d="M7.002 11a1 1 0 1 1 2 0 1 1 0 0 1-2 0zM7.1 4.995a.905.905 0 1 1 1.8 0l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 4.995z"></path></svg >';
@@ -31,7 +9,7 @@ const YOUTUBE_ICON = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 71.41
 
 const modules = new Map();
 // eslint-disable-next-line prefer-const
-let selectedVersion = LATEST_VERSION;
+let selectedVersion = '1.18';
 
 /**
  * Fetch modules from the datapacks and resourcepacks repos.
@@ -39,10 +17,10 @@ let selectedVersion = LATEST_VERSION;
  */
 // eslint-disable-next-line no-unused-vars
 function fetchModulesAndResources() {
-	const flatModuleSources = MODULE_SOURCES.flatMap(({ type, url, versions }) =>
-		versions.map(version => ({ type, version, url })));
-	return Promise.all(flatModuleSources.map(async ({ type, url, version }) => {
-		const meta = await fetch(`${url}/release/${version.id}/meta.json`).then(r => r.json());
+	const flatModuleSources = MODULE_SOURCES.flatMap(({ type, repo, versions }) =>
+		versions.map(version => ({ type, version, repo })));
+	return Promise.all(flatModuleSources.map(async ({ type, repo, version }) => {
+		const meta = await fetch(`https://raw.githubusercontent.com/${repo}/release/${version.id}/meta.json`).then(r => r.json());
 		return { type, version, ...meta };
 	})).then((sources) => {
 		for (const source of sources) {
@@ -182,7 +160,7 @@ function loadModuleCategories(element, categories) {
 			const div = document.createElement('div');
 			const title = categories[i].title;
 			div.insertAdjacentHTML('afterbegin', `<h2 class="categoryTitle">${title} <span class="categoryLengthText">(${category.length})</span></h2>`);
-			const track = createModuleTrack(LATEST_VERSION, category.map(id => `gm4_${id}`));
+			const track = createModuleTrack(selectedVersion, category.map(id => `gm4_${id}`));
 			track.querySelector('.trackContainer').insertAdjacentHTML('beforeend', '<div class="trackItem moduleCard trackEndItem noselect"><img width="100%" height="100%" src="/images/enderpuff_by_qbert.png" title="End of results. Artwork by Qbert" alt="End of data pack results"/><span class="cardName">You\'ve reached the end</span></div>');
 			div.append(track);
 			element.append(div);
@@ -391,10 +369,10 @@ function createModulePromoImage(moduleId, image) {
  */
 function getModuleIconUrl(moduleId) {
 	const mod = modules.get(moduleId);
-	const repo = MODULE_SOURCES.find(s => s.type === mod.type).url;
+	const repo = MODULE_SOURCES.find(s => s.type === mod.type).repo;
 	const branch = getBranchName(mod.versions[0], mod.type);
 	const extension = mod.type === 'resourcepack' ? 'png' : 'svg';
-	return `${repo}/${branch}/${moduleId}/pack.${extension}`;
+	return `https://raw.githubusercontent.com/${repo}/${branch}/${moduleId}/pack.${extension}`;
 }
 
 /**
@@ -405,8 +383,8 @@ function getModuleIconUrl(moduleId) {
  */
 function getModuleDownload(version, moduleId) {
 	const mod = modules.get(moduleId);
-	const repo = MODULE_SOURCES.find(s => s.type === mod.type).url;
-	return `${repo}/release/${version}/${moduleId}_${version.replace('.', '_')}.zip`;
+	const repo = MODULE_SOURCES.find(s => s.type === mod.type).repo;
+	return `https://raw.githubusercontent.com/${repo}/release/${version}/${moduleId}_${version.replace('.', '_')}.zip`;
 }
 
 /**
