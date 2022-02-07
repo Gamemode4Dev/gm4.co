@@ -383,7 +383,7 @@ function getModuleIconUrl(moduleId) {
  */
 function getModuleDownload(version, moduleId) {
 	const id = moduleId.replace(/^gm4_/, '').replace(/_/g, '-');
-	return `https://gm4.co.com/modules/downloads/${version}/${id}`;
+	return `https://gm4.co/modules/downloads/${version}/${id}`;
 }
 
 /**
