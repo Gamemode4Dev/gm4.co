@@ -382,9 +382,8 @@ function getModuleIconUrl(moduleId) {
  * @returns a URL to the module zip
  */
 function getModuleDownload(version, moduleId) {
-	const mod = modules.get(moduleId);
-	const repo = MODULE_SOURCES.find(s => s.type === mod.type).repo;
-	return `https://raw.githubusercontent.com/${repo}/release/${version}/${moduleId}_${version.replace('.', '_')}.zip`;
+	const id = moduleId.replace(/^gm4_/, '').replace(/_/g, '-');
+	return `https://gm4.co.com/modules/downloads/${version}/${id}`;
 }
 
 /**
