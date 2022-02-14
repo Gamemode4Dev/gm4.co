@@ -35,7 +35,7 @@ function fetchModulesAndResources() {
 					modules.set(mod.id, {
 						type: source.type,
 						...mod,
-						recommends: [...mod.recommends, 'gm4_resources'],
+						recommends: mod.recommends,
 						versions: [source.version.id],
 						credits: Object.fromEntries(Object.entries(mod.credits).map(
 							([title, names]) => [title, names.map(name =>
@@ -46,6 +46,10 @@ function fetchModulesAndResources() {
 				}
 			});
 		}
+		modules.get('gm4_resource_pack').recommends.push(...[...modules.values()]
+			.filter(m => m.recommends.includes('gm4_resource_pack'))
+			.sort((a, b) => a.name.localeCompare(b.name))
+			.map(m => m.id));
 		return modules;
 	});
 }
@@ -135,9 +139,24 @@ function createSquircle(image, text, href, target) {
  * @returns an HTMLElement
  */
 function createVersionButton(version, moduleId, text) {
-	const el = createSquircle(DOWNLOAD_ICON, text || version, getModuleDownload(version, moduleId), 'download_frame');
+	const url = getModuleDownload(version, moduleId);
+	const el = createSquircle(DOWNLOAD_ICON, text || version, url, 'download_frame');
 	if (version === selectedVersion) {
 		el.classList.add('selectedVersion');
+	}
+	// Detect Safari, because it doesn't support http-equiv=refresh
+	// see https://stackoverflow.com/a/23522755
+	if (/^((?!chrome|android).)*safari/i.test(navigator.userAgent)) {
+		el.removeAttribute('href');
+		el.addEventListener('click', () => {
+			fetch(url).then(r => r.text()).then(text => {
+				const realUrl = text.match(/https:\/\/.+\.zip/);
+				console.log(realUrl);
+				if (realUrl) {
+					location.href = realUrl[0];
+				}
+			});
+		});
 	}
 	return el;
 }

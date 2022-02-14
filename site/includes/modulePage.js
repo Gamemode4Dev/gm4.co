@@ -43,7 +43,8 @@ window.addEventListener('DOMContentLoaded', () => {
 
 			const requiresRecommended = mod.requires.flatMap(r => modules.get(r).recommends)
 				.filter(id => id !== loadedModuleId);
-			const allRecommended = [...new Set([...mod.recommends, ...requiresRecommended])];
+			const allRecommended = [...new Set([...mod.recommends, ...requiresRecommended])]
+				.filter(id => modules.has(id));
 			if (allRecommended.length > 0) {
 				document.querySelector('main').append(createRecommendedModuleSection());
 				const recommendedTrack = createModuleTrack(selectedVersion, allRecommended);
