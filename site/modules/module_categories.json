@@ -39,6 +39,7 @@
       "title":"Featured",
       "order":"shuffled",
       "modules":[
+        "sweethearts",
         "zauber_cauldrons",
         "bat_grenades",
         "metallurgy",
