@@ -254,14 +254,9 @@ function createModuleTrack(version, moduleIds, onDownloadAll) {
 function createModuleCard(moduleId) {
 	const card = document.createElement('div');
 	card.classList.add('trackItem', 'moduleCard', 'noselect');
-	const img = document.createElement('img');
-	img.src = getModuleIconUrl(moduleId);
-	img.alt = `${modules.get(moduleId).name}'s Logo`;
+	const img = createModuleIcon(moduleId);
 	img.setAttribute('width', '128');
 	img.setAttribute('height', '128');
-	img.addEventListener('error', () => {
-		img.src = '/modules/media/placeholder.png';
-	});
 	card.append(img);
 	const cardName = document.createElement('span');
 	cardName.classList.add('cardName');
@@ -347,14 +342,7 @@ function createModulePromo(moduleId) {
 	return fetchModulePromo(moduleId).then(promo => {
 		const promoImages = promo.filter(p => p.type === 'image');
 		if (promoImages.length === 0) {
-			const img = document.createElement('img');
-			img.src = getModuleIconUrl(moduleId);
-			img.alt = `${modules.get(moduleId).name}'s Logo`;
-			const iconCredit = (modules.get(moduleId).credits['Icon Design'] ?? [])
-				.map(c => c.name).join(', ');
-			if (iconCredit) {
-				img.title = `(credit: ${iconCredit})`;
-			}
+			const img = createModuleIcon(moduleId);
 			return img;
 		}
 		if (promoImages.length < 4) {
@@ -381,6 +369,28 @@ function createModulePromoImage(moduleId, image) {
 	const title = image.credit ? `${image.alt} (credit: ${image.credit})` : image.alt;
 	img.alt = title;
 	img.title = title;
+	return img;
+}
+
+/**
+ * Create an image of the module icon
+ * @param {string} moduleId the module ID
+ * @returns an Image Element
+ */
+function createModuleIcon(moduleId) {
+	const img = document.createElement('img');
+	const iconCredit = (modules.get(moduleId).credits['Icon Design'] ?? [])
+		.map(c => c.name).join(', ');
+	let title = `${modules.get(moduleId).name}'s Logo`;
+	if (iconCredit) {
+		title += ` (credit: ${iconCredit})`;
+	}
+	img.src = getModuleIconUrl(moduleId);
+	img.alt = title;
+	img.title = title;
+	img.addEventListener('error', () => {
+		img.src = '/modules/media/placeholder.png';
+	});
 	return img;
 }
 
