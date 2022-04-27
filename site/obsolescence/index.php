@@ -61,15 +61,15 @@ gtag('config', 'UA-63061711-1');
   <br>
   <br>
   <div class="buttonGrid">
-    <a href="https://github.com/Gamemode4Dev/obsolescence/releases/download/1.0-w/Obsolescence_v1.1.zip" class="squircleLink worldDownloadLink">
+    <a href="https://github.com/Gamemode4Dev/obsolescence/releases/download/1.2-w/Obsolescence_v1.1.zip" class="squircleLink worldDownloadLink">
     <img src="/obsolescence/images/filled_map.svg">
     Download the Map
 </a>
-    <a href="https://github.com/Gamemode4Dev/obsolescence/releases/download/1.0-w/Obsolescence_RP.zip" class="squircleLink resourcePackDownloadLink">
+    <a href="https://github.com/Gamemode4Dev/obsolescence/releases/download/1.2-w/Obsolescence_RP.zip" class="squircleLink resourcePackDownloadLink">
     <img src="/obsolescence/images/message_in_a_bottle.svg">
     Download Resource Pack
 </a>
-    <a href="https://github.com/Gamemode4Dev/obsolescence/releases/tag/1.0-w" class="squircleLink viewCodeLink">
+    <a href="https://github.com/Gamemode4Dev/obsolescence/releases/tag/1.2-w" class="squircleLink viewCodeLink">
     <img src="/images/logo/github.svg">
     Read Install Instructions
 </a>
