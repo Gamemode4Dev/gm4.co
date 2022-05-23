@@ -9,6 +9,7 @@ jobs:
       - uses: actions/checkout@v3
       - uses: actions/setup-python@v3
       - run: python scripts/create_sitemap.py
+      - run: pip install requests
       - uses: EndBug/add-and-commit@v9
         with:
           add: 'site/sitemap.txt'
