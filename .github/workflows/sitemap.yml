@@ -8,8 +8,8 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-python@v3
-      - run: python scripts/create_sitemap.py
       - run: pip install requests
+      - run: python scripts/create_sitemap.py
       - uses: EndBug/add-and-commit@v9
         with:
           add: 'site/sitemap.txt'
