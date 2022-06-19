@@ -9,7 +9,7 @@ const YOUTUBE_ICON = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 71.41
 
 const modules = new Map();
 // eslint-disable-next-line prefer-const
-let selectedVersion = '1.18';
+let selectedVersion = '1.19';
 
 /**
  * Fetch modules from the datapacks and resourcepacks repos.
