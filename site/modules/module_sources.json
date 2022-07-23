@@ -16,7 +16,8 @@
     "type": "resourcepack",
     "repo": "Gamemode4Dev/GM4_Resources",
     "versions": [
-      { "id": "1.18", "name": "Minecraft Java 1.18", "branch": "master" }
+      { "id": "1.19", "name": "Minecraft Java 1.19", "branch": "master" }
+      { "id": "1.18", "name": "Minecraft Java 1.18", "branch": "ver/1.18" }
     ]
   }
 ]
