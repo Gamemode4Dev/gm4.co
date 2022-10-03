@@ -3,6 +3,7 @@ https://gm4.co/modules/ambrosia
 https://gm4.co/modules/animi-shamir
 https://gm4.co/modules/apple-trees
 https://gm4.co/modules/audere-shamir
+https://gm4.co/modules/auto-crafting
 https://gm4.co/modules/bat-grenades
 https://gm4.co/modules/beehive-inspector
 https://gm4.co/modules/better-armour-stands
@@ -13,6 +14,7 @@ https://gm4.co/modules/boots-of-ostara
 https://gm4.co/modules/cement-mixers
 https://gm4.co/modules/chairs
 https://gm4.co/modules/chest-boats
+https://gm4.co/modules/combat-expanded
 https://gm4.co/modules/cooler-caves
 https://gm4.co/modules/cozy-campfires
 https://gm4.co/modules/crossbow-cartridges
@@ -73,6 +75,7 @@ https://gm4.co/modules/speed-paths
 https://gm4.co/modules/standard-crafting
 https://gm4.co/modules/sunken-treasure
 https://gm4.co/modules/sweethearts
+https://gm4.co/modules/teleportation-anchors
 https://gm4.co/modules/tinkering-compressors
 https://gm4.co/modules/tnt-landmines
 https://gm4.co/modules/tower-structures
