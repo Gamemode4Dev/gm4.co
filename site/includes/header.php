@@ -8,10 +8,10 @@
   <nav>
     <ul>
       <li>
-        <a href="/#modules"><h1>Modules</h1></a>
+        <a href="/wiki" target="_blank" rel="noreferrer"><h1>Wiki</h1></a>
       </li>
       <li>
-        <a href="/wiki" target="_blank" rel="noreferrer"><h1>Wiki</h1></a>
+        <a href="//blog.gm4.co" target="_blank" rel="noreferrer"><h1>Blog</h1></a>
       </li>
       <li>
         <a href="/server"><h1>Server</h1></a>
