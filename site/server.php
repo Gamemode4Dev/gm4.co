@@ -30,6 +30,7 @@ gtag('config', 'UA-63061711-1', {cookie_flags:'SameSite=None;Secure'});
 <link rel = "stylesheet" href="includes/header.css?hash=<?php echo hash_file("crc32","includes/header.css"); ?>" />
 <script src="https://www.gm4.co/includes/jquery-3.6.0.min.js"></script>
 <link rel = "stylesheet" href="https://www.gm4.co/includes/server.css?hash=<?php echo hash_file("crc32","includes/server.css"); ?>" />
+<script src="/includes/tracks.js?hash=<?php echo hash_file("crc32", __DIR__ . "/includes/tracks.js"); ?>"></script>
 <script src="/includes/server.js?hash=<?php echo hash_file("crc32", __DIR__ . "/includes/server.js"); ?>"></script>
 <title>Gamemode 4 - Server</title>
 </head>
@@ -53,8 +54,23 @@ gtag('config', 'UA-63061711-1', {cookie_flags:'SameSite=None;Secure'});
     <h3>IP: <span class="serverIp">server.gm4.co<div class="copyButton" title="Copy server IP"></div></span></h3>
 		<br />
     <p>A new public server is here! To keep up to date with all the latest news, <a href='https://gm4.co/discord'>join our Discord Server!</a></p>
+
+		<div class="serverSlides slideshow track">
+			<div class="trackButton trackButtonLeft"></div>
+			<div class="trackButton trackButtonRight"></div>
+			<div class="trackContainer">
+				<div class="trackItem bottom-left" style="background-image: url(images/server/ps8_cave.png);">
+					<h2>A welcoming spawn</h2>
+					<p>Don't like living alone? Get cosy at the spawn town that every server has</p>
+				</div>
+				<div class="trackItem bottom-left" style="background-image: url(images/server/ps8_players.png);">
+					<h2>Active community</h2>
+					<p>An active, lively community of players who all like Survival with a twist</p>
+				</div>
+			</div>
+		</div>
 	</div>
-  
+
   <?php include_once("includes/footer.php"); ?>
   
 </body>
