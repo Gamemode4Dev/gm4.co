@@ -23,31 +23,36 @@ gtag('config', 'UA-63061711-1', {cookie_flags:'SameSite=None;Secure'});
 <meta property="og:site_name" content="Gamemode 4 Server"/>
 <meta property="og:title" content="A multiplayer vanilla Minecraft world with a spicy Gamemode 4 twist."/>
 <meta property="og:description" content="A collection of data packs that can be added to survival Minecraft in any combination to create a new, exciting feel without the use of mods or plugins. This website allows you to download the latest versions of Gamemode 4 modules and links to our Discord, Twitter, public Minecraft server and github."/>
-<meta property="og:image" content="https://gm4.co/images/logo_256.png">
-<meta property="og:url" content="https://gm4.co">
-<meta property="og:image:width" content="256"/>
-<meta property="og:image:height" content="256"/>
+<meta property="og:image" content="https://gm4.co/images/server/ps9_banner_text.png">
+<meta property="og:url" content="https://gm4.co/server">
 
 <link rel="icon" type="image/svg" href="https://www.gm4.co/images/logo/logo_clear.svg" sizes="any">
 <link rel = "stylesheet" href="includes/header.css?hash=<?php echo hash_file("crc32","includes/header.css"); ?>" />
 <script src="https://www.gm4.co/includes/jquery-3.6.0.min.js"></script>
 <link rel = "stylesheet" href="https://www.gm4.co/includes/server.css?hash=<?php echo hash_file("crc32","includes/server.css"); ?>" />
+<script src="/includes/server.js?hash=<?php echo hash_file("crc32", __DIR__ . "/includes/server.js"); ?>"></script>
 <title>Gamemode 4 - Server</title>
 </head>
 <body class="light">
 	<?php include_once($dev."includes/header.php"); ?>
 
-	<div id="infoContainer">
-		<div id="slideshow">
-			<div class='slide'>
-			<h2>This page is currently being worked on. Check back later!</h2>
-            <h4>To keep up to date with all the latest news, <a href='https://gm4.co/discord'>join our Discord Server!</a></h4>
-				<!--<iframe title="Gamemode 4 public server trailer" style="position:relative;display:inline-block;width:95vw;max-width:1075px;height:53vw;max-height:604px;border:0px;" src="https://www.youtube.com/embed/W4KGS5-Hdjs" allowfullscreen></iframe>-->
-			</div>
-			<div class='slide'>
-
+	<div class="serverSplash slideshow track">
+		<div class="trackContainer">
+			<div class="trackItem" style="background-image: url(images/server/ps9_banner.png);">
+				<img src="/images/server/ps9_logo.png">
+				<div>
+					<h2>Gamemode 4</h2>
+					<h2>Public Server 9</h2>
+				</div>
 			</div>
 		</div>
+	</div>
+
+	<div class="infoContainer">
+		<h2>Gamemode 4 has a Public Server!</h2>
+    <h3>IP: <span class="serverIp">server.gm4.co<div class="copyButton" title="Copy server IP"></div></span></h3>
+		<br />
+    <p>A new public server is here! To keep up to date with all the latest news, <a href='https://gm4.co/discord'>join our Discord Server!</a></p>
 	</div>
   
   <?php include_once("includes/footer.php"); ?>

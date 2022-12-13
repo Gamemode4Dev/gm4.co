@@ -1,59 +1,244 @@
-h2{
-	font-size:27px;
-}
-h3{
-	font-size:36px;
-}
-h4{
-	font-size:21px;
-}
-#infoContainer{
-	width:95%;
-	max-width:1075px;
-	position:relative;
-	margin-left:auto;
-	margin-right:auto;
-	margin-top:40px;
-	text-align:center;
-  padding-top:30px;
+/* Tracks */
+
+.track {
+  --offset: 0;
+  --item-width: calc((100vw - var(--scrollbar-width, 0) - 2 * var(--track-spacer, 0px)) / var(--visible-items, 1));
+  width: 100%;
+  position: relative;
+  overflow: hidden;
 }
 
-.slideCaption{
-	position:absolute;
-	bottom:0px;
-	width:100%;
-	height:100%;
-	text-align:left;
-	color:#FFFFFF;
-	font-size:20pt;
-
-background: rgba(0,0,0,0.6);
-background: -moz-linear-gradient(top, rgba(0,0,0,0.6) 0%, rgba(126,126,126,0) 50%, rgba(252,252,252,0) 100%);
-background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(0,0,0,0.6)), color-stop(50%, rgba(126,126,126,0)), color-stop(100%, rgba(252,252,252,0)));
-background: -webkit-linear-gradient(top, rgba(0,0,0,0.6) 0%, rgba(126,126,126,0) 50%, rgba(252,252,252,0) 100%);
-background: -o-linear-gradient(top, rgba(0,0,0,0.6) 0%, rgba(126,126,126,0) 50%, rgba(252,252,252,0) 100%);
-background: -ms-linear-gradient(top, rgba(0,0,0,0.6) 0%, rgba(126,126,126,0) 50%, rgba(252,252,252,0) 100%);
-background: linear-gradient(to bottom, rgba(0,0,0,0.6) 0%, rgba(126,126,126,0) 50%, rgba(252,252,252,0) 100%);
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#fcfcfc', GradientType=0 );
+.trackContainer {
+  position: absolute;
+  height: 100%;
+  display: flex;
+  width: max-content;
+  left: calc(var(--track-spacer, 0px) - var(--offset, 0) * var(--item-width) - var(--partial-offset, 0px));
 }
 
-.slideCaption p{
-	margin-bottom:10px;
-	margin-top:5px;
-	padding-left:10px;
-}
-.slideCaption h3{
-	padding-left:10px;
-	margin-bottom:1px;
-	margin-top:10px;
+.track.transitioning .trackContainer {
+  transition: left var(--transition-time) ease;
 }
 
-.slide{
-	position:relative;
+.trackItem {
+  position: relative;
+  width: var(--item-width);
 }
 
-.slideshow{
-	position:relative;
-	width:100%;
-	height:300px;
+.trackItem.hidden {
+  display: none;
+}
+
+.trackButton {
+  height: 100%;
+  width: var(--content-spacer);
+  position: absolute;
+  top: 0;
+  z-index: 1;
+  background-size: 30px;
+  cursor: pointer;
+  background-color: var(--main-bg-color);
+  opacity: 0.6;
+}
+
+.trackButton.hidden {
+  display: none;
+}
+
+.trackButton:hover {
+  transform: scaleX(1.2);
+  opacity: 0.7;
+}
+
+.trackButtonLeft {
+  left: 0;
+}
+
+.trackButtonRight {
+  right: 0;
+}
+
+.trackButtonLeft::after {
+  left: 0;
+  mask: url(https://gm4.co/images/leftArrow.svg);
+  -webkit-mask: url(https://gm4.co/images/leftArrow.svg);
+}
+
+.trackButtonRight::after {
+  right: 0;
+  mask: url(https://gm4.co/images/rightArrow.svg);
+  -webkit-mask: url(https://gm4.co/images/rightArrow.svg);
+}
+
+.trackButton::after {
+  content: '';
+  position: absolute;
+  width: var(--content-spacer);
+  opacity: 1;
+  height: 30px;
+  top: 50%;
+  transform: translateY(-50%);
+  mask-size: 30px;
+  -webkit-mask-size: 30px;
+  mask-repeat: no-repeat;
+  -webkit-mask-repeat: no-repeat;
+  mask-position: center;
+  -webkit-mask-position: center;
+  background-color: var(--main-text-color);
+}
+
+
+/* Slideshow */
+
+.slideshow {
+  --main-text-color: #DDDDDD;
+  --visible-items: 1;
+  --transition-time: 800ms;
+  --item-width: 100vw;
+  height: 25vw;
+  min-height: 30vh;
+  max-height: 40vh;
+  flex-shrink: 0;
+  background-color: var(--modulecard-bg-bottom);
+  box-shadow: inset 0px 0px 48px -8px rgba(0, 0, 0, 1);
+}
+
+.slideshow .trackItem {
+  width: 100vw;
+  flex-direction: column;
+  display: flex;
+  padding: 10px calc(var(--content-spacer) + var(--scrollbar-width, 0)) 10px var(--content-spacer);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  box-shadow: inset 0 0 40px 0 black;
+}
+
+.slideshow .trackItem.darken::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: #0002;
+}
+
+.slideshow .trackItem > * {
+  text-shadow: 0px 0px 12px black;
+  color: white;
+  z-index: 1;
+}
+
+.slideshow .trackItem h2 {
+  font-size: 32px;
+}
+
+.slideshow .trackItem p {
+  font-size: 25px;
+  margin: 0.5em 0;
+}
+
+@media (max-width: 480px) {
+  .slideshow .trackItem h2 {
+    font-size: 22px;
+  }
+  
+  .slideshow .trackItem p {
+    font-size: 16px;
+  }
+}
+
+.slideshow .trackItem.top-left {
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.slideshow .trackItem.top-right {
+  justify-content: flex-start;
+  align-items: flex-end;
+  text-align: right;
+}
+
+.slideshow .trackItem.bottom-left {
+  justify-content: flex-end;
+  align-items: flex-start;
+}
+
+.slideshow .trackItem.bottom-right {
+  justify-content: flex-end;
+  align-items: flex-end;
+  text-align: right;
+}
+
+.slideshow .trackButton {
+  background: none;
+  opacity: 1;
+}
+
+/* Landing */
+
+.serverSplash {
+  height: 35vw;
+  min-height: 40vh;
+  max-height: 50vh;
+}
+
+.slideshow.serverSplash .trackItem {
+	flex-direction: row;
+	justify-content: space-evenly;
+	padding-right: 100px;
+}
+
+.slideshow.serverSplash .trackItem > img {
+	transform: scale(1.1);
+}
+
+.slideshow.serverSplash .trackItem > div {
+	display: flex;
+	flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.slideshow.serverSplash .trackItem h2 {
+	text-transform: uppercase;
+	font-size: 40px;
+}
+
+.infoContainer {
+	margin: 15px var(--content-spacer);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.infoContainer h3 {
+	display: flex;
+	align-items: center;
+}
+
+.serverIp {
+	margin: 5px 10px;
+	padding: 5px 10px;
+	background: var(--thematic-element-color);
+	border-radius: 6px;
+	display: flex;
+  align-items: center;
+}
+
+.copyButton {
+  width: 32px;
+  height: 32px;
+  margin-left: 15px;
+  mask: no-repeat center / contain url(https://gm4.co/images/copy_button.svg);
+  -webkit-mask: no-repeat center / contain url(https://gm4.co/images/copy_button.svg);
+  background-color: var(--main-text-color);
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+.infoContainer a {
+	text-decoration: underline;
+	color: var(--main-accent-color);
 }
