@@ -20,7 +20,12 @@ function fetchModulesAndResources() {
 	const flatModuleSources = MODULE_SOURCES.flatMap(({ type, repo, versions }) =>
 		versions.map(version => ({ type, version, repo })));
 	return Promise.all(flatModuleSources.map(async ({ type, repo, version }) => {
-		const meta = await fetch(`https://raw.githubusercontent.com/${repo}/release/${version.id}/meta.json`).then(r => r.json());
+		let meta;
+		try {
+			meta = await fetch(`https://raw.githubusercontent.com/${repo}/release/${version.id}/meta.json`).then(r => r.json());
+		} catch (e) {
+			meta = await fetch(`https://cdn.jsdelivr.net/gh/${repo}@release/${version.id}/meta.json`).then(r => r.json());
+		}
 		return { type, version, ...meta };
 	})).then((sources) => {
 		for (const source of sources) {
