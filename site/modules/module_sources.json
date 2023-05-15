@@ -3,7 +3,8 @@
     "type": "datapack",
     "repo": "Gamemode4Dev/GM4_Datapacks",
     "versions": [
-      { "id": "1.19", "name": "Minecraft Java 1.19", "branch": "master" },
+      { "id": "1.19.4", "name": "Minecraft Java 1.19.4", "branch": "master" },
+      { "id": "1.19", "name": "Minecraft Java 1.19", "branch": "ver/1.19" },
       { "id": "1.18", "name": "Minecraft Java 1.18", "branch": "ver/1.18" },
       { "id": "1.17", "name": "Minecraft Java 1.17", "branch": "ver/1.17" },
       { "id": "1.16", "name": "Minecraft Java 1.16", "branch": "ver/1.16" },
@@ -16,7 +17,8 @@
     "type": "resourcepack",
     "repo": "Gamemode4Dev/GM4_Resources",
     "versions": [
-      { "id": "1.19", "name": "Minecraft Java 1.19", "branch": "master" },
+      { "id": "1.19.4", "name": "Minecraft Java 1.19.4", "branch": "master" },
+      { "id": "1.19", "name": "Minecraft Java 1.19", "branch": "ver/1.19" },
       { "id": "1.18", "name": "Minecraft Java 1.18", "branch": "ver/1.18" }
     ]
   }
