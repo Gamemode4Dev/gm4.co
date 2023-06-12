@@ -10,6 +10,14 @@ This repo acts as a back-end for the gm4 website. It serves two purposes:
 2) Allowing "partners" of GM4 to link their modules to the website. These are hosted in the "partners" directory.
 
 
+## Development setup
+You need PHP installed to test this site locally. Then you can proceed like so:
+```bash
+cd site
+php -S localhost:8000
+```
+
+
 ## Notes on site contribution
 Due to some files containing sensitive database related information, the entire website will not be hosted on the git. Instead, this repo is mostly designed to let everyone contribute images and content for the front-facing side of the site and for partners to control the content that appears on the site.
 
