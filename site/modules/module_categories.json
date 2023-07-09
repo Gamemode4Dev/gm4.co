@@ -1,8 +1,8 @@
 {
-  "module_categories":[
+  "module_categories": [
     {
-      "title":"New Modules",
-      "modules":[
+      "title": "New Modules",
+      "modules": [
         "shapeless_portals",
         "calling_bell",
         "auto_crafting",
@@ -26,9 +26,9 @@
       ]
     },
     {
-      "title":"Featured",
-      "order":"shuffled",
-      "modules":[
+      "title": "Featured",
+      "order": "shuffled",
+      "modules": [
         "bat_grenades",
         "better_armour_stands",
         "block_compressors",
@@ -45,73 +45,12 @@
       ]
     },
     {
-      "title":"Automate Everything",
-      "order":"shuffled",
-      "modules":[
-        "auto_crafting",
-        "dripleaf_filters",
-        "block_compressors",
-        "book_binders",
-        "boots_of_ostara",
-        "cement_mixers",
-        "custom_crafters",
-        "disassemblers",
-        "enchantment_extractors",
-        "ender_hoppers",
-        "lightning_in_a_bottle",
-        "liquid_minecarts",
-        "liquid_tanks",
-        "forming_press",
-        "mending_tanks",
-        "metallurgy",
-        "podzol_rooting_soil",
-        "potion_liquids",
-        "relocators",
-        "shroomites",
-        "smelteries",
-        "spawner_minecarts",
-        "trapped_signs",
-        "tunnel_bores"
-      ]
-    },
-    {
-      "title":"Storage on Steroids",
-      "order":"shuffled",
-      "modules":[
-        "beehive_inspector",
-        "block_compressors",
-        "book_binders",
-        "disassemblers",
-        "enchantment_extractors",
-        "liquid_tanks",
-        "ender_hoppers",
-        "liquid_minecarts",
-        "potion_liquids",
-        "trapped_signs",
-        "vertical_rails",
-        "xp_storage",
-        "tinkering_compressors"
-      ]
-    },
-    {
-      "title":"Make Minecarts Great Again",
-      "order":"shuffled",
-      "modules":[
-        "ender_hoppers",
-        "liquid_minecarts",
-        "spawner_minecarts",
-        "tunnel_bores",
-        "vertical_rails",
-        "ziprails"
-      ]
-    },
-    {
-      "title":"Metallurgy",
-      "order":{
-        "mode":"shuffled",
-        "from":1
+      "title": "Metallurgy",
+      "order": {
+        "mode": "shuffled",
+        "from": 1
       },
-      "modules":[
+      "modules": [
         "metallurgy",
         "animi_shamir",
         "audere_shamir",
@@ -124,6 +63,154 @@
         "orb_of_ankou",
         "weighted_armour",
         "desire_lines"
+      ]
+    },
+    {
+      "title": "Quality of Life",
+      "order": "shuffled",
+      "modules": [
+        "beehive_inspector",
+        "better_fire",
+        "calling_bell",
+        "chairs",
+        "cozy_campfires",
+        "crossbow_cartridges",
+        "ink_spitting_squid",
+        "display_frames",
+        "ink_spitting_squid",
+        "live_catch",
+        "note_block_interface",
+        "podzol_rooting_soil",
+        "rope_ladders",
+        "shapeless_portals",
+        "speed_paths",
+        "xp_storage"
+      ]
+    },
+    {
+      "title": "A Whole New World",
+      "order": "shuffled",
+      "modules": [
+        "apple_trees",
+        "cooler_caves",
+        "dangerous_dungeons",
+        "end_fishing",
+        "ink_spitting_squid",
+        "live_catch",
+        "scuba_gear",
+        "sunken_treasure",
+        "tower_structures"
+      ]
+    },
+    {
+      "title": "Creepies & Crawlies",
+      "order": "shuffled",
+      "modules": [
+        "bat_grenades",
+        "enderman_support_class",
+        "ink_spitting_squid",
+        "mysterious_midnights",
+        "midnight_menaces",
+        "pig_tractors",
+        "undead_players",
+        "combat_expanded",
+        "orb_of_ankou"
+      ]
+    },
+    {
+      "title": "Builder's Paradise",
+      "order": "shuffled",
+      "modules": [
+        "better_armour_stands",
+        "particles_pack",
+        "poses_pack",
+        "boots_of_ostara",
+        "chairs",
+        "desire_lines",
+        "display_frames",
+        "holographic_tags",
+        "rope_ladders",
+        "shapeless_portals",
+        "speed_paths",
+        "fulcio_shamir"
+      ]
+    },
+    {
+      "title": "Potions and Souls",
+      "order": "shuffled",
+      "modules": [
+        "zauber_cauldrons",
+        "zauber_liquids",
+        "potion_liquids",
+        "orb_of_ankou",
+        "potion_swords",
+        "soul_glass",
+        "spawner_minecarts",
+        "sweethearts",
+        "undead_players",
+        "everstone"
+      ]
+    },
+    {
+      "title": "Storage on Steroids",
+      "order": "shuffled",
+      "modules": [
+        "block_compressors",
+        "book_binders",
+        "enchantment_extractors",
+        "ender_hoppers",
+        "disassemblers",
+        "dripleaf_filters",
+        "liquid_minecarts",
+        "liquid_tanks",
+        "potion_liquids",
+        "xp_storage",
+        "zauber_liquids"
+      ]
+    },
+    {
+      "title": "Make Minecarts Great Again",
+      "order": "shuffled",
+      "modules": [
+        "ender_hoppers",
+        "liquid_minecarts",
+        "spawner_minecarts",
+        "tunnel_bores",
+        "vertical_rails",
+        "ziprails"
+      ]
+    },
+    {
+      "title": "Automate Everything",
+      "order": "shuffled",
+      "modules": [
+        "auto_crafting",
+        "block_compressors",
+        "book_binders",
+        "disassemblers",
+        "enchantment_extractors",
+        "ender_hoppers",
+        "forming_press",
+        "liquid_tanks",
+        "relocators",
+        "smelteries",
+        "standard_crafting",
+        "teleportation_anchors",
+        "tinkering_compressors",
+        "trapped_signs"
+      ]
+    },
+    {
+      "title": "Classics",
+      "modules": [
+        "bat_grenades",
+        "better_fire",
+        "weighted_armour",
+        "xp_storage",
+        "enderman_support_class",
+        "heart_canisters",
+        "desire_lines",
+        "potion_swords"
       ]
     }
   ]
