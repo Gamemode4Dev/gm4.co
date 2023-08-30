@@ -3,6 +3,7 @@
     {
       "title": "New Modules",
       "modules": [
+        "double_doors",
         "shapeless_portals",
         "calling_bell",
         "auto_crafting",
@@ -77,6 +78,7 @@
         "crossbow_cartridges",
         "ink_spitting_squid",
         "display_frames",
+        "double_doors",
         "ink_spitting_squid",
         "live_catch",
         "note_block_interface",
