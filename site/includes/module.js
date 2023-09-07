@@ -222,6 +222,10 @@ function createModuleTrack(version, moduleIds, onDownloadAll) {
 			console.warn(`Module ${moduleId} does not exist!`);
 			return;
 		}
+		if (!modules.get(moduleId).hidden) {
+			return;
+		}
+
 		const item = createModuleCard(moduleId);
 		item.addEventListener('click', () => {
 			if (!item.classList.contains('selected')) {
