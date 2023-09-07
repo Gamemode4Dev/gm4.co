@@ -83,7 +83,7 @@ function createModuleFilter() {
 	textSearch.placeholder = 'Search...';
 	textSearch.addEventListener('keyup', () => {
 		const filter = textSearch.value.toLowerCase();
-		filterModules('wrongFilter', mod => mod.name.toLowerCase().includes(filter));
+		filterModules('wrongFilter', mod => (mod.name.toLowerCase().includes(filter) || mod.search_keywords.includes(filter)));
 	});
 	moduleFilter.append(textSearch);
 
