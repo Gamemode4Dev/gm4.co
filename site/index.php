@@ -58,7 +58,7 @@ gtag('config', 'UA-63061711-1');
   </div>
   <div class="landingLinks">
     <h2>Join our community</h2>
-    <a class="discordLink squircleLink" href="https://discord.gg/0qLGgv7JGfIXf45t" target="_blank" rel="noopener">
+    <a class="discordLink squircleLink" href="https://gm4.co/discord" target="_blank" rel="noopener">
       <img src="/images/logo/discord.svg" width="31" height="24" alt="Discord Logo">Discord
     </a>
     <a class="githubLink squircleLink" href="https://github.com/Gamemode4Dev/GM4_Datapacks" target="_blank" rel="noopener">
