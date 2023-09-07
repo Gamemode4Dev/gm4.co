@@ -222,7 +222,7 @@ function createModuleTrack(version, moduleIds, onDownloadAll) {
 			console.warn(`Module ${moduleId} does not exist!`);
 			return;
 		}
-		if (!modules.get(moduleId).hidden) {
+		if (modules.get(moduleId).hidden) {
 			return;
 		}
 
