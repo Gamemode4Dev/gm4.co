@@ -219,7 +219,7 @@ function createModuleTrack(version, moduleIds, onDownloadAll) {
 	trackContainer.classList.add('trackContainer');
 	moduleIds.forEach(moduleId => {
 		if (!modules.has(moduleId)) {
-			console.warn(`Module ${moduleId} does not exits!`);
+			console.warn(`Module ${moduleId} does not exist!`);
 			return;
 		}
 		const item = createModuleCard(moduleId);

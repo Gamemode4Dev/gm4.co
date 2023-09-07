@@ -66,7 +66,7 @@ window.addEventListener('DOMContentLoaded', () => {
 			error.textContent = 'Something unexpected happened...';
 			div.append(error);
 			if (!modules.has(loadedModuleId)) {
-				error.textContent = 'Sorry, this module doesn\'t exits!';
+				error.textContent = 'Sorry, this module doesn\'t exist!';
 				const browseButton = createSquircle('', 'Browse our modules instead', '/#browse');
 				browseButton.classList.add('browseButton');
 				div.append(browseButton);
