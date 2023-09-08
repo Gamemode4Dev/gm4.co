@@ -222,10 +222,15 @@ function createModuleTrack(version, moduleIds, onDownloadAll) {
 			console.warn(`Module ${moduleId} does not exist!`);
 			return;
 		}
+		// If a module does not exist or is hidden for the selected version, don't show it here
+		if (!modules.get(moduleId).versions.includes(version)) {
+			return;
+		}
+
 		const item = createModuleCard(moduleId);
 		item.addEventListener('click', () => {
 			if (!item.classList.contains('selected')) {
-				createPreview(moduleId, () => onDownload(moduleId)).then(preview => {
+				createPreview(version, moduleId, () => onDownload(moduleId)).then(preview => {
 					const oldPreview = track.parentElement.querySelector('.preview');
 					if (oldPreview) {
 						oldPreview.replaceWith(preview);
@@ -280,11 +285,12 @@ function hidePreview() {
 
 /**
  * Loads the module's metadata and then creates a preview.
+ * @param {string} version the version
  * @param {string} moduleId the module ID
  * @param {Function} onDownload callback when the download button is clicked
  * @returns a Promise to an HTMLElement containing the preview
  */
-async function createPreview(moduleId, onDownload) {
+async function createPreview(version, moduleId, onDownload) {
 	const mod = modules.get(moduleId);
 	const preview = document.createElement('div');
 	preview.classList.add('preview');
@@ -297,7 +303,7 @@ async function createPreview(moduleId, onDownload) {
 	previewInfo.insertAdjacentHTML('beforeend', `<h3>${mod.name}</h3>`);
 	previewInfo.insertAdjacentHTML('beforeend', `<p>${mod.description}</p>`);
 	previewInfo.classList.add('previewInfo');
-	const downloadButton = createVersionButton(selectedVersion, moduleId, `Download for Java ${selectedVersion}`);
+	const downloadButton = createVersionButton(version, moduleId, `Download for Java ${version}`);
 	downloadButton.classList.add('datapackLink');
 	if (onDownload) downloadButton.addEventListener('click', onDownload);
 	previewInfo.append(downloadButton);
