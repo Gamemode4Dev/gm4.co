@@ -8,9 +8,8 @@ const WIKI_ICON = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 878.79 8
 const YOUTUBE_ICON = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 71.412 50" width="24" height="24"><mask id="mask"><rect id="bg" x="0" y="0" width="100%" height="100%" fill="white"/><path d="M47.176 25L28.588 14.294v21.412z" fill="black"/></mask><path d="M69.941 7.824a8.95 8.95 0 0 0-6.294-6.294C58.059 0 35.706 0 35.706 0S13.353 0 7.765 1.471c-3 .824-5.471 3.294-6.294 6.353C0 13.412 0 25 0 25s0 11.647 1.471 17.176a8.95 8.95 0 0 0 6.294 6.294C13.412 50 35.706 50 35.706 50s22.353 0 27.941-1.471a8.95 8.95 0 0 0 6.294-6.294c1.471-5.588 1.471-17.176 1.471-17.176s.059-11.647-1.471-17.235z" fill="var(--main-text-color)" mask="url(#mask)"/></svg>';
 
 const modules = new Map();
-const defaultVersion = '1.20'
 // eslint-disable-next-line prefer-const
-let selectedVersion = defaultVersion;
+let selectedVersion = '1.20';
 
 /**
  * Fetch modules from the datapacks and resourcepacks repos.
@@ -223,15 +222,15 @@ function createModuleTrack(version, moduleIds, onDownloadAll) {
 			console.warn(`Module ${moduleId} does not exist!`);
 			return;
 		}
-		// If a module does not exist or is hidden for the latest version, don't show it here
-		if (!modules.get(moduleId).versions.includes(defaultVersion)) {
+		// If a module does not exist or is hidden for the selected version, don't show it here
+		if (!modules.get(moduleId).versions.includes(version)) {
 			return;
 		}
 
 		const item = createModuleCard(moduleId);
 		item.addEventListener('click', () => {
 			if (!item.classList.contains('selected')) {
-				createPreview(moduleId, () => onDownload(moduleId)).then(preview => {
+				createPreview(version, moduleId, () => onDownload(moduleId)).then(preview => {
 					const oldPreview = track.parentElement.querySelector('.preview');
 					if (oldPreview) {
 						oldPreview.replaceWith(preview);
@@ -286,11 +285,12 @@ function hidePreview() {
 
 /**
  * Loads the module's metadata and then creates a preview.
+ * @param {string} version the version
  * @param {string} moduleId the module ID
  * @param {Function} onDownload callback when the download button is clicked
  * @returns a Promise to an HTMLElement containing the preview
  */
-async function createPreview(moduleId, onDownload) {
+async function createPreview(version, moduleId, onDownload) {
 	const mod = modules.get(moduleId);
 	const preview = document.createElement('div');
 	preview.classList.add('preview');
@@ -303,7 +303,7 @@ async function createPreview(moduleId, onDownload) {
 	previewInfo.insertAdjacentHTML('beforeend', `<h3>${mod.name}</h3>`);
 	previewInfo.insertAdjacentHTML('beforeend', `<p>${mod.description}</p>`);
 	previewInfo.classList.add('previewInfo');
-	const downloadButton = createVersionButton(selectedVersion, moduleId, `Download for Java ${selectedVersion}`);
+	const downloadButton = createVersionButton(version, moduleId, `Download for Java ${version}`);
 	downloadButton.classList.add('datapackLink');
 	if (onDownload) downloadButton.addEventListener('click', onDownload);
 	previewInfo.append(downloadButton);
