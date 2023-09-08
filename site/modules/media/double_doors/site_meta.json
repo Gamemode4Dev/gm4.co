@@ -1,0 +1,10 @@
+{
+  "promo_images": [
+    {
+      "type": "image",
+      "image": "double_doors.webp",
+      "credit": "Denniss",
+      "alt": "Player using a double door"
+    }
+  ]
+}
