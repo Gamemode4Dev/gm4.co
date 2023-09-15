@@ -3,6 +3,7 @@
     {
       "title": "New Modules",
       "modules": [
+        "mountaineerung",
         "double_doors",
         "shapeless_portals",
         "calling_bell",
