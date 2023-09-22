@@ -295,7 +295,7 @@ async function createPreview(version, moduleId, onDownload) {
 	const preview = document.createElement('div');
 	preview.classList.add('preview');
 
-	const previewMedia = await createModulePromo(moduleId);
+	const previewMedia = await createFeaturedModulePromo(moduleId);
 	previewMedia.classList.add('previewMedia');
 	preview.append(previewMedia);
 
@@ -345,8 +345,29 @@ function fetchModulePromo(moduleId) {
 }
 
 /**
+ * Creates an element with the first featured module promo image.
+ * @param {string} moduleId  the module id
+ * @returns a promise to a HTMLElement with the loaded promo
+ */
+function createFeaturedModulePromo(moduleId) {
+	return fetchModulePromo(moduleId).then(promo => {
+		const promoFeatures = promo.filter(p => p.featured === true);
+		if (promoFeatures.length === 0) {
+			const promoImages = promo.filter(p => p.type === 'image'); //  there was no featured image, look for the first normal image instead
+			if (promoImages.length === 0) {
+				const img = createModuleIcon(moduleId); // there was no normal image, use module icon instead
+				return img;
+			}
+			return createModulePromoImage(moduleId, promoImages[0]);
+		}
+		return createModulePromoImage(moduleId, promoFeatures[0]);
+	});
+}
+
+/**
  * Create an element with the promo image(s)
  * @param {string} moduleId the module ID
+ * @param {boolean} onlyFeatured whether to only fetch the first featured image instead of all promo art, defaults to false.
  * @returns a promise to a HTMLElement with the loaded promo
  */
 function createModulePromo(moduleId) {
