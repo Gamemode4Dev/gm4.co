@@ -1,0 +1,28 @@
+{
+    "promo_images": [
+        {
+            "type": "image",
+            "image": "setting-up-a-portal.webp",
+            "credit": "Thanathor",
+            "alt": "Creating an oddly shaped portal."
+        },
+        {
+            "type": "image",
+            "image": "small-portal.png",
+            "credit": "Thanathor",
+            "alt": "The smallest possible portal."
+        },
+        {
+            "type": "image",
+            "image": "crying-portal.png",
+            "credit": "Thanathor",
+            "alt": "A portal made from Cyring Obsidian."
+        },
+        {
+            "type": "image",
+            "image": "there-is-one-portal-among-us.png",
+            "credit": "Thanathor",
+            "alt": "A sus portal."
+        }
+    ]
+}
