@@ -6,6 +6,11 @@ const WARNING_ICON = '<svg xmlns="http://www.w3.org/2000/svg" width="32" height=
 const RIGHT_ARROW_ICON = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M102.4 51.8L154.1 0l255.5 256h0 0L154.1 512l-51.7-51.8L306.1 256z" fill="var(--main-text-color)" /></svg>';
 const WIKI_ICON = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 878.79 878.79"><defs><clipPath id="A"><path d="M140.32 140.14h603.89v603.89H140.32z" fill="none"/></clipPath><clipPath id="B"><path d="M165.29 164.35h555.75V720.1H165.29z" fill="none"/></clipPath></defs><g clip-path="url(#A)"><g clip-path="url(#A)"><g opacity="0"><g clip-path="url(#B)"><rect x="165.29" y="164.35" width="555.75" height="555.75" rx="48.1" fill="var(--main-text-color)"/></g></g><g fill="var(--main-text-color)"><rect x="241" y="240.15" width="100.01" height="100.01" rx="13.74"/><rect x="392.16" y="240.15" width="100.01" height="100.01" rx="13.74"/><rect x="543.33" y="240.15" width="100.01" height="100.01" rx="13.74"/><rect x="241" y="391.54" width="100.01" height="100.01" rx="13.74"/><rect x="393.16" y="391.54" width="100.01" height="100.01" rx="13.74"/><rect x="543.33" y="391.54" width="100.01" height="100.01" rx="13.74"/><rect x="241" y="542.94" width="100.01" height="100.01" rx="13.74"/><rect x="392.16" y="542.94" width="100.01" height="100.01" rx="13.74"/><rect x="543.33" y="542.94" width="100.01" height="100.01" rx="13.74"/></g></g></g><path d="M223.71 188.4h105.51a10.3 10.3 0 0 0 10.31-10.31v-27.48a10.31 10.31 0 0 0-10.31-10.31H213.39a72.24 72.24 0 0 0-72.15 72.15v449.24a82.46 82.46 0 0 0 82.47 82.46h105.51a10.3 10.3 0 0 0 10.31-10.31v-27.48a10.31 10.31 0 0 0-10.31-10.31H223.71a34.36 34.36 0 0 1-34.37-34.36V222.77a34.37 34.37 0 0 1 34.37-34.37zm438.92-48.1h-109a10.32 10.32 0 0 0-10.31 10.31v27.48a10.31 10.31 0 0 0 10.31 10.31h109A34.36 34.36 0 0 1 697 222.77v438.92a34.36 34.36 0 0 1-34.36 34.36h-109a10.32 10.32 0 0 0-10.31 10.31v27.48a10.31 10.31 0 0 0 10.31 10.31h109a82.46 82.46 0 0 0 82.46-82.46V222.77a82.46 82.46 0 0 0-82.47-82.47z" fill="var(--main-text-color)"/></svg>';
 const YOUTUBE_ICON = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 71.412 50" width="24" height="24"><mask id="mask"><rect id="bg" x="0" y="0" width="100%" height="100%" fill="white"/><path d="M47.176 25L28.588 14.294v21.412z" fill="black"/></mask><path d="M69.941 7.824a8.95 8.95 0 0 0-6.294-6.294C58.059 0 35.706 0 35.706 0S13.353 0 7.765 1.471c-3 .824-5.471 3.294-6.294 6.353C0 13.412 0 25 0 25s0 11.647 1.471 17.176a8.95 8.95 0 0 0 6.294 6.294C13.412 50 35.706 50 35.706 50s22.353 0 27.941-1.471a8.95 8.95 0 0 0 6.294-6.294c1.471-5.588 1.471-17.176 1.471-17.176s.059-11.647-1.471-17.235z" fill="var(--main-text-color)" mask="url(#mask)"/></svg>';
+const SELECT_ICON = '<svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="m424-296 282-282-56-56-226 226-114-114-56 56 170 170Zm56 216q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q134 0 227-93t93-227q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93Zm0-320Z"/></svg>'
+const SELECTED_ICON = '<svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="m424-296 282-282-56-56-226 226-114-114-56 56 170 170Zm56 216q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Z"/></svg>'
+const DELETE_ICON = '<svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M280-120q-33 0-56.5-23.5T200-200v-520h-40v-80h200v-40h240v40h200v80h-40v520q0 33-23.5 56.5T680-120H280Zm400-600H280v520h400v-520ZM360-280h80v-360h-80v360Zm160 0h80v-360h-80v360ZM280-720v520-520Z"/></svg>'
+const EXPAND_ARROW = '<svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M480-345 240-585l56-56 184 184 184-184 56 56-240 240Z"/></svg>'
+const COLLAPSE_ARROW = '<svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="m296-345-56-56 240-240 240 240-56 56-184-184-184 184Z"/></svg>'
 
 const modules = new Map();
 // eslint-disable-next-line prefer-const
@@ -272,7 +277,104 @@ function createModuleCard(moduleId) {
 	cardName.classList.add('cardName');
 	cardName.textContent = modules.get(moduleId).name;
 	card.append(cardName);
+	// Module selection
+	if (document.querySelector('.moduleSelection')) {
+		card.setAttribute('data-module-id', moduleId);
+		const includedModules = getIncludedModules();
+		if (includedModules.includes(moduleId)) {
+			card.classList.add('included');
+		}
+		const cardSelect = document.createElement('div');
+		cardSelect.classList.add('cardSelect');
+		cardSelect.innerHTML = SELECT_ICON;
+		cardSelect.addEventListener('click', e => {
+			e.stopPropagation();
+			e.preventDefault();
+			const includedModules = getIncludedModules();
+			const included = !includedModules.includes(moduleId);
+			if (included) {
+				updateIncludedModules([...includedModules, moduleId]);
+			} else {
+				updateIncludedModules(includedModules.filter(id => id !== moduleId));
+			}
+		});
+		card.append(cardSelect);
+		const cardSelected = document.createElement('div');
+		cardSelected.classList.add('cardSelected');
+		cardSelected.innerHTML = SELECTED_ICON;
+		card.append(cardSelected);
+	}
 	return card;
+}
+
+/**
+ * Returns the module IDs that are included
+ * @param {string[]} moduleIds
+ */
+function getIncludedModules() {
+	return JSON.parse(localStorage.getItem('gm4_module_selection') ?? '[]');
+}
+
+/**
+ * Updates the module IDs that are included
+ * @param {string[]} moduleIds
+ */
+function updateIncludedModules(moduleIds) {
+	localStorage.setItem('gm4_module_selection', JSON.stringify(moduleIds));
+	const div = document.querySelector('.moduleSelection');
+	if (!div) return;
+	div.innerHTML = '';
+	const includedModules = moduleIds.map(id => modules.get(id)).filter(m => m !== undefined && m.versions.includes(selectedVersion));
+	console.log(includedModules)
+	includedModules.sort((a, b) => a.name.localeCompare(b.name));
+	div.classList.toggle('active', includedModules.length > 0);
+
+	const selectionHead = document.createElement('div');
+	selectionHead.classList.add('selectionHead');
+	const selectionText = document.createElement('h3');
+	selectionText.textContent = 'Selected modules ';
+	const selectionCount = document.createElement('span');
+	selectionCount.textContent = `(${includedModules.length})`;
+	selectionCount.classList.add('selectionCount');
+	selectionText.append(selectionCount);
+	selectionHead.append(selectionText);
+	const selectionExpandButton = document.createElement('button');
+	selectionExpandButton.classList.add('selectionExpandButton');
+	selectionExpandButton.innerHTML = div.classList.contains('collapsed') ? COLLAPSE_ARROW : EXPAND_ARROW;
+	selectionExpandButton.addEventListener('click', () => {
+		const collapsed = div.classList.toggle('collapsed');
+		selectionExpandButton.innerHTML = collapsed ? COLLAPSE_ARROW : EXPAND_ARROW;
+	});
+	selectionHead.append(selectionExpandButton);
+	div.append(selectionHead);
+
+	const moduleList = document.createElement('div');
+	moduleList.classList.add('moduleList');
+	for (const mod of includedModules) {
+		const moduleRow = document.createElement('div');
+		moduleRow.classList.add('moduleRow');
+		const moduleRowName = document.createElement('a');
+		moduleRowName.href = `/modules/${mod.id.replace(/gm4_/, '').replaceAll('_', '-')}`
+		moduleRowName.textContent = mod.name;
+		moduleRow.append(moduleRowName);
+		const moduleDelete = document.createElement('button');
+		moduleDelete.innerHTML = DELETE_ICON;
+		moduleDelete.addEventListener('click', () => {
+			updateIncludedModules(moduleIds.filter(id => id !== mod.id));
+		});
+		moduleRow.append(moduleDelete);
+		moduleList.append(moduleRow);
+	}
+	div.append(moduleList);
+
+	const downloadButton = createSquircle(DOWNLOAD_ICON, `Download for Java ${selectedVersion}`, '');
+	downloadButton.classList.add('selectedVersion');
+	div.append(downloadButton);
+
+	for (const card of document.querySelectorAll('.moduleCard[data-module-id]')) {
+		const moduleId = card.getAttribute('data-module-id')
+		card.classList.toggle('included', moduleIds.includes(moduleId));
+	}
 }
 
 /**

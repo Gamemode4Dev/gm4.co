@@ -281,6 +281,10 @@ CSS for the module browse page
   border-radius: 10%;
 }
 
+.moduleCard.included {
+  border-color: var(--selection-color);
+}
+
 .moduleCard.selected {
   border-color: var(--main-text-color);
 }
@@ -311,12 +315,50 @@ CSS for the module browse page
   filter: drop-shadow(0 0 12px black);
 }
 
+.moduleCard.included .cardName {
+  color: var(--selection-color);
+}
+
 .moduleCard:hover {
   box-shadow: inset 0px 0px 48px -8px rgba(0, 0, 0, 0.39);
 }
 
 .moduleCard:hover img {
   transform: scale(1.04);
+}
+
+.moduleCard .cardSelect,
+.moduleCard .cardSelected {
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  padding-right: 4px;
+  padding-bottom: 4px;
+  fill: var(--selection-color);
+  opacity: 0.3;
+  transition: opacity 0.2s;
+}
+
+.moduleCard .cardSelected {
+  pointer-events: none;
+  opacity: 0;
+}
+
+.moduleCard .cardSelect:hover {
+  opacity: 0;
+}
+
+.moduleCard .cardSelect:hover + .cardSelected {
+  opacity: 0.5;
+}
+
+.moduleCard.included .cardSelect {
+  opacity: 0;
+}
+
+.moduleCard.included .cardSelect + .cardSelected {
+  opacity: 1;
+  fill: var(--selection-color);
 }
 
 /* All Modules */
@@ -359,6 +401,64 @@ CSS for the module browse page
 #modules .wrongVersion,
 #modules .wrongFilter {
   display: none
+}
+
+/* Module selection */
+
+.moduleSelection {
+  position: fixed;
+  right: 10px;
+  bottom: 10px;
+  z-index: 2;
+  display: none;
+  flex-direction: column;
+  padding: 12px 20px;
+  background-color: var(--preview-bg);
+  border-radius: 10px;
+  border: 2px solid var(--selection-color);
+  box-shadow: 0 1px 7px -1px #000;
+}
+
+.moduleSelection.active {
+  display: flex;
+}
+
+.moduleSelection .selectionHead {
+  display: flex;
+}
+
+.moduleSelection .selectionCount {
+  opacity: 0.5;
+}
+
+.moduleSelection .moduleList {
+  display: flex;
+  flex-direction: column;
+  max-height: 200px;
+  overflow-y: scroll;
+}
+
+.moduleSelection .moduleRow {
+  margin: 4px;
+  display: flex;
+}
+
+.moduleSelection.collapsed .moduleList {
+  display: none;
+}
+
+.moduleSelection button {
+  background: none;
+  border: none;
+  fill: var(--main-text-color); 
+  margin-left: auto;
+  cursor: pointer;
+  opacity: 0.7;
+  transition: opacity 0.2s;
+}
+
+.moduleSelection button:hover {
+  opacity: 1;
 }
 
 /* Preview */

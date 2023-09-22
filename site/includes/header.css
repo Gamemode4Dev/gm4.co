@@ -108,6 +108,7 @@
   --modulecard-bg-bottom: #212531;
   --preview-bg: #1f2122;
   --preview-shade-bg: #232b2f;
+  --selection-color: #4AA0C7;
 }
 
 .light {
@@ -119,6 +120,7 @@
   --modulecard-bg-bottom: #5e91a8;
   --preview-bg: #c1ccd1;
   --preview-shade-bg: #b0b7bb;
+  --selection-color: black;
 }
 
 body {
@@ -215,6 +217,10 @@ a:visited {
   margin-right: 0.5rem;
   vertical-align: middle;
   height: 1.5rem;
+}
+
+.squircleLink.selectedVersion {
+	background-color: var(--main-accent-color);
 }
 
 /*Header */

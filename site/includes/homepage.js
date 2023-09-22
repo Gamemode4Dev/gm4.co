@@ -1,4 +1,4 @@
-/* global MODULE_SOURCES selectedVersion modules fetchModulesAndResources initTrack createModuleCard loadModuleCategories */
+/* global MODULE_SOURCES selectedVersion modules fetchModulesAndResources initTrack createModuleCard loadModuleCategories updateIncludedModules, getIncludedModules */
 
 window.addEventListener('DOMContentLoaded', () => {
 	Promise.all([
@@ -42,6 +42,9 @@ window.addEventListener('DOMContentLoaded', () => {
 					moduleLink.append(moduleCard);
 					document.getElementById('modules').append(moduleLink);
 				});
+
+			// Module selection box
+			updateIncludedModules(getIncludedModules());
 		});
 });
 
