@@ -367,7 +367,6 @@ function createFeaturedModulePromo(moduleId) {
 /**
  * Create an element with the promo image(s)
  * @param {string} moduleId the module ID
- * @param {boolean} onlyFeatured whether to only fetch the first featured image instead of all promo art, defaults to false.
  * @returns a promise to a HTMLElement with the loaded promo
  */
 function createModulePromo(moduleId) {
