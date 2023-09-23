@@ -552,9 +552,8 @@ function getModuleIconUrl(moduleId) {
  * @returns a URL to the module zip
  */
 function getModuleDownload(version, moduleId) {
-	// const id = moduleId.replace(/^gm4_/, '').replace(/_/g, '-');
-	// return `/modules/download/${version}/${id}`;
-	return `https://raw.githubusercontent.com/Gamemode4Dev/GM4_Datapacks/release/1.20/${moduleId}_${version.replace(/\./g, '_')}.zip`
+	const id = moduleId.replace(/^gm4_/, '').replace(/_/g, '-');
+	return `/modules/download/${version}/${id}`;
 }
 
 /**
