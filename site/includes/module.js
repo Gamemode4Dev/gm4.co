@@ -325,7 +325,6 @@ function updateIncludedModules(moduleIds) {
 	if (!div) return;
 	div.innerHTML = '';
 	const includedModules = moduleIds.map(id => modules.get(id)).filter(m => m !== undefined && m.versions.includes(selectedVersion));
-	console.log(includedModules)
 	includedModules.sort((a, b) => a.name.localeCompare(b.name));
 	div.classList.toggle('active', includedModules.length > 0);
 
@@ -369,12 +368,38 @@ function updateIncludedModules(moduleIds) {
 
 	const downloadButton = createSquircle(DOWNLOAD_ICON, `Download for Java ${selectedVersion}`, '');
 	downloadButton.classList.add('selectedVersion');
+	downloadButton.addEventListener('click', async () => {
+		const { downloadZip } = await import('/includes/client-zip.min.js');
+		const files = await Promise.all(includedModules.map(mod => {
+			return fetch(getModuleDownload(selectedVersion, mod.id));
+		}));
+
+		const blob = await downloadZip(files).blob();
+	
+		const link = document.createElement("a");
+		link.href = URL.createObjectURL(blob);
+		const hash = hashString(includedModules.map(mod => mod.id).join(','));
+		link.download = `Gamemode4_${hash}_UNZIP_ME.zip`;
+		link.click();
+	})
 	div.append(downloadButton);
 
 	for (const card of document.querySelectorAll('.moduleCard[data-module-id]')) {
 		const moduleId = card.getAttribute('data-module-id')
 		card.classList.toggle('included', moduleIds.includes(moduleId));
 	}
+}
+
+/**
+ * @param {string} str the string to hash
+ */
+function hashString(str) {
+	let hash = 5381;
+	for (let i = 0; i < str.length; i++) {
+		const char = str.charCodeAt(i);
+		hash = (hash * 33) ^ char;
+	}
+	return (hash >>> 0).toString(36).slice(0, 8);
 }
 
 /**
@@ -527,8 +552,9 @@ function getModuleIconUrl(moduleId) {
  * @returns a URL to the module zip
  */
 function getModuleDownload(version, moduleId) {
-	const id = moduleId.replace(/^gm4_/, '').replace(/_/g, '-');
-	return `/modules/download/${version}/${id}`;
+	// const id = moduleId.replace(/^gm4_/, '').replace(/_/g, '-');
+	// return `/modules/download/${version}/${id}`;
+	return `https://raw.githubusercontent.com/Gamemode4Dev/GM4_Datapacks/release/1.20/${moduleId}_${version.replace(/\./g, '_')}.zip`
 }
 
 /**

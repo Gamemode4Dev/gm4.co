@@ -455,10 +455,15 @@ CSS for the module browse page
   cursor: pointer;
   opacity: 0.7;
   transition: opacity 0.2s;
+
 }
 
 .moduleSelection button:hover {
   opacity: 1;
+}
+
+.moduleSelection a {
+  cursor: pointer;
 }
 
 /* Preview */
