@@ -371,13 +371,10 @@ function updateIncludedModules(moduleIds) {
 	downloadButton.addEventListener('click', async () => {
 		const { downloadZip } = await import('/includes/client-zip.min.js');
 		const files = await Promise.all(includedModules.map(mod => {
-			return fetch(getModuleDownload(selectedVersion, mod.id));
+			return fetch(`https://raw.githubusercontent.com/Gamemode4Dev/GM4_Datapacks/release/1.20/${mod.id}_${selectedVersion.replace(/\./g, '_')}.zip`);
 		}));
 
-		const blob = await downloadZip(files.map((file, i) => ({
-			name: `${includedModules[i].id}_${selectedVersion.replace(/\./g, '_')}.zip`,
-			input: file,
-		}))).blob();
+		const blob = await downloadZip(files).blob();
 	
 		const link = document.createElement("a");
 		link.href = URL.createObjectURL(blob);
