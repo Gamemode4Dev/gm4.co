@@ -374,7 +374,10 @@ function updateIncludedModules(moduleIds) {
 			return fetch(getModuleDownload(selectedVersion, mod.id));
 		}));
 
-		const blob = await downloadZip(files).blob();
+		const blob = await downloadZip(files.map((file, i) => ({
+			name: `${includedModules[i].id}_${selectedVersion.replace(/\./g, '_')}.zip`,
+			input: file,
+		}))).blob();
 	
 		const link = document.createElement("a");
 		link.href = URL.createObjectURL(blob);
