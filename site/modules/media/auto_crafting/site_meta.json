@@ -1,0 +1,10 @@
+{
+  "promo_images": [
+    {
+      "type": "image",
+      "image": "auto_crafter.webp",
+      "credit": "Sparks",
+      "alt": "An Auto Crafter making melons from melonade"
+    }
+  ]
+}
