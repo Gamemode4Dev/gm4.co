@@ -1,0 +1,29 @@
+{
+    "promo_images": [
+        {
+            "type": "image",
+            "image": "husk-hoard.webp",
+            "credit": "Thanathor",
+            "alt": "Creating an oddly shaped portal."
+        },
+        {
+            "type": "image",
+            "image": "skeletons.png",
+            "credit": "Thanathor",
+            "alt": "The smallest possible portal."
+        },
+        {
+            "type": "image",
+            "featured": true,
+            "image": "respawning-zombies.webp",
+            "credit": "Thanathor",
+            "alt": "A portal made from Crying Obsidian."
+        },
+        {
+            "type": "image",
+            "image": "unidentified-axe.webp",
+            "credit": "Thanathor",
+            "alt": "A sus portal."
+        }
+    ]
+}
