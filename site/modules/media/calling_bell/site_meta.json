@@ -1,0 +1,10 @@
+{
+    "promo_images": [
+        {
+            "type": "image",
+            "image": "using-a-calling-bell.webp",
+            "credit": "Denniss",
+            "alt": "A player calling a Wandering Trader."
+        }
+    ]
+}
