@@ -69,6 +69,10 @@ gtag('config', 'UA-63061711-1');
     </a>
   </div>
 </div>
+<div class="supporters">
+  <h3>Thanks to our amazing patrons supporting the project!</h3>
+  <div class="supporters-list"></div>
+</div>
 <div class="moduleNavBar">
   <a href="#browse" class="moduleNavButton active noselect">Browse</a>
   <a href="#modules" class="moduleNavButton noselect">All Modules</a>
