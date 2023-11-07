@@ -1,5 +1,21 @@
 /* global MODULE_SOURCES selectedVersion modules fetchModulesAndResources initTrack createModuleCard loadModuleCategories updateIncludedModules, getIncludedModules */
 
+const SUPPORTERS = [
+	'kruthers',
+	'Hero29',
+	'Luexa',
+	'DragonEye3k',
+	'TheEpyonProject',
+	'gjunnila',
+	'Jackohhh',
+	'ShadowSlam',
+	'SpecialBuilder32',
+	'suppergerrie2',
+	'StickyStuff',
+	'R3AP3R_exe',
+	'venomousbirds',
+]
+
 window.addEventListener('DOMContentLoaded', () => {
 	Promise.all([
 		fetchModulesAndResources(),
@@ -20,6 +36,10 @@ window.addEventListener('DOMContentLoaded', () => {
 					e.target.style.backgroundImage = 'url(' + bg + ')';
 				}
 			});
+
+			for (const supporter of SUPPORTERS) {
+				$('.supporters-list').append(`<img src="https://cravatar.eu/avatar/${supporter}/16.png" alt="${supporter}" title="${supporter}" />`)
+			}
 
 			// Browse tab
 			loadModuleCategories(document.getElementById('browse'), categories.module_categories);
