@@ -1,0 +1,10 @@
+{
+    "promo_images": [
+        {
+            "type": "image",
+            "image": "elytra-launch.gif",
+            "credit": "Thanathor",
+            "alt": "A player being launched into the air by a Dripleaf."
+        }
+    ]
+}
