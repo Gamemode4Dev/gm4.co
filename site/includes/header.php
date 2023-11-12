@@ -16,6 +16,12 @@
       <li>
         <a href="/server"><h1>Server</h1></a>
       </li>
+      <li class="dropdown"><h1>Maps</h1>
+      <div class="dropdown-content">
+        <a href="/obsolescence/">Obsolescence</a>
+        <a href="/Coming Soon/">Coming Soon...</a>
+        </div>
+      </li>
     </ul>
   </nav>
   <span class="themeButton" onclick="toggleTheme()"></span>

@@ -109,6 +109,8 @@
   --preview-bg: #1f2122;
   --preview-shade-bg: #232b2f;
   --selection-color: #4AA0C7;
+  --hover-color: #80b4cc;
+  --drop-shadow-color: rgba(241, 241, 241, 0.1);
 }
 
 .light {
@@ -121,6 +123,8 @@
   --preview-bg: #c1ccd1;
   --preview-shade-bg: #b0b7bb;
   --selection-color: black;
+  --hover-color:#80b4cc;
+  --drop-shadow-color: rgba(0,0,0,0.2);
 }
 
 body {
@@ -312,4 +316,51 @@ footer {
 
 p.footer-small {
   font-size: 0.7em;
+}
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+/* Dropdown button */
+.dropdown {
+  font-size: 16px;
+  border: none;
+  outline: none;
+  background-color: inherit;
+  font-family: inherit; /* Important for vertical align on mobile phones */
+  margin: 0; /* Important for vertical align on mobile phones */
+}
+
+
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: var(--main-bg-color);
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px var(--drop-shadow-color) !important;
+  z-index: 1;
+  height: 18%;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  float: none;
+  color: var(--main-text-color);
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+/* Add a grey background color to dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: var(--hover-color);
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
 }
