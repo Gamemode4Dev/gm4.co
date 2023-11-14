@@ -3,7 +3,7 @@
     {
       "title": "New Modules",
       "modules": [
-        "bookshelf_inspectors",
+        "bookshelf_inspector",
         "dripleaf_launchers",
         "mountaineering",
         "double_doors",
