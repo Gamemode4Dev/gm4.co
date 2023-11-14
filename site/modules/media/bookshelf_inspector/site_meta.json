@@ -1,0 +1,10 @@
+{
+    "promo_images": [
+        {
+            "type": "image",
+            "image": "bookshelf_inspector.png",
+            "credit": "Thanthor",
+            "alt": "The text hint shown when hovering over a Chiseled Bookshelf."
+        }
+    ]
+}
