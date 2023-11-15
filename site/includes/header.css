@@ -109,6 +109,7 @@
   --preview-bg: #1f2122;
   --preview-shade-bg: #232b2f;
   --selection-color: #4AA0C7;
+  --drop-shadow-color: rgba(241, 241, 241, 0.1);
 }
 
 .light {
@@ -121,6 +122,7 @@
   --preview-bg: #c1ccd1;
   --preview-shade-bg: #b0b7bb;
   --selection-color: black;
+  --drop-shadow-color: rgba(0,0,0,0.2);
 }
 
 body {
@@ -229,7 +231,6 @@ header {
   margin: 6px 0;
   display: flex;
   justify-content: center;
-  overflow-x: hidden;
   flex-shrink: 0;
   color: var(--main-accent-color);
 }
@@ -263,7 +264,7 @@ header ul li h1{
   font-size:24px;
 }
 
-header li>* {
+header li > :first-child {
   display: block;
   height: 100%;
   font-size: 24px;
@@ -279,7 +280,7 @@ header li>* {
   }
 }
 
-header .home:hover, header li>*:hover {
+header .home:hover, header li:hover {
   box-shadow: 0px -30px 0px -28px var(--main-accent-color) inset;
 }
 
@@ -312,4 +313,44 @@ footer {
 
 p.footer-small {
   font-size: 0.7em;
+}
+
+/* Dropdown button */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  z-index: 5;
+  right: 0;
+  background-color: var(--main-bg-color);
+  box-shadow: 0px 8px 16px 0px var(--drop-shadow-color) !important;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown-content a {
+  display: block;
+  position: relative;
+  color: var(--main-text-color);
+  padding: 8px 24px;
+  text-decoration: none;
+  white-space: nowrap;
+  font-weight: bold;
+}
+
+.dropdown-content a:first-child {
+  padding-top: 16px;
+}
+
+.dropdown-content a:last-child {
+  padding-bottom: 16px;
+}
+
+.dropdown-content a:hover {
+  color: var(--main-accent-color);
 }
