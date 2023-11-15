@@ -109,7 +109,6 @@
   --preview-bg: #1f2122;
   --preview-shade-bg: #232b2f;
   --selection-color: #4AA0C7;
-  --hover-color: #80b4cc;
   --drop-shadow-color: rgba(241, 241, 241, 0.1);
 }
 
@@ -123,7 +122,6 @@
   --preview-bg: #c1ccd1;
   --preview-shade-bg: #b0b7bb;
   --selection-color: black;
-  --hover-color:#80b4cc;
   --drop-shadow-color: rgba(0,0,0,0.2);
 }
 
@@ -233,7 +231,6 @@ header {
   margin: 6px 0;
   display: flex;
   justify-content: center;
-  overflow-x: hidden;
   flex-shrink: 0;
   color: var(--main-accent-color);
 }
@@ -267,7 +264,7 @@ header ul li h1{
   font-size:24px;
 }
 
-header li>* {
+header li > :first-child {
   display: block;
   height: 100%;
   font-size: 24px;
@@ -283,7 +280,7 @@ header li>* {
   }
 }
 
-header .home:hover, header li>*:hover {
+header .home:hover, header li:hover {
   box-shadow: 0px -30px 0px -28px var(--main-accent-color) inset;
 }
 
@@ -318,49 +315,42 @@ p.footer-small {
   font-size: 0.7em;
 }
 
-.dropdown {
-  float: left;
-  overflow: hidden;
-}
-
 /* Dropdown button */
 .dropdown {
-  font-size: 16px;
-  border: none;
-  outline: none;
-  background-color: inherit;
-  font-family: inherit; /* Important for vertical align on mobile phones */
-  margin: 0; /* Important for vertical align on mobile phones */
+  position: relative;
 }
 
-
-/* Dropdown content (hidden by default) */
 .dropdown-content {
   display: none;
   position: absolute;
+  z-index: 5;
+  right: 0;
   background-color: var(--main-bg-color);
-  min-width: 160px;
   box-shadow: 0px 8px 16px 0px var(--drop-shadow-color) !important;
-  z-index: 1;
-  height: 18%;
 }
 
-/* Links inside the dropdown */
-.dropdown-content a {
-  float: none;
-  color: var(--main-text-color);
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-  text-align: left;
-}
-
-/* Add a grey background color to dropdown links on hover */
-.dropdown-content a:hover {
-  background-color: var(--hover-color);
-}
-
-/* Show the dropdown menu on hover */
 .dropdown:hover .dropdown-content {
   display: block;
+}
+
+.dropdown-content a {
+  display: block;
+  position: relative;
+  color: var(--main-text-color);
+  padding: 8px 24px;
+  text-decoration: none;
+  white-space: nowrap;
+  font-weight: bold;
+}
+
+.dropdown-content a:first-child {
+  padding-top: 16px;
+}
+
+.dropdown-content a:last-child {
+  padding-bottom: 16px;
+}
+
+.dropdown-content a:hover {
+  color: var(--main-accent-color);
 }
