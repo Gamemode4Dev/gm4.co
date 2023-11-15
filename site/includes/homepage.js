@@ -11,9 +11,9 @@ const SUPPORTERS = [
 	'ShadowSlam',
 	'SpecialBuilder32',
 	'suppergerrie2',
-	'StickyStuff',
 	'R3AP3R_exe',
 	'venomousbirds',
+	'MichaelMiner137'
 ]
 
 window.addEventListener('DOMContentLoaded', () => {
