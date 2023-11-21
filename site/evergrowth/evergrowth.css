@@ -1,0 +1,140 @@
+#header {
+  background-color: var(--main-bg-color);
+}
+
+footer {
+  background-color: var(--main-bg-color);
+}
+
+#splash {
+  background-image: url(evergrowth_splash.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+  position: relative;
+  min-height: 150px;
+  height: 40vh;
+  overflow: hidden;
+  text-align: center;
+  z-index: -1;
+}
+
+
+#loop_gif {
+  background-image: url(evergrowth_loop.gif);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+  position: relative;
+  min-height: 150px;
+  height: 40vh;
+  overflow: hidden;
+  text-align: center;
+  z-index: -1;
+}
+
+#logo {
+  width: 80%;
+  height: 80%;
+  top: 10%;
+  max-width: 685px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  background-image: url(evergrowth_title.png);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  content: "";
+}
+
+h2 {
+  font-weight: normal;
+}
+
+.credits {
+  font-size: 12pt;
+  opacity: 0.5;
+}
+
+#side-by-side-grid {
+display:flex;
+flex-direction: row;
+padding-top: 30px;
+justify-content: space-around;
+align-items: center;
+text-align:center;
+margin-left:auto;
+margin-right:auto;
+}
+
+.side-by-side-child{
+
+  margin: auto;
+
+}
+
+.poster {
+  width: 80%;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  margin-top: 50px;
+  box-sizing: border-box;
+}
+
+.posterPair {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  box-sizing: border-box;
+}
+
+.posterPairBox {
+  width: 100%;
+  height: 100%;
+  float: left;
+  box-sizing: border-box;
+  padding: 10px;
+}
+
+.posterPairBox img {
+  width: 100%;
+}
+
+@media screen and (min-width: 1000px) {
+  .posterPairBox {
+    width: 50%;
+    height: 100%;
+    float: left;
+    box-sizing: border-box;
+    padding: 10px;
+  }
+}
+
+.worldDownloadLink {
+  color: var(--main-text-color) !important;
+  background-color: var(--main-accent-color);
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px;
+}
+
+.resourcePackDownloadLink, .viewCodeLink {
+  color: var(--main-text-color) !important;
+  background-color: var(--modulecard-bg-top);
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px;
+}
+
+.center {
+text-align:center;
+
+
+}
