@@ -34,11 +34,7 @@
   <link rel="stylesheet" href="evergrowth.css?hash=a<?php echo hash_file("crc32", "evergrowth.css"); ?>" />
   <script src="https://www.gm4.co/includes/jquery-3.6.0.min.js"></script>
   <script src="../includes/tracks.js?hash=<?php echo hash_file("crc32", "../includes/tracks.js"); ?>"></script>
-  <script src="../includes/module.js?hash=<?php echo hash_file("crc32", "../includes/module.js"); ?>"></script>
   <script src="evergrowth.js?hash=<?php echo hash_file("crc32", "evergrowth.js"); ?>"></script>
-  <script>
-    const MODULE_SOURCES = JSON.parse(`<?php echo file_get_contents('../modules/module_sources.json') ?>`);
-  </script>
 </head>
 
 <body class="light">
@@ -60,42 +56,97 @@
         <h2>The Goal:</h2>
         <p>Discover the weird and wonderful puzzles of pushing boxes. Discover the mystery behind the giant glowing tree at the center of the map.</p>
         <p>Evergrowth contains a large variety of Puzzle Mechanics, but all focused on pushing boxes and getting yourself out of tricky logical conundrums!</p>
+
+
       </div>
+      <br>
+      <p>Spread throughout the map are a variety of collectables and extra tough "meta" puzzles, for those who want to go even further to break their brain!</p>
     </div>
-    <p>Spread throughout the map are a variety of collectables and extra tough "meta" puzzles, for those who want to go even further to break their brain!</p>
     <br>
+
     <br>
   </div>
-  <div id="side-by-side-grid">
-    <div class="buttonGrid side-by-side-child">
-      <a href="https://github.com/Gamemode4Dev/evergrowth" class="squircleLink worldDownloadLink">
-        <img src="/evergrowth/images/filled_map.svg">
-        Download the Map
-      </a>
-      <a href="https://github.com/Gamemode4Dev/evergrowth" class="squircleLink resourcePackDownloadLink">
-        <img src="/evergrowth/images/message_in_a_bottle.svg">
-        Download Resource Pack
-      </a>
-      <a href="https://github.com/Gamemode4Dev/evergrowth" class="squircleLink viewCodeLink">
-        <img src="/images/logo/github.svg">
-        Read Install Instructions
-      </a>
-    </div>
-    <div class="side-by-side-child">
-      <h2>Credits</h3>
-
-    </div>
-
+  <div class="buttonGrid" id="downloads">
+    <a href="https://github.com/Gamemode4Dev/evergrowth" class="squircleLink worldDownloadLink">
+      <img src="/evergrowth/images/filled_map.svg">
+      Download the Map
+    </a>
+    <a href="https://github.com/Gamemode4Dev/evergrowth" class="squircleLink resourcePackDownloadLink">
+      <img src="/evergrowth/images/message_in_a_bottle.svg">
+      Download Resource Pack
+    </a>
+    <a href="https://github.com/Gamemode4Dev/evergrowth" class="squircleLink viewCodeLink">
+      <img src="/images/logo/github.svg">
+      Read Install Instructions
+    </a>
   </div>
-  <br>
-  <br>
-  <br>
-  <div id="loop_gif">
-  </div>
-  <div class="center">
-    <?php include '../includes/footer.php'; ?>
+  <div id="credits">
+    <h2>Credits</h3>
+      <div class="supporters">
+        <div class="supporters-list">
+          <div class="creator">
+            <div class="creator-image">
+              <img src="/evergrowth/images/credits/thanathor.png"></img>
+              <h4>Thanathor</h4>
+            </div>
+            <p>Datapack Development</p>
+          </div>
+          <div class="creator">
+            <div class="creator-image">
+              <img src="/evergrowth/images/credits/kyrkis.png"></img>
+              <h4>Kyrkis</h4>
+            </div>
+            <p>Datapack Development</p>
+
+          </div>
+        </div>
+      </div>
+      <div class="supporters">
+        <div class="supporters-list">
+          <div class="creator small">
+            <div class="creator-image">
+              <img src="/evergrowth/images/credits/toffeemax.png"></img>
+              <h4>ToffeeMax</h4>
+            </div>
+            <p>Music</p>
+          </div>
+          <div class="creator small">
+            <div class="creator-image">
+              <img src="/evergrowth/images/credits/raasdonder.png"></img>
+              <h4>Raasdonder</h4>
+            </div>
+            <p>Sound FXs</p>
+          </div>
+          
+          <div class="creator small">
+            <div class="creator-image">
+              <img src="/evergrowth/images/credits/bartthebart.png"></img>
+              <h4>BartTheBart</h4>
+            </div>
+            <p>Supplimentary Music</p>
+          </div>
 
         </div>
+
+
+      </div>
+  </div>
+
+
+  </div>
+  </div>
+  </div>
+  </div>
+  <div>
+    <br>
+    <br>
+    <br>
+    <div id="loop_gif">
+    </div>
+    <div class="center">
+      <?php include '../includes/footer.php'; ?>
+
+    </div>
 </body>
 
 </html>

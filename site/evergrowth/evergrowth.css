@@ -59,22 +59,51 @@ h2 {
   opacity: 0.5;
 }
 
-#side-by-side-grid {
+#credits {
+  margin:20px;
+}
+
+#credits > h2 {
+  text-align: center;
+
+}
+
+#downloads {
+  margin:30px;
+
+}
+
+.supporters img {
+  image-rendering: pixelated;
+  width: 48px;
+  height: 48px;
+  border-radius: 1em;
+  margin-right: 10px;
+}
+
+.creator {
 display:flex;
-flex-direction: row;
-padding-top: 30px;
-justify-content: space-around;
 align-items: center;
-text-align:center;
-margin-left:auto;
-margin-right:auto;
-}
-
-.side-by-side-child{
-
-  margin: auto;
+flex-direction:column;
+margin:10px;
 
 }
+
+.creator-image {
+display: flex;
+flex-direction: row;
+align-items:center;
+margin: 15px;
+
+}
+
+.small {
+  transform:scale(0.75);
+
+}
+
+
+
 
 .poster {
   width: 80%;
