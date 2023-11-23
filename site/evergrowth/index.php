@@ -52,7 +52,7 @@
       <div class="posterPairBox">
         <iframe width="100%" height="100%" src="https://www.youtube.com/embed/HTwCD5T7S0A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       </div>
-      <div class="posterPairBox">
+      <div class="posterPairBox" id="poster-pair-box-right">
         <h2>The Goal:</h2>
         <p>Discover the weird and wonderful puzzles of pushing boxes. Discover the mystery behind the giant glowing tree at the center of the map.</p>
         <p>Evergrowth contains a large variety of Puzzle Mechanics, but all focused on pushing boxes and getting yourself out of tricky logical conundrums!</p>
@@ -77,35 +77,43 @@
   <div class="credits">
     <h2>Credits</h3>
       <div class="credits-list">
+        <a href="https://gm4.co/discord">
         <div class="creator">
           <div class="creator-image">
             <img src="https://cravatar.eu/helmavatar/thanathor/16.png"></img>
             <h4>Thanathor</h4>
           </div>
           <p>Datapack Development</p>
+          <p>& Mechanics</p>
+        </a>
         </div>
         <div class="creator">
+        <a href="https://linktr.ee/kyrius">
           <div class="creator-image">
             <img src="https://cravatar.eu/helmavatar/kyrkis/16.png"></img>
             <h4>Kyrkis</h4>
           </div>
-          <p>Datapack Development</p>
+          <p>Resourcepack Development</p>
+          <p>& Mechanics</p>
+        </a>
         </div>
       </div>
       <div class="credits-list">
         <div class="creator small">
+          <a href="https://twitter.com/ToffeeMax">
           <div class="creator-image">
             <img src="https://cravatar.eu/helmavatar/toffeemax/16.png"></img>
             <h4>ToffeeMax</h4>
           </div>
-          <p>Music</p>
+          <p>Music & Promotional Campaign</p>
+        </a>
         </div>
         <div class="creator small">
           <div class="creator-image">
             <img src="https://cravatar.eu/helmavatar/raasdonder/16.png"></img>
             <h4>Raasdonder</h4>
           </div>
-          <p>Sound FXs</p>
+          <p>Sound FXs & Playtesting</p>
         </div>
         
         <div class="creator small">
@@ -115,6 +123,16 @@
           </div>
           <p>Supplimentary Music</p>
         </div>
+        <div class="creator small">
+          <a href="https://linktr.ee/miraku_memo">
+          <div class="creator-image">
+            <img src="https://cravatar.eu/helmavatar/miraku_memo/16.png"></img>
+            <h4>miraku_memo</h4>
+          </div>
+          <p>Logo & Promotional Artwork</p>
+          </a>
+        </div>
+      
       </div>
   </div>
   <div id="loop_gif">

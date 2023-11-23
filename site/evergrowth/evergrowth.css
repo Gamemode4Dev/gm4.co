@@ -51,6 +51,8 @@ h2 {
 
 .credits {
   margin: 20px;
+  margin-bottom: 50px;
+  text-align: center;
 }
 
 .credits > h2 {
@@ -69,14 +71,17 @@ h2 {
   display: flex;
   align-items: center;
   flex-direction: column;
-  margin: 10px 20px;
+  margin: 10px 10px;
+  
 }
 
 .creator-image {
   display: flex;
   flex-direction: row;
   align-items: center;
+  text-align:center;
   margin: 15px;
+  justify-content:center;
 }
 
 .creator-image img {
@@ -85,6 +90,10 @@ h2 {
   height: 48px;
   border-radius: 1em;
   margin-right: 10px;
+}
+.creator > p{
+margin: 0;
+
 }
 
 .small {
@@ -114,6 +123,12 @@ h2 {
   float: left;
   box-sizing: border-box;
   padding: 10px;
+
+}
+
+#poster-pair-box-right {
+  padding-top: 5%
+
 }
 
 .posterPairBox img {
@@ -154,4 +169,9 @@ h2 {
 
 .clearfix {
   clear: both;
+}
+
+footer {
+border-top: 0px !important;
+
 }
