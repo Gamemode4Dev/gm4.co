@@ -62,11 +62,11 @@
   </div>
   <div class="buttonGrid downloads">
     <a href="https://github.com/Gamemode4Dev/evergrowth" class="squircleLink worldDownloadLink">
-      <img src="/evergrowth/images/filled_map.svg">
+      <img src="/images/filled_map.svg">
       Download the Map
     </a>
     <a href="https://github.com/Gamemode4Dev/evergrowth" class="squircleLink resourcePackDownloadLink">
-      <img src="/evergrowth/images/message_in_a_bottle.svg">
+      <img src="/images/message_in_a_bottle.svg">
       Download Resource Pack
     </a>
     <a href="https://github.com/Gamemode4Dev/evergrowth" class="squircleLink viewCodeLink">
