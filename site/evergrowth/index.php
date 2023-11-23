@@ -74,7 +74,7 @@
       Read Install Instructions
     </a>
   </div>
-  <div id="credits">
+  <div class="credits">
     <h2>Credits</h3>
       <div class="credits-list">
         <div class="creator">
