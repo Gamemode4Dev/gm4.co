@@ -65,15 +65,35 @@ h2 {
 
 #credits > h2 {
   text-align: center;
-
 }
 
-#downloads {
+.downloads {
   margin:30px;
-
 }
 
-.supporters img {
+.credits-list {
+  padding: 0 var(--content-spacer);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.creator {
+  display:flex;
+  align-items: center;
+  flex-direction:column;
+  margin:10px 20px;
+}
+
+.creator-image {
+  display: flex;
+  flex-direction: row;
+  align-items:center;
+  margin: 15px;
+}
+
+.creator-image img {
   image-rendering: pixelated;
   width: 48px;
   height: 48px;
@@ -81,29 +101,9 @@ h2 {
   margin-right: 10px;
 }
 
-.creator {
-display:flex;
-align-items: center;
-flex-direction:column;
-margin:10px;
-
-}
-
-.creator-image {
-display: flex;
-flex-direction: row;
-align-items:center;
-margin: 15px;
-
-}
-
 .small {
   transform:scale(0.75);
-
 }
-
-
-
 
 .poster {
   width: 80%;
@@ -163,7 +163,9 @@ margin: 15px;
 }
 
 .center {
-text-align:center;
+  text-align:center;
+}
 
-
+.clearfix {
+  clear: both;
 }

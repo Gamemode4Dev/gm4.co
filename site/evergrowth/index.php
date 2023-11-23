@@ -56,17 +56,11 @@
         <h2>The Goal:</h2>
         <p>Discover the weird and wonderful puzzles of pushing boxes. Discover the mystery behind the giant glowing tree at the center of the map.</p>
         <p>Evergrowth contains a large variety of Puzzle Mechanics, but all focused on pushing boxes and getting yourself out of tricky logical conundrums!</p>
-
-
       </div>
-      <br>
-      <p>Spread throughout the map are a variety of collectables and extra tough "meta" puzzles, for those who want to go even further to break their brain!</p>
     </div>
-    <br>
-
-    <br>
+    <p style="clear: both;">Spread throughout the map are a variety of collectables and extra tough "meta" puzzles, for those who want to go even further to break their brain!</p>
   </div>
-  <div class="buttonGrid" id="downloads">
+  <div class="buttonGrid downloads">
     <a href="https://github.com/Gamemode4Dev/evergrowth" class="squircleLink worldDownloadLink">
       <img src="/evergrowth/images/filled_map.svg">
       Download the Map
@@ -82,71 +76,52 @@
   </div>
   <div id="credits">
     <h2>Credits</h3>
-      <div class="supporters">
-        <div class="supporters-list">
-          <div class="creator">
-            <div class="creator-image">
-              <img src="/evergrowth/images/credits/thanathor.png"></img>
-              <h4>Thanathor</h4>
-            </div>
-            <p>Datapack Development</p>
+      <div class="credits-list">
+        <div class="creator">
+          <div class="creator-image">
+            <img src="https://cravatar.eu/helmavatar/thanathor/16.png"></img>
+            <h4>Thanathor</h4>
           </div>
-          <div class="creator">
-            <div class="creator-image">
-              <img src="/evergrowth/images/credits/kyrkis.png"></img>
-              <h4>Kyrkis</h4>
-            </div>
-            <p>Datapack Development</p>
-
+          <p>Datapack Development</p>
+        </div>
+        <div class="creator">
+          <div class="creator-image">
+            <img src="https://cravatar.eu/helmavatar/kyrkis/16.png"></img>
+            <h4>Kyrkis</h4>
           </div>
+          <p>Datapack Development</p>
         </div>
       </div>
-      <div class="supporters">
-        <div class="supporters-list">
-          <div class="creator small">
-            <div class="creator-image">
-              <img src="/evergrowth/images/credits/toffeemax.png"></img>
-              <h4>ToffeeMax</h4>
-            </div>
-            <p>Music</p>
+      <div class="credits-list">
+        <div class="creator small">
+          <div class="creator-image">
+            <img src="https://cravatar.eu/helmavatar/toffeemax/16.png"></img>
+            <h4>ToffeeMax</h4>
           </div>
-          <div class="creator small">
-            <div class="creator-image">
-              <img src="/evergrowth/images/credits/raasdonder.png"></img>
-              <h4>Raasdonder</h4>
-            </div>
-            <p>Sound FXs</p>
-          </div>
-          
-          <div class="creator small">
-            <div class="creator-image">
-              <img src="/evergrowth/images/credits/bartthebart.png"></img>
-              <h4>BartTheBart</h4>
-            </div>
-            <p>Supplimentary Music</p>
-          </div>
-
+          <p>Music</p>
         </div>
-
-
+        <div class="creator small">
+          <div class="creator-image">
+            <img src="https://cravatar.eu/helmavatar/raasdonder/16.png"></img>
+            <h4>Raasdonder</h4>
+          </div>
+          <p>Sound FXs</p>
+        </div>
+        
+        <div class="creator small">
+          <div class="creator-image">
+            <img src="https://cravatar.eu/helmavatar/bartthebart/16.png"></img>
+            <h4>BartTheBart</h4>
+          </div>
+          <p>Supplimentary Music</p>
+        </div>
       </div>
   </div>
-
-
+  <div id="loop_gif">
   </div>
+  <div class="center">
+    <?php include '../includes/footer.php'; ?>
   </div>
-  </div>
-  </div>
-  <div>
-    <br>
-    <br>
-    <br>
-    <div id="loop_gif">
-    </div>
-    <div class="center">
-      <?php include '../includes/footer.php'; ?>
-
-    </div>
 </body>
 
 </html>

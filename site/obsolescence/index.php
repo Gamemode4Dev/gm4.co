@@ -57,7 +57,7 @@ gtag('config', 'UA-63061711-1');
       <p>Obsolesence contains enough variety for all play styles. Want lore to unpack? You can explore tattered notes and the design of the world. Looking for a challenging puzzle? Tackle a dungeon! Have a desire to go caving and fight monsters? Try and find one of our large custom caves.</p>
     </div>
   </div>
-  <p>To find the pieces for the ritual, you must defeat monsters, solve puzzles, and use Gamemode 4 Modules – our awesome survival datapacks!</p>
+  <p style="clear: both;">To find the pieces for the ritual, you must defeat monsters, solve puzzles, and use Gamemode 4 Modules – our awesome survival datapacks!</p>
   <br>
   <br>
   <div class="buttonGrid">
@@ -89,7 +89,7 @@ gtag('config', 'UA-63061711-1');
     </div>
     <br>
     <br>
-  <p class="credits">Obsolescence is a Gamemode 4 project. It was created by Thanathor, BluePsychoRanger, ToffeeMax, MichaelMiner137, Bloo___, TheEpyonProjects, Kyrkis, JP12_, miraku_memo, Kruthers, SpecialBuilder32. Cover and logo art by miraku_memo.</p>
+  <p class="credits" style="clear: both;">Obsolescence is a Gamemode 4 project. It was created by Thanathor, BluePsychoRanger, ToffeeMax, MichaelMiner137, Bloo___, TheEpyonProjects, Kyrkis, JP12_, miraku_memo, Kruthers, SpecialBuilder32. Cover and logo art by miraku_memo.</p>
 </div>
 
 <?php include '../includes/footer.php';?>
