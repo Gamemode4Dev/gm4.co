@@ -61,17 +61,17 @@
     <p style="clear: both;">Spread throughout the map are a variety of collectables and extra tough "meta" puzzles, for those who want to go even further to break their brain!</p>
   </div>
   <div class="buttonGrid downloads">
-    <a href="https://github.com/Gamemode4Dev/evergrowth" class="squircleLink worldDownloadLink">
+    <a href="https://github.com/Gamemode4Dev/evergrowth/releases/latest/download/Evergrowth.zip" class="squircleLink worldDownloadLink">
       <img src="/images/filled_map.svg">
       Download the Map
     </a>
-    <a href="https://github.com/Gamemode4Dev/evergrowth" class="squircleLink resourcePackDownloadLink">
+    <a href="https://github.com/Gamemode4Dev/Evergrowth_RP/releases/latest/download/Evergrowth_RP.zip" class="squircleLink resourcePackDownloadLink">
       <img src="/images/message_in_a_bottle.svg">
       Download Resource Pack
     </a>
     <a href="https://github.com/Gamemode4Dev/evergrowth" class="squircleLink viewCodeLink">
       <img src="/images/logo/github.svg">
-      Read Install Instructions
+      Report a Bug! (or on Discord!)
     </a>
   </div>
   <div class="credits">
