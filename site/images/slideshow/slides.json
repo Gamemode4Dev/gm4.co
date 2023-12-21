@@ -1,6 +1,16 @@
 {
   "slides":[
     {
+      "low_resolution_background_image":"evergrowth_cover.jpg",
+      "background_image":"evergrowth_cover.png",
+      "text":{
+        "header":"Block Pushing Puzzle Madnesss",
+        "paragraph":"Our Latest Custom Map for Minecraft 1.20. Go Block Pushing mad!",
+        "position":"bottom-left"
+      },
+      "link":"https://gm4.co/evergrowth"
+    },
+    {
       "low_resolution_background_image": "resourcepack_1.jpg",
       "background_image": "resourcepack_1.png",
       "text": {
