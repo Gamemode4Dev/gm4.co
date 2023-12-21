@@ -50,7 +50,7 @@
     <br>
     <div class="posterPair">
       <div class="posterPairBox">
-        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/HTwCD5T7S0A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/fkBs9pX8sQo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       </div>
       <div class="posterPairBox" id="poster-pair-box-right">
         <h2>The Goal:</h2>
