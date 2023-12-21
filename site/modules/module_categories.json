@@ -3,28 +3,26 @@
     {
       "title": "New Modules",
       "modules": [
-        "mountaineerung",
+        "bookshelf_inspector",
+        "dripleaf_launchers",
+        "mountaineering",
         "double_doors",
         "shapeless_portals",
         "calling_bell",
         "auto_crafting",
         "combat_expanded",
         "teleportation_anchors",
-        "dripleaf_filters",
         "rope_ladders",
         "mob_curing",
         "lightning_in_a_bottle",
         "shroomites",
+        "dripleaf_filters",
         "chest_boats",
         "animi_shamir",
         "audere_shamir",
         "iacio_shamir",
         "vecto_shamir",
-        "vigere_shamir",
-        "metallurgy",
-        "better_armour_stands",
-        "display_frames",
-        "apple_trees"
+        "vigere_shamir"
       ]
     },
     {

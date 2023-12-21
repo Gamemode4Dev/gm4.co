@@ -4,16 +4,16 @@ const SUPPORTERS = [
 	'kruthers',
 	'Hero29',
 	'Luexa',
-	'DragonEye3k',
+	'Danticlockwise',
 	'TheEpyonProject',
 	'gjunnila',
 	'Jackohhh',
 	'ShadowSlam',
 	'SpecialBuilder32',
 	'suppergerrie2',
-	'StickyStuff',
 	'R3AP3R_exe',
 	'venomousbirds',
+	'MichaelMiner137'
 ]
 
 window.addEventListener('DOMContentLoaded', () => {
@@ -38,7 +38,7 @@ window.addEventListener('DOMContentLoaded', () => {
 			});
 
 			for (const supporter of SUPPORTERS) {
-				$('.supporters-list').append(`<img src="https://cravatar.eu/avatar/${supporter}/16.png" alt="${supporter}" title="${supporter}" />`)
+				$('.supporters-list').append(`<img src="https://cravatar.eu/helmavatar/${supporter}/16.png" alt="${supporter}" title="${supporter}" />`)
 			}
 
 			// Browse tab
