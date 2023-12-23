@@ -81,7 +81,7 @@ gtag('config', 'UA-63061711-1');
 <script src="/includes/module.js?hash=<?php echo hash_file("crc32", __DIR__ . "/includes/module.js"); ?>"></script>
 <script src="/includes/modulePage.js?hash=<?php echo hash_file("crc32", __DIR__ . "/includes/modulePage.js"); ?>"></script>
 <script>
-	loadedModuleId = '<?php echo $module_id ?>';
+	loadedModuleId = '<?php echo htmlentities($module_id) ?>';
 	const MODULE_SOURCES = JSON.parse(`<?php echo file_get_contents('modules/module_sources.json') ?>`);
 </script>
 <title><?php echo $module["name"] ?> - Gamemode 4 Data Pack</title>
