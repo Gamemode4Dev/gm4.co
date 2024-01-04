@@ -3,11 +3,11 @@
 const SUPPORTERS = [
 	'kruthers',
 	'Hero29',
+	'TransportLayer',
 	'Luexa',
 	'Danticlockwise',
 	'TheEpyonProject',
 	'gjunnila',
-	'Jackohhh',
 	'ShadowSlam',
 	'SpecialBuilder32',
 	'suppergerrie2',
