@@ -5,9 +5,7 @@
 Tries to contact cravatar to get a 16x16 skin. 
 If it fails, it tries to load a cached image.
 If there's no cached image it returns a default image. */
-ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
-error_reporting(E_ALL);
+
 //replace any non-allowed characters in the request for security
 $username = preg_replace("/[^a-z0-9_]/", '', strtolower($_GET["username"]));
 $image = "cache/failed_to_load.png"; //defaults to this image if everything after fails
