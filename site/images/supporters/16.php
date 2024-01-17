@@ -18,7 +18,6 @@ if(@get_headers($remote_file)[0] != 'HTTP/1.1 404 Not Found'){
 
   if(@getimagesize($temp_file_path)){
     //the file is valid and was retrieved successfully
-    $image = $temp_file_path;
     //create a local cache of the user's head
     rename($temp_file_path,"cache/" . $username . ".png");
   }
@@ -26,9 +25,9 @@ if(@get_headers($remote_file)[0] != 'HTTP/1.1 404 Not Found'){
 
 
 //load the cached image if it exists
-  if(file_exists("cache/" . $username . ".png")){
-    $image = "cache/" . $username . ".png";
-  }
+if(file_exists("cache/" . $username . ".png")){
+  $image = "cache/" . $username . ".png";
+}
 
 $fp = fopen($image, 'rb');
 
