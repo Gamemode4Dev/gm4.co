@@ -16,9 +16,9 @@ $remote_file = "https://cravatar.eu/helmavatar/" . $username . "/16.png";
 if(@get_headers($remote_file)[0] != 'HTTP/1.1 404 Not Found'){
   copy($remote_file,$temp_file_path);
 
-  if(@getimagesize("cache/temp.png")){
+  if(@getimagesize($temp_file_path)){
     //the file is valid and was retrieved successfully
-    $image = "cache/temp.png";
+    $image = $temp_file_path;
     //create a local cache of the user's head
     rename($temp_file_path,"cache/" . $username . ".png");
   }
