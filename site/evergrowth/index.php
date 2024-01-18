@@ -43,7 +43,7 @@
     <div id="logo"></div>
   </div>
   <div class="poster">
-    <h1>Evergrowth is an block pushing, mind bending Puzzle Map.</h1>
+    <h1>Evergrowth is a block pushing, mind bending Puzzle Map.</h1>
     <br>
     <br>
     <h2 style="font-style:italic"> What is with the giant glowing tree at the center of the world? Why is this place abandoned? <strong>Evergrowth</strong>!</h2>
