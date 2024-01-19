@@ -80,7 +80,7 @@
         <a href="https://gm4.co/discord">
         <div class="creator">
           <div class="creator-image">
-            <img src="https://cravatar.eu/helmavatar/thanathor/16.png"></img>
+            <img src="https://gm4.co/images/supporters/16.php?username=thanathor"></img>
             <h4>Thanathor</h4>
           </div>
           <p>Datapack Development</p>
@@ -90,7 +90,7 @@
         <div class="creator">
         <a href="https://linktr.ee/kyrius">
           <div class="creator-image">
-            <img src="https://cravatar.eu/helmavatar/kyrkis/16.png"></img>
+            <img src="https://gm4.co/images/supporters/16.php?username=kyrkis"></img>
             <h4>Kyrkis</h4>
           </div>
           <p>Resourcepack Development</p>
@@ -102,7 +102,7 @@
         <div class="creator small">
           <a href="https://twitter.com/ToffeeMax">
           <div class="creator-image">
-            <img src="https://cravatar.eu/helmavatar/toffeemax/16.png"></img>
+            <img src="https://gm4.co/images/supporters/16.php?username=toffeemax"></img>
             <h4>ToffeeMax</h4>
           </div>
           <p>Music & Promotional Campaign</p>
@@ -110,7 +110,7 @@
         </div>
         <div class="creator small">
           <div class="creator-image">
-            <img src="https://cravatar.eu/helmavatar/raasdonder/16.png"></img>
+            <img src="https://gm4.co/images/supporters/16.php?username=raasdonder"></img>
             <h4>Raasdonder</h4>
           </div>
           <p>Sound FXs & Playtesting</p>
@@ -118,7 +118,7 @@
         
         <div class="creator small">
           <div class="creator-image">
-            <img src="https://cravatar.eu/helmavatar/bartthebart/16.png"></img>
+            <img src="https://gm4.co/images/supporters/16.php?username=bartthebart"></img>
             <h4>BartTheBart</h4>
           </div>
           <p>Supplimentary Music</p>
@@ -126,7 +126,7 @@
         <div class="creator small">
           <a href="https://linktr.ee/miraku_memo">
           <div class="creator-image">
-            <img src="https://cravatar.eu/helmavatar/miraku_memo/16.png"></img>
+            <img src="https://gm4.co/images/supporters/16.php?username=miraku_memo"></img>
             <h4>miraku_memo</h4>
           </div>
           <p>Logo & Promotional Artwork</p>
