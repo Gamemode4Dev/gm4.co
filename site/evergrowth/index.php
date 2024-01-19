@@ -69,7 +69,7 @@
       <img src="/images/message_in_a_bottle.svg">
       Download Resource Pack
     </a>
-    <a href="https://github.com/Gamemode4Dev/evergrowth" target="_BLANK" class="squircleLink viewCodeLink">
+    <a href="https://github.com/Gamemode4Dev/evergrowth" target="_blank" class="squircleLink viewCodeLink">
       <img src="/images/logo/github.svg">
       Report a Bug! (or on Discord!)
     </a>
@@ -77,7 +77,7 @@
   <div class="credits">
     <h2>Credits</h3>
       <div class="credits-list">
-        <a href="https://gm4.co/discord" target="_BLANK">
+        <a href="https://gm4.co/discord" target="_blank">
         <div class="creator">
           <div class="creator-image">
             <img src="https://cravatar.eu/helmavatar/thanathor/16.png"></img>
@@ -88,7 +88,7 @@
         </a>
         </div>
         <div class="creator">
-        <a href="https://linktr.ee/kyrius" target="_BLANK">
+        <a href="https://linktr.ee/kyrius" target="_blank">
           <div class="creator-image">
             <img src="https://cravatar.eu/helmavatar/kyrkis/16.png"></img>
             <h4>Kyrkis</h4>
@@ -100,7 +100,7 @@
       </div>
       <div class="credits-list">
         <div class="creator small">
-          <a href="https://twitter.com/ToffeeMax" target="_BLANK">
+          <a href="https://twitter.com/ToffeeMax" target="_blank">
           <div class="creator-image">
             <img src="https://cravatar.eu/helmavatar/toffeemax/16.png"></img>
             <h4>ToffeeMax</h4>
@@ -124,7 +124,7 @@
           <p>Supplimentary Music</p>
         </div>
         <div class="creator small">
-          <a href="https://linktr.ee/miraku_memo" target="_BLANK">
+          <a href="https://linktr.ee/miraku_memo" target="_blank">
           <div class="creator-image">
             <img src="https://cravatar.eu/helmavatar/miraku_memo/16.png"></img>
             <h4>miraku_memo</h4>
