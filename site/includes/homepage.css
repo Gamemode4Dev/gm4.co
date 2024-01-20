@@ -61,6 +61,8 @@ CSS for the module browse page
   height: 48px;
   border-radius: 1em;
   margin: 4px;
+  background-color:var(--preview-bg);
+  font-size:0px;
 }
 
 /* Tracks */

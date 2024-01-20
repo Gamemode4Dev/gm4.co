@@ -90,6 +90,8 @@ h2 {
   height: 48px;
   border-radius: 1em;
   margin-right: 10px;
+  background-color:var(--preview-bg);
+  font-size:0px;
 }
 .creator > p{
 margin: 0;
