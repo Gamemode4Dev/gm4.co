@@ -59,7 +59,7 @@ CSS for the module browse page
   image-rendering: pixelated;
   width: 48px;
   height: 48px;
-  border-radius: 1em;
+  border-radius: 1rem;
   margin: 4px;
   background-color:var(--preview-bg);
   font-size:0px;
