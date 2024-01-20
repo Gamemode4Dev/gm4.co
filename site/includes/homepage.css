@@ -313,6 +313,8 @@ CSS for the module browse page
 }
 
 .moduleCard img {
+  background-color:#c1ccd1;
+  font-size:0px;
   border-radius: 10%;
   transition: transform 0.1s;
   height: calc(var(--item-width) * 0.75);
