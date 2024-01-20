@@ -38,7 +38,7 @@ window.addEventListener('DOMContentLoaded', () => {
 			});
 
 			for (const supporter of SUPPORTERS) {
-				$('.supporters-list').append(`<img src="https://gm4.co/images/supporters/16.php?username=${supporter}" alt="${supporter}" title="${supporter}" />`)
+				$('.supporters-list').append(`<img class="lazyload" src="https://gm4.co/images/supporters/16.php?username=${supporter}" alt="${supporter}" title="${supporter}" />`)
 			}
 
 			// Browse tab
