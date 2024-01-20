@@ -88,8 +88,10 @@ h2 {
   image-rendering: pixelated;
   width: 48px;
   height: 48px;
-  border-radius: 1em;
+  border-radius: 1rem;
   margin-right: 10px;
+  background-color:var(--preview-bg);
+  font-size:0px;
 }
 .creator > p{
 margin: 0;
