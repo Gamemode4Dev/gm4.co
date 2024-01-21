@@ -43,7 +43,7 @@
     <div id="logo"></div>
   </div>
   <div class="poster">
-    <h1>Evergrowth is an block pushing, mind bending Puzzle Map.</h1>
+    <h1>Evergrowth is a block pushing, mind bending Puzzle Map.</h1>
     <br>
     <br>
     <h2 style="font-style:italic"> What is with the giant glowing tree at the center of the world? Why is this place abandoned? <strong>Evergrowth</strong>!</h2>
@@ -69,7 +69,7 @@
       <img src="/images/message_in_a_bottle.svg">
       Download Resource Pack
     </a>
-    <a href="https://github.com/Gamemode4Dev/evergrowth" class="squircleLink viewCodeLink">
+    <a href="https://github.com/Gamemode4Dev/evergrowth" target="_blank" class="squircleLink viewCodeLink">
       <img src="/images/logo/github.svg">
       Report a Bug! (or on Discord!)
     </a>
@@ -77,10 +77,10 @@
   <div class="credits">
     <h2>Credits</h3>
       <div class="credits-list">
-        <a href="https://gm4.co/discord">
+        <a href="https://gm4.co/discord" target="_blank">
         <div class="creator">
           <div class="creator-image">
-            <img src="https://cravatar.eu/helmavatar/thanathor/16.png"></img>
+            <img src="https://gm4.co/images/supporters/16.php?username=thanathor"></img>
             <h4>Thanathor</h4>
           </div>
           <p>Datapack Development</p>
@@ -88,9 +88,9 @@
         </a>
         </div>
         <div class="creator">
-        <a href="https://linktr.ee/kyrius">
+        <a href="https://linktr.ee/kyrius" target="_blank">
           <div class="creator-image">
-            <img src="https://cravatar.eu/helmavatar/kyrkis/16.png"></img>
+            <img src="https://gm4.co/images/supporters/16.php?username=kyrkis"></img>
             <h4>Kyrkis</h4>
           </div>
           <p>Resourcepack Development</p>
@@ -100,9 +100,9 @@
       </div>
       <div class="credits-list">
         <div class="creator small">
-          <a href="https://twitter.com/ToffeeMax">
+          <a href="https://twitter.com/ToffeeMax" target="_blank">
           <div class="creator-image">
-            <img src="https://cravatar.eu/helmavatar/toffeemax/16.png"></img>
+            <img src="https://gm4.co/images/supporters/16.php?username=toffeemax"></img>
             <h4>ToffeeMax</h4>
           </div>
           <p>Music & Promotional Campaign</p>
@@ -110,7 +110,7 @@
         </div>
         <div class="creator small">
           <div class="creator-image">
-            <img src="https://cravatar.eu/helmavatar/raasdonder/16.png"></img>
+            <img src="https://gm4.co/images/supporters/16.php?username=raasdonder"></img>
             <h4>Raasdonder</h4>
           </div>
           <p>Sound FXs & Playtesting</p>
@@ -118,15 +118,15 @@
         
         <div class="creator small">
           <div class="creator-image">
-            <img src="https://cravatar.eu/helmavatar/bartthebart/16.png"></img>
+            <img src="https://gm4.co/images/supporters/16.php?username=bartthebart"></img>
             <h4>BartTheBart</h4>
           </div>
           <p>Supplimentary Music</p>
         </div>
         <div class="creator small">
-          <a href="https://linktr.ee/miraku_memo">
+          <a href="https://linktr.ee/miraku_memo" target="_blank">
           <div class="creator-image">
-            <img src="https://cravatar.eu/helmavatar/miraku_memo/16.png"></img>
+            <img src="https://gm4.co/images/supporters/16.php?username=miraku_memo"></img>
             <h4>miraku_memo</h4>
           </div>
           <p>Logo & Promotional Artwork</p>
