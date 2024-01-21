@@ -3,10 +3,12 @@
     {
       "title": "New Modules",
       "modules": [
+        "guidebook",
+        "zauber_cauldrons",
+        "double_doors",
         "bookshelf_inspector",
         "dripleaf_launchers",
         "mountaineering",
-        "double_doors",
         "shapeless_portals",
         "calling_bell",
         "auto_crafting",
@@ -20,9 +22,7 @@
         "chest_boats",
         "animi_shamir",
         "audere_shamir",
-        "iacio_shamir",
-        "vecto_shamir",
-        "vigere_shamir"
+        "iacio_shamir"
       ]
     },
     {
