@@ -19,8 +19,14 @@
       <li class="dropdown">
         <h1>Maps</h1>
         <div class="dropdown-content">
-          <a href="/obsolescence">Obsolescence</a>
-          <a href="/evergrowth">Evergrowth</a>
+          <a class="dropdown-map-info" href="/evergrowth">
+            <div>Evergrowth</div>
+            <div class="dropdown-entry-info">Puzzle - 1.20.4</div>
+          </a>
+          <a class="dropdown-entry" href="/obsolescence">
+            <div>Obsolescence</div>
+            <div class="dropdown-entry-info">CTM - 1.17</div>
+          </a>
         </div>
       </li>
     </ul>
