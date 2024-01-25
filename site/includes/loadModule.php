@@ -4,7 +4,7 @@
 
 		foreach ($sources as $source) {
 			foreach ($source["versions"] as $version) {
-				$cache = __DIR__ . "/../" . preg_replace("/\//", "-", $source["repo"]) . "-" . $version["id"] . ".cache";
+				$cache = __DIR__ . "/../" . "resources-cache/" . preg_replace("/\//", "-", $source["repo"]) . "-" . $version["id"] . ".cache";
 				if (file_exists($cache) && time() - filemtime($cache) < 60 * 60 * 24) {
 					$contents = file_get_contents($cache);
 				} else {
