@@ -4,7 +4,7 @@ $(document).ready(() => {
 	resizeVideo();
 	fetchLastRelease().then((version) => {
 		console.log(version);
-		document.querySelector('.worldDownloadLink').textContent += ` (v${version})`
+		document.querySelector('.worldDownloadLink span').textContent += ` (v${version})`
 	});
 });
 

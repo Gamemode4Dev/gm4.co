@@ -63,15 +63,15 @@
   <div class="buttonGrid downloads">
     <a href="https://github.com/Gamemode4Dev/evergrowth/releases/latest/download/Evergrowth.zip" class="squircleLink worldDownloadLink">
       <img src="/images/filled_map.svg">
-      Download the Map
+      <span>Download the Map</span>
     </a>
     <a href="https://github.com/Gamemode4Dev/Evergrowth_RP/releases/latest/download/Evergrowth_RP.zip" class="squircleLink resourcePackDownloadLink">
       <img src="/images/message_in_a_bottle.svg">
       Download Resource Pack
     </a>
-    <a href="https://github.com/Gamemode4Dev/evergrowth" target="_blank" class="squircleLink viewCodeLink">
-      <img src="/images/logo/github.svg">
-      Report a Bug! (or on Discord!)
+    <a href="https://gm4.co/discord" target="_blank" class="squircleLink viewCodeLink">
+      <img src="/images/logo/discord.svg">
+      Get Help on Discord
     </a>
   </div>
   <div class="credits">
