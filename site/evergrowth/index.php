@@ -56,9 +56,9 @@
         <h2>The Goal:</h2>
         <p>Discover the weird and wonderful puzzles of pushing boxes. Discover the mystery behind the giant glowing tree at the center of the map.</p>
         <p>Evergrowth contains a large variety of Puzzle Mechanics, but all focused on pushing boxes and getting yourself out of tricky logical conundrums!</p>
+        <p>Spread throughout the map are a variety of collectables and extra tough "meta" puzzles, for those who want to go even further to break their brain!</p>
       </div>
     </div>
-    <p style="clear: both;">Spread throughout the map are a variety of collectables and extra tough "meta" puzzles, for those who want to go even further to break their brain!</p>
   </div>
   <div class="buttonGrid downloads">
     <a href="https://github.com/Gamemode4Dev/evergrowth/releases/latest/download/Evergrowth.zip" class="squircleLink worldDownloadLink">
