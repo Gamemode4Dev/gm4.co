@@ -23,7 +23,7 @@ gtag('config', 'UA-63061711-1', {cookie_flags:'SameSite=None;Secure'});
 <meta property="og:site_name" content="Gamemode 4 Server"/>
 <meta property="og:title" content="A multiplayer vanilla Minecraft world with a spicy Gamemode 4 twist."/>
 <meta property="og:description" content="A collection of data packs that can be added to survival Minecraft in any combination to create a new, exciting feel without the use of mods or plugins. This website allows you to download the latest versions of Gamemode 4 modules and links to our Discord, Twitter, public Minecraft server and github."/>
-<meta property="og:image" content="https://gm4.co/images/server/ps9_banner_text.jpg">
+<meta property="og:image" content="https://gm4.co/images/server/ps10_logo.png">
 <meta property="og:url" content="https://gm4.co/server">
 
 <link rel="icon" type="image/svg" href="https://www.gm4.co/images/logo/logo_clear.svg" sizes="any">
