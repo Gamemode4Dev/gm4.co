@@ -39,8 +39,9 @@
 
 <body class="light">
   <?php include '../includes/header.php'; ?>
-  <div id="splash">
-    <div id="logo"></div>
+  <div class="splash">
+    <img src="evergrowth_splash.png" alt="">
+    <img class="splash-overlay" src="evergrowth_title.png" alt="Evergrowth">
   </div>
   <div class="poster">
     <h1>Evergrowth is a block pushing, mind bending Puzzle Map.</h1>
@@ -77,10 +78,9 @@
   <div class="credits">
     <h2>Credits</h3>
       <div class="credits-list">
-        <a href="https://gm4.co/discord" target="_blank">
         <div class="creator">
           <div class="creator-image">
-            <img src="https://gm4.co/images/supporters/16.php?username=thanathor"></img>
+            <img loading="lazy" src="https://gm4.co/images/supporters/16.php?username=thanathor"></img>
             <h4>Thanathor</h4>
           </div>
           <p>Datapack Development</p>
@@ -90,7 +90,7 @@
         <div class="creator">
         <a href="https://linktr.ee/kyrius" target="_blank">
           <div class="creator-image">
-            <img src="https://gm4.co/images/supporters/16.php?username=kyrkis"></img>
+            <img loading="lazy" src="https://gm4.co/images/supporters/16.php?username=kyrkis"></img>
             <h4>Kyrkis</h4>
           </div>
           <p>Resourcepack Development</p>
@@ -102,7 +102,7 @@
         <div class="creator small">
           <a href="https://twitter.com/ToffeeMax" target="_blank">
           <div class="creator-image">
-            <img src="https://gm4.co/images/supporters/16.php?username=toffeemax"></img>
+            <img loading="lazy" src="https://gm4.co/images/supporters/16.php?username=toffeemax"></img>
             <h4>ToffeeMax</h4>
           </div>
           <p>Music & Promotional Campaign</p>
@@ -110,7 +110,7 @@
         </div>
         <div class="creator small">
           <div class="creator-image">
-            <img src="https://gm4.co/images/supporters/16.php?username=raasdonder"></img>
+            <img loading="lazy" src="https://gm4.co/images/supporters/16.php?username=raasdonder"></img>
             <h4>Raasdonder</h4>
           </div>
           <p>Sound FXs & Playtesting</p>
@@ -118,7 +118,7 @@
         
         <div class="creator small">
           <div class="creator-image">
-            <img src="https://gm4.co/images/supporters/16.php?username=bartthebart"></img>
+            <img loading="lazy" src="https://gm4.co/images/supporters/16.php?username=bartthebart"></img>
             <h4>BartTheBart</h4>
           </div>
           <p>Supplimentary Music</p>
@@ -126,7 +126,7 @@
         <div class="creator small">
           <a href="https://linktr.ee/miraku_memo" target="_blank">
           <div class="creator-image">
-            <img src="https://gm4.co/images/supporters/16.php?username=miraku_memo"></img>
+            <img loading="lazy" src="https://gm4.co/images/supporters/16.php?username=miraku_memo"></img>
             <h4>miraku_memo</h4>
           </div>
           <p>Logo & Promotional Artwork</p>
@@ -135,8 +135,7 @@
       
       </div>
   </div>
-  <div id="loop_gif">
-  </div>
+  <img class="bottom-loop" loading="lazy" src="evergrowth_loop.gif" alt="">
   <div class="center">
     <?php include '../includes/footer.php'; ?>
   </div>

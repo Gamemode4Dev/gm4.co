@@ -1,44 +1,27 @@
-#splash {
-  background-image: url(evergrowth_splash.png);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
+.splash {
+  display: grid;
+  grid-template-areas: "splash";
+  justify-items: center;
   width: 100%;
-  position: relative;
+  min-height: 150px;
+  height: 40vh;
+}
+
+.splash img {
+  grid-area: splash;
+  width: 100%;
   min-height: 150px;
   height: 40vh;
   overflow: hidden;
-  text-align: center;
-  z-index: -1;
+  object-fit: cover;
 }
 
-#loop_gif {
-  background-image: url(evergrowth_loop.gif);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  width: 100%;
-  position: relative;
-  min-height: 150px;
-  height: 40vh;
-  overflow: hidden;
-  text-align: center;
-  z-index: -1;
-}
-
-#logo {
+.splash img.splash-overlay {
   width: 80%;
-  height: 80%;
-  top: 10%;
   max-width: 685px;
-  margin-left: auto;
-  margin-right: auto;
-  position: relative;
-  background-image: url(evergrowth_title.png);
-  background-position: center;
-  background-size: contain;
-  background-repeat: no-repeat;
-  content: "";
+  top: 0;
+  left: 0;
+  object-fit: contain;
 }
 
 h2 {
@@ -155,6 +138,14 @@ h2 {
   margin-left: auto;
   margin-right: auto;
   padding: 10px;
+}
+
+.bottom-loop {
+  width: 100%;
+  min-height: 150px;
+  height: 40vh;
+  object-fit: cover;
+  object-position: center;
 }
 
 .center {
