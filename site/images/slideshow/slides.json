@@ -1,6 +1,16 @@
 {
   "slides":[
     {
+      "low_resolution_background_image": "stickers.jpg",
+      "background_image": "stickers.png",
+      "text": {
+        "header": "10 Years of Gamemode 4!",
+        "paragraph": "Check out our celebratory sticker set!",
+        "position": "bottom-left"
+      },
+      "link": "https://ko-fi.com/miraku_memo/shop"
+    },
+    {
       "low_resolution_background_image":"evergrowth_banner.jpg",
       "background_image":"evergrowth_banner.png",
       "text":{
