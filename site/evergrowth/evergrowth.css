@@ -122,6 +122,10 @@ h2 {
   }
 }
 
+.worldVersionInfo {
+  text-align: center;
+}
+
 .worldDownloadLink {
   color: var(--main-text-color) !important;
   background-color: var(--main-accent-color);
