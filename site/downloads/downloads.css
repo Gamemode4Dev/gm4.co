@@ -1,25 +1,46 @@
- /* Style the button that is used to open and close the collapsible content */
- .collapsible {
-    background-color: #eee;
-    color: #444;
-    cursor: pointer;
-    padding: 18px;
-    width: 100%;
-    border: none;
-    text-align: left;
-    outline: none;
-    font-size: 15px;
-  }
-  
-  /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
-  .active, .collapsible:hover {
-    background-color: #ccc;
-  }
-  
-  /* Style the collapsible content. Note: hidden by default */
-  .content {
-    padding: 0 18px;
-    display: none;
-    overflow: hidden;
-    background-color: #f1f1f1;
-  } 
+.infoContainer {
+	margin: 15px var(--content-spacer);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.infoContainer h3 {
+	display: flex;
+	align-items: center;
+}
+
+section {
+  padding: 20px var(--content-spacer);
+}
+
+section:nth-child(2n+1) {
+  background-color: var(--preview-bg);
+}
+
+section ul {
+  padding-left: 2rem;
+}
+
+section li span {
+  font-size: 20px;
+  vertical-align: middle;
+}
+
+section li .squircleLink {
+  display: inline-block;
+  font-size: 18px;
+  margin-left: 1rem;
+  margin-top: 0.25rem;
+  margin-bottom: 0.25rem;
+  background-color: var(--modulecard-bg-bottom);
+}
+
+section li .squircleLink svg {
+  width: 20px;
+  height: 20px;
+}
+
+section li .squircleLink.mainLink {
+  background-color: var(--main-accent-color);
+}
