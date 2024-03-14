@@ -18,8 +18,14 @@ section:nth-child(2n+1) {
   background-color: var(--preview-bg);
 }
 
+section p {
+  padding-left: 1rem;
+  margin-bottom: 0;
+}
+
 section ul {
-  padding-left: 2rem;
+  padding-left: 1rem;
+  list-style: none;
 }
 
 section li span {
@@ -30,7 +36,7 @@ section li span {
 section li .squircleLink {
   display: inline-block;
   font-size: 18px;
-  margin-left: 1rem;
+  margin-right: 0.5rem;
   margin-top: 0.25rem;
   margin-bottom: 0.25rem;
   background-color: var(--modulecard-bg-bottom);

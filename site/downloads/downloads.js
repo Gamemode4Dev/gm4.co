@@ -25,9 +25,6 @@ $(document).ready(() => {
         for (const download of group.downloads) {
           const li = document.createElement('li');
           ul.append(li);
-          const span = document.createElement('span');
-          li.append(span)
-          span.textContent = `${download.name} (${download.size}, Minecraft ${download.version})`;
           if (download.options?.main) {
             const mainBtn = createDownloadButton('Download', download.options.main);
             li.append(mainBtn);
@@ -37,6 +34,9 @@ $(document).ready(() => {
             const mirrorBtn = createDownloadButton('Mirror', download.options.mirror);
             li.append(mirrorBtn);
           }
+          const span = document.createElement('span');
+          li.append(span)
+          span.textContent = `${download.name} (${download.size}, Minecraft ${download.version})`;
         }
       }
     });
