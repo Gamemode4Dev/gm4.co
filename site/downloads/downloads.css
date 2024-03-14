@@ -1,3 +1,9 @@
+.slideshow.downloadsSlides {
+  height: 20vw;
+  min-height: 25vh;
+  max-height: 35vh;
+}
+
 .infoContainer {
 	margin: 15px var(--content-spacer);
 	display: flex;
