@@ -8,12 +8,17 @@ const SUPPORTERS = [
 	'Danticlockwise',
 	'TheEpyonProject',
 	'gjunnila',
+	'Jackohhh',
+	'kyrkis',
 	'ShadowSlam',
 	'SpecialBuilder32',
 	'suppergerrie2',
 	'R3AP3R_exe',
 	'venomousbirds',
-	'MichaelMiner137'
+	'MichaelMiner137',
+	'MightyBurger',
+	'Levertion',
+	'AnkaEs'
 ]
 
 window.addEventListener('DOMContentLoaded', () => {
