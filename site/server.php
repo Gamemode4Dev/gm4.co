@@ -54,6 +54,8 @@ gtag('config', 'UA-63061711-1', {cookie_flags:'SameSite=None;Secure'});
     <h3>IP: <span class="serverIp">server.gm4.co<div class="copyButton" title="Copy server IP"></div></span></h3>
 		<br />
     <p>A new public server is here! To keep up to date with all the latest news, <a href='https://gm4.co/discord'>join our Discord Server!</a></p>
+		<p>Looking for the world downloads of our past seasons? <a href="https://gm4.co/downloads">Check out our downloads page!</a></p>
+		<br />
 
 		<div class="serverSlides slideshow track">
 			<div class="trackButton trackButtonLeft"></div>
