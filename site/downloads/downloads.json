@@ -153,7 +153,7 @@
         },
         {
           "name": "All worlds",
-          "size": "REPLACE MB",
+          "size": "16.4 DB",
           "version": "1.12.2",
           "options": {
             "main": "https://files.kruthers.com/worlds/gm4/GM4_Public_server_GM4D_full.zip"
