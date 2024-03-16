@@ -3,17 +3,22 @@
 const SUPPORTERS = [
 	'kruthers',
 	'Hero29',
+	'TransportLayer',
 	'Luexa',
 	'Danticlockwise',
 	'TheEpyonProject',
 	'gjunnila',
 	'Jackohhh',
+	'kyrkis',
 	'ShadowSlam',
 	'SpecialBuilder32',
 	'suppergerrie2',
 	'R3AP3R_exe',
 	'venomousbirds',
-	'MichaelMiner137'
+	'MichaelMiner137',
+	'MightyBurger',
+	'Levertion',
+	'AnkaEs'
 ]
 
 window.addEventListener('DOMContentLoaded', () => {
@@ -26,7 +31,8 @@ window.addEventListener('DOMContentLoaded', () => {
 
 			// Header slideshow
 			for (const slide of slideshow.slides) {
-				$('.slideshow > .trackContainer').append(`<${slide.link ? `a href=${slide.link}` : 'div'} data-bg="images/slideshow/${slide.background_image}" class="lazyload trackItem ${slide.text.position || 'bottom-left'} ${slide.darken ? 'darken' : ''}" style="background-image:url(images/slideshow/${slide.low_resolution_background_image});">${slide.text ? `<h2>${slide.text.header}</h2><p>${slide.text.paragraph}</p>` : ''}${slide.link ? '</a>' : '</div>'}`);
+				const external = slide.link.startsWith('https://') && !slide.link.startsWith('https://gm4.co/')
+				$('.slideshow > .trackContainer').append(`<${slide.link ? `a href=${slide.link}` : 'div'} ${external ? 'target="_blank"' : ''} data-bg="images/slideshow/${slide.background_image}" class="lazyload trackItem ${slide.text.position || 'bottom-left'} ${slide.darken ? 'darken' : ''}" style="background-image:url(images/slideshow/${slide.low_resolution_background_image});">${slide.text ? `<h2>${slide.text.header}</h2><p>${slide.text.paragraph}</p>` : ''}${slide.link ? '</a>' : '</div>'}`);
 			}
 			initTrack($('.slideshow'), 8000);
 			//scale up lazyloaded low res background images (such as the slideshow)
@@ -38,7 +44,7 @@ window.addEventListener('DOMContentLoaded', () => {
 			});
 
 			for (const supporter of SUPPORTERS) {
-				$('.supporters-list').append(`<img src="https://cravatar.eu/helmavatar/${supporter}/16.png" alt="${supporter}" title="${supporter}" />`)
+				$('.supporters-list').append(`<img src="https://gm4.co/images/supporters/16.php?username=${supporter}" alt="${supporter}" title="${supporter}" />`)
 			}
 
 			// Browse tab
@@ -49,7 +55,7 @@ window.addEventListener('DOMContentLoaded', () => {
 			document.getElementById('modules').append(moduleFilter);
 
 			[...modules.values()]
-				.filter(mod => mod.type === 'datapack')
+				.filter(mod => mod.id !== 'gm4_resource_pack')
 				.sort((a, b) => a.name.localeCompare(b.name))
 				.forEach(mod => {
 					const moduleLink = document.createElement('a');

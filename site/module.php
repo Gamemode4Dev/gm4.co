@@ -9,7 +9,7 @@
 		foreach ($source["versions"] as $version) {
 			global $module;
 
-			$cache = preg_replace("/\//", "-", $source["repo"]) . "-" . $version["id"] . ".cache";
+			$cache = "resources-cache/" . preg_replace("/\//", "-", $source["repo"]) . "-" . $version["id"] . ".cache";
 			if (file_exists($cache) && time() - filemtime($cache) < 60 * 60 * 24) {
 				$contents = file_get_contents($cache);
 			} else {

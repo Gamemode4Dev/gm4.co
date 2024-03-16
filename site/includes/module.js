@@ -22,16 +22,16 @@ let selectedVersion = '1.20';
  */
 // eslint-disable-next-line no-unused-vars
 function fetchModulesAndResources() {
-	const flatModuleSources = MODULE_SOURCES.flatMap(({ type, repo, versions }) =>
-		versions.map(version => ({ type, version, repo })));
-	return Promise.all(flatModuleSources.map(async ({ type, repo, version }) => {
+	const flatModuleSources = MODULE_SOURCES.flatMap(({ repo, versions }) =>
+		versions.map(version => ({ version, repo })));
+	return Promise.all(flatModuleSources.map(async ({ repo, version }) => {
 		let meta;
 		try {
 			meta = await fetch(`https://raw.githubusercontent.com/${repo}/release/${version.id}/meta.json`).then(r => r.json());
 		} catch (e) {
 			meta = await fetch(`https://cdn.jsdelivr.net/gh/${repo}@release/${version.id}/meta.json`).then(r => r.json());
 		}
-		return { type, version, ...meta };
+		return { source: { repo, version } , version, ...meta };
 	})).then((sources) => {
 		for (const source of sources) {
 			source.modules.filter(m => !m.hidden).forEach(mod => {
@@ -43,7 +43,7 @@ function fetchModulesAndResources() {
 					});
 				} else {
 					modules.set(mod.id, {
-						type: source.type,
+						source: source.source,
 						...mod,
 						recommends: mod.recommends,
 						versions: [source.version.id],
@@ -559,10 +559,11 @@ function createModuleIcon(moduleId) {
  */
 function getModuleIconUrl(moduleId) {
 	const mod = modules.get(moduleId);
-	const repo = MODULE_SOURCES.find(s => s.type === mod.type).repo;
-	const branch = getBranchName(mod.versions[0], mod.type);
-	const extension = mod.type === 'resourcepack' ? 'png' : 'svg';
-	return `https://raw.githubusercontent.com/${repo}/${branch}/${moduleId}/pack.${extension}`;
+	const repo = mod.source.repo
+	const branch = mod.source.version.branch
+	const folder = mod.id === 'gm4_resource_pack' ? 'resource_pack' : mod.id
+	const extension = mod.id === 'gm4_resource_pack' ? 'png' : 'svg';
+	return `https://raw.githubusercontent.com/${repo}/${branch}/${folder}/pack.${extension}`;
 }
 
 /**
@@ -577,17 +578,6 @@ function getModuleDownload(version, moduleId) {
 }
 
 /**
- * Get the branch name for a version.
- * @param {string} version the version
- * @param {string} type the module source type
- * @returns the branch name
- */
-function getBranchName(version, type) {
-	const versions = MODULE_SOURCES.find(s => s.type === type).versions;
-	return versions.find(v => v.id === version).branch;
-}
-
-/**
  * Shuffles an array
  * @param {unknown[]} arr the array to shuffle
  * @param {number} shuffleFrom optional start index
@@ -595,29 +585,4 @@ function getBranchName(version, type) {
  */
 function shuffleArray(arr, shuffleFrom = 0) {
 	return arr.slice(0, shuffleFrom).concat((arr.slice(shuffleFrom)).sort(() => Math.random() - 0.5));
-}
-
-const CACHE_NAME = 'gm4-v1';
-
-/**
- * @param {string} url the url to fetch
- * @param {number} ttl time to live in seconds
- */
-async function cachedFetch(url, ttl) {
-	const now = new Date().getTime();
-	const cache = await caches.open(CACHE_NAME);
-	const cacheResponse = await cache.match(url);
-	if (cacheResponse && cacheResponse.ok) {
-		const expires = new Date(cacheResponse.headers.get('Expires')).getTime();
-		if (now < expires) {
-			return cacheResponse;
-		}
-	}
-
-	const fetchResponse = await fetch(url);
-	const storedResponse = new Response(fetchResponse.clone().body, { headers: {
-		Expires: new Date(now + ttl * 1000).toUTCString(),
-	} });
-	await cache.put(url, storedResponse);
-	return fetchResponse;
 }

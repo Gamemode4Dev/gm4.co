@@ -1,4 +1,5 @@
 https://gm4.co/
+https://gm4.co/evergrowth/
 https://gm4.co/modules/ambrosia
 https://gm4.co/modules/animi-shamir
 https://gm4.co/modules/apple-trees
@@ -10,7 +11,9 @@ https://gm4.co/modules/better-armour-stands
 https://gm4.co/modules/better-fire
 https://gm4.co/modules/block-compressors
 https://gm4.co/modules/book-binders
+https://gm4.co/modules/bookshelf-inspector
 https://gm4.co/modules/boots-of-ostara
+https://gm4.co/modules/calling-bell
 https://gm4.co/modules/cement-mixers
 https://gm4.co/modules/chairs
 https://gm4.co/modules/chest-boats
@@ -23,7 +26,9 @@ https://gm4.co/modules/dangerous-dungeons
 https://gm4.co/modules/desire-lines
 https://gm4.co/modules/disassemblers
 https://gm4.co/modules/display-frames
+https://gm4.co/modules/double-doors
 https://gm4.co/modules/dripleaf-filters
+https://gm4.co/modules/dripleaf-launchers
 https://gm4.co/modules/enchantment-extractors
 https://gm4.co/modules/end-fishing
 https://gm4.co/modules/ender-hoppers
@@ -49,6 +54,7 @@ https://gm4.co/modules/midnight-menaces
 https://gm4.co/modules/mob-conversion
 https://gm4.co/modules/mob-curing
 https://gm4.co/modules/moneo-shamir
+https://gm4.co/modules/mountaineering
 https://gm4.co/modules/mysterious-midnights
 https://gm4.co/modules/note-block-interface
 https://gm4.co/modules/orb-of-ankou
@@ -67,6 +73,7 @@ https://gm4.co/modules/relocators
 https://gm4.co/modules/resource-pack
 https://gm4.co/modules/rope-ladders
 https://gm4.co/modules/scuba-gear
+https://gm4.co/modules/shapeless-portals
 https://gm4.co/modules/shroomites
 https://gm4.co/modules/smelteries
 https://gm4.co/modules/soul-glass

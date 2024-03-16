@@ -354,3 +354,13 @@ p.footer-small {
 .dropdown-content a:hover {
   color: var(--main-accent-color);
 }
+
+.dropdown-entry {
+  display: flex;
+  flex-direction: column;
+}
+
+.dropdown-entry-info {
+  font-size: 16px;
+  font-weight: normal;
+}

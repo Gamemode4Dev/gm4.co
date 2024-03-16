@@ -1,0 +1,167 @@
+{
+  "groups": [
+    {
+      "name": "Public Server 1",
+      "downloads": [
+        {
+          "name": "Final World",
+          "size": "1.45 GB",
+          "version": "1.8.9",
+          "options": {
+            "main": "https://drive.google.com/file/d/1jXCigmdiKDQSxvNC6PTM1nc0CvFsaGfd/view",
+            "mirror": "https://files.kruthers.com/worlds/gm4/GM4_Public_Server_1.zip"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Public Server 2",
+      "downloads": [
+        {
+          "name": "Final World",
+          "size": "3.28 GB",
+          "version": "1.8.9",
+          "options": {
+            "main": "https://drive.google.com/file/d/14gJc4PBzTeLneCIMbUY4g3YRlZrPJjHk/view",
+            "mirror": "https://files.kruthers.com/worlds/gm4/GM4_Public_Server_2.zip"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Public Server 3",
+      "downloads": [
+        {
+          "name": "Final World",
+          "size": "4.47 GB",
+          "version": "1.10.2",
+          "options": {
+            "main": "https://drive.google.com/file/d/1njppT2EyrKvC8Ntlzw1rF6MU9hfq5f-G/view",
+            "mirror": "https://files.kruthers.com/worlds/gm4/GM4_Public_Server_3-final.zip"
+          }
+        },
+        {
+          "name": "Pre-Players World",
+          "size": "2.72 GB",
+          "version": "1.9.2",
+          "options": {
+            "main": "https://drive.google.com/file/d/1xCT1smm-hLc1VjpOAEbeKsaAGa-XgCGI/view",
+            "mirror": "https://files.kruthers.com/worlds/gm4/GM4_Public_Server_3-pre_players.zip"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Public Server 4 (GM4D)",
+      "description": "Not available currently",
+      "downloads": []
+    },
+    {
+      "name": "Public Server 5",
+      "downloads": [
+        {
+          "name": "Final World",
+          "size": "12.5 GB",
+          "version": "1.14.4",
+          "options": {
+            "main": "https://drive.google.com/file/d/1M7-Vz2o8dL-VCxZW-jjM_prLLHTVzkDF/view",
+            "mirror": "https://files.kruthers.com/worlds/gm4/GM4_Public_Server_5-final.zip"
+          }
+        },
+        {
+          "name": "Pre-Players World",
+          "size": "1.70 GB",
+          "version": "1.13.2",
+          "options": {
+            "main": "https://drive.google.com/file/d/1h9stTfXiGZvcHiSFqm9zOkfSHTR3neMS/view",
+            "mirror": "https://files.kruthers.com/worlds/gm4/GM4_Public_Server_5-pre_players.zip"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Public Server 6",
+      "downloads": [
+        {
+          "name": "Final World",
+          "size": "8.07 GB",
+          "version": "1.16.5",
+          "options": {
+            "main": "https://files.kruthers.com/worlds/gm4/GM4_Public_Server_6-final.zip"
+          }
+        },
+        {
+          "name": "Pre-Players World",
+          "size": "6.32 GB",
+          "version": "1.15.2",
+          "options": {
+            "main": "https://files.kruthers.com/worlds/gm4/GM4_Public_Server_6-pre_players.zip"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Public Server 7 (Sky)",
+      "downloads": [
+        {
+          "name": "Final World",
+          "size": "11.57 GB",
+          "version": "1.17.1",
+          "options": {
+            "main": "https://files.kruthers.com/worlds/gm4/GM4_Public_Server_7-final.zip"
+          }
+        },
+        {
+          "name": "Pre-Players World",
+          "size": "13 GB",
+          "version": "1.16.5",
+          "options": {
+            "main": "https://files.kruthers.com/worlds/gm4/GM4_Public_Server_7-pre_players.zip"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Public Server 8",
+      "downloads": [
+        {
+          "name": "Final World",
+          "size": "7.72 GB",
+          "version": "1.18.2",
+          "options": {
+            "main": "https://files.kruthers.com/worlds/gm4/GM4_Public_Server_8-final.zip"
+          }
+        },
+        {
+          "name": "Pre-Players World",
+          "size": "5.14 GB",
+          "version": "1.18.1",
+          "options": {
+            "main": "https://files.kruthers.com/worlds/gm4/GM4_Public_Server_8-pre_players.zip"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Public Server 9",
+      "downloads": [
+        {
+          "name": "Final World",
+          "size": "9.03 GB",
+          "version": "1.19.2",
+          "options": {
+            "main": "https://files.kruthers.com/worlds/gm4/GM4_Public_Server_9-final.zip"
+          }
+        },
+        {
+          "name": "Pre-Players World",
+          "size": "8.08 GB",
+          "version": "1.19.2",
+          "options": {
+            "main": "https://files.kruthers.com/worlds/gm4/GM4_Public_Server_9-pre_players.zip"
+          }
+        }
+      ]
+    }
+  ]
+}

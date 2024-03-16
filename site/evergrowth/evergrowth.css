@@ -1,44 +1,27 @@
-#splash {
-  background-image: url(evergrowth_splash.png);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
+.splash {
+  display: grid;
+  grid-template-areas: "splash";
+  justify-items: center;
   width: 100%;
-  position: relative;
+  min-height: 150px;
+  height: 40vh;
+}
+
+.splash img {
+  grid-area: splash;
+  width: 100%;
   min-height: 150px;
   height: 40vh;
   overflow: hidden;
-  text-align: center;
-  z-index: -1;
+  object-fit: cover;
 }
 
-#loop_gif {
-  background-image: url(evergrowth_loop.gif);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  width: 100%;
-  position: relative;
-  min-height: 150px;
-  height: 40vh;
-  overflow: hidden;
-  text-align: center;
-  z-index: -1;
-}
-
-#logo {
+.splash img.splash-overlay {
   width: 80%;
-  height: 80%;
-  top: 10%;
   max-width: 685px;
-  margin-left: auto;
-  margin-right: auto;
-  position: relative;
-  background-image: url(evergrowth_title.png);
-  background-position: center;
-  background-size: contain;
-  background-repeat: no-repeat;
-  content: "";
+  top: 0;
+  left: 0;
+  object-fit: contain;
 }
 
 h2 {
@@ -88,12 +71,14 @@ h2 {
   image-rendering: pixelated;
   width: 48px;
   height: 48px;
-  border-radius: 1em;
+  border-radius: 1rem;
   margin-right: 10px;
+  background-color:var(--preview-bg);
+  font-size:0px;
 }
-.creator > p{
-margin: 0;
 
+.creator p {
+  margin: 0;
 }
 
 .small {
@@ -112,37 +97,33 @@ margin: 0;
 
 .posterPair {
   width: 100%;
-  margin-left: auto;
-  margin-right: auto;
-  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .posterPairBox {
-  width: 100%;
-  height: 100%;
-  float: left;
-  box-sizing: border-box;
+  width: 50%;
   padding: 10px;
-
-}
-
-#poster-pair-box-right {
-  padding-top: 5%
-
 }
 
 .posterPairBox img {
   width: 100%;
 }
 
-@media screen and (min-width: 1000px) {
-  .posterPairBox {
-    width: 50%;
-    height: 100%;
-    float: left;
-    box-sizing: border-box;
-    padding: 10px;
+@media screen and (max-width: 1000px) {
+  .posterPair {
+    flex-direction: column;
+    align-items: center;
   }
+
+  .posterPairBox {
+    width: 100%;
+  }
+}
+
+.worldVersionInfo {
+  text-align: center;
 }
 
 .worldDownloadLink {
@@ -163,15 +144,18 @@ margin: 0;
   padding: 10px;
 }
 
+.bottom-loop {
+  width: 100%;
+  min-height: 150px;
+  height: 40vh;
+  object-fit: cover;
+  object-position: center;
+}
+
 .center {
   text-align: center;
 }
 
-.clearfix {
-  clear: both;
-}
-
 footer {
-border-top: 0px !important;
-
+  border-top: 0px !important;
 }

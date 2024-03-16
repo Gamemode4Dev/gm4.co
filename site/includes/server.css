@@ -191,7 +191,7 @@
 }
 
 .slideshow.serverSplash .trackItem > img {
-	transform: scale(1.1);
+	transform: scale(0.8);
 }
 
 .slideshow.serverSplash .trackItem > div {

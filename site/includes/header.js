@@ -62,3 +62,28 @@ function savePreferences() {
 		window.localStorage.setItem('user', JSON.stringify(userdata));
 	}
 }
+
+const CACHE_NAME = 'gm4-v1';
+
+/**
+ * @param {string} url the url to fetch
+ * @param {number} ttl time to live in seconds
+ */
+async function cachedFetch(url, ttl) {
+	const now = new Date().getTime();
+	const cache = await caches.open(CACHE_NAME);
+	const cacheResponse = await cache.match(url);
+	if (cacheResponse && cacheResponse.ok) {
+		const expires = new Date(cacheResponse.headers.get('Expires')).getTime();
+		if (now < expires) {
+			return cacheResponse;
+		}
+	}
+
+	const fetchResponse = await fetch(url);
+	const storedResponse = new Response(fetchResponse.clone().body, { headers: {
+		Expires: new Date(now + ttl * 1000).toUTCString(),
+	} });
+	await cache.put(url, storedResponse);
+	return fetchResponse;
+}

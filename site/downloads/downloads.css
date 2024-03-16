@@ -1,0 +1,58 @@
+.slideshow.downloadsSlides {
+  height: 20vw;
+  min-height: 25vh;
+  max-height: 35vh;
+}
+
+.infoContainer {
+	margin: 15px var(--content-spacer);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.infoContainer h3 {
+	display: flex;
+	align-items: center;
+}
+
+section {
+  padding: 20px var(--content-spacer);
+}
+
+section:nth-child(2n+1) {
+  background-color: var(--preview-bg);
+}
+
+section p {
+  padding-left: 1rem;
+  margin-bottom: 0;
+}
+
+section ul {
+  padding-left: 1rem;
+  list-style: none;
+}
+
+section li span {
+  font-size: 20px;
+  vertical-align: middle;
+}
+
+section li .squircleLink {
+  display: inline-block;
+  font-size: 18px;
+  margin-right: 0.5rem;
+  margin-top: 0.25rem;
+  margin-bottom: 0.25rem;
+  background-color: var(--modulecard-bg-bottom);
+}
+
+section li .squircleLink svg {
+  width: 20px;
+  height: 20px;
+}
+
+section li .squircleLink.mainLink {
+  background-color: var(--main-accent-color);
+}

@@ -23,7 +23,7 @@ gtag('config', 'UA-63061711-1', {cookie_flags:'SameSite=None;Secure'});
 <meta property="og:site_name" content="Gamemode 4 Server"/>
 <meta property="og:title" content="A multiplayer vanilla Minecraft world with a spicy Gamemode 4 twist."/>
 <meta property="og:description" content="A collection of data packs that can be added to survival Minecraft in any combination to create a new, exciting feel without the use of mods or plugins. This website allows you to download the latest versions of Gamemode 4 modules and links to our Discord, Twitter, public Minecraft server and github."/>
-<meta property="og:image" content="https://gm4.co/images/server/ps9_banner_text.png">
+<meta property="og:image" content="https://gm4.co/images/server/ps10_logo.png">
 <meta property="og:url" content="https://gm4.co/server">
 
 <link rel="icon" type="image/svg" href="https://www.gm4.co/images/logo/logo_clear.svg" sizes="any">
@@ -40,10 +40,10 @@ gtag('config', 'UA-63061711-1', {cookie_flags:'SameSite=None;Secure'});
 	<div class="serverSplash slideshow track">
 		<div class="trackContainer">
 			<div class="trackItem" style="background-image: url(images/server/ps9_banner.png);">
-				<img src="/images/server/ps9_logo.png">
+				<img src="/images/server/ps10_logo.png">
 				<div>
 					<h2>Gamemode 4</h2>
-					<h2>Public Server 9</h2>
+					<h2>Public Server 10</h2>
 				</div>
 			</div>
 		</div>
@@ -54,6 +54,8 @@ gtag('config', 'UA-63061711-1', {cookie_flags:'SameSite=None;Secure'});
     <h3>IP: <span class="serverIp">server.gm4.co<div class="copyButton" title="Copy server IP"></div></span></h3>
 		<br />
     <p>A new public server is here! To keep up to date with all the latest news, <a href='https://gm4.co/discord'>join our Discord Server!</a></p>
+		<p>Looking for the world downloads of our past seasons? <a href="https://gm4.co/downloads">Check out our downloads page!</a></p>
+		<br />
 
 		<div class="serverSlides slideshow track">
 			<div class="trackButton trackButtonLeft"></div>
