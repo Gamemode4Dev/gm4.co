@@ -54,6 +54,10 @@ h2 {
   box-sizing: border-box;
 }
 
+.worldVersionInfo {
+  text-align: center;
+}
+
 .posterPair {
   width: 100%;
   margin-left: auto;
