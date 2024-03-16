@@ -60,6 +60,7 @@ gtag('config', 'UA-63061711-1');
   <p style="clear: both;">To find the pieces for the ritual, you must defeat monsters, solve puzzles, and use Gamemode 4 Modules – our awesome survival datapacks!</p>
   <br>
   <br>
+  <p class="worldVersionInfo">For Minecraft: Java Edition 1.17.1</p>
   <div class="buttonGrid">
     <a href="https://github.com/Gamemode4Dev/obsolescence/releases/download/1.2-w/Obsolescence_v1.2.zip" class="squircleLink worldDownloadLink">
     <img src="/images/filled_map.svg">
