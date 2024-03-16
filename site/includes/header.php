@@ -13,8 +13,16 @@
       <li>
         <a href="//blog.gm4.co" target="_blank" rel="noreferrer"><h1>Blog</h1></a>
       </li>
-      <li>
-        <a href="/server"><h1>Server</h1></a>
+      <li class="dropdown">
+        <h1>Servers</h1>
+        <div class="dropdown-content">
+        <a class="dropdown-map-info" href="/server">
+          <div>Current Server</div>
+        </a>
+        <a class="dropdown-entry" href="/downloads">
+          <div>Previous Server Downloads</div>
+        </a>
+        </div>
       </li>
       <li class="dropdown">
         <h1>Maps</h1>
