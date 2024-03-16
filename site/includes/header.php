@@ -17,10 +17,10 @@
         <h1>Servers</h1>
         <div class="dropdown-content">
         <a class="dropdown-map-info" href="/server">
-          <div>Current Server</div>
+          <div>Public Server 10</div>
         </a>
         <a class="dropdown-entry" href="/downloads">
-          <div>Previous Server Downloads</div>
+          <div>Previous Downloads</div>
         </a>
         </div>
       </li>
