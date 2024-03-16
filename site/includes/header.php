@@ -14,7 +14,9 @@
         <a href="//blog.gm4.co" target="_blank" rel="noreferrer"><h1>Blog</h1></a>
       </li>
       <li class="dropdown">
-        <h1>Servers</h1>
+        <a href="/server">
+          <h1>Server</h1>
+        </a>
         <div class="dropdown-content">
         <a class="dropdown-map-info" href="/server">
           <div>Public Server 10</div>
