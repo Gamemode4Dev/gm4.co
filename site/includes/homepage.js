@@ -55,7 +55,7 @@ window.addEventListener('DOMContentLoaded', () => {
 			document.getElementById('modules').append(moduleFilter);
 
 			[...modules.values()]
-				.filter(mod => mod.type === 'datapack')
+				.filter(mod => mod.id !== 'gm4_resource_pack')
 				.sort((a, b) => a.name.localeCompare(b.name))
 				.forEach(mod => {
 					const moduleLink = document.createElement('a');
