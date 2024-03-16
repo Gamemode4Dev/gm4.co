@@ -54,7 +54,112 @@
     {
       "name": "Public Server 4 (GM4D)",
       "description": "Not available currently",
-      "downloads": []
+      "downloads": [
+        {
+          "name": "Aether",
+          "size": "200 MB",
+          "version": "1.12.2",
+          "options": {
+            "main": "https://files.kruthers.com/worlds/gm4/GM4_Public_server_GM4D_aether.zip"
+          }
+        },
+        {
+          "name": "Amplified",
+          "size": "1.13 GB",
+          "version": "1.12.2",
+          "options": {
+            "main": "https://files.kruthers.com/worlds/gm4/GM4_Public_server_GM4D_amplified.zip"
+          }
+        },
+        {
+          "name": "Cursed",
+          "size": "892 MB",
+          "version": "1.12.2",
+          "options": {
+            "main": "https://files.kruthers.com/worlds/gm4/GM4_Public_server_GM4D_cursed.zip"
+          }
+        },
+        {
+          "name": "Events",
+          "size": "18. MB",
+          "version": "1.12.2",
+          "options": {
+            "main": "https://files.kruthers.com/worlds/gm4/GM4_Public_server_GM4D_events.zip"
+          }
+        },
+        {
+          "name": "Events 3",
+          "size": "137 MB",
+          "version": "1.12.2",
+          "options": {
+            "main": "https://files.kruthers.com/worlds/gm4/GM4_Public_server_GM4D_events_3.zip"
+          }
+        },
+        {
+          "name": "Fertile",
+          "size": "1.36 GB",
+          "version": "1.12.2",
+          "options": {
+            "main": "https://files.kruthers.com/worlds/gm4/GM4_Public_server_GM4D_fertile.zip"
+          }
+        },
+        {
+          "name": "Lower Caves",
+          "size": "4.88 GB",
+          "version": "1.12.2",
+          "options": {
+            "main": "https://files.kruthers.com/worlds/gm4/GM4_Public_server_GM4D_lower_caves.zip"
+          }
+        },
+        {
+          "name": "Moon",
+          "size": "861 MB",
+          "version": "1.12.2",
+          "options": {
+            "main": "https://files.kruthers.com/worlds/gm4/GM4_Public_server_GM4D_moon.zip"
+          }
+        },
+        {
+          "name": "Overworld",
+          "size": "3.01 GB",
+          "version": "1.12.2",
+          "options": {
+            "main": "https://files.kruthers.com/worlds/gm4/GM4_Public_server_GM4D_overworld.zip"
+          }
+        },
+        {
+          "name": "Superflat",
+          "size": "244 MB",
+          "version": "1.12.2",
+          "options": {
+            "main": "https://files.kruthers.com/worlds/gm4/GM4_Public_server_GM4D_superflat.zip"
+          }
+        },
+        {
+          "name": "Upper Caves",
+          "size": "3.27 GB",
+          "version": "1.12.2",
+          "options": {
+            "main": "https://files.kruthers.com/worlds/gm4/GM4_Public_server_GM4D_upper_caves.zip"
+          }
+        },
+        {
+          "name": "Landings",
+          "size": "428 MB",
+          "version": "1.12.2",
+          "options": {
+            "main": "https://files.kruthers.com/worlds/gm4/GM4_Public_server_GM4D_landings.zip"
+          }
+        },
+        {
+          "name": "All worlds",
+          "size": "REPLACE MB",
+          "version": "1.12.2",
+          "options": {
+            "main": "https://files.kruthers.com/worlds/gm4/GM4_Public_server_GM4D_full.zip"
+          }
+        }
+      ]
     },
     {
       "name": "Public Server 5",
