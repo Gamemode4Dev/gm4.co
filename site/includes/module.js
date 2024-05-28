@@ -14,7 +14,7 @@ const COLLAPSE_ARROW = '<svg xmlns="http://www.w3.org/2000/svg" height="24" view
 
 const modules = new Map();
 // eslint-disable-next-line prefer-const
-let selectedVersion = '1.20';
+let selectedVersion = '1.20.5';
 
 /**
  * Fetch modules from the datapacks and resourcepacks repos.
@@ -371,7 +371,7 @@ function updateIncludedModules(moduleIds) {
 	downloadButton.addEventListener('click', async () => {
 		const { downloadZip } = await import('/includes/client-zip.min.js');
 		const files = await Promise.all(includedModules.map(mod => {
-			return fetch(`https://raw.githubusercontent.com/Gamemode4Dev/GM4_Datapacks/release/1.20/${mod.id}_${selectedVersion.replace(/\./g, '_')}.zip`);
+			return fetch(`https://raw.githubusercontent.com/Gamemode4Dev/GM4_Datapacks/release/${selectedVersion}/${mod.id}_${selectedVersion.replace(/\./g, '_')}.zip`);
 		}));
 
 		const blob = await downloadZip(files).blob();
