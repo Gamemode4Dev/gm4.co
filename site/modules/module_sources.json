@@ -2,24 +2,24 @@
   {
     "repo": "Gamemode4Dev/GM4_Datapacks",
     "versions": [
-      { "id": "1.20.5", "name": "Minecraft Java 1.20.5", "branch": "master" },
-      { "id": "1.20", "name": "Minecraft Java 1.20", "branch": "ver/1.20" },
-      { "id": "1.19.4", "name": "Minecraft Java 1.19.4", "branch": "ver/1.19.4" },
-      { "id": "1.19", "name": "Minecraft Java 1.19", "branch": "ver/1.19" },
-      { "id": "1.18", "name": "Minecraft Java 1.18", "branch": "ver/1.18" },
-      { "id": "1.17", "name": "Minecraft Java 1.17", "branch": "ver/1.17" },
-      { "id": "1.16", "name": "Minecraft Java 1.16", "branch": "ver/1.16" },
-      { "id": "1.15", "name": "Minecraft Java 1.15", "branch": "ver/1.15" },
-      { "id": "1.14", "name": "Minecraft Java 1.14", "branch": "ver/1.14" },
-      { "id": "1.13", "name": "Minecraft Java 1.13", "branch": "ver/1.13" }
+      { "id": "1.20.5", "name": "1.20.5 — 1.20.6", "branch": "master" },
+      { "id": "1.20", "name": "1.20 — 1.20.4", "branch": "ver/1.20" },
+      { "id": "1.19.4", "name": "1.19.4", "branch": "ver/1.19.4" },
+      { "id": "1.19", "name": "1.19 — 1.29.3", "branch": "ver/1.19" },
+      { "id": "1.18", "name": "1.18", "branch": "ver/1.18" },
+      { "id": "1.17", "name": "1.17", "branch": "ver/1.17" },
+      { "id": "1.16", "name": "1.16", "branch": "ver/1.16" },
+      { "id": "1.15", "name": "1.15", "branch": "ver/1.15" },
+      { "id": "1.14", "name": "1.14", "branch": "ver/1.14" },
+      { "id": "1.13", "name": "1.13", "branch": "ver/1.13" }
     ]
   },
   {
     "repo": "Gamemode4Dev/GM4_Resources",
     "versions": [
-      { "id": "1.19.4", "name": "Minecraft Java 1.19.4", "branch": "ver/1.19.4" },
-      { "id": "1.19", "name": "Minecraft Java 1.19", "branch": "ver/1.19" },
-      { "id": "1.18", "name": "Minecraft Java 1.18", "branch": "ver/1.18" }
+      { "id": "1.19.4", "name": "1.19.4", "branch": "ver/1.19.4" },
+      { "id": "1.19", "name": "1.19 — 1.19.3", "branch": "ver/1.19" },
+      { "id": "1.18", "name": "1.18", "branch": "ver/1.18" }
     ]
   }
 ]

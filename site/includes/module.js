@@ -149,8 +149,9 @@ function createSquircle(image, text, href, target) {
  * @returns an HTMLElement
  */
 function createVersionButton(version, moduleId, text) {
+	const versionName = MODULE_SOURCES[0].versions.find(v => v.id === version).name
 	const url = getModuleDownload(version, moduleId);
-	const el = createSquircle(DOWNLOAD_ICON, text || version, url, 'download_frame');
+	const el = createSquircle(DOWNLOAD_ICON, text || (versionName ?? version), url, 'download_frame');
 	if (version === selectedVersion) {
 		el.classList.add('selectedVersion');
 	}
@@ -430,7 +431,8 @@ async function createPreview(version, moduleId, onDownload) {
 	previewInfo.insertAdjacentHTML('beforeend', `<h3>${mod.name}</h3>`);
 	previewInfo.insertAdjacentHTML('beforeend', `<p>${mod.description}</p>`);
 	previewInfo.classList.add('previewInfo');
-	const downloadButton = createVersionButton(version, moduleId, `Download for Java ${version}`);
+	const versionName = MODULE_SOURCES[0].versions.find(v => v.id === version).name
+	const downloadButton = createVersionButton(version, moduleId, `Download for Java ${versionName ?? version}`);
 	downloadButton.classList.add('datapackLink');
 	if (onDownload) downloadButton.addEventListener('click', onDownload);
 	previewInfo.append(downloadButton);

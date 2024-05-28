@@ -96,7 +96,7 @@ function createModuleFilter() {
 	[...MODULE_SOURCES[0].versions, { id: 'older', name: 'Earlier Versions...' }].forEach(version => {
 		const option = document.createElement('option');
 		option.value = version.id;
-		option.textContent = version.name;
+		option.textContent = `Minecraft Java ${version.name}`;
 		versionSelect.append(option);
 	});
 	versionSelect.addEventListener('change', () => {
