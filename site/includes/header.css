@@ -271,6 +271,7 @@ header li > :first-child {
   font-weight: bold;
   padding: 10px;
   cursor: pointer;
+  align-content: center;
 }
 
 @media (max-width: 480px) {
