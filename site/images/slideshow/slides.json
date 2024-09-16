@@ -1,14 +1,14 @@
 {
   "slides":[
     {
-      "low_resolution_background_image": "stickers.jpg",
-      "background_image": "stickers.png",
+      "low_resolution_background_image": "smithed_summit.jpg",
+      "background_image": "smithed_summit.png",
       "text": {
-        "header": "10 Years of Gamemode 4!",
-        "paragraph": "Check out our celebratory sticker set!",
+        "header": "Join us at the Smithed Summit!",
+        "paragraph": "A convention held inside of Minecraft, featuring datapack creators, map makers, and more!",
         "position": "bottom-left"
       },
-      "link": "https://ko-fi.com/miraku_memo/shop"
+      "link": "https://smithed.net/summit"
     },
     {
       "low_resolution_background_image":"evergrowth_banner.jpg",
@@ -19,6 +19,27 @@
         "position":"bottom-left"
       },
       "link":"https://gm4.co/evergrowth"
+    },
+    {
+      "low_resolution_background_image":"server10_1.jpg",
+      "background_image":"server10_1.png",
+      "text":{
+        "header":"Gamemode 4 Public Server",
+        "paragraph":"Join us on play.gm4.co",
+        "position":"bottom-left"
+      },
+      "darken": true,
+      "link":"https://gm4.co/server"
+    },
+    {
+      "low_resolution_background_image":"zauber_cauldrons_1.jpg",
+      "background_image":"zauber_cauldrons_1.png",
+      "text":{
+        "header":"Magical Cauldrons",
+        "paragraph":"Add a brand new brewing mechanic<br>for custom armor, potions and teleportation!",
+        "position":"bottom-left"
+      },
+      "link":"https://gm4.co/modules/zauber-cauldrons"
     },
     {
       "low_resolution_background_image": "resourcepack_1.jpg",
@@ -40,27 +61,6 @@
       },
       "darken": true,
       "link":"https://gm4.co/modules/liquid-tanks"
-    },
-    {
-      "low_resolution_background_image":"server8_1.jpg",
-      "background_image":"server8_1.png",
-      "text":{
-        "header":"Gamemode 4 Public Server",
-        "paragraph":"Join us on play.gm4.co",
-        "position":"bottom-left"
-      },
-      "darken": true,
-      "link":"https://gm4.co/server"
-    },
-    {
-      "low_resolution_background_image":"zauber_cauldrons_1.jpg",
-      "background_image":"zauber_cauldrons_1.png",
-      "text":{
-        "header":"Magical Cauldrons",
-        "paragraph":"Add a brand new brewing mechanic<br>for custom armor, potions and teleportation!",
-        "position":"bottom-left"
-      },
-      "link":"https://gm4.co/modules/zauber-cauldrons"
     }
   ]
 }
