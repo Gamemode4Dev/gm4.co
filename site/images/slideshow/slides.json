@@ -11,16 +11,6 @@
       "link": "https://smithed.net/summit"
     },
     {
-      "low_resolution_background_image": "stickers.jpg",
-      "background_image": "stickers.png",
-      "text": {
-        "header": "10 Years of Gamemode 4!",
-        "paragraph": "Check out our celebratory sticker set!",
-        "position": "bottom-left"
-      },
-      "link": "https://ko-fi.com/miraku_memo/shop"
-    },
-    {
       "low_resolution_background_image":"evergrowth_banner.jpg",
       "background_image":"evergrowth_banner.png",
       "text":{
@@ -29,27 +19,6 @@
         "position":"bottom-left"
       },
       "link":"https://gm4.co/evergrowth"
-    },
-    {
-      "low_resolution_background_image": "resourcepack_1.jpg",
-      "background_image": "resourcepack_1.png",
-      "text": {
-        "header": "Resource Pack",
-        "paragraph": "Get textures and models for<br>the definitive Gamemode 4 experience!",
-        "position": "bottom-left"
-      },
-      "link": "https://gm4.co/modules/resource-pack"
-    },
-    {
-      "low_resolution_background_image":"liquid_tanks_1.jpg",
-      "background_image":"liquid_tanks_1.png",
-      "text":{
-        "header":"Tanks & Transportation",
-        "paragraph":"Store potions, lava and other liquids in specialized tanks.<br>Wanna transport liquids in Minecarts? Gamemode 4's got your back!",
-        "position":"bottom-left"
-      },
-      "darken": true,
-      "link":"https://gm4.co/modules/liquid-tanks"
     },
     {
       "low_resolution_background_image":"server10_1.jpg",
@@ -71,6 +40,27 @@
         "position":"bottom-left"
       },
       "link":"https://gm4.co/modules/zauber-cauldrons"
+    },
+    {
+      "low_resolution_background_image": "resourcepack_1.jpg",
+      "background_image": "resourcepack_1.png",
+      "text": {
+        "header": "Resource Pack",
+        "paragraph": "Get textures and models for<br>the definitive Gamemode 4 experience!",
+        "position": "bottom-left"
+      },
+      "link": "https://gm4.co/modules/resource-pack"
+    },
+    {
+      "low_resolution_background_image":"liquid_tanks_1.jpg",
+      "background_image":"liquid_tanks_1.png",
+      "text":{
+        "header":"Tanks & Transportation",
+        "paragraph":"Store potions, lava and other liquids in specialized tanks.<br>Wanna transport liquids in Minecarts? Gamemode 4's got your back!",
+        "position":"bottom-left"
+      },
+      "darken": true,
+      "link":"https://gm4.co/modules/liquid-tanks"
     }
   ]
 }
