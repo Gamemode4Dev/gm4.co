@@ -234,7 +234,10 @@ function createModuleTrack(version, moduleIds, onDownloadAll) {
 		}
 
 		const item = createModuleCard(moduleId);
-		item.addEventListener('click', () => {
+		item.addEventListener('click', (e) => {
+			// Prevent the anchor tag from navigating to the module page when clicked (but still allowing middle clicks, since those don't trigger the click event)
+			e.preventDefault();
+
 			if (!item.classList.contains('selected')) {
 				createPreview(version, moduleId, () => onDownload(moduleId)).then(preview => {
 					const oldPreview = track.parentElement.querySelector('.preview');
@@ -268,8 +271,12 @@ function createModuleTrack(version, moduleIds, onDownloadAll) {
  * @returns a HTMLElement representing a module card
  */
 function createModuleCard(moduleId) {
-	const card = document.createElement('div');
+	const card = document.createElement('a');
 	card.classList.add('trackItem', 'moduleCard', 'noselect');
+
+	card.href = `/modules/${moduleId.replace(/gm4_/, '').replaceAll('_', '-')}`;
+	card.target = '_blank';
+
 	const img = createModuleIcon(moduleId);
 	img.setAttribute('width', '128');
 	img.setAttribute('height', '128');
