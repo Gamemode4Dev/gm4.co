@@ -1,0 +1,10 @@
+{
+  "promo_images": [
+    {
+      "type": "image",
+      "image": "pig_tractors.webp",
+      "credit": "Denniss",
+      "alt": "A player planting seeds with a pig tractor"
+    }
+  ]
+}
