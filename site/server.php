@@ -39,7 +39,7 @@ gtag('config', 'UA-63061711-1', {cookie_flags:'SameSite=None;Secure'});
 
 	<div class="serverSplash slideshow track">
 		<div class="trackContainer">
-			<div class="trackItem" style="background-image: url(images/server/ps9_banner.png);">
+			<div class="trackItem" style="background-image: url(images/server/ps10_banner.png);">
 				<img src="/images/server/ps10_logo.png">
 				<div>
 					<h2>Gamemode 4</h2>
@@ -61,7 +61,7 @@ gtag('config', 'UA-63061711-1', {cookie_flags:'SameSite=None;Secure'});
 			<div class="trackButton trackButtonLeft"></div>
 			<div class="trackButton trackButtonRight"></div>
 			<div class="trackContainer">
-				<div class="trackItem bottom-left" style="background-image: url(images/server/ps8_cave.png);">
+				<div class="trackItem bottom-left" style="background-image: url(images/server/ps10_spawn.png);">
 					<h2>A welcoming spawn</h2>
 					<p>Don't like living alone? Get cosy at the spawn town that every server has</p>
 				</div>
