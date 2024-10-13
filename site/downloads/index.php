@@ -49,7 +49,7 @@
       <div class="trackItem bottom-left" style="background-image: url(/images/server/ps8_players.png);">
         <h2>Public Server 8</h2>
       </div>
-      <div class="trackItem bottom-left" style="background-image: url(/images/server/ps9_banner.png);">
+      <div class="trackItem bottom-left" style="background-image: url(/images/server/ps10_banner.png);">
         <h2>Public Server 9</h2>
       </div>
     </div>
