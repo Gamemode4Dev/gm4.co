@@ -1,0 +1,31 @@
+.infoContainer {
+	margin: 15px calc(var(--content-spacer) * 2);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.team-member {
+  display: flex;
+  padding: 1rem 0;
+  gap: 2rem;
+}
+
+.team-member:nth-child(2n+1) {
+  flex-direction: row-reverse;
+  text-align: right;
+}
+
+.team-member img {
+  image-rendering: pixelated;
+  width: 128px;
+  height: 128px;
+  margin: 8px;
+  font-size:0px;
+  border-radius: 1rem;
+  background-color:var(--preview-bg);
+}
+
+.team-member p a {
+  color: var(--main-accent-color);
+}
