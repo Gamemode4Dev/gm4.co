@@ -1,0 +1,87 @@
+[
+  {
+    "name": "Sparks",
+    "description": "Hi I'm Sparks! I founded Gamemode 4 in 2014 but have stepped back considerably from the project. I now leave the management to people with more time and energy, and fill in roles and help with tasks where my time allows.",
+    "minecraft_name": "Sparks"
+  },
+  {
+    "name": "Michael",
+    "description": "Hello, my name is Michael and I have been playing Minecraft since 1.6 and only fully joined the Gamemode 4 Community during Public Server 6. A few modules on the website were created by me, those being <a href=\"/modules/rope-ladders\">Rope Ladders</a> and <a href=\"/modules/live-catch\">Live Catch</a>. I joined the staff team in June 2021 and have worked on various projects since then: <a href=\"/obsolescence\">Obsolescence</a>, Stanley's Summer Island Event on PS7, and the NPC's on PS9 and 10.",
+    "minecraft_name": "MichaelMiner137"
+  },
+  {
+    "name": "Bloo",
+    "description": "When I joined Gamemode 4 in 2014, I didn't think I'd be committing to a project that's gonna keep me occupied for a decade. I made the first non-sparksian module <a href=\"/modules/potion-swords\">Potion Swords</a> on a rainy afternoon. Nowadays I take an administrative and directive role, but still dabble into module development when time allows for it.",
+    "minecraft_name": "Bloo___"
+  },
+  {
+    "name": "Kyrius",
+    "description": "I'm Kyrius, don't bother trying to pronounce it... I joined the Gamemode 4 public server back in 2018 and our amazing community has shaped me to the person I am today! My focus in the team started off with building tasks but has blossomed into what I do now, having realized my dreams of working with Minecraft as a medium to create experiences of my own!",
+    "minecraft_name": "kyrkis"
+  },
+  {
+    "name": "BluePsychoRanger",
+    "description": "I'm BluePsychoRanger, also known as BPR or Beeps. I joined Gamemode 4 in 2015 after watching the GM4 Hermitcraft series and having already worked on other command block projects. Since then, I've made some of the more complex Gamemode 4 datapacks such as <a href=\"/modules/end_fishing\">End Fishing</a>, <a href=\"/modules/orb-of-ankou\">Orb of Ankou</a>, <a href=\"/modules/auto-crafting\">Auto Crafting</a>, <a href=\"/modules/guidebook\">Guidebook</a>, and the original Sky Dimension for Public Server Sky.",
+    "minecraft_name": "BluePsychoRanger"
+  },
+  {
+    "name": "Thanathor",
+    "description": "I'm Thanathor, alternatively just \"that tree\" if you're low on time or my <a href=\"/modules/combat-expanded\">Combat Expanded</a> module just resulted in your death. I first joined Gamemode 4 only around the end of PS1 after I wrote the wrong email and missed the invite email, which really tells you all you need to know about me. Joining the team in April 2020 as a builder I quickly made the mistake of getting into datapacks. I've since worked on various <del>ways to torture players</del> server events, modules, and the <a href=\"/obsolescence\">Obsolescence</a> and <a href=\"/evergrowth\">Evergrowth</a> maps.",
+    "minecraft_name": "Thanathor"
+  },
+  {
+    "name": "JP12",
+    "description": "I'm JP12/JP/Jeeps/Sorris Borris. I have recently only been working on backend related tasks, but if you've ever used a wormhole tank and been disappointed that it didn't teleport your enemies into space, that was me. I first heard about Gamemode 4 in 2018, and joined the server and was enamored with using lightning rods to mass eliminate shulkers. After cozying up to all the staff, I successfully infiltrated the staff team in 2021, and have been hiding inside their computers ever since.",
+    "minecraft_name": "JP_12"
+  },
+  {
+    "name": "Denniss",
+    "description": "I'm Denniss, I joined the Gamemode 4 community during the first Public Server in 2015, and I've been part of the staff team since 2016. Since then, I've worked on various Gamemode 4 datapacks, with the most notable ones being <a href=\"/modules/better-armour-stands\">Better Armor Stands</a>, <a href=\"/modules/chairs\">Chairs</a>, and <a href=\"/modules/crossbow-cartridges\">Crossbow Cartridges</a>.",
+    "minecraft_name": "Denniss"
+  },
+  {
+    "name": "TheEpyonProject",
+    "description": "I am TheEpyonProject, also known as Epyon or sushi.  Since rejoining in PS6, I have extended my grasp to nearly every part of Gamemode 4.  My notable additions are <a href=\"/modules/balloon-animals\">Balloon Animals</a>, <a href=\"/modules/lightning-in-a-bottle\">Lightning in a Bottle</a>, and the <a href=\"/modules/metallurgy\">Infinitas shamir</a>.",
+    "minecraft_name": "TheEpyonProject"
+  },
+  {
+    "name": "SpecialBuilder32",
+    "description": "Hi, I'm SpecialBuilder32! I'm a datapack and python developer for Gamemode 4, but I've done a little bit of everything. I officially joined the project back in 2017 when I dragged <a href=\"/modules/liquid-tanks\">Liquid Tanks</a> kicking and screaming out of Minecraft 1.8 and into the modern era. With most of my time being focused on University at the moment, nowadays I primarily do infrastructure and updates, though I'm excited to get back to developing new modules!",
+    "minecraft_name": "SpecialBuilder32"
+  },
+  {
+    "name": "Misode",
+    "description": "Hello, I'm Misode! I started playing on the Gamemode 4 Public Server in 2016, and in 2018 I started contributing to the modules when they moved to data packs. My main focus now is keeping data packs updated and improving our publishing workflow.",
+    "minecraft_name": "misode"
+  },
+  {
+    "name": "kruthers",
+    "description": "Hello I am Kruthers! I joined Gamemode 4 close to PS1 and become a Community Moderator (remember those) in 2018. I now focus on system administration, writing many of the Gamemode 4 public server custom plugins and extinguishing the wiki when it inevitably sets itself on fire.",
+    "minecraft_name": "kruthers"
+  },
+  {
+    "name": "catter",
+    "description": "Hi, I'm catter! I recently joined the Gamemode4 team after being inspired by their development. I got my start with datapacks when I joined Stardust Labs in 2020, where I also developed my Python skills. With my experience, I plan to contribute to many of the existing Gamemode4 modules, and potentially even make my own one day.",
+    "minecraft_name": "catter1"
+  },
+  {
+    "name": "Destroyer",
+    "description": "Hi there! I'm Destroyer or Des for short. I remember when GM4 was command block blobs and it's been a joy being part of this community. I started my datapackery in Stardust Labs where I learned worldgen and basic function knowledge. I will be taking part in project development, helping to create awesome experiences with the rest of the gm4 team.",
+    "minecraft_name": "xX_Pr0H4cker_Xx"
+  },
+  {
+    "name": "rednls",
+    "description": "Hey! I'm rednls or just red.  Despite only discovering datapacks Nov 2023, I was (somehow) accepted as a member of Gamemode4 in Aug 2024. Now, as a member of the Project Development team, I'll be dedicated to creating high-quality maps and helping to shape this amazing community!",
+    "minecraft_name": "rednls"
+  },
+  {
+    "name": "TheSneakingSpider",
+    "description": "Hi, I'm TheSneakingSpider -- not an actual spider, but close enough! I've been a part of the Gamemode 4 Community for a long time before joining the team to take more of an active role. As a part of the  team I help with map & project development, whether it is something for our public testing server or another map of ours, I get my eight hands to help wherever needed.",
+    "minecraft_name": "TheSneakinSpider"
+  },
+  {
+    "name": "Sheepe",
+    "description": "Hi, I'm Sheepe. I've been involved in Gamemode 4 since the second public server. Now I primarily work on datapacks, with special attention to those with complex maths.",
+    "minecraft_name": "SirSheepe"
+  }
+]
