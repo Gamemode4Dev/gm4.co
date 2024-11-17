@@ -15,11 +15,9 @@ function resizeVideo() {
 }
 
 async function fetchLastRelease() {
-	const response = await fetch("https://api.github.com/repos/Gamemode4Dev/evergrowth/releases");
+	const response = await cachedFetch("https://api.github.com/repos/Gamemode4Dev/evergrowth/releases");
 	const data = await response.json();
-	console.log(data)
 	const filteredData = data.filter(release => !release.prerelease);
-	console.log(filteredData);
 	return filteredData[0].tag_name;
-	//return data[0].tag_name
+
 }
