@@ -62,5 +62,7 @@ usort($team, function($a, $b) {
     <?php endforeach; ?>
   </div>
 
+  <?php include '../includes/footer.php'; ?>
+
 </body>
 </html>
