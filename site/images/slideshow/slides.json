@@ -1,16 +1,6 @@
 {
   "slides":[
     {
-      "low_resolution_background_image": "smithed_summit.jpg",
-      "background_image": "smithed_summit.png",
-      "text": {
-        "header": "Join us at the Smithed Summit!",
-        "paragraph": "A convention held inside of Minecraft, featuring datapack creators, map makers, and more!",
-        "position": "bottom-left"
-      },
-      "link": "https://smithed.net/summit"
-    },
-    {
       "low_resolution_background_image":"evergrowth_banner.jpg",
       "background_image":"evergrowth_banner.png",
       "text":{
