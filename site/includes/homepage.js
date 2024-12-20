@@ -5,20 +5,24 @@ const SUPPORTERS = [
 	'Hero29',
 	'TransportLayer',
 	'Luexa',
-	'Danticlockwise',
+	'Dantifreeze',
 	'TheEpyonProject',
 	'gjunnila',
 	'Jackohhh',
 	'kyrkis',
+	'miraku_memo',
 	'ShadowSlam',
 	'SpecialBuilder32',
 	'suppergerrie2',
+	'MichaelMiner137',
 	'R3AP3R_exe',
 	'venomousbirds',
-	'MichaelMiner137',
+	'SpiderRobotMan',
 	'MightyBurger',
 	'Levertion',
-	'AnkaEs'
+	'AnkaEs',
+	'Darkest9469',
+	'Frienderman'
 ]
 
 window.addEventListener('DOMContentLoaded', () => {
