@@ -16,16 +16,45 @@
   text-align: right;
 }
 
-.team-member img {
+.team-member > img {
   image-rendering: pixelated;
-  width: 128px;
+  width: 128px; 
   height: 128px;
+  aspect-ratio: 1/1;
   margin: 8px;
   font-size:0px;
   border-radius: 1rem;
   background-color:var(--preview-bg);
 }
 
+.team-member h2 {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.team-member:nth-child(2n+1) h2 {
+  flex-direction: row-reverse;
+}
+
 .team-member p a {
   color: var(--main-accent-color);
+}
+
+.team-member-links {
+  display: flex;
+  gap: 1rem;
+}
+
+.team-member-links a {
+  display: block;
+}
+
+.team-member-links img {
+  display: block;
+  background-color: var(--main-text-color);
+  padding: 2px;
+  width: 24px;
+  height: 24px;
+  border-radius: 16px;
 }

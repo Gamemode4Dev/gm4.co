@@ -53,9 +53,29 @@ usort($team, function($a, $b) {
 
     <?php foreach ($team as $member): ?>
       <div class="team-member">
-        <img src="https://gm4.co/images/supporters/16.php?username=<?= $member['minecraft_name'] ?>" alt="<?= $member['name'] ?>">
+        <img class="team-member-image" src="https://gm4.co/images/supporters/16.php?username=<?= $member['minecraft_name'] ?>" alt="<?= $member['name'] ?>">
         <div>
-          <h2><?= $member['name'] ?></h2>
+          <h2>
+            <span><?= $member['name'] ?></span>
+            <?php if (!empty($member['links'])): ?>
+            <span class="team-member-links">
+              <?php foreach ($member['links'] as $link): ?>
+                <?php
+                  $icons = [
+                    'bsky.app' => '/images/logo/bluesky.svg',
+                    'github.com' => '/images/logo/github.svg',
+                    'twitter.com' => '/images/logo/twitter.svg',
+                  ];
+                  $domain = parse_url($link, PHP_URL_HOST);
+                  $icon = isset($icons[$domain])
+                    ? '<img src="' . $icons[$domain] . '" alt="' . ucfirst(explode('.', $domain)[0]) . '">'
+                    : '🔗';
+                ?>
+                <a href="<?= $link ?>" target="_blank"><?= $icon ?></a>
+              <?php endforeach; ?>
+            </span>
+          <?php endif; ?>
+          </h2>
           <p><?= $member['description'] ?></p>
         </div>
       </div>
