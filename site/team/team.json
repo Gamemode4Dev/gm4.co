@@ -9,7 +9,7 @@
     ]
   },
   {
-    "name": "Michael",
+    "name": "MichaelModulo",
     "description": "Hello, my name is Michael and I have been playing Minecraft since 1.6 and only fully joined the Gamemode 4 Community during Public Server 6. A few modules on the website were created by me, those being <a href=\"/modules/rope-ladders\">Rope Ladders</a> and <a href=\"/modules/live-catch\">Live Catch</a>. I joined the staff team in June 2021 and have worked on various projects since then: <a href=\"/obsolescence\">Obsolescence</a>, Stanley's Summer Island Event on PS7, and the NPC's on PS9 and 10.",
     "minecraft_name": "MichaelMiner137",
     "links": [
@@ -102,7 +102,7 @@
   },
   {
     "name": "catter",
-    "description": "Hi, I'm catter! I recently joined the Gamemode4 team after being inspired by their development. I got my start with datapacks when I joined Stardust Labs in 2020, where I also developed my Python skills. With my experience, I plan to contribute to many of the existing Gamemode4 modules, and potentially even make my own one day.",
+    "description": "Hi, I'm catter! I recently joined the Gamemode4 team after being inspired by their development. I got my start with datapacks when I joined <a href=\"https://www.stardustlabs.net/\" target=\"_blank\">Stardust Labs</a> in 2020, where I also developed my Python skills. With my experience, I plan to contribute to many of the existing Gamemode4 modules, and potentially even make my own one day.",
     "minecraft_name": "catter1",
     "links": [
       "https://bsky.app/profile/catter.dev"
@@ -110,8 +110,8 @@
   },
   {
     "name": "Destroyer",
-    "description": "Hi there! I'm Destroyer or Des for short. I remember when GM4 was command block blobs and it's been a joy being part of this community. I started my datapackery in Stardust Labs where I learned worldgen and basic function knowledge. I will be taking part in project development, helping to create awesome experiences with the rest of the gm4 team.",
-    "minecraft_name": "xX_Pr0H4cker_Xx"
+    "description": "Hi there! I'm Destroyer or Des for short. I remember when GM4 was command block blobs and it's been a joy being part of this community. I started my datapackery in <a href=\"https://www.stardustlabs.net/\" target=\"_blank\">Stardust Labs</a> where I learned worldgen and basic function knowledge. I will be taking part in project development, helping to create awesome experiences with the rest of the gm4 team.",
+    "minecraft_name": "Destroyer077"
   },
   {
     "name": "rednls",
