@@ -31,7 +31,7 @@
         <div class="dropdown-content">
           <a class="dropdown-map-info" href="/evergrowth">
             <div>Evergrowth</div>
-            <div class="dropdown-entry-info">Puzzle - 1.20.4</div>
+            <div class="dropdown-entry-info">Puzzle</div>
           </a>
           <a class="dropdown-entry" href="/obsolescence">
             <div>Obsolescence</div>
