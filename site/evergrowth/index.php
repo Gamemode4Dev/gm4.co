@@ -63,13 +63,9 @@
   </div>
   <div class="buttonGrid downloads">
     <p class="worldVersionInfo">For Minecraft: Java Edition 1.20.2 to 1.21.3</p>
-    <a href="https://github.com/Gamemode4Dev/evergrowth/releases/latest/download/Evergrowth.zip" class="squircleLink worldDownloadLink">
+    <a href="https://github.com/Gamemode4Dev/evergrowth/releases/download/1.10/Evergrowth.zip" class="squircleLink worldDownloadLink">
       <img src="/images/filled_map.svg">
-      <span>Download the Map</span>
-    </a>
-    <a href="https://github.com/Gamemode4Dev/Evergrowth_RP/releases/latest/download/Evergrowth_RP.zip" class="squircleLink resourcePackDownloadLink">
-      <img src="/images/message_in_a_bottle.svg">
-      Download Resource Pack
+      <span>Download the Map (Java 1.20.2 to 1.21.3)</span>
     </a>
     <a href="https://gm4.co/discord" target="_blank" class="squircleLink viewCodeLink">
       <img src="/images/logo/discord.svg">
