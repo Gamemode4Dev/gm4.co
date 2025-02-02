@@ -9,12 +9,38 @@
     ]
   },
   {
-    "name": "MichaelModulo",
-    "description": "Hello, my name is Michael and I have been playing Minecraft since 1.6 and only fully joined the Gamemode 4 Community during Public Server 6. A few modules on the website were created by me, those being <a href=\"/modules/rope-ladders\">Rope Ladders</a> and <a href=\"/modules/live-catch\">Live Catch</a>. I joined the staff team in June 2021 and have worked on various projects since then: <a href=\"/obsolescence\">Obsolescence</a>, Stanley's Summer Island Event on PS7, and the NPC's on PS9 and 10.",
+    "name": "Modulorium",
+    "description": "Hello, my name is Modulo and I have been playing Minecraft since 1.6 and only fully joined the Gamemode 4 Community during Public Server 6. A few modules on the website were created by me, those being <a href=\"/modules/rope-ladders\">Rope Ladders</a> and <a href=\"/modules/live-catch\">Live Catch</a>. I joined the staff team in June 2021 and have worked on various projects since then: <a href=\"/obsolescence\">Obsolescence</a>, Stanley's Summer Island Event on PS7, and the NPC's on PS9 and 10.",
     "minecraft_name": "MichaelMiner137",
     "links": [
-      "https://bsky.app/profile/michaelmodulo.bsky.social",
-      "https://github.com/MichaelMiner137"
+      "https://bsky.app/profile/modulorium.bsky.social",
+      "https://github.com/Modulorium"
+    ]
+  },
+  {
+    "name": "Studio Memo",
+    "description": "I'm Memo (Studio Memo/miraku_memo), a digital artist bringing imagination to reality! I joined the Gamemode 4 team in 2020 and have made various works for map art, promotional material, logos, and more to come.",
+    "minecraft_name": "miraku_memo",
+    "links": [
+      "https://linktr.ee/miraku_memo",
+      "https://bsky.app/profile/studio-memo.bsky.social"
+    ]
+  },
+  {
+    "name": "ToffeeMax",
+    "description": "I make content for Gamemode 4, handle the Twitter when I remember and try edit videos. I also made some of the music for Evergrowth!",
+    "minecraft_name": "ToffeeMax",
+    "links": [
+      "https://github.com/ToffeeMax"
+    ]
+  },
+  {
+    "name": "runcows",
+    "description": "Hey, I'm runcows, but you can also just call me run. I've been playing Minecraft since beds were added, yet never really interacted with the community until recently. I joined Gamemode 4 in the aftermath of The Smithed Summit 2024, where I showcased my pack, Blossoming Pots. The staff here thought it was a perfect fit for GM4 and reached out! And now I have weekly imposter syndrome!",
+    "minecraft_name": "runcows",
+    "links": [
+      "https://bsky.app/profile/runcows.bsky.social",
+      "https://github.com/runcows"
     ]
   },
   {
@@ -28,7 +54,7 @@
   },
   {
     "name": "Kyrius",
-    "description": "I'm Kyrius, don't bother trying to pronounce it... I joined the Gamemode 4 public server back in 2018 and our amazing community has shaped me to the person I am today! My focus in the team started off with building tasks but has blossomed into what I do now, having realized my dreams of working with Minecraft as a medium to create experiences of my own!",
+    "description": "I'm Kyrius! pronounced like the word 'Curious'. I joined the Gamemode 4 public server back in 2018 and our amazing community has shaped me to the person I am today! My focus in the team started off with building tasks but has blossomed into what I do now, having realized my dreams of working with Minecraft as a medium to create experiences of my own!",
     "minecraft_name": "kyrkis",
     "links": [
       "https://bsky.app/profile/kyriuspixels.bsky.social"
