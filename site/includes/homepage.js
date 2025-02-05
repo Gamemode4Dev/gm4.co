@@ -14,7 +14,7 @@ const SUPPORTERS = [
 	'ShadowSlam',
 	'SpecialBuilder32',
 	'suppergerrie2',
-	'MichaelMiner137',
+	'Modulorium',
 	'R3AP3R_exe',
 	'venomousbirds',
 	'SpiderRobotMan',
