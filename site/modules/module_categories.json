@@ -3,6 +3,7 @@
     {
       "title": "New Modules",
       "modules": [
+        "blossoming_pots",
         "guidebook",
         "zauber_cauldrons",
         "double_doors",
@@ -121,6 +122,7 @@
       "title": "Builder's Paradise",
       "order": "shuffled",
       "modules": [
+        "blossoming_pots",
         "better_armour_stands",
         "particles_pack",
         "poses_pack",
