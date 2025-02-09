@@ -90,7 +90,7 @@ gtag('config', 'UA-63061711-1');
     </div>
     <br>
     <br>
-  <p class="credits" style="clear: both;">Obsolescence is a Gamemode 4 project. It was created by Thanathor, BluePsychoRanger, ToffeeMax, MichaelMiner137, Bloo___, TheEpyonProjects, Kyrkis, JP12_, miraku_memo, Kruthers, SpecialBuilder32. Cover and logo art by miraku_memo.</p>
+  <p class="credits" style="clear: both;">Obsolescence is a Gamemode 4 project. It was created by Thanathor, BluePsychoRanger, ToffeeMax, Modulorium, Bloo___, TheEpyonProjects, Kyrkis, JP12_, miraku_memo, Kruthers, SpecialBuilder32. Cover and logo art by miraku_memo.</p>
 </div>
 
 <?php include '../includes/footer.php';?>
