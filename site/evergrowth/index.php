@@ -18,11 +18,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#4AA0C7">
-  <meta name="keywords" content="Puzzle Map, 1.20, Minecraft, Datapacks, Custom Resourcepack">
+  <meta name="keywords" content="Puzzle Map, 1.21.5, Minecraft, Datapacks, Custom Resourcepack">
   <meta name="description" content="A box sliding puzzle map made by Gamemode 4">
   <meta property="og:site_name" content="Gamemode 4">
   <meta property="og:title" content="Gamemode 4: Evergrowth" />
-  <meta property="og:description" content="A box sliding, mind twisting puzzle map for Minecraft 1.20">
+  <meta property="og:description" content="A box sliding, mind twisting puzzle map for Minecraft 1.21.5">
   <meta property="og:image" content="https://gm4.co/images/logo/logo_256.png">
   <meta property="og:url" content="https://gm4.co/evergrowth">
   <meta property="og:image:width" content="256">
@@ -62,7 +62,7 @@
     </div>
   </div>
   <div class="buttonGrid downloads">
-    <p class="worldVersionInfo">For Minecraft: Java Edition 1.21.4</p>
+    <p class="worldVersionInfo">For Minecraft: Java Edition 1.21.5</p>
     <a href="https://github.com/Gamemode4Dev/evergrowth/releases/latest/download/Evergrowth.zip" class="squircleLink worldDownloadLink">
       <img src="/images/filled_map.svg">
       <span>Download the Map</span>
