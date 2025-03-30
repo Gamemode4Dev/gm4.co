@@ -6,13 +6,14 @@ header('Access-Control-Allow-Origin:');
 <html lang="en">
 <head>
 <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-63061711-1"></script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KDNJ7GR1VK"></script>
 <script>
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
-gtag('config', 'UA-63061711-1', {cookie_flags:'SameSite=None;Secure'});
+  gtag('config', 'G-KDNJ7GR1VK');
 </script>
 
 <meta charset="UTF-8">
