@@ -58,3 +58,12 @@
   height: 24px;
   border-radius: 16px;
 }
+
+.team-member-links span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 24px;
+  height: 24px;
+  font-size: 20px;
+}
