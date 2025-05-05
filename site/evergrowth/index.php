@@ -133,8 +133,29 @@
           <p>Logo & Promotional Artwork</p>
           </a>
         </div>
-      
-      </div>
+  </div>
+  
+  <div style="padding-top:5px">
+    <h4>Additional Thanks</h4>
+           
+    <div class="credits-list" style="padding-top:5px">
+    
+          <div class="creator small">
+            <div class="creator-image"></div>
+            <h4>Tai_zazanek</h4>
+            <p>Japanese Translation</p>
+    
+          </div>
+    
+    
+        <div class="creator small">
+            <div class="creator-image"></div>
+            <h4>ZeroIceBear</h4>
+            <p>Mandarin Translation</p>
+    
+          </div>
+    
+        </div>
   </div>
   <img class="bottom-loop" loading="lazy" src="evergrowth_loop.gif" alt="">
   <div class="center">

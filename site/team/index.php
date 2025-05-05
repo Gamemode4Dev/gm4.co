@@ -64,12 +64,14 @@ usort($team, function($a, $b) {
                   $icons = [
                     'bsky.app' => '/images/logo/bluesky.svg',
                     'github.com' => '/images/logo/github.svg',
+                    'ko-fi.com' => '/images/logo/kofi.svg',
+                    'linktr.ee' => '/images/logo/linktree.svg',
                     'twitter.com' => '/images/logo/twitter.svg',
                   ];
                   $domain = parse_url($link, PHP_URL_HOST);
                   $icon = isset($icons[$domain])
                     ? '<img src="' . $icons[$domain] . '" alt="' . ucfirst(explode('.', $domain)[0]) . '">'
-                    : '🔗';
+                    : '<span>🔗</span>';
                 ?>
                 <a href="<?= $link ?>" target="_blank"><?= $icon ?></a>
               <?php endforeach; ?>
