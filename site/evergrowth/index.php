@@ -155,6 +155,12 @@
     
           </div>
     
+          <div class="creator small">
+            <div class="creator-image"></div>
+            <h4>KyKyPy3Ka</h4>
+            <p>Russian Translation</p>
+    
+          </div>
         </div>
   </div>
   <img class="bottom-loop" loading="lazy" src="evergrowth_loop.gif" alt="">
