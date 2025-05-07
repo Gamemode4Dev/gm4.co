@@ -151,7 +151,7 @@ function createSquircle(image, text, href, target) {
 function createVersionButton(version, moduleId, text) {
 	const versionName = MODULE_SOURCES[0].versions.find(v => v.id === version).name
 	const url = getModuleDownload(version, moduleId);
-	const el = createSquircle(DOWNLOAD_ICON, text || (versionName ?? version), url, 'download_frame');
+	const el = createSquircle(DOWNLOAD_ICON, text || (versionName ?? version), url);
 	if (version === selectedVersion) {
 		el.classList.add('selectedVersion');
 	}
