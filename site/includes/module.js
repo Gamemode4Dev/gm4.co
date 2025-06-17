@@ -14,7 +14,7 @@ const COLLAPSE_ARROW = '<svg xmlns="http://www.w3.org/2000/svg" height="24" view
 
 const modules = new Map();
 // eslint-disable-next-line prefer-const
-let selectedVersion = '1.21.5';
+let selectedVersion = '1.21.6';
 
 /**
  * Fetch modules from the datapacks and resourcepacks repos.
