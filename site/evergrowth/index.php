@@ -151,7 +151,13 @@
         <div class="creator small">
             <div class="creator-image"></div>
             <h4>ZeroIceBear</h4>
-            <p>Mandarin Translation</p>
+            <p>Original Mandarin Translation</p>
+    
+          </div>
+         <div class="creator small">
+            <div class="creator-image"></div>
+            <h4>nageih & DC10-10 </h4>
+            <p>Additional Mandarin Translation</p>
     
           </div>
     
