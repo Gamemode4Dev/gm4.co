@@ -3,6 +3,8 @@
     {
       "title": "New Modules",
       "modules": [
+        "survival_refightalized",
+        "monsters_unbound",
         "blossoming_pots",
         "guidebook",
         "zauber_cauldrons",
@@ -21,9 +23,7 @@
         "shroomites",
         "dripleaf_filters",
         "chest_boats",
-        "animi_shamir",
-        "audere_shamir",
-        "iacio_shamir"
+        "animi_shamir"
       ]
     },
     {
@@ -113,8 +113,9 @@
         "mysterious_midnights",
         "midnight_menaces",
         "pig_tractors",
+        "survival_refightalized",
+        "monsters_unbound",
         "undead_players",
-        "combat_expanded",
         "orb_of_ankou"
       ]
     },
