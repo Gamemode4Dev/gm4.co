@@ -3,6 +3,7 @@
     {
       "title": "New Modules",
       "modules": [
+        "reeling_rods",
         "survival_refightalized",
         "monsters_unbound",
         "blossoming_pots",
@@ -22,7 +23,6 @@
         "lightning_in_a_bottle",
         "shroomites",
         "dripleaf_filters",
-        "chest_boats",
         "animi_shamir"
       ]
     },
