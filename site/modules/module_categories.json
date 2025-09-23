@@ -3,6 +3,7 @@
     {
       "title": "New Modules",
       "modules": [
+        "lively_lily_pads",
         "reeling_rods",
         "survival_refightalized",
         "monsters_unbound",
@@ -123,6 +124,7 @@
       "title": "Builder's Paradise",
       "order": "shuffled",
       "modules": [
+        "lively_lily_pads",
         "blossoming_pots",
         "better_armour_stands",
         "particles_pack",
