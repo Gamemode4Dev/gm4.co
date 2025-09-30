@@ -1,10 +1,17 @@
 {
   "promo_images": [
     {
+      "featured": true,
       "type": "image",
       "image": "blossoming_pots.webp",
       "credit": "runcows",
       "alt": "A player planting a berry bush and a pitcher plant in a decorated pot and a flower pot."
+    },
+    {
+      "type": "image",
+      "image": "chorus_pot.webp",
+      "credit": "runcows",
+      "alt": "A large chorus plant in a decorated pot."
     }
   ]
 }
