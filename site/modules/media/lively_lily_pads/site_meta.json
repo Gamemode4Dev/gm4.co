@@ -1,0 +1,17 @@
+{
+  "promo_images": [
+    {
+      "featured": true,
+      "type": "image",
+      "image": "lively_lily_pads.webp",
+      "credit": "runcows",
+      "alt": "A player placing a spore blossom on a lily pad."
+    },
+    {
+      "type": "image",
+      "image": "lily_pad_pond.png",
+      "credit": "runcows",
+      "alt": "A pond with many decorated lily pads on it."
+    }
+  ]
+}
