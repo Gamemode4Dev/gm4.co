@@ -31,14 +31,14 @@
         <div class="dropdown-content">
           <a class="dropdown-map-info" href="/evergrowth">
             <div>Evergrowth</div>
-            <div class="dropdown-entry-info">Puzzle - 1.21.8</div>
+            <div class="dropdown-entry-info">Puzzle - 1.21.10</div>
           </a>
           <a class="dropdown-entry" href="/obsolescence">
             <div>Obsolescence</div>
             <div class="dropdown-entry-info">CTM - 1.17</div>
           </a>
         </div>
-      </li>
+      </li1
     </ul>
   </nav>
   <span class="themeButton" onclick="toggleTheme()"></span>
