@@ -38,7 +38,7 @@
             <div class="dropdown-entry-info">CTM - 1.17</div>
           </a>
         </div>
-      </li1
+      </li>
     </ul>
   </nav>
   <span class="themeButton" onclick="toggleTheme()"></span>
