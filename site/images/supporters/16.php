@@ -24,7 +24,7 @@ $image = "cache/failed_to_load.png"; //defaults to this image if everything afte
 
 if ($uuid) {
   $temp_file_path = "cache/temp.png";
-  $remote_file = "https://crafatar.com/avatars/" . $uuid . "?overlay=true&size=16";
+  $remote_file = "https://mc-heads.net/avatar/" . $uuid . "/16";
   
   //try grab the image from crafatar
   if(@get_headers($remote_file)[0] != 'HTTP/1.1 404 Not Found'){
