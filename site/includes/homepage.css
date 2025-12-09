@@ -521,7 +521,7 @@ CSS for the module browse page
 
 .previewInfo {
   flex: 0 1 50%;
-  min-width: 370px;
+  min-width: 390px;
   max-width: 50vh;
   height: 100%;
   display: flex;
