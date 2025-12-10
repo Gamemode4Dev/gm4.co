@@ -53,7 +53,7 @@ usort($team, function($a, $b) {
 
     <?php foreach ($team as $member): ?>
       <div class="team-member">
-        <img class="team-member-image" src="https://gm4.co/images/supporters/16.php?username=<?= $member['minecraft_name'] ?>" alt="<?= $member['name'] ?>">
+        <img class="team-member-image" src="https://mc-heads.net/avatar/<?= $member['minecraft_name'] ?>/16" alt="<?= $member['name'] ?>">
         <div>
           <h2>
             <span><?= $member['name'] ?></span>

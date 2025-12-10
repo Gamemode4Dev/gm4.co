@@ -81,7 +81,7 @@
       <div class="credits-list">
         <div class="creator">
           <div class="creator-image">
-            <img loading="lazy" src="https://gm4.co/images/supporters/16.php?username=thanathor"></img>
+            <img loading="lazy" src="https://mc-heads.net/avatar/thanathor/16"></img>
             <h4>Thanathor</h4>
           </div>
           <p>Datapack Development</p>
@@ -91,7 +91,7 @@
         <div class="creator">
         <a href="https://linktr.ee/kyrius" target="_blank">
           <div class="creator-image">
-            <img loading="lazy" src="https://gm4.co/images/supporters/16.php?username=kyrkis"></img>
+            <img loading="lazy" src="https://mc-heads.net/avatar/kyrkis/16"></img>
             <h4>Kyrkis</h4>
           </div>
           <p>Resourcepack Development</p>
@@ -103,7 +103,7 @@
         <div class="creator small">
           <a href="https://twitter.com/ToffeeMax" target="_blank">
           <div class="creator-image">
-            <img loading="lazy" src="https://gm4.co/images/supporters/16.php?username=toffeemax"></img>
+            <img loading="lazy" src="https://mc-heads.net/avatar/toffeemax/16"></img>
             <h4>ToffeeMax</h4>
           </div>
           <p>Music & Promotional Campaign</p>
@@ -111,7 +111,7 @@
         </div>
         <div class="creator small">
           <div class="creator-image">
-            <img loading="lazy" src="https://gm4.co/images/supporters/16.php?username=raasdonder"></img>
+            <img loading="lazy" src="https://mc-heads.net/avatar/raasdonder/16"></img>
             <h4>Raasdonder</h4>
           </div>
           <p>Sound FXs & Playtesting</p>
@@ -119,7 +119,7 @@
         
         <div class="creator small">
           <div class="creator-image">
-            <img loading="lazy" src="https://gm4.co/images/supporters/16.php?username=bartthebart"></img>
+            <img loading="lazy" src="https://mc-heads.net/avatar/bartthebart/16"></img>
             <h4>BartTheBart</h4>
           </div>
           <p>Supplimentary Music</p>
@@ -127,7 +127,7 @@
         <div class="creator small">
           <a href="https://linktr.ee/miraku_memo" target="_blank">
           <div class="creator-image">
-            <img loading="lazy" src="https://gm4.co/images/supporters/16.php?username=miraku_memo"></img>
+            <img loading="lazy" src="https://mc-heads.net/avatar/miraku_memo/16"></img>
             <h4>miraku_memo</h4>
           </div>
           <p>Logo & Promotional Artwork</p>
