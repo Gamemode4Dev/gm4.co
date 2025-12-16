@@ -4,25 +4,25 @@
             "type": "image",
             "featured": true,
             "image": "setting-up-a-portal.webp",
-            "credit": "Thanathor",
+            "credit": "Djones",
             "alt": "Creating an oddly shaped portal."
         },
         {
             "type": "image",
             "image": "small-portal.png",
-            "credit": "Thanathor",
+            "credit": "Djones",
             "alt": "The smallest possible portal."
         },
         {
             "type": "image",
             "image": "crying-portal.png",
-            "credit": "Thanathor",
+            "credit": "Djones",
             "alt": "A portal made from Crying Obsidian."
         },
         {
             "type": "image",
             "image": "there-is-one-portal-among-us.png",
-            "credit": "Thanathor",
+            "credit": "Djones",
             "alt": "A sus portal."
         }
     ]
