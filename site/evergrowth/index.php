@@ -81,8 +81,8 @@
       <div class="credits-list">
         <div class="creator">
           <div class="creator-image">
-            <img loading="lazy" src="https://mc-heads.net/avatar/thanathor/16"></img>
-            <h4>Thanathor</h4>
+            <img loading="lazy" src="https://mc-heads.net/avatar/djoness/16"></img>
+            <h4>Djoness</h4>
           </div>
           <p>Datapack Development</p>
           <p>& Mechanics</p>
