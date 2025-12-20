@@ -3,6 +3,7 @@
     {
       "title": "New Modules",
       "modules": [
+        "lavish_livestock",
         "lively_lily_pads",
         "reeling_rods",
         "survival_refightalized",
