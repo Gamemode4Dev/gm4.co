@@ -161,5 +161,31 @@
     "links": [
       "https://bsky.app/profile/sirsheepe.bsky.social"
     ]
+  },
+  {
+    "name": "Lune",
+    "description": "Hi, I'm Lune! I just joined the team at the end of 2025 to help out with the public server. I've been playing Minecraft since alpha. I also do digital art. I will likely be dedicated to moderation and various creative tasks.",
+    "minecraft_name": "Lune6",
+    "links": [
+      "https://bsky.app/profile/lune6.bsky.social"
+    ]
+  },
+  {
+    "name": "TransportLayer",
+    "description": "You can call me Transport or TL! I first joined the team to work on the secret PSIV project (AKA Gamemode 4D) and stayed as a sysadmin/server dev through PSV before rejoining during PS11! I also set up the Gamemode 4 Wiki and helped migrate away from Fandom. While most of my work is on the backend, I love to help out with moderation and just hang out on the server!",
+    "minecraft_name": "TransportLayer"
+    "links": [
+      "https://wiki.gm4.co/User:TransportLayer"
+    ]
+  },
+  {
+    "name": "Hero",
+    "description": "Hello, I'm Hero. I’ve been playing on the Gamemode 4 server since PSIII (after missing my initial acceptance for PSII) and got pretty involved in the community. Because of some internet issues, I ended up playing off and on across various servers (aside from some serious playtime on the first Skyblock server). I've helped on the wiki a little bit with GIFs, and I'm excited to help make sure the server I've loved for years stays a fun and inviting place for everyone.",
+    "minecraft_name": "Hero29"
+  },
+  {
+    "name": "Jess",
+    "description": "Hey, I go by Jesse and my pronouns are They/Them. Yes, my username is a dinosaur and a penguin mix! I'm new around here but if I have an opinion then I'll get involved in any project.. like taking on the furniture module oops. Outside of this I'm probably most well known being a mental health advocate as I have BPD among other things :D I look forward to meeting you on the public server!",
+    "minecraft_name": "Dinoguin_Jess"
   }
 ]
