@@ -184,8 +184,11 @@
     "minecraft_name": "Hero29"
   },
   {
-    "name": "Jess",
+    "name": "Jesse",
     "description": "Hey, I go by Jesse and my pronouns are They/Them. Yes, my username is a dinosaur and a penguin mix! I'm new around here but if I have an opinion then I'll get involved in any project.. like taking on the furniture module oops. Outside of this I'm probably most well known being a mental health advocate as I have BPD among other things :D I look forward to meeting you on the public server!",
-    "minecraft_name": "Dinoguin_Jess"
+    "minecraft_name": "Dinoguin_Jess",
+    "links": [
+      "https://wiki.gm4.co/User:Dinoguin"
+    ]
   }
 ]
