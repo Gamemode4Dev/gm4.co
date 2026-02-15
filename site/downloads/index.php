@@ -52,6 +52,9 @@
       <div class="trackItem bottom-left" style="background-image: url(/images/server/ps9_banner.png);">
         <h2>Public Server 9</h2>
       </div>
+      <div class="trackItem bottom-left" style="background-image: url(/images/server/ps10_spawn.png);">
+        <h2>Public Server 10</h2>
+      </div>
     </div>
   </div>
   <div class="infoContainer">

@@ -266,6 +266,27 @@
           }
         }
       ]
+    },
+    {
+      "name": "Public Server 10",
+      "downloads": [
+        {
+          "name": "Final World",
+          "size": "9.66 GB",
+          "version": "1.20.4",
+          "options": {
+            "main": "https://files.kruthers.com/worlds/gm4/GM4_Public_Server_10-final.zip"
+          }
+        },
+        {
+          "name": "Pre-Players World",
+          "size": "6.92 GB",
+          "version": "1.20.4",
+          "options": {
+            "main": "https://files.kruthers.com/worlds/gm4/GM4_Public_Server_10-pre_players.zip"
+          }
+        }
+      ]
     }
   ]
 }
