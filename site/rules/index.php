@@ -40,7 +40,7 @@
         <li><a href="#intro">Introduction</a></li>
         <li><a href="#respect">Respect Others</a></li>
         <li><a href="#spam">No Spamming</a></li>
-        <li><a href="#account">Account Responsibility</a></li>
+        <li><a href="#account_responsibility">Account Responsibility</a></li>
         <li><a href="#impersonation">Impersonation & Ban Evasion</a></li>
         <li><a href="#staff">Staff</a></li>
         <li><a href="#server">Server Rules</a></li>
@@ -61,15 +61,23 @@
           Everyone here wants to enjoy themselves; to do this, you must always treat others with respect, dignity, and consideration. Be mindful of everyone and how what you are saying can be taken. Meanings can get lost, misinterpreted or considered offensive. Not everyone will have the same sense of humour or knowledge as you.<br />
           To help achieve this, we expect the following:
         </p>
-        <h3>No Hate Speech or Discrimination</h3>
-        <p>Any sexist, racist, or offensive messages or comments will not be tolerated. Swearing is allowed as long as it is not directed at someone.</p>
-        <h3>Personal Privacy</h3>
-        <p>
-          Do not make public or share another person's personal information without consent.<br />
-          Harassment, stalking, or doxxing of community members will be punished, even if it occurs outside the Gamemode 4 environment.
-        </p>
-        <h3>No Harassment</h3>
-        <p>Harassment of any kind toward others, or promoting/misleading others to break the rules, is not allowed.</p>
+        <ul>
+          <li>
+            <h3>No Hate Speech or Discrimination</h3>
+            <p>Any sexist, racist, or offensive messages or comments will not be tolerated. Swearing is allowed as long as it is not directed at someone.</p>
+          </li>
+          <li>
+            <h3>Personal Privacy</h3>
+            <p>
+              Do not make public or share another person's personal information without consent.<br />
+              Harassment, stalking, or doxxing of community members will be punished, even if it occurs outside the Gamemode 4 environment.
+            </p>
+          </li>
+          <li>
+            <h3>No Harassment</h3>
+            <p>Harassment of any kind toward others, or promoting/misleading others to break the rules, is not allowed.</p>
+          </li>
+        </ul>
       </section>
       <section id="spam">
         <h2>No Spamming</h2>
@@ -77,7 +85,7 @@
           Spam of any kind is not permitted. Consequently, sending repeated or similar messages, flooding chat/channels, using all CAPITAL letters, randomly pinging/tagging others or sending messages with zero meaning may be classified as spam by staff and punished accordingly.
         </p>
       </section>
-      <section id="account">
+      <section id="account_responsibility">
         <h2>Account Responsibility</h2>
         <p>
           You are responsible for your account and all actions taken by that account, even if another person uses your account.
@@ -116,6 +124,7 @@
             <i>* Duplication may only be allowed if it's carpets specifically for map art!</i>
           </li>
         </ul>
+        <br>
         <h3>Claims and Ownership</h3>
         <p>
           Our server does not use claim or ownership plugins; instead, you may claim any location of reasonable size and place your belongings anywhere, as long as you do not break any other rules.<br />

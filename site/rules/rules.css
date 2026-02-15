@@ -17,33 +17,43 @@
   position: sticky;
   top: 1rem;
   align-self: flex-start;
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  a {
+    display: block;
+    padding: 0.5rem 0.75rem;
+    text-decoration: none;
+    border-left: 3px solid transparent;
+  }
+
+  a.active {
+    font-weight: 600;
+    border-left-color: #007acc;
+  }
 }
 
-.rulesNav ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.rulesNav a {
-  display: block;
-  padding: 0.5rem 0.75rem;
-  text-decoration: none;
-  border-left: 3px solid transparent;
-}
-
-.rulesNav a.active {
-  font-weight: 600;
-  border-left-color: #007acc;
-}
 
 /* Main content */
-.content {
+.rules.infoContainer {
   flex: 1;
-}
-
-.content section {
   margin-bottom: 4rem;
+
+  section {
+    width: 100%;
+  }
+
+  h2 {
+    text-decoration: underline;
+  }
+
+  .indent {
+    padding-left: 10px;
+  }
 }
 
 /* Mobile behavior */
