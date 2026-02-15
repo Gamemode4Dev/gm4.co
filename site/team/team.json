@@ -70,9 +70,9 @@
     ]
   },
   {
-    "name": "Thanathor",
-    "description": "I'm Thanathor, alternatively just \"that tree\" if you're low on time or my <a href=\"/modules/combat-expanded\">Combat Expanded</a> module just resulted in your death. I first joined Gamemode 4 only around the end of PS1 after I wrote the wrong email and missed the invite email, which really tells you all you need to know about me. Joining the team in April 2020 as a builder I quickly made the mistake of getting into datapacks. I've since worked on various <del>ways to torture players</del> server events, modules, and the <a href=\"/obsolescence\">Obsolescence</a> and <a href=\"/evergrowth\">Evergrowth</a> maps.",
-    "minecraft_name": "Thanathor",
+    "name": "Djones",
+    "description": "I'm Djones, alternatively just \"that tree\" if you're low on time or my <a href=\"/modules/combat-expanded\">Combat Expanded</a> module just resulted in your death. I first joined Gamemode 4 only around the end of PS1 after I wrote the wrong email and missed the invite email, which really tells you all you need to know about me. Joining the team in April 2020 as a builder I quickly made the mistake of getting into datapacks. I've since worked on various <del>ways to torture players</del> server events, modules, and the <a href=\"/obsolescence\">Obsolescence</a> and <a href=\"/evergrowth\">Evergrowth</a> maps.",
+    "minecraft_name": "Djoness",
     "links": [
       "https://bsky.app/profile/thanathor.bsky.social"
     ]
@@ -143,7 +143,7 @@
   },
   {
     "name": "rednls",
-    "description": "Hey! I'm rednls or just red.  Despite only discovering datapacks Nov 2023, I was (somehow) accepted as a member of Gamemode4 in Aug 2024. Now, as a member of the Project Development team, I'll be dedicated to creating high-quality maps and helping to shape this amazing community!",
+    "description": "Hey! I'm rednls or just red. I began learning datapacks mid-November 2023, resource packs 6 months after, and then joined the team in August 2024. Since then, I've been absorbed into Smithed to help with a Summit and Direct- as well as participated in a few mapjams (one of which I won!). Moving forward- I'd love to continue creating enjoyable maps and experiences, whether or not I actually finish them :3c",
     "minecraft_name": "rednls",
     "links": [
       "https://bsky.app/profile/rednls.bsky.social"
@@ -160,6 +160,35 @@
     "minecraft_name": "SirSheepe",
     "links": [
       "https://bsky.app/profile/sirsheepe.bsky.social"
+    ]
+  },
+  {
+    "name": "Lune",
+    "description": "Hi, I'm Lune! I just joined the team at the end of 2025 to help out with the public server. I've been playing Minecraft since alpha. I also do digital art. I will likely be dedicated to moderation and various creative tasks.",
+    "minecraft_name": "Lune6",
+    "links": [
+      "https://bsky.app/profile/lune6.bsky.social"
+    ]
+  },
+  {
+    "name": "TransportLayer",
+    "description": "You can call me Transport or TL! I first joined the team to work on the secret PSIV project (AKA Gamemode 4D) and stayed as a sysadmin/server dev through PSV before rejoining during PS11! I also set up the Gamemode 4 Wiki and helped migrate away from Fandom. While most of my work is on the backend, I love to help out with moderation and just hang out on the server!",
+    "minecraft_name": "TransportLayer",
+    "links": [
+      "https://wiki.gm4.co/User:TransportLayer"
+    ]
+  },
+  {
+    "name": "Hero",
+    "description": "Hello, I'm Hero. I’ve been playing on the Gamemode 4 server since PSIII (after missing my initial acceptance for PSII) and got pretty involved in the community. Because of some internet issues, I ended up playing off and on across various servers (aside from some serious playtime on the first Skyblock server). I've helped on the wiki a little bit with GIFs, and I'm excited to help make sure the server I've loved for years stays a fun and inviting place for everyone.",
+    "minecraft_name": "Hero29"
+  },
+  {
+    "name": "Jesse",
+    "description": "Hey, I go by Jesse and my pronouns are They/Them. Yes, my username is a dinosaur and a penguin mix! I'm new around here but if I have an opinion then I'll get involved in any project.. like taking on the furniture module oops. Outside of this I'm probably most well known being a mental health advocate as I have BPD among other things :D I look forward to meeting you on the public server!",
+    "minecraft_name": "Dinoguin_Jess",
+    "links": [
+      "https://wiki.gm4.co/User:Dinoguin"
     ]
   }
 ]
