@@ -21,7 +21,7 @@
         <a class="dropdown-map-info" href="/server">
           <div>Public Server 11</div>
         </a>
-        <a class="dropdown-entry" href="/rules#server">
+        <a class="dropdown-entry" href="/rules">
           <div>Server Rules</div>
         </a>
         <a class="dropdown-entry" href="/downloads">

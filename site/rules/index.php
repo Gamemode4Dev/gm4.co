@@ -44,15 +44,15 @@
         <li><a href="#impersonation">Impersonation & Ban Evasion</a></li>
         <li><a href="#staff">Staff</a></li>
         <li><a href="#server">Server Rules</a></li>
-        <li><a href="#punishments">Punishments & Consequences & Reporting</a></li>
+        <li><a href="#punishments">Punishments & Reporting</a></li>
       </ul>
     </nav>
 
     <div class="rules infoContainer">
-      <section id="into">
-        <h1>Official Rules & Community Guidelines</h1>
+      <section id="intro">
+        <h1>Rules & Community Guidelines</h1>
         <p>
-          Welcome to Gamemode 4 (GM4). While you are here, we have a few rules and guidelines that lay out expectations for how everyone behaves; these are here to ensure that GM4 is a fun place for everyone, and you don't accidentally ruin someone else's experience. We expect all members of the community to treat others with respect and be responsible for their actions and belongings. These apply to all spaces within Gamemode 4, and failure to do so will result in punishments. As long as you're a nice person and use common sense, you shouldn't have trouble following these rules.
+          We have a few rules and guidelines that lay out expectations for how everyone behaves; these are here to ensure that Gamemode 4 is a fun place for everyone, and you don't accidentally ruin someone else's experience. These apply to all spaces within Gamemode 4, and failure to do so will result in punishments. As long as you're a nice person and use common sense, you shouldn't have trouble following these rules.
         </p>
       </section>
       <section id="respect">
@@ -61,23 +61,20 @@
           Everyone here wants to enjoy themselves; to do this, you must always treat others with respect, dignity, and consideration. Be mindful of everyone and how what you are saying can be taken. Meanings can get lost, misinterpreted or considered offensive. Not everyone will have the same sense of humour or knowledge as you.<br />
           To help achieve this, we expect the following:
         </p>
-        <ul>
-          <li>
-            <h3>No Hate Speech or Discrimination</h3>
-            <p>Any sexist, racist, or offensive messages or comments will not be tolerated. Swearing is allowed as long as it is not directed at someone.</p>
-          </li>
-          <li>
-            <h3>Personal Privacy</h3>
-            <p>
-              Do not make public or share another person's personal information without consent.<br />
-              Harassment, stalking, or doxxing of community members will be punished, even if it occurs outside the Gamemode 4 environment.
-            </p>
-          </li>
-          <li>
-            <h3>No Harassment</h3>
-            <p>Harassment of any kind toward others, or promoting/misleading others to break the rules, is not allowed.</p>
-          </li>
-        </ul>
+        <h3>No Hate Speech or Discrimination</h3>
+        <p>
+          Any sexist, racist, or offensive messages or comments will not be tolerated. Swearing is allowed as long as it is not directed at someone.
+        </p>
+        <h3>Personal Privacy</h3>
+        <p>
+          Do not make public or share another person's personal information without consent.<br />
+          Harassment, stalking, or doxxing of community members will be punished, even if it occurs outside the Gamemode 4 environment.
+        </p>
+        <h3>No Harassment</h3>
+          <p>
+            Harassment of any kind toward others, or promoting/misleading others to break the rules, is not allowed.
+          </p>
+        </li>
       </section>
       <section id="spam">
         <h2>No Spamming</h2>
@@ -95,9 +92,13 @@
       <section id="impersonation">
         <h2>Impersonation & Ban Evasion</h2>
         <p>
-          Attempting to impersonate others is not allowed. This includes but is not limited to tricking people into believing you are someone else and/or trying to assert that you are staff.<br />
-          Using alternative accounts is not allowed.<br />
-          <i>NOTE: While on the public Minecraft server, members may apply nicknames for fun; these can be identified by starting with ~. If nicknames are similar to those of other community members, you must have their consent.</i>
+          Attempting to impersonate others is not allowed. This includes but is not limited to tricking people into believing you are someone else and/or trying to assert that you are staff.
+        </p>
+        <p>
+          Using alternative accounts is not allowed.
+        </p>
+        <p>
+          While on the public Minecraft server, members may apply nicknames for fun; these can be identified by starting with ~. If nicknames are similar to those of other community members, you must have their consent.
         </p>
       </section>
       <section id="staff">
@@ -124,7 +125,6 @@
             <i>* Duplication may only be allowed if it's carpets specifically for map art!</i>
           </li>
         </ul>
-        <br>
         <h3>Claims and Ownership</h3>
         <p>
           Our server does not use claim or ownership plugins; instead, you may claim any location of reasonable size and place your belongings anywhere, as long as you do not break any other rules.<br />
@@ -153,11 +153,13 @@
         <h3>Excessive Lag</h3>
         <p>
           Do not cause lag. Builds that cause lag will be warnable, and we reserve the right to kick you and remove builds in the case of excessive lag. This means you should take actions to keep entity counts low and ensure farms are well-regulated. Complex redstone contraptions should also be kept away, and chunk loaders are not allowed.
-          <i>NOTE: Ender Pearl stasis chambers are allowed, as long as they do not cause excessive lag.</i>
+        </p>
+        <p>
+          Ender Pearl stasis chambers are allowed, as long as they do not cause excessive lag.
         </p>
       </section>
       <section id="punishments">
-        <h2>Punishments & Consequences & Reporting</h2>
+        <h2>Punishments & Reporting</h2>
         <p>
           Failure to follow these rules and the essence they display will result in warnings and temporary bans. Excessive rule-breaking will result in permanent banning.<br />
           You may appeal any punishment on the Discord server through the public server help channel, in which case, another unassociated staff member will review your appeal.<br />
