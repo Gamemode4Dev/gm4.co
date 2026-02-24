@@ -35,15 +35,15 @@ gtag('config', 'UA-63061711-1', {cookie_flags:'SameSite=None;Secure'});
 <title>Gamemode 4 - Server</title>
 </head>
 <body class="light">
-	<?php include_once($dev."includes/header.php"); ?>
+	<?php include 'includes/header.php';?>
 
 	<div class="serverSplash slideshow track">
 		<div class="trackContainer">
-			<div class="trackItem" style="background-image: url(images/server/ps10_banner.png);">
+			<div class="trackItem" style="background-image: url(images/server/ps11_banner.png);">
 				<img src="/images/server/ps10_logo.png">
 				<div>
 					<h2>Gamemode 4</h2>
-					<h2>Public Server 10</h2>
+					<h2>Public Server 11</h2>
 				</div>
 			</div>
 		</div>
@@ -53,7 +53,14 @@ gtag('config', 'UA-63061711-1', {cookie_flags:'SameSite=None;Secure'});
 		<h2>Gamemode 4 has a Public Server!</h2>
     <h3>IP: <span class="serverIp">server.gm4.co<div class="copyButton" title="Copy server IP"></div></span></h3>
 		<br />
-    <p>A new public server is here! To keep up to date with all the latest news, <a href='https://gm4.co/discord'>join our Discord Server!</a></p>
+		<p>Check out the latest public server! Public Server 11 has some of the latest modules plus a range of exclusive public server only features!</p>
+		<p>Some of the features you can find out our Vanilla++ server are</p>
+		<ul>
+			<li>15+ Custom Dimensions!</li>
+			<li>80+ GM4 Datapacks adding a range of custom items, blocks and features</li>
+			<li>Special Items and machines that change the way you can play or farm</li>
+		</ul>
+    	<p>To keep up to date with all the latest news, <a href='https://gm4.co/discord'>join our Discord Server!</a></p>
 		<p>Looking for the world downloads of our past seasons? <a href="https://gm4.co/downloads">Check out our downloads page!</a></p>
 		<br />
 
@@ -61,7 +68,7 @@ gtag('config', 'UA-63061711-1', {cookie_flags:'SameSite=None;Secure'});
 			<div class="trackButton trackButtonLeft"></div>
 			<div class="trackButton trackButtonRight"></div>
 			<div class="trackContainer">
-				<div class="trackItem bottom-left" style="background-image: url(images/server/ps10_spawn.png);">
+				<div class="trackItem bottom-left" style="background-image: url(images/server/ps11_spawn.png);">
 					<h2>A welcoming spawn</h2>
 					<p>Don't like living alone? Get cosy at the spawn town that every server has</p>
 				</div>

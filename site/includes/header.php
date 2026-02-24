@@ -19,7 +19,10 @@
         </a>
         <div class="dropdown-content">
         <a class="dropdown-map-info" href="/server">
-          <div>Public Server 10</div>
+          <div>Public Server 11</div>
+        </a>
+        <a class="dropdown-entry" href="/rules">
+          <div>Server Rules</div>
         </a>
         <a class="dropdown-entry" href="/downloads">
           <div>Previous Downloads</div>
