@@ -81,7 +81,7 @@
     <div>
       <h3>Realms Mapmaker Awards</h3>
       <p>Best Singleplayer Experience 2025</p>
-      <p><a href="https://www.minecraft.net/en-us/article/realms-page-content-creator" target="_blank">minecraft.net • March 6th, 2026</a></p>
+      <p><a href="https://www.minecraft.net/en-us/article/java-realms-mapmaker-awards" target="_blank">minecraft.net • March 6th, 2026</a></p>
     </div>
   </div>
   <div class="credits">
