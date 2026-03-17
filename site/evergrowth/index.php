@@ -62,7 +62,7 @@
     </div>
   </div>
   <div class="buttonGrid downloads">
-    <p class="worldVersionInfo">For Minecraft: Java Edition 1.21.10</p>
+    <p class="worldVersionInfo">For Minecraft: Java Edition 1.21.11</p>
     <a href="https://github.com/Gamemode4Dev/evergrowth/releases/latest/download/Evergrowth.zip" class="squircleLink worldDownloadLink">
       <img src="/images/filled_map.svg">
       <span>Download the Map</span>
@@ -75,6 +75,14 @@
       <img src="/images/logo/discord.svg">
       Get Help on Discord
     </a>
+  </div>
+  <div class="awardSection">
+    <img src="/images/realms_mapmaker_award.png" alt="Realms Mapmaker Award Trophy" width="48">
+    <div>
+      <h3>Realms Mapmaker Awards</h3>
+      <p>Best Singleplayer Experience 2025</p>
+      <p><a href="https://www.minecraft.net/en-us/article/realms-page-content-creator" target="_blank">minecraft.net • March 6th, 2026</a></p>
+    </div>
   </div>
   <div class="credits">
     <h2>Credits</h3>

@@ -159,3 +159,37 @@ h2 {
 footer {
   border-top: 0px !important;
 }
+
+.awardSection {
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.awardSection div {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+
+.awardSection h3 {
+  margin-bottom: 0.5rem;
+}
+
+.awardSection p {
+  margin: 0.25rem 0;
+}
+
+.awardSection a {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  font-size: small;
+  color: var(---thematic-element-color);
+}
+
+.awardSection a:hover {
+  text-decoration: underline;
+}
