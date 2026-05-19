@@ -1,0 +1,10 @@
+{
+  "promo_images": [
+    {
+      "type": "image",
+      "image": "lavish_livestock.png",
+      "credit": "runcows",
+      "alt": "The 3 sizes of cows with this module."
+    }
+  ]
+}
