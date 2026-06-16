@@ -2,7 +2,8 @@
   {
     "repo": "Gamemode4Dev/GM4_Datapacks",
     "versions": [
-      { "id": "26.1", "name": "26.1", "branch": "master" },
+      { "id": "26.2", "name": "26.2", "branch": "master" },
+      { "id": "26.1", "name": "26.1", "branch": "ver/26.1" },
       { "id": "1.21.5", "name": "1.21.5 — 1.21.11", "branch": "ver/1.21.5" },
       { "id": "1.21", "name": "1.21 — 1.21.4", "branch": "ver/1.21" },
       { "id": "1.20.5", "name": "1.20.5 — 1.20.6", "branch": "ver/1.20.5" },
