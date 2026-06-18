@@ -60,7 +60,7 @@ gtag('config', 'UA-63061711-1', {cookie_flags:'SameSite=None;Secure'});
 			<li>80+ GM4 Datapacks adding a range of custom items, blocks and features</li>
 			<li>Special Items and machines that change the way you can play or farm</li>
 		</ul>
-    	<p>To keep up to date with all the latest news, <a href='https://gm4.co/discord'>join our Discord Server!</a></p>
+		<p>To keep up to date with all the latest news, <a href='https://discord.gg/eN257Mr'>join our Discord Server!</a></p>
 		<p>Looking for the world downloads of our past seasons? <a href="https://gm4.co/downloads">Check out our downloads page!</a></p>
 		<br />
 

@@ -71,7 +71,7 @@
       <img src="/images/message_in_a_bottle.svg">
       Download Latest Resource Pack
     </a>
-    <a href="https://gm4.co/discord" target="_blank" class="squircleLink viewCodeLink">
+    <a href="https://discord.gg/eN257Mr" target="_blank" class="squircleLink viewCodeLink">
       <img src="/images/logo/discord.svg">
       Get Help on Discord
     </a>
