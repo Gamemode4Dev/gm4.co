@@ -4,7 +4,7 @@
 <head>
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-63061711-1"></script>
-  <script async src="https://gm4.co/includes/lazysizes.min.js"></script>
+  <script async src="/includes/lazysizes.min.js"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
 
@@ -28,12 +28,12 @@
   <meta property="og:image:width" content="256">
   <meta property="og:image:height" content="256">
 
-  <link rel="icon" type="image/svg" href="../images/logo/logo_clear.svg" sizes="any">
+  <link rel="icon" type="image/svg" href="/images/logo/logo_clear.svg" sizes="any">
   <title>Gamemode 4: World Downloads</title>
-  <link rel="stylesheet" href="../includes/homepage.css?hash=a<?php echo hash_file("crc32", "../includes/homepage.css"); ?>" />
+  <link rel="stylesheet" href="/includes/homepage.css?hash=a<?php echo hash_file("crc32", "../includes/homepage.css"); ?>" />
   <link rel="stylesheet" href="downloads.css?hash=a<?php echo hash_file("crc32", "downloads.css"); ?>" />
-  <script src="https://www.gm4.co/includes/jquery-3.6.0.min.js"></script>
-  <script src="../includes/tracks.js?hash=<?php echo hash_file("crc32", "../includes/tracks.js"); ?>"></script>
+  <script src="/includes/jquery-3.6.0.min.js"></script>
+  <script src="/includes/tracks.js?hash=<?php echo hash_file("crc32", "../includes/tracks.js"); ?>"></script>
   <script src="downloads.js?hash=<?php echo hash_file("crc32", "downloads.js"); ?>"></script>
 </head>
 

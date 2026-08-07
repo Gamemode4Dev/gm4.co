@@ -24,12 +24,12 @@
   <meta property="og:image:width" content="256">
   <meta property="og:image:height" content="256">
 
-  <link rel="icon" type="image/svg" href="../images/logo/logo_clear.svg" sizes="any">
+  <link rel="icon" type="image/svg" href="/images/logo/logo_clear.svg" sizes="any">
   <title>Gamemode 4: Rules</title>
-  <link rel="stylesheet" href="../includes/homepage.css?hash=a<?php echo hash_file("crc32", "../includes/homepage.css"); ?>" />
-  <link rel="stylesheet" href="./rules.css?hash=a<?php echo hash_file("crc32", "rules.css"); ?>" />
-  <script src="https://www.gm4.co/includes/jquery-3.6.0.min.js"></script>
-  <script src="./rules.js"></script>
+  <link rel="stylesheet" href="/includes/homepage.css?hash=a<?php echo hash_file("crc32", "../includes/homepage.css"); ?>" />
+  <link rel="stylesheet" href="/rules/rules.css?hash=a<?php echo hash_file("crc32", "rules.css"); ?>" />
+  <script src="/includes/jquery-3.6.0.min.js"></script>
+  <script src="/rules/rules.js"></script>
 </head>
 
 <body>

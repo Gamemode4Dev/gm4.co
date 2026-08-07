@@ -32,6 +32,10 @@
       <li class="dropdown">
         <h1>Maps</h1>
         <div class="dropdown-content">
+          <a class="dropdown-map-info" href="/masquerade">
+            <div>The Masquerade</div>
+            <div class="dropdown-entry-info">Social Deduction - 26.2</div>
+          </a>
           <a class="dropdown-map-info" href="/evergrowth">
             <div>Evergrowth</div>
             <div class="dropdown-entry-info">Puzzle - 1.21.11</div>

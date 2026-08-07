@@ -26,10 +26,10 @@ gtag('config', 'UA-63061711-1', {cookie_flags:'SameSite=None;Secure'});
 <meta property="og:image" content="https://gm4.co/images/server/ps10_logo.png">
 <meta property="og:url" content="https://gm4.co/server">
 
-<link rel="icon" type="image/svg" href="https://www.gm4.co/images/logo/logo_clear.svg" sizes="any">
+<link rel="icon" type="image/svg" href="/images/logo/logo_clear.svg" sizes="any">
 <link rel = "stylesheet" href="includes/header.css?hash=<?php echo hash_file("crc32","includes/header.css"); ?>" />
-<script src="https://www.gm4.co/includes/jquery-3.6.0.min.js"></script>
-<link rel = "stylesheet" href="https://www.gm4.co/includes/server.css?hash=<?php echo hash_file("crc32","includes/server.css"); ?>" />
+<script src="/includes/jquery-3.6.0.min.js"></script>
+<link rel = "stylesheet" href="/includes/server.css?hash=<?php echo hash_file("crc32","includes/server.css"); ?>" />
 <script src="/includes/tracks.js?hash=<?php echo hash_file("crc32", __DIR__ . "/includes/tracks.js"); ?>"></script>
 <script src="/includes/server.js?hash=<?php echo hash_file("crc32", __DIR__ . "/includes/server.js"); ?>"></script>
 <title>Gamemode 4 - Server</title>
@@ -60,8 +60,8 @@ gtag('config', 'UA-63061711-1', {cookie_flags:'SameSite=None;Secure'});
 			<li>80+ GM4 Datapacks adding a range of custom items, blocks and features</li>
 			<li>Special Items and machines that change the way you can play or farm</li>
 		</ul>
-    	<p>To keep up to date with all the latest news, <a href='https://gm4.co/discord'>join our Discord Server!</a></p>
-		<p>Looking for the world downloads of our past seasons? <a href="https://gm4.co/downloads">Check out our downloads page!</a></p>
+    	<p>To keep up to date with all the latest news, <a href='/discord'>join our Discord Server!</a></p>
+		<p>Looking for the world downloads of our past seasons? <a href="/downloads">Check out our downloads page!</a></p>
 		<br />
 
 		<div class="serverSlides slideshow track">

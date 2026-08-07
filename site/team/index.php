@@ -13,7 +13,7 @@ usort($team, function($a, $b) {
 <head>
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-63061711-1"></script>
-  <script async src="https://gm4.co/includes/lazysizes.min.js"></script>
+  <script async src="/includes/lazysizes.min.js"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag() {
@@ -32,11 +32,11 @@ usort($team, function($a, $b) {
   <meta property="og:image:width" content="256">
   <meta property="og:image:height" content="256">
 
-  <link rel="icon" type="image/svg" href="../images/logo/logo_clear.svg" sizes="any">
+  <link rel="icon" type="image/svg" href="/images/logo/logo_clear.svg" sizes="any">
   <title>Gamemode 4: Meet the Team</title>
-  <link rel="stylesheet" href="../includes/homepage.css?hash=a<?php echo hash_file("crc32", "../includes/homepage.css"); ?>" />
-  <link rel="stylesheet" href="team.css?hash=a<?php echo hash_file("crc32", "team.css"); ?>" />
-  <script src="https://www.gm4.co/includes/jquery-3.6.0.min.js"></script>
+  <link rel="stylesheet" href="/includes/homepage.css?hash=a<?php echo hash_file("crc32", "../includes/homepage.css"); ?>" />
+  <link rel="stylesheet" href="/team/team.css?hash=a<?php echo hash_file("crc32", "team.css"); ?>" />
+  <script src="/includes/jquery-3.6.0.min.js"></script>
 </head>
 <body>
   <?php include '../includes/header.php'; ?>

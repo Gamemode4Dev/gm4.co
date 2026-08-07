@@ -76,7 +76,7 @@ gtag('config', 'UA-63061711-1');
 <link rel="icon" type="image/svg" href="https://www.gm4.co/images/logo/logo_clear.svg" sizes="any">
 <link rel = "stylesheet" href="/includes/module.css" />
 <link rel = "stylesheet" href="/includes/homepage.css" />
-<script src="https://www.gm4.co/includes/jquery-3.6.0.min.js"></script>
+<script src="/includes/jquery-3.6.0.min.js"></script>
 <script src="/includes/tracks.js?hash=<?php echo hash_file("crc32", __DIR__ . "/includes/tracks.js"); ?>"></script>
 <script src="/includes/module.js?hash=<?php echo hash_file("crc32", __DIR__ . "/includes/module.js"); ?>"></script>
 <script src="/includes/modulePage.js?hash=<?php echo hash_file("crc32", __DIR__ . "/includes/modulePage.js"); ?>"></script>

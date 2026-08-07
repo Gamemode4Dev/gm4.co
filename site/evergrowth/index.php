@@ -4,7 +4,7 @@
 <head>
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-63061711-1"></script>
-  <script async src="https://gm4.co/includes/lazysizes.min.js"></script>
+  <script async src="/includes/lazysizes.min.js"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
 
@@ -28,20 +28,20 @@
   <meta property="og:image:width" content="256">
   <meta property="og:image:height" content="256">
 
-  <link rel="icon" type="image/svg" href="../images/logo/logo_clear.svg" sizes="any">
+  <link rel="icon" type="image/svg" href="/images/logo/logo_clear.svg" sizes="any">
   <title>Gamemode 4: Evergrowth</title>
-  <link rel="stylesheet" href="../includes/homepage.css?hash=a<?php echo hash_file("crc32", "../includes/homepage.css"); ?>" />
-  <link rel="stylesheet" href="evergrowth.css?hash=a<?php echo hash_file("crc32", "evergrowth.css"); ?>" />
-  <script src="https://www.gm4.co/includes/jquery-3.6.0.min.js"></script>
-  <script src="../includes/tracks.js?hash=<?php echo hash_file("crc32", "../includes/tracks.js"); ?>"></script>
-  <script src="evergrowth.js?hash=<?php echo hash_file("crc32", "evergrowth.js"); ?>"></script>
+  <link rel="stylesheet" href="/includes/homepage.css?hash=a<?php echo hash_file("crc32", "../includes/homepage.css"); ?>" />
+  <link rel="stylesheet" href="/evergrowth/evergrowth.css?hash=a<?php echo hash_file("crc32", "evergrowth.css"); ?>" />
+  <script src="/includes/jquery-3.6.0.min.js"></script>
+  <script src="/includes/tracks.js?hash=<?php echo hash_file("crc32", "../includes/tracks.js"); ?>"></script>
+  <script src="/evergrowth/evergrowth.js?hash=<?php echo hash_file("crc32", "evergrowth.js"); ?>"></script>
 </head>
 
 <body class="light">
   <?php include '../includes/header.php'; ?>
   <div class="splash">
-    <img src="evergrowth_splash.png" alt="">
-    <img class="splash-overlay" src="evergrowth_title.png" alt="Evergrowth">
+    <img src="/evergrowth/evergrowth_splash.png" alt="">
+    <img class="splash-overlay" src="/evergrowth/evergrowth_title.png" alt="Evergrowth">
   </div>
   <div class="poster">
     <h1>Evergrowth is a block pushing, mind bending Puzzle Map.</h1>
@@ -71,7 +71,7 @@
       <img src="/images/message_in_a_bottle.svg">
       Download Latest Resource Pack
     </a>
-    <a href="https://gm4.co/discord" target="_blank" class="squircleLink viewCodeLink">
+    <a href="/discord" target="_blank" class="squircleLink viewCodeLink">
       <img src="/images/logo/discord.svg">
       Get Help on Discord
     </a>

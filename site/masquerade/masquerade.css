@@ -1,0 +1,153 @@
+.splash {
+  display: grid;
+  grid-template-areas: "splash";
+  justify-items: center;
+  width: 100%;
+  min-height: 150px;
+  height: 40vh;
+}
+
+.splash img {
+  grid-area: splash;
+  width: 100%;
+  min-height: 150px;
+  height: 40vh;
+  overflow: hidden;
+  object-fit: cover;
+}
+
+.splash img.splash-overlay {
+  width: 80%;
+  max-width: 685px;
+  top: 0;
+  left: 0;
+  object-fit: contain;
+}
+
+h2 {
+  font-weight: normal;
+}
+
+.downloads {
+  margin: 30px;
+}
+
+.credits {
+  margin: 20px;
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+.credits > h2 {
+  text-align: center;
+}
+
+.credits-list {
+  padding: 0 var(--content-spacer);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.creator {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin: 10px 10px;
+  
+}
+
+.creator-image {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-align:center;
+  margin: 15px;
+  justify-content:center;
+}
+
+.creator-image img {
+  image-rendering: pixelated;
+  width: 48px;
+  height: 48px;
+  border-radius: 1rem;
+  margin-right: 10px;
+  background-color:var(--preview-bg);
+  font-size:0px;
+}
+
+.creator p {
+  margin: 0;
+}
+
+.small {
+  transform: scale(0.75);
+}
+
+.poster {
+  width: 80%;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  margin-top: 50px;
+  box-sizing: border-box;
+}
+
+.posterPair {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.posterPairBox {
+  width: 50%;
+  padding: 10px;
+}
+
+.posterPairBox img {
+  width: 100%;
+}
+
+@media screen and (max-width: 1000px) {
+  .posterPair {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .posterPairBox {
+    width: 100%;
+  }
+}
+
+.worldVersionInfo {
+  text-align: center;
+}
+
+.worldDownloadLink {
+  color: var(--main-text-color) !important;
+  background-color: var(--main-accent-color);
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px;
+}
+
+.resourcePackDownloadLink, .viewCodeLink {
+  color: var(--main-text-color) !important;
+  background-color: var(--modulecard-bg-top);
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px;
+}
+
+.center {
+  text-align: center;
+}
+
+footer {
+  border-top: 0px !important;
+}

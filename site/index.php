@@ -8,7 +8,7 @@ created 19 august 2020
 <head>
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-63061711-1"></script>
-<script async src="https://gm4.co/includes/lazysizes.min.js"></script>
+<script async src="/includes/lazysizes.min.js"></script>
 <script>
 window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
@@ -33,7 +33,7 @@ gtag('config', 'UA-63061711-1');
 <link rel="icon" type="image/svg" href="/images/logo/logo_clear.svg" sizes="any">
 <link rel="stylesheet" href="/includes/homepage.css?hash=<?php echo hash_file("crc32", __DIR__ . "/includes/homepage.css"); ?>" />
 <title>Gamemode 4</title>
-<script src="https://www.gm4.co/includes/jquery-3.6.0.min.js"></script>
+<script src="/includes/jquery-3.6.0.min.js"></script>
 <script src="/includes/tracks.js?hash=<?php echo hash_file("crc32", __DIR__ . "/includes/tracks.js"); ?>"></script>
 <script src="/includes/module.js?hash=<?php echo hash_file("crc32", __DIR__ . "/includes/module.js"); ?>"></script>
 <script src="/includes/homepage.js?hash=<?php echo hash_file("crc32", __DIR__ . "/includes/homepage.js"); ?>"></script>
@@ -58,7 +58,7 @@ gtag('config', 'UA-63061711-1');
   </div>
   <div class="landingLinks">
     <h2>Join our community</h2>
-    <a class="discordLink squircleLink" href="https://gm4.co/discord" target="_blank" rel="noopener">
+    <a class="discordLink squircleLink" href="/discord" target="_blank" rel="noopener">
       <img src="/images/logo/discord.svg" width="31" height="24" alt="Discord Logo">Discord
     </a>
     <a class="githubLink squircleLink" href="https://github.com/Gamemode4Dev/GM4_Datapacks" target="_blank" rel="noopener">

@@ -47,7 +47,7 @@ h1{
   height:40px;
   content:"";
   z-index:2;
-  background-image:url(../images/theme_button.svg);
+  background-image:url(/images/theme_button.svg);
   background-size:contain;
   background-position:center;
   background-repeat:no-repeat;
