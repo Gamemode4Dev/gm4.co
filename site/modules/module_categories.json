@@ -3,6 +3,7 @@
     {
       "title": "New Modules",
       "modules": [
+        "blasting_maces",
         "towering_trees",
         "lavish_livestock",
         "lively_lily_pads",
@@ -15,12 +16,10 @@
         "double_doors",
         "bookshelf_inspector",
         "dripleaf_launchers",
-        "mountaineering",
         "shapeless_portals",
         "calling_bell",
         "teleportation_anchors",
         "rope_ladders",
-        "mob_curing",
         "lightning_in_a_bottle",
         "shroomites",
         "dripleaf_filters",
