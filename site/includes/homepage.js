@@ -1,23 +1,26 @@
 /* global MODULE_SOURCES selectedVersion modules fetchModulesAndResources initTrack createModuleCard loadModuleCategories updateIncludedModules, getIncludedModules */
 
 const SUPPORTERS = [
-	'Dantifreeze',
-	'EmmaSmithe',
-	'Frienderman',
-	'Hero29',
-	'Jackohhh',
-	'kruthers',
-	'kyrkis',
-	'Levertion',
 	'luegxrl',
-	'MichaelMiner137',
-	'MightyBurger',
-	'miraku_memo',
-	'ShadowSlam',
-	'suppergerrie2',
+	'kruthers',
+	'Hero29',
+	'Dantifreeze',
 	'TheEpyonProject',
-	'Uncle_Mole',
-	'venomousbirds'
+	'Jackohhh',
+	'Jesse',
+	'MightyBurger',
+	'Hozz',
+	'Levertion',
+	'kyrkis',
+	'miraku_memo',
+	'MichaelMiner137',
+	'Frienderman',
+	'ShadowSlam',
+	'SpecialBuilder32',
+	'suppergerrie2',
+	'TransportLayer',
+	'venomousbirds',
+	'EmmaSmithe'
 ]
 
 window.addEventListener('DOMContentLoaded', () => {
