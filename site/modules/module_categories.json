@@ -4,8 +4,9 @@
       "title": "New Modules",
       "modules": [
         "blasting_maces",
-        "towering_trees",
+        "horsemanship",
         "lavish_livestock",
+        "towering_trees",
         "lively_lily_pads",
         "reeling_rods",
         "survival_refightalized",
@@ -21,9 +22,7 @@
         "teleportation_anchors",
         "rope_ladders",
         "lightning_in_a_bottle",
-        "shroomites",
-        "dripleaf_filters",
-        "animi_shamir"
+        "shroomites"
       ]
     },
     {
