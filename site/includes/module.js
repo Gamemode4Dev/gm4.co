@@ -449,6 +449,15 @@ async function createPreview(version, moduleId, onDownload) {
 		videoButton.classList.add('videoLink');
 		previewInfo.append(videoButton);
 	}
+	if (mod.sponsor) {
+		const sponsorButton = document.createElement('div');
+		sponsorButton.classList.add('noselect', 'squircleLink', 'sponsorLink', 'noHover');
+		const sponsorImage = document.createElement('img');
+		sponsorImage.src = `https://mc-heads.net/avatar/${mod.sponsor.game_profile}/16`;
+		sponsorButton.append(sponsorImage);
+		sponsorButton.insertAdjacentText('beforeend', `Sponsored by ${mod.sponsor.name}`);
+		previewInfo.append(sponsorButton);
+	}
 	preview.append(previewInfo);
 
 	return preview;

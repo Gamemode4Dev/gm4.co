@@ -559,6 +559,18 @@ CSS for the module browse page
   background-color: var(--modulecard-bg-top);
 }
 
+.sponsorLink {
+  color: #ffffff !important;
+  background-color: #8c52c4;
+}
+
+.sponsorLink img {
+  image-rendering: pixelated;
+  border-radius: 0.25rem;
+  background-color: var(--preview-bg);
+  font-size: 0px;
+}
+
 @media screen and (max-width: 768px) {
   .landing {
     flex-direction: column;
