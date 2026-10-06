@@ -1,0 +1,29 @@
+{
+  "promo_images": [
+    {
+      "type": "image",
+      "featured": true,
+      "image": "gilded_gateways.webp",
+      "credit": "runcows",
+      "alt": "Main island gateways variations"
+    },
+    {
+      "type": "image",
+      "image": "main_island_above.png",
+      "credit": "runcows",
+      "alt": "Main island gateways from above"
+    },
+    {
+      "type": "image",
+      "image": "main_island_side.png",
+      "credit": "runcows",
+      "alt": "Main island gateways from the side"
+    },
+    {
+      "type": "image",
+      "image": "outer_end_gateway.png",
+      "credit": "runcows",
+      "alt": "Outer end gateway"
+    }
+  ]
+}
