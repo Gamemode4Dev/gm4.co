@@ -3,6 +3,7 @@
     {
       "title": "New Modules",
       "modules": [
+        "gilded_gateways",
         "blasting_maces",
         "horsemanship",
         "lavish_livestock",
