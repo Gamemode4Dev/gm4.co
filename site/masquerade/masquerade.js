@@ -1,0 +1,23 @@
+/* global cachedFetch */
+
+$(document).ready(() => {
+	resizeVideo();
+	fetchLastRelease().then((version) => {
+		console.log(version);
+		document.querySelector('.worldDownloadLink span').textContent += ` (v${version})`
+	});
+});
+
+function resizeVideo() {
+	$('iframe').each(function() {
+		$(this).css('height', ((parseInt($(this).css('width')) * 9) / 16) + 'px');
+	});
+}
+
+async function fetchLastRelease() {
+	const response = await cachedFetch("https://api.github.com/repos/Gamemode4Dev/The_Masquerade/releases");
+	const data = await response.json();
+	const filteredData = data.filter(release => !release.prerelease);
+	return filteredData[0].tag_name;
+
+}
