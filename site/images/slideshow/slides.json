@@ -1,14 +1,14 @@
 {
   "slides":[
     {
-      "low_resolution_background_image":"evergrowth_banner.jpg",
-      "background_image":"evergrowth_banner.png",
+      "low_resolution_background_image":"masquerade_banner.jpg",
+      "background_image":"masquerade_banner.png",
       "text":{
-        "header":"Block Pushing Puzzle Madness",
-        "paragraph":"Our Latest Custom Map for Minecraft 1.21.11. Go Block Pushing mad!",
+        "header":"The Masquerade",
+        "paragraph":"Our Latest Custom Map for Minecraft 26.3.",
         "position":"bottom-left"
       },
-      "link":"https://gm4.co/evergrowth"
+      "link":"https://gm4.co/masquerade"
     },
     {
       "low_resolution_background_image":"server10_1.jpg",

@@ -34,7 +34,7 @@
         <div class="dropdown-content">
           <a class="dropdown-map-info" href="/masquerade">
             <div>The Masquerade</div>
-            <div class="dropdown-entry-info">Social Deduction - 26.2</div>
+            <div class="dropdown-entry-info">Social Deduction - 26.3</div>
           </a>
           <a class="dropdown-map-info" href="/evergrowth">
             <div>Evergrowth</div>
