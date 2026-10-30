@@ -94,8 +94,8 @@
             <img loading="lazy" src="https://mc-heads.net/avatar/kyrkis/16"></img>
             <h4>Kyrius</h4>
           </div>
-          <p>Build</p>
-          <p>& Resource Pack</p>
+          <p>Build &</p>
+          <p>Resource Pack</p>
         </a>
         </div>
         <div class="creator">
@@ -103,8 +103,8 @@
             <img loading="lazy" src="https://mc-heads.net/avatar/bpr02/16"></img>
             <h4>BPR</h4>
           </div>
-          <p>Shaders</p>
-          <p>& Tech Support</p>
+          <p>Shaders &</p>
+          <p>Tech Support</p>
         </a>
         </div>
       </div>
