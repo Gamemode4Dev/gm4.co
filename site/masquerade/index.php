@@ -34,6 +34,7 @@
   <link rel="stylesheet" href="/masquerade/masquerade.css?hash=a<?php echo hash_file("crc32", "masquerade.css"); ?>" />
   <script src="/includes/jquery-3.6.0.min.js"></script>
   <script src="/includes/tracks.js?hash=<?php echo hash_file("crc32", "../includes/tracks.js"); ?>"></script>
+  <script src="/masquerade/masquerade.js?hash=<?php echo hash_file("crc32", "masquerade.js"); ?>"></script>
 </head>
 
 <body class="light">
