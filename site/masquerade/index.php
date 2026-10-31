@@ -41,7 +41,7 @@
   <?php include '../includes/header.php'; ?>
   <div class="splash">
     <img src="/masquerade/masquerade_splash.png" alt="">
-    <img class="splash-overlay" src="/masquerade/masquerade_title.png" alt="The Masquerade">
+    <img class="splash-overlay masquerade-logo" src="/masquerade/masquerade_title.webp" alt="The Masquerade">
   </div>
   <div class="poster">
     <h1>The Masquerade is a social deduction game for 5-15 players.</h1>

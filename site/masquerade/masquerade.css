@@ -24,6 +24,11 @@
   object-fit: contain;
 }
 
+.masquerade-logo {
+  transform: scale(1.333);
+  image-rendering: pixelated;
+}
+
 h2 {
   font-weight: normal;
 }
