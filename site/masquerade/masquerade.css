@@ -27,6 +27,7 @@
 .masquerade-logo {
   transform: scale(1.333);
   image-rendering: pixelated;
+  pointer-events: none;
 }
 
 h2 {
