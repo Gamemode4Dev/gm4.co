@@ -86,17 +86,16 @@
           </div>
           <p>Game Design</p>
           <p>& Datapack</p>
-        </a>
         </div>
         <div class="creator">
-        <a href="https://linktr.ee/kyrius" target="_blank">
-          <div class="creator-image">
-            <img loading="lazy" src="https://mc-heads.net/avatar/kyrkis/16"></img>
-            <h4>Kyrius</h4>
-          </div>
-          <p>Build &</p>
-          <p>Resource Pack</p>
-        </a>
+          <a href="https://linktr.ee/kyrius" target="_blank">
+            <div class="creator-image">
+              <img loading="lazy" src="https://mc-heads.net/avatar/kyrkis/16"></img>
+              <h4>Kyrius</h4>
+            </div>
+            <p>Build &</p>
+            <p>Resource Pack</p>
+          </a>
         </div>
         <div class="creator">
           <div class="creator-image">
@@ -105,7 +104,6 @@
           </div>
           <p>Shaders &</p>
           <p>Tech Support</p>
-        </a>
         </div>
       </div>
       <div class="credits-list">
@@ -124,12 +122,13 @@
           <p>Wiki & Playtest Lead</p>
         </div>
         <div class="creator small">
-        <a href="https://www.youtube.com/@Looshable" target="_blank">
-          <div class="creator-image">
-            <img loading="lazy" src="https://mc-heads.net/avatar/looshable/16"></img>
-            <h4>Looshable</h4>
-          </div>
-          <p>Trailer</p>
+          <a href="https://www.youtube.com/@Looshable" target="_blank">
+            <div class="creator-image">
+              <img loading="lazy" src="https://mc-heads.net/avatar/looshable/16"></img>
+              <h4>Looshable</h4>
+            </div>
+            <p>Trailer</p>
+          </a>
         </div>
         <div class="creator small">
           <div class="creator-image">
