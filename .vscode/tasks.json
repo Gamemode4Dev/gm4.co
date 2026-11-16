@@ -6,7 +6,7 @@
     {
       "label": "Local PHP Server ",
       "type": "shell",
-      "command": "cd site && php -S localhost:8000",
+      "command": "cd site && php -S localhost:8000 dev-router.php",
       "group": {
         "kind": "build",
         "isDefault": true

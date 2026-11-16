@@ -1,5 +1,5 @@
 /* global initTrack */
-/* global fetchModulesAndResources fetchModulePromo createModulePromo modules createPromoLinkContainer createModuleTrack createSquircle createVersionButton hidePreview selectedVersion:writable */
+/* global fetchModulesAndResources fetchModulePromo createModulePromo modules createPromoLinkContainer createSponsorContainer, createModuleTrack createSquircle createVersionButton hidePreview selectedVersion:writable */
 
 const OLD_MODULES = new Set(['bat_grenades', 'enderman_support_class', 'weighted_armour', 'undead_players', 'potion_swords', 'ink_spitting_squid', 'better_fire', 'desire_lines', 'vertical_rails', 'custom_crafters', 'record_crafting', 'standard_crafting', 'heart_canisters', 'master_crafting', 'sunken_treasure', 'better_armour_stands', 'liquid_tanks', 'lightning_rods', 'enchantment_extractors', 'trapped_signs', 'block_compressors', 'speed_paths', 'ender_hoppers', 'zauber_cauldrons', 'sweethearts', 'standard_liquids', 'potion_liquids', 'particles_pack', 'poses_pack', 'ender_hoppers', 'tnt_landmines', 'xp_storage', 'disassemblers', 'blast_furnaces', 'enchantment_extractors', 'boots_of_ostara', 'cooler_caves', 'dangerous_dungeons', 'tower_structures', 'spawner_minecarts', 'pig_tractors']);
 
@@ -29,6 +29,11 @@ window.addEventListener('DOMContentLoaded', () => {
 
 			const moduleLinkContainer = createPromoLinkContainer(loadedModuleId);
 			document.getElementById('moduleTitle').append(moduleLinkContainer);
+
+			if (mod.sponsor) {
+				const sponsorContainer = createSponsorContainer(loadedModuleId);
+				document.getElementById('moduleTitle').append(sponsorContainer);
+			}
 
 			const versionList = createVersionList(mod.id, mod.versions);
 			document.querySelector('#versionDownloads')?.remove();

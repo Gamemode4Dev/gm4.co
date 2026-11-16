@@ -10,10 +10,14 @@ This repo acts as a back-end for the gm4 website. It serves two purposes:
 2) Allowing "partners" of GM4 to link their modules to the website. These are hosted in the "partners" directory.
 
 ## Development setup
-You need PHP installed to test this site locally. Then you can proceed like so:
+You need PHP installed to test this site locally.
+
+Make sure to enable `extension=openssl`, for example in `C:\tools\php85\php.ini`.
+
+Then you can run the server like so:
 ```bash
 cd site
-php -S localhost:8000
+php -S localhost:8000 dev-router.php
 ```
 
 ## Notes on site contribution
