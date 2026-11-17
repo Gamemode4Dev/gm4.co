@@ -111,6 +111,28 @@ function createPromoLinkContainer(moduleId) {
 	return promoLinkContainer;
 }
 
+
+/**
+ * Creates a "sponsored by" container
+ * @param {string} moduleId the module to do this for.
+ */
+function createSponsorContainer(moduleId) {
+	const container = document.createElement('div');
+	container.id = 'moduleLinkContainer';
+	container.classList.add('horizontalSplitDisplay');
+	const mod = modules.get(moduleId);
+	if (mod.sponsor) {
+		const el = document.createElement('div');
+		el.classList.add('noselect', 'squircleLink', 'promoLink', 'sponsorLink', 'noHover');
+		const sponsorImage = document.createElement('img');
+		sponsorImage.src = `https://mc-heads.net/avatar/${mod.sponsor.game_profile}/16`;
+		el.append(sponsorImage);
+		el.insertAdjacentText('beforeend', `Sponsored by ${mod.sponsor.name}`);
+		container.append(el);
+	}
+	return container;
+}
+
 /**
  * Creates a squircle link from the supplied image and with a link to the supplied link.
  * @param {string} image An img to display on the button as an html tag
