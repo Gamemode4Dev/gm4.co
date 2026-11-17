@@ -76,6 +76,18 @@
       Get Help on Discord
     </a>
   </div>
+  <div class="poster">
+  <div class="posterPair">
+      <div class="posterPairBox">
+        <h3>Proximity Voice Chat</h3>
+        <p>Prefer to talk instead of type? The Masquerade supports proximity voice chat for the first 3 symphonies!</p>
+        <p>We recommend <a href="https://modrinth.com/plugin/plasmo-voice" style="color: #1bd96a; text-decoration: underline;">Plasmo Voice</a>. Make sure to enable <b>Sound Occlusion</b> in the settings!</p>
+      </div>
+      <div class="posterPairBox">
+        <img class="lazyload" src="images/plasmo_voice.png" data-src="images/plasmo_voice.png" data-sizes="auto" alt="Plasmo Voice Icon"/>
+      </div>
+  </div>
+  </div>
   <div class="credits">
     <h2>Credits</h3>
       <div class="credits-list">
@@ -138,7 +150,16 @@
           <p>Music</p>
         </div>
   </div>
-
+  <div style="padding-top:5px">
+    <h4>Additional Thanks</h4>
+    <div class="credits-list" style="padding-top:5px">
+      <div class="creator small">
+        <div class="creator-image"></div>
+        <h4>VM Chinese Translation Group</h4>
+        <p>Simplified Chinese Translation</p>
+      </div>
+    </div>
+  </div>
   <div class="center">
     <?php include '../includes/footer.php'; ?>
   </div>
