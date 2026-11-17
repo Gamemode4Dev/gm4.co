@@ -84,7 +84,7 @@
         <p>We recommend <a href="https://modrinth.com/plugin/plasmo-voice" target="_blank" style="color: #1bd96a; text-decoration: underline;">Plasmo Voice</a>. Make sure to enable <b>Sound Occlusion</b> in the settings!</p>
       </div>
       <div class="posterPairBox">
-        <img class="lazyload" src="images/plasmo_voice.png" data-src="images/plasmo_voice.png" data-sizes="auto" alt="Plasmo Voice Icon" style="max-width: 196px;"/>
+        <img class="lazyload" src="/images/plasmo_voice.png" data-src="/images/plasmo_voice.png" data-sizes="auto" alt="Plasmo Voice Icon" style="max-width: 196px;"/>
       </div>
   </div>
   </div>
