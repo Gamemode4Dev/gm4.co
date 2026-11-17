@@ -18,25 +18,8 @@
     ]
   },
   {
-    "name": "Studio Memo",
-    "description": "I'm Memo (Studio Memo/miraku_memo), a digital artist bringing imagination to reality! I joined the Gamemode 4 team in 2020 and have made various works for map art, promotional material, logos, and more to come.",
-    "minecraft_name": "miraku_memo",
-    "links": [
-      "https://linktr.ee/miraku_memo",
-      "https://bsky.app/profile/studio-memo.bsky.social"
-    ]
-  },
-  {
-    "name": "ToffeeMax",
-    "description": "I make content for Gamemode 4, handle the Social Media when I remember and try edit videos. I also made some of the music for Evergrowth!",
-    "minecraft_name": "ToffeeMax",
-    "links": [
-      "https://github.com/ToffeeMax"
-    ]
-  },
-  {
     "name": "runcows",
-    "description": "Hey, I'm runcows, but you can also just call me run. I've been playing Minecraft since beds were added, yet never really interacted with the community until recently. I joined Gamemode 4 in the aftermath of The Smithed Summit 2024, where I showcased my pack, Blossoming Pots. The staff here thought it was a perfect fit for GM4 and reached out! And now I have weekly imposter syndrome!",
+    "description": "Hey, I'm runcows. I was abducted into Gameode 4 after The Smithed Summit 2024. I help out where i can, but I mainly help make and update modules. I simply can't resist the thrill of making Pull Requests! Oh, I'm also a Module Director now 😁",
     "minecraft_name": "runcows",
     "links": [
       "https://bsky.app/profile/runcows.bsky.social",
@@ -86,14 +69,6 @@
     ]
   },
   {
-    "name": "Denniss",
-    "description": "I'm Denniss, I joined the Gamemode 4 community during the first Public Server in 2015, and I've been part of the staff team since 2016. Since then, I've worked on various Gamemode 4 datapacks, with the most notable ones being <a href=\"/modules/better-armour-stands\">Better Armor Stands</a>, <a href=\"/modules/chairs\">Chairs</a>, and <a href=\"/modules/crossbow-cartridges\">Crossbow Cartridges</a>.",
-    "minecraft_name": "Denniss",
-    "links": [
-      "https://github.com/Dennis-0"
-    ]
-  },
-  {
     "name": "TheEpyonProject",
     "description": "I am TheEpyonProject, also known as Epyon or sushi.  Since rejoining in PS6, I have extended my grasp to nearly every part of Gamemode 4.  My notable additions are <a href=\"/modules/balloon-animals\">Balloon Animals</a>, <a href=\"/modules/lightning-in-a-bottle\">Lightning in a Bottle</a>, and the <a href=\"/modules/metallurgy\">Infinitas shamir</a>.",
     "minecraft_name": "TheEpyonProject",
@@ -135,11 +110,6 @@
     "links": [
       "https://bsky.app/profile/catter.dev"
     ]
-  },
-  {
-    "name": "Destroyer",
-    "description": "Hi there! I'm Destroyer or Des for short. I remember when GM4 was command block blobs and it's been a joy being part of this community. I started my datapackery in <a href=\"https://www.stardustlabs.net/\" target=\"_blank\">Stardust Labs</a> where I learned worldgen and basic function knowledge. I will be taking part in project development, helping to create awesome experiences with the rest of the gm4 team.",
-    "minecraft_name": "Destroyer077"
   },
   {
     "name": "rednls",
