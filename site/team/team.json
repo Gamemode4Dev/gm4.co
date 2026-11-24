@@ -69,14 +69,6 @@
     ]
   },
   {
-    "name": "TheEpyonProject",
-    "description": "I am TheEpyonProject, also known as Epyon or sushi.  Since rejoining in PS6, I have extended my grasp to nearly every part of Gamemode 4.  My notable additions are <a href=\"/modules/balloon-animals\">Balloon Animals</a>, <a href=\"/modules/lightning-in-a-bottle\">Lightning in a Bottle</a>, and the <a href=\"/modules/metallurgy\">Infinitas shamir</a>.",
-    "minecraft_name": "TheEpyonProject",
-    "links": [
-      "https://github.com/EpyonProjects"
-    ]
-  },
-  {
     "name": "SpecialBuilder32",
     "description": "Hi, I'm SpecialBuilder32! I'm a datapack and python developer for Gamemode 4, but I've done a little bit of everything. I officially joined the project back in 2017 when I dragged <a href=\"/modules/liquid-tanks\">Liquid Tanks</a> kicking and screaming out of Minecraft 1.8 and into the modern era. With most of my time being focused on University at the moment, nowadays I primarily do infrastructure and updates, though I'm excited to get back to developing new modules!",
     "minecraft_name": "SpecialBuilder32",
