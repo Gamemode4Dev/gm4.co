@@ -209,13 +209,14 @@
       "title": "Classics",
       "modules": [
         "bat_grenades",
-        "better_fire",
         "weighted_armour",
-        "xp_storage",
-        "enderman_support_class",
-        "heart_canisters",
         "desire_lines",
-        "potion_swords"
+        "undead_players",
+        "ink_spitting_squid",
+        "vertical_rails",
+        "boots_of_ostara",
+        "pig_tractors",
+        "block_compressors"
       ]
     }
   ]
